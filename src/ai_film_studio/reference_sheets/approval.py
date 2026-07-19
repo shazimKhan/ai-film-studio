@@ -10,6 +10,7 @@ import yaml
 
 from ai_film_studio.core.exceptions import ReferenceSheetError
 from ai_film_studio.module_loader import ModuleLoader
+from ai_film_studio.reference_sheets.inventory import ReferenceInventoryService
 from ai_film_studio.reference_sheets.models import ReferenceStatus
 
 
@@ -22,11 +23,23 @@ class ReferenceApprovalService:
 
     def approve(self, *, project: str, character: str, reference: str) -> Path:
         """Mark a reference as approved."""
+        validation = ReferenceInventoryService(
+            repo_root=self._repo_root,
+            module_loader=self._module_loader,
+        ).validate_reference(project=project, character=character, reference=reference)
+        if not validation.is_valid:
+            msg = f"Reference '{reference}' cannot be approved: {validation.reason}."
+            raise ReferenceSheetError(msg)
+
         character_yaml, data, view = self._load_view(project, character, reference)
         view["status"] = ReferenceStatus.APPROVED.value
         view["approved"] = True
         view.pop("rejection_reason", None)
         self._write_character_yaml(character_yaml, data)
+        ReferenceInventoryService(
+            repo_root=self._repo_root,
+            module_loader=self._module_loader,
+        ).sync_manifest_statuses(project=project, character=character)
         return character_yaml
 
     def reject(self, *, project: str, character: str, reference: str, reason: str) -> Path:
@@ -39,6 +52,10 @@ class ReferenceApprovalService:
         view["approved"] = False
         view["rejection_reason"] = reason.strip()
         self._write_character_yaml(character_yaml, data)
+        ReferenceInventoryService(
+            repo_root=self._repo_root,
+            module_loader=self._module_loader,
+        ).sync_manifest_statuses(project=project, character=character)
         return character_yaml
 
     def _load_view(

@@ -1,0 +1,9 @@
+project: guriya
+character: guriya
+title: Left profile reference selection
+action: Guriya looks toward the courtyard
+camera:
+  shot_type: close_up
+  angle: profile_left
+  framing: face
+expected_reference: left_profile

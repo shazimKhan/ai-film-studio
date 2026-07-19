@@ -1,0 +1,10 @@
+project: guriya
+character: guriya
+title: Full-body standing reference selection
+action: Guriya stands quietly in the courtyard
+camera:
+  shot_type: full_body
+  angle: front
+  framing: full_body
+  pose: standing
+expected_reference: full_body_front

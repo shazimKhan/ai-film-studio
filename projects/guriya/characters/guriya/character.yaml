@@ -13,7 +13,7 @@ reference_images:
     status: pending_review
   views:
     front:
-      path: references/views/front.png
+      path: references/views/front_v2.png
       tags:
       - front
       - portrait
@@ -25,13 +25,13 @@ reference_images:
       camera_angles:
       - front
       priority: 10
-      approved: false
-      status: pending_review
+      approved: true
+      status: approved
       width: 344
       height: 384
       checksum: 7c79919fc668925ce251869a5311b0e17c96dc3dfc11ce1c901af732906dfcc5
     left_profile:
-      path: references/views/left_profile.png
+      path: references/views/left_profile_v2.png
       tags:
       - left
       - profile
@@ -45,13 +45,13 @@ reference_images:
       - left
       - profile_left
       priority: 15
-      approved: false
-      status: pending_review
+      approved: true
+      status: approved
       width: 344
       height: 384
       checksum: 65f2e2d0ac311b9f4512b18a8b1815066dad19c177a5d8b9b8267dcd435812d1
     three_quarter_left:
-      path: references/views/three_quarter_left.png
+      path: references/views/three_quarter_left_v2.png
       tags:
       - three_quarter
       - three_quarter_left
@@ -65,13 +65,13 @@ reference_images:
       - three_quarter_left
       - left
       priority: 20
-      approved: false
-      status: pending_review
+      approved: true
+      status: approved
       width: 344
       height: 384
       checksum: 785bafc10dbca6d4ebf0ff62e161bdd737a58d95ce937128e4322284eb37b987
     three_quarter_right:
-      path: references/views/three_quarter_right.png
+      path: references/views/three_quarter_right_v2.png
       tags:
       - three_quarter
       - three_quarter_right
@@ -85,13 +85,13 @@ reference_images:
       - three_quarter_right
       - right
       priority: 25
-      approved: false
-      status: pending_review
+      approved: true
+      status: approved
       width: 344
       height: 384
       checksum: c1f1b83ad3988044aa0bf62775c04488c43803664a895256f28295ed716c4126
     full_body_front:
-      path: references/views/full_body_front.png
+      path: references/views/full_body_front_v2.png
       tags:
       - full_body
       - standing
@@ -103,13 +103,13 @@ reference_images:
       camera_angles:
       - front
       priority: 30
-      approved: false
-      status: pending_review
+      approved: true
+      status: approved
       width: 344
       height: 384
       checksum: 38b79b6a5f5b7788a3c112e615e7f24ca127b93d103bb8de1f9bda164a33bed9
     full_body_back_left:
-      path: references/views/full_body_back_left.png
+      path: references/views/full_body_back_left_v2.png
       tags:
       - full_body
       - back
@@ -130,7 +130,7 @@ reference_images:
       height: 384
       checksum: fba4ff95a752fad60fb797b38658b3a4439553c8decd50bcf61205bb29ca334a
     full_body_back:
-      path: references/views/full_body_back.png
+      path: references/views/full_body_back_v2.png
       tags:
       - full_body
       - back
@@ -144,13 +144,13 @@ reference_images:
       - back
       - back_view
       priority: 32
-      approved: false
-      status: pending_review
+      approved: true
+      status: approved
       width: 344
       height: 384
       checksum: ed59c70219ae71c66ad1e2a435abfbfb2430901bf2392f6e5ff21a94c8f67b0d
     seated_front:
-      path: references/views/seated_front.png
+      path: references/views/seated_front_v2.png
       tags:
       - seated
       - sitting
@@ -162,8 +162,8 @@ reference_images:
       camera_angles:
       - front
       priority: 40
-      approved: false
-      status: pending_review
+      approved: true
+      status: approved
       width: 344
       height: 384
       checksum: 9dbff171e1b22a45b3e06303a4c0f737a2bca1bf74ee13e8f137bdb2e9969812

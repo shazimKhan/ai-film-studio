@@ -25,6 +25,7 @@ def with_selected_character_references(
                     "name": reference.name,
                     "path": reference.path,
                     "score": reference.score,
+                    "reason": reference.reason,
                     "priority": reference.priority,
                     "tags": list(reference.tags),
                     "status": reference.status.value,

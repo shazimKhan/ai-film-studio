@@ -5,7 +5,7 @@ from __future__ import annotations
 from enum import StrEnum
 from typing import Any, Self
 
-from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
+from pydantic import AliasChoices, BaseModel, ConfigDict, Field, field_validator, model_validator
 
 
 class ReferenceStatus(StrEnum):
@@ -286,8 +286,22 @@ class SelectedReference(BaseModel):
     path: str
     score: float
     priority: int
+    reason: str = ""
     tags: tuple[str, ...] = ()
     status: ReferenceStatus = ReferenceStatus.PENDING_REVIEW
+
+
+class ExcludedReference(BaseModel):
+    """Reference that was considered but not selected."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    name: str
+    path: str | None = None
+    reason: str
+    score: float = 0.0
+    status: ReferenceStatus = ReferenceStatus.PENDING_REVIEW
+    tags: tuple[str, ...] = ()
 
 
 class ReferenceSelectionRequest(BaseModel):
@@ -303,6 +317,7 @@ class ReferenceSelectionRequest(BaseModel):
     approved_only: bool = True
     engine_reference_limit: int = Field(default=1, gt=0)
     preferred_reference_types: tuple[str, ...] = ()
+    allow_weak_fallbacks: bool = False
 
     @field_validator(
         "camera_shot_type",
@@ -332,3 +347,79 @@ class ReferenceSelectionRequest(BaseModel):
             return tuple(str(item).strip() for item in value if str(item).strip())
         msg = "Expected a string or list of strings."
         raise ValueError(msg)
+
+
+class ReferenceSelectionResult(BaseModel):
+    """Explainable result for a character reference selection request."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    character_id: str
+    selector_inputs: ReferenceSelectionRequest
+    selected: tuple[SelectedReference, ...] = ()
+    excluded: tuple[ExcludedReference, ...] = ()
+    engine_reference_limit: int = Field(gt=0)
+    allow_weak_fallbacks: bool = False
+
+
+class ReferenceImageValidation(BaseModel):
+    """Validation result for a single mapped character reference image."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    name: str
+    path: str | None = None
+    exists: bool = False
+    readable: bool = False
+    width: int | None = Field(default=None, gt=0)
+    height: int | None = Field(default=None, gt=0)
+    checksum: str | None = None
+    expected_checksum: str | None = None
+    checksum_matches: bool | None = None
+    status: ReferenceStatus = ReferenceStatus.PENDING_REVIEW
+    approved: bool = False
+    reason: str = ""
+
+    @property
+    def is_valid(self) -> bool:
+        """Return whether the image exists, is readable, and matches checksum if present."""
+        checksum_ok = self.checksum_matches is not False
+        return self.exists and self.readable and checksum_ok
+
+
+class ReferenceSceneCamera(BaseModel):
+    """Camera inputs used for reference selection integration scenes."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    shot_type: str = Field(
+        min_length=1,
+        validation_alias=AliasChoices("shot_type", "shot", "camera_shot_type"),
+    )
+    angle: str = Field(min_length=1)
+    framing: str | None = None
+    pose: str | None = None
+
+
+class ReferenceSelectionScene(BaseModel):
+    """Small test scene blueprint for reference selector integration."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    project: str = Field(min_length=1)
+    character: str = Field(min_length=1)
+    title: str = Field(min_length=1)
+    action: str = Field(min_length=1)
+    camera: ReferenceSceneCamera = Field(validation_alias=AliasChoices("camera", "Camera"))
+    expected_reference: str | None = None
+
+
+class SceneReferenceSelectionArtifact(BaseModel):
+    """Manifest artifact emitted by reference selection scene compilation."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    scene_file: str
+    output_path: str
+    result: ReferenceSelectionResult
+    validations: tuple[ReferenceImageValidation, ...] = ()

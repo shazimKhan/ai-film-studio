@@ -1,0 +1,283 @@
+{
+  "allow_weak_fallbacks": false,
+  "character_id": "guriya",
+  "engine": "gemini",
+  "engine_reference_limit": 4,
+  "excluded_references": [
+    {
+      "name": "full_body_back",
+      "path": "references/views/full_body_back_v2.png",
+      "reason": "incompatible shot type",
+      "score": 0.0,
+      "status": "approved",
+      "tags": [
+        "back",
+        "back_view",
+        "body",
+        "full",
+        "full_body",
+        "full_body_back",
+        "standing",
+        "view",
+        "wardrobe",
+        "wide"
+      ]
+    },
+    {
+      "name": "full_body_back_left",
+      "path": "references/views/full_body_back_left_v2.png",
+      "reason": "not approved",
+      "score": 0.0,
+      "status": "pending_review",
+      "tags": []
+    },
+    {
+      "name": "full_body_front",
+      "path": "references/views/full_body_front_v2.png",
+      "reason": "incompatible shot type",
+      "score": 0.0,
+      "status": "approved",
+      "tags": [
+        "body",
+        "front",
+        "full",
+        "full_body",
+        "full_body_front",
+        "standing",
+        "wardrobe",
+        "wide"
+      ]
+    },
+    {
+      "name": "left_profile",
+      "path": "references/views/left_profile_v2.png",
+      "reason": "incompatible angle",
+      "score": 0.0,
+      "status": "approved",
+      "tags": [
+        "close",
+        "close_up",
+        "left",
+        "left_profile",
+        "portrait",
+        "profile",
+        "profile_left",
+        "up"
+      ]
+    },
+    {
+      "name": "seated_front",
+      "path": "references/views/seated_front_v2.png",
+      "reason": "incompatible shot type",
+      "score": 0.0,
+      "status": "approved",
+      "tags": [
+        "body",
+        "front",
+        "full",
+        "full_body",
+        "medium",
+        "pose",
+        "seated",
+        "seated_front",
+        "sitting"
+      ]
+    },
+    {
+      "name": "three_quarter_left",
+      "path": "references/views/three_quarter_left_v2.png",
+      "reason": "exact approved match available",
+      "score": 91.0,
+      "status": "approved",
+      "tags": [
+        "close",
+        "close_up",
+        "left",
+        "portrait",
+        "quarter",
+        "three",
+        "three_quarter",
+        "three_quarter_left",
+        "up"
+      ]
+    },
+    {
+      "name": "three_quarter_right",
+      "path": "references/views/three_quarter_right_v2.png",
+      "reason": "exact approved match available",
+      "score": 90.5,
+      "status": "approved",
+      "tags": [
+        "close",
+        "close_up",
+        "portrait",
+        "quarter",
+        "right",
+        "three",
+        "three_quarter",
+        "three_quarter_right",
+        "up"
+      ]
+    }
+  ],
+  "expected_reference": "front",
+  "generated_at": "2026-07-19T21:11:48.233375+00:00",
+  "output_path": "output/guriya/reference_selection/close_up_front/generation_manifest.json",
+  "primary_reference": "front",
+  "project": "guriya",
+  "reference_validation": [
+    {
+      "approved": true,
+      "checksum": "7c79919fc668925ce251869a5311b0e17c96dc3dfc11ce1c901af732906dfcc5",
+      "checksum_matches": true,
+      "exists": true,
+      "height": 384,
+      "name": "front",
+      "path": "references/views/front_v2.png",
+      "readable": true,
+      "reason": "valid",
+      "status": "approved",
+      "valid": true,
+      "width": 344
+    },
+    {
+      "approved": true,
+      "checksum": "ed59c70219ae71c66ad1e2a435abfbfb2430901bf2392f6e5ff21a94c8f67b0d",
+      "checksum_matches": true,
+      "exists": true,
+      "height": 384,
+      "name": "full_body_back",
+      "path": "references/views/full_body_back_v2.png",
+      "readable": true,
+      "reason": "valid",
+      "status": "approved",
+      "valid": true,
+      "width": 344
+    },
+    {
+      "approved": false,
+      "checksum": "fba4ff95a752fad60fb797b38658b3a4439553c8decd50bcf61205bb29ca334a",
+      "checksum_matches": true,
+      "exists": true,
+      "height": 384,
+      "name": "full_body_back_left",
+      "path": "references/views/full_body_back_left_v2.png",
+      "readable": true,
+      "reason": "valid",
+      "status": "pending_review",
+      "valid": true,
+      "width": 344
+    },
+    {
+      "approved": true,
+      "checksum": "38b79b6a5f5b7788a3c112e615e7f24ca127b93d103bb8de1f9bda164a33bed9",
+      "checksum_matches": true,
+      "exists": true,
+      "height": 384,
+      "name": "full_body_front",
+      "path": "references/views/full_body_front_v2.png",
+      "readable": true,
+      "reason": "valid",
+      "status": "approved",
+      "valid": true,
+      "width": 344
+    },
+    {
+      "approved": true,
+      "checksum": "65f2e2d0ac311b9f4512b18a8b1815066dad19c177a5d8b9b8267dcd435812d1",
+      "checksum_matches": true,
+      "exists": true,
+      "height": 384,
+      "name": "left_profile",
+      "path": "references/views/left_profile_v2.png",
+      "readable": true,
+      "reason": "valid",
+      "status": "approved",
+      "valid": true,
+      "width": 344
+    },
+    {
+      "approved": true,
+      "checksum": "9dbff171e1b22a45b3e06303a4c0f737a2bca1bf74ee13e8f137bdb2e9969812",
+      "checksum_matches": true,
+      "exists": true,
+      "height": 384,
+      "name": "seated_front",
+      "path": "references/views/seated_front_v2.png",
+      "readable": true,
+      "reason": "valid",
+      "status": "approved",
+      "valid": true,
+      "width": 344
+    },
+    {
+      "approved": true,
+      "checksum": "785bafc10dbca6d4ebf0ff62e161bdd737a58d95ce937128e4322284eb37b987",
+      "checksum_matches": true,
+      "exists": true,
+      "height": 384,
+      "name": "three_quarter_left",
+      "path": "references/views/three_quarter_left_v2.png",
+      "readable": true,
+      "reason": "valid",
+      "status": "approved",
+      "valid": true,
+      "width": 344
+    },
+    {
+      "approved": true,
+      "checksum": "c1f1b83ad3988044aa0bf62775c04488c43803664a895256f28295ed716c4126",
+      "checksum_matches": true,
+      "exists": true,
+      "height": 384,
+      "name": "three_quarter_right",
+      "path": "references/views/three_quarter_right_v2.png",
+      "readable": true,
+      "reason": "valid",
+      "status": "approved",
+      "valid": true,
+      "width": 344
+    }
+  ],
+  "scene_file": "projects/guriya/tests/reference_selection/close_up_front.yaml",
+  "selected_references": [
+    {
+      "name": "front",
+      "path": "references/views/front_v2.png",
+      "priority": 10,
+      "reason": "exact angle, shot, framing match",
+      "score": 100.0,
+      "status": "approved",
+      "tags": [
+        "close",
+        "close_up",
+        "front",
+        "identity",
+        "portrait",
+        "up"
+      ]
+    }
+  ],
+  "selector_inputs": {
+    "action": "Guriya looks calmly toward the camera",
+    "allow_weak_fallbacks": false,
+    "angle": "front",
+    "approved_only": true,
+    "camera_shot_type": "close_up",
+    "engine_reference_limit": 4,
+    "framing": "face",
+    "pose": null,
+    "preferred_reference_types": [
+      "front",
+      "three_quarter",
+      "profile",
+      "full_body"
+    ]
+  },
+  "title": "Close-up front reference selection",
+  "verification": {
+    "actual_first_reference": "front",
+    "expected_first_reference": "front",
+    "matches_expected": true
+  }
+}

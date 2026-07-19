@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from collections.abc import Iterable
 from pathlib import Path
 from typing import Annotated
 
@@ -17,7 +18,10 @@ from ai_film_studio.core.logging import configure_logging
 from ai_film_studio.prompt_compiler import PromptCompilationService
 from ai_film_studio.reference_sheets import (
     ReferenceApprovalService,
+    ReferenceImageValidation,
+    ReferenceInventoryService,
     ReferenceOutputFormat,
+    ReferenceSelectionService,
     ReferenceSheetSplitter,
     SplitOptions,
 )
@@ -367,6 +371,125 @@ def reject_reference(
     console.print(f"Rejected reference '{reference}' in: {path}")
 
 
+@app.command("list-references")
+def list_references(
+    project: Annotated[
+        str,
+        typer.Option("--project", help="Project id under projects/."),
+    ],
+    character: Annotated[
+        str,
+        typer.Option("--character", help="Character asset id."),
+    ],
+) -> None:
+    """List mapped character references and validation state."""
+    try:
+        validations = ReferenceInventoryService(repo_root=Path.cwd()).validate_character(
+            project=project,
+            character=character,
+        )
+    except AIFilmStudioError as exc:
+        console.print(f"[red]Error:[/red] {exc}")
+        raise typer.Exit(1) from None
+
+    _print_reference_validation_table(validations)
+
+
+@app.command("validate-references")
+def validate_references(
+    project: Annotated[
+        str,
+        typer.Option("--project", help="Project id under projects/."),
+    ],
+    character: Annotated[
+        str,
+        typer.Option("--character", help="Character asset id."),
+    ],
+) -> None:
+    """Validate mapped character reference images."""
+    try:
+        validations = ReferenceInventoryService(repo_root=Path.cwd()).validate_character(
+            project=project,
+            character=character,
+        )
+    except AIFilmStudioError as exc:
+        console.print(f"[red]Error:[/red] {exc}")
+        raise typer.Exit(1) from None
+
+    _print_reference_validation_table(validations)
+    invalid = [validation for validation in validations if not validation.is_valid]
+    if invalid:
+        console.print(f"[red]{len(invalid)} invalid reference image(s).[/red]")
+        raise typer.Exit(1)
+    console.print("[green]Reference image validation passed.[/green]")
+
+
+@app.command("select-references")
+def select_references(
+    scene_file: Annotated[
+        Path,
+        typer.Argument(help="Path to a reference-selection scene YAML file."),
+    ],
+    engine: Annotated[
+        str,
+        typer.Option("--engine", "-e", help="Target engine adapter id."),
+    ],
+    allow_weak_fallbacks: Annotated[
+        bool,
+        typer.Option(
+            "--allow-weak-fallbacks",
+            help="Allow weak selector fallbacks such as portrait refs for full-body shots.",
+        ),
+    ] = False,
+) -> None:
+    """Debug reference selection for a scene and write a generation manifest."""
+    try:
+        runtime = create_default_builder().build()
+        artifact = ReferenceSelectionService.from_runtime(
+            runtime,
+            repo_root=Path.cwd(),
+            output_root=Path("output"),
+        ).compile_scene(
+            scene_file,
+            engine=engine,
+            allow_weak_fallbacks=allow_weak_fallbacks,
+        )
+    except AIFilmStudioError as exc:
+        console.print(f"[red]Error:[/red] {exc}")
+        raise typer.Exit(1) from None
+
+    inputs = artifact.result.selector_inputs
+    console.print(f"Character: {artifact.result.character_id}")
+    console.print(f"Shot: {inputs.camera_shot_type}")
+    console.print(f"Angle: {inputs.angle}")
+    if inputs.framing:
+        console.print(f"Framing: {inputs.framing}")
+    if inputs.pose:
+        console.print(f"Pose: {inputs.pose}")
+    if inputs.action:
+        console.print(f"Action: {inputs.action}")
+    console.print(f"Engine reference limit: {artifact.result.engine_reference_limit}")
+    console.print(f"Manifest: {artifact.output_path}")
+
+    console.print("\nSelected:")
+    if artifact.result.selected:
+        for index, reference in enumerate(artifact.result.selected, start=1):
+            console.print(f"{index}. {reference.path}")
+            console.print(f"   Score: {_format_score(reference.score)}")
+            console.print(f"   Reason: {reference.reason}")
+    else:
+        console.print("- none")
+
+    console.print("\nExcluded:")
+    if artifact.result.excluded:
+        for excluded_reference in artifact.result.excluded:
+            path = excluded_reference.path or excluded_reference.name
+            console.print(f"- {path}")
+            console.print(f"  Reason: {excluded_reference.reason}")
+    else:
+        console.print("- none")
+
+
 @adapters_app.command("list")
 def list_adapters() -> None:
     """List registered engine adapter ids."""
@@ -420,3 +543,34 @@ def _resolve_project_character(
         msg = "Could not infer character from image path. Provide --project and --character."
         raise AIFilmStudioError(msg)
     return inferred_project, inferred_character
+
+
+def _print_reference_validation_table(validations: Iterable[ReferenceImageValidation]) -> None:
+    table = Table(title="Character References")
+    table.add_column("Reference")
+    table.add_column("Path")
+    table.add_column("Status")
+    table.add_column("Valid")
+    table.add_column("Size")
+    table.add_column("Reason")
+    for validation in validations:
+        size = (
+            f"{validation.width}x{validation.height}"
+            if validation.width and validation.height
+            else "-"
+        )
+        table.add_row(
+            validation.name,
+            validation.path or "-",
+            validation.status.value,
+            "yes" if validation.is_valid else "no",
+            size,
+            validation.reason,
+        )
+    console.print(table)
+
+
+def _format_score(score: float) -> str:
+    if score.is_integer():
+        return str(int(score))
+    return f"{score:.2f}"

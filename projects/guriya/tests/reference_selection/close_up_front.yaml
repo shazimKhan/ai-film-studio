@@ -1,0 +1,9 @@
+project: guriya
+character: guriya
+title: Close-up front reference selection
+action: Guriya looks calmly toward the camera
+camera:
+  shot_type: close_up
+  angle: front
+  framing: face
+expected_reference: front

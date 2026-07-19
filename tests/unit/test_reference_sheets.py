@@ -260,7 +260,16 @@ def test_approval_rejection_and_selector_behaviour(tmp_path: Path) -> None:
         ),
     )
 
-    assert [item.name for item in selected] == ["front", "three_quarter_left"]
+    assert [item.name for item in selected] == ["front"]
+    explained = selector.explain_from_yaml(
+        character_yaml,
+        ReferenceSelectionRequest(
+            camera_shot_type="close_up",
+            angle="front",
+            engine_reference_limit=3,
+        ),
+    )
+    assert any(item.name == "three_quarter_right" for item in explained.excluded)
     rejected_data = yaml.safe_load(character_yaml.read_text(encoding="utf-8"))
     assert rejected_data["reference_images"]["views"]["three_quarter_right"]["status"] == "rejected"
 
