@@ -118,6 +118,58 @@ projects/guriya/asset_index.json
 See `docs/ASSET_PIPELINE.md` for naming conventions, validation rules, and best
 practices.
 
+## Reference Sheet Splitting
+
+Manual character sheets can be split into production reference crops with deterministic
+layout templates. The splitter uses Pillow locally only; it does not run OCR, face
+recognition, character identification, cloud APIs, or image generation.
+
+Preview Guriya's current master sheet:
+
+```bash
+aifs preview-reference-sheet projects/guriya/characters/guriya/references/master/master_sheet.png --layout guriya_master_v1 --overrides projects/guriya/characters/guriya/references/crop_overrides.yaml
+```
+
+Split the sheet:
+
+```bash
+aifs split-reference-sheet projects/guriya/characters/guriya/references/master/master_sheet.png --project guriya --character guriya --layout guriya_master_v1
+```
+
+Equivalent module entry point:
+
+```bash
+python -m ai_film_studio.cli split-reference-sheet projects/guriya/characters/guriya/references/master/master_sheet.png --project guriya --character guriya --layout guriya_master_v1
+```
+
+Generated crops are written to:
+
+```text
+projects/guriya/characters/guriya/references/views/
+```
+
+The crop preview is written to:
+
+```text
+projects/guriya/characters/guriya/references/master/master_sheet_preview.png
+```
+
+The reference manifest is written to:
+
+```text
+projects/guriya/characters/guriya/references/reference_sheet_manifest.json
+```
+
+Split crops start as `pending_review`. Approve or reject them explicitly:
+
+```bash
+aifs approve-reference --project guriya --character guriya --reference front
+aifs reject-reference --project guriya --character guriya --reference front --reason "Crop is not usable"
+```
+
+See `docs/REFERENCE_SHEET_WORKFLOW.md` for the Roman Urdu workflow and exact
+Guriya commands.
+
 ## Current Limitations
 
 - Local prompt compilation only.
@@ -126,6 +178,8 @@ practices.
 - Guriya is demo project data, not compiler logic.
 - Prompt Compiler v1 resolves character and world assets from local YAML files.
 - Asset reference images are manually generated and may be awaiting approval.
+- Reference sheet splitting is deterministic local asset management only; the combined
+  master sheet is not treated as an ideal direct video-generation input.
 
 ## Features
 

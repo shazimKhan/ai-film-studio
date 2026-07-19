@@ -1,0 +1,152 @@
+id: guriya_master_v1
+description: "Deterministic 4x2 master character reference sheet layout."
+rows: 2
+columns: 4
+panels:
+  - name: front
+    output_filename: front.png
+    row: 0
+    column: 0
+    tags:
+      - front
+      - portrait
+      - close_up
+      - identity
+    shot_types:
+      - close_up
+      - portrait
+    camera_angles:
+      - front
+    priority: 10
+    required: true
+    description: "Front portrait identity reference."
+  - name: left_profile
+    output_filename: left_profile.png
+    row: 0
+    column: 1
+    tags:
+      - left
+      - profile
+      - profile_left
+      - close_up
+    shot_types:
+      - close_up
+      - portrait
+      - profile
+    camera_angles:
+      - left
+      - profile_left
+    priority: 15
+    required: true
+    description: "Left profile portrait reference."
+  - name: three_quarter_left
+    output_filename: three_quarter_left.png
+    row: 0
+    column: 2
+    tags:
+      - three_quarter
+      - three_quarter_left
+      - left
+      - close_up
+    shot_types:
+      - close_up
+      - portrait
+      - three_quarter
+    camera_angles:
+      - three_quarter_left
+      - left
+    priority: 20
+    required: true
+    description: "Left three-quarter portrait reference."
+  - name: three_quarter_right
+    output_filename: three_quarter_right.png
+    row: 0
+    column: 3
+    tags:
+      - three_quarter
+      - three_quarter_right
+      - right
+      - close_up
+    shot_types:
+      - close_up
+      - portrait
+      - three_quarter
+    camera_angles:
+      - three_quarter_right
+      - right
+    priority: 25
+    required: true
+    description: "Right three-quarter portrait reference."
+  - name: full_body_front
+    output_filename: full_body_front.png
+    row: 1
+    column: 0
+    tags:
+      - full_body
+      - standing
+      - front
+      - wardrobe
+    shot_types:
+      - full_body
+      - wide
+    camera_angles:
+      - front
+    priority: 30
+    required: true
+    description: "Full-body front wardrobe and stance reference."
+  - name: full_body_back_left
+    output_filename: full_body_back_left.png
+    row: 1
+    column: 1
+    tags:
+      - full_body
+      - back
+      - back_left
+      - standing
+      - wardrobe
+    shot_types:
+      - full_body
+      - wide
+    camera_angles:
+      - back_left
+      - back_view
+      - left
+    priority: 35
+    required: true
+    description: "Full-body back-left wardrobe and stance reference."
+  - name: full_body_back
+    output_filename: full_body_back.png
+    row: 1
+    column: 2
+    tags:
+      - full_body
+      - back
+      - back_view
+      - standing
+      - wardrobe
+    shot_types:
+      - full_body
+      - wide
+    camera_angles:
+      - back
+      - back_view
+    priority: 32
+    required: true
+    description: "Full-body back wardrobe and stance reference."
+  - name: seated_front
+    output_filename: seated_front.png
+    row: 1
+    column: 3
+    tags:
+      - seated
+      - sitting
+      - front
+      - pose
+    shot_types:
+      - medium
+      - full_body
+    camera_angles:
+      - front
+    priority: 40
+    required: true
+    description: "Seated front pose reference."

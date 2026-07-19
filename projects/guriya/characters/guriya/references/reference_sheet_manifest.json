@@ -1,0 +1,330 @@
+{
+  "character": "guriya",
+  "checksums": {
+    "crops": {
+      "front": "7c79919fc668925ce251869a5311b0e17c96dc3dfc11ce1c901af732906dfcc5",
+      "full_body_back": "ed59c70219ae71c66ad1e2a435abfbfb2430901bf2392f6e5ff21a94c8f67b0d",
+      "full_body_back_left": "fba4ff95a752fad60fb797b38658b3a4439553c8decd50bcf61205bb29ca334a",
+      "full_body_front": "38b79b6a5f5b7788a3c112e615e7f24ca127b93d103bb8de1f9bda164a33bed9",
+      "left_profile": "65f2e2d0ac311b9f4512b18a8b1815066dad19c177a5d8b9b8267dcd435812d1",
+      "seated_front": "9dbff171e1b22a45b3e06303a4c0f737a2bca1bf74ee13e8f137bdb2e9969812",
+      "three_quarter_left": "785bafc10dbca6d4ebf0ff62e161bdd737a58d95ce937128e4322284eb37b987",
+      "three_quarter_right": "c1f1b83ad3988044aa0bf62775c04488c43803664a895256f28295ed716c4126"
+    },
+    "source": "08cd9ef47081add980fe93dd40a412c29cc9d5e0d561a909788b96e414c76351"
+  },
+  "generated_at": "2026-07-19T20:32:08.073160+00:00",
+  "generated_files": [
+    {
+      "camera_angles": [
+        "front"
+      ],
+      "checksum": "7c79919fc668925ce251869a5311b0e17c96dc3dfc11ce1c901af732906dfcc5",
+      "dimensions": {
+        "height": 384,
+        "width": 344
+      },
+      "name": "front",
+      "normalized_crop": {
+        "height": 0.5,
+        "width": 0.25,
+        "x": 0.0,
+        "y": 0.0
+      },
+      "path": "projects/guriya/characters/guriya/references/views/front.png",
+      "pixel_crop": {
+        "bottom": 384,
+        "left": 0,
+        "right": 344,
+        "top": 0
+      },
+      "priority": 10,
+      "shot_types": [
+        "close_up",
+        "portrait"
+      ],
+      "tags": [
+        "front",
+        "portrait",
+        "close_up",
+        "identity"
+      ],
+      "validation_status": "pending_review"
+    },
+    {
+      "camera_angles": [
+        "left",
+        "profile_left"
+      ],
+      "checksum": "65f2e2d0ac311b9f4512b18a8b1815066dad19c177a5d8b9b8267dcd435812d1",
+      "dimensions": {
+        "height": 384,
+        "width": 344
+      },
+      "name": "left_profile",
+      "normalized_crop": {
+        "height": 0.5,
+        "width": 0.25,
+        "x": 0.25,
+        "y": 0.0
+      },
+      "path": "projects/guriya/characters/guriya/references/views/left_profile.png",
+      "pixel_crop": {
+        "bottom": 384,
+        "left": 344,
+        "right": 688,
+        "top": 0
+      },
+      "priority": 15,
+      "shot_types": [
+        "close_up",
+        "portrait",
+        "profile"
+      ],
+      "tags": [
+        "left",
+        "profile",
+        "profile_left",
+        "close_up"
+      ],
+      "validation_status": "pending_review"
+    },
+    {
+      "camera_angles": [
+        "three_quarter_left",
+        "left"
+      ],
+      "checksum": "785bafc10dbca6d4ebf0ff62e161bdd737a58d95ce937128e4322284eb37b987",
+      "dimensions": {
+        "height": 384,
+        "width": 344
+      },
+      "name": "three_quarter_left",
+      "normalized_crop": {
+        "height": 0.5,
+        "width": 0.25,
+        "x": 0.5,
+        "y": 0.0
+      },
+      "path": "projects/guriya/characters/guriya/references/views/three_quarter_left.png",
+      "pixel_crop": {
+        "bottom": 384,
+        "left": 688,
+        "right": 1032,
+        "top": 0
+      },
+      "priority": 20,
+      "shot_types": [
+        "close_up",
+        "portrait",
+        "three_quarter"
+      ],
+      "tags": [
+        "three_quarter",
+        "three_quarter_left",
+        "left",
+        "close_up"
+      ],
+      "validation_status": "pending_review"
+    },
+    {
+      "camera_angles": [
+        "three_quarter_right",
+        "right"
+      ],
+      "checksum": "c1f1b83ad3988044aa0bf62775c04488c43803664a895256f28295ed716c4126",
+      "dimensions": {
+        "height": 384,
+        "width": 344
+      },
+      "name": "three_quarter_right",
+      "normalized_crop": {
+        "height": 0.5,
+        "width": 0.25,
+        "x": 0.75,
+        "y": 0.0
+      },
+      "path": "projects/guriya/characters/guriya/references/views/three_quarter_right.png",
+      "pixel_crop": {
+        "bottom": 384,
+        "left": 1032,
+        "right": 1376,
+        "top": 0
+      },
+      "priority": 25,
+      "shot_types": [
+        "close_up",
+        "portrait",
+        "three_quarter"
+      ],
+      "tags": [
+        "three_quarter",
+        "three_quarter_right",
+        "right",
+        "close_up"
+      ],
+      "validation_status": "pending_review"
+    },
+    {
+      "camera_angles": [
+        "front"
+      ],
+      "checksum": "38b79b6a5f5b7788a3c112e615e7f24ca127b93d103bb8de1f9bda164a33bed9",
+      "dimensions": {
+        "height": 384,
+        "width": 344
+      },
+      "name": "full_body_front",
+      "normalized_crop": {
+        "height": 0.5,
+        "width": 0.25,
+        "x": 0.0,
+        "y": 0.5
+      },
+      "path": "projects/guriya/characters/guriya/references/views/full_body_front.png",
+      "pixel_crop": {
+        "bottom": 768,
+        "left": 0,
+        "right": 344,
+        "top": 384
+      },
+      "priority": 30,
+      "shot_types": [
+        "full_body",
+        "wide"
+      ],
+      "tags": [
+        "full_body",
+        "standing",
+        "front",
+        "wardrobe"
+      ],
+      "validation_status": "pending_review"
+    },
+    {
+      "camera_angles": [
+        "back_left",
+        "back_view",
+        "left"
+      ],
+      "checksum": "fba4ff95a752fad60fb797b38658b3a4439553c8decd50bcf61205bb29ca334a",
+      "dimensions": {
+        "height": 384,
+        "width": 344
+      },
+      "name": "full_body_back_left",
+      "normalized_crop": {
+        "height": 0.5,
+        "width": 0.25,
+        "x": 0.25,
+        "y": 0.5
+      },
+      "path": "projects/guriya/characters/guriya/references/views/full_body_back_left.png",
+      "pixel_crop": {
+        "bottom": 768,
+        "left": 344,
+        "right": 688,
+        "top": 384
+      },
+      "priority": 35,
+      "shot_types": [
+        "full_body",
+        "wide"
+      ],
+      "tags": [
+        "full_body",
+        "back",
+        "back_left",
+        "standing",
+        "wardrobe"
+      ],
+      "validation_status": "pending_review"
+    },
+    {
+      "camera_angles": [
+        "back",
+        "back_view"
+      ],
+      "checksum": "ed59c70219ae71c66ad1e2a435abfbfb2430901bf2392f6e5ff21a94c8f67b0d",
+      "dimensions": {
+        "height": 384,
+        "width": 344
+      },
+      "name": "full_body_back",
+      "normalized_crop": {
+        "height": 0.5,
+        "width": 0.25,
+        "x": 0.5,
+        "y": 0.5
+      },
+      "path": "projects/guriya/characters/guriya/references/views/full_body_back.png",
+      "pixel_crop": {
+        "bottom": 768,
+        "left": 688,
+        "right": 1032,
+        "top": 384
+      },
+      "priority": 32,
+      "shot_types": [
+        "full_body",
+        "wide"
+      ],
+      "tags": [
+        "full_body",
+        "back",
+        "back_view",
+        "standing",
+        "wardrobe"
+      ],
+      "validation_status": "pending_review"
+    },
+    {
+      "camera_angles": [
+        "front"
+      ],
+      "checksum": "9dbff171e1b22a45b3e06303a4c0f737a2bca1bf74ee13e8f137bdb2e9969812",
+      "dimensions": {
+        "height": 384,
+        "width": 344
+      },
+      "name": "seated_front",
+      "normalized_crop": {
+        "height": 0.5,
+        "width": 0.25,
+        "x": 0.75,
+        "y": 0.5
+      },
+      "path": "projects/guriya/characters/guriya/references/views/seated_front.png",
+      "pixel_crop": {
+        "bottom": 768,
+        "left": 1032,
+        "right": 1376,
+        "top": 384
+      },
+      "priority": 40,
+      "shot_types": [
+        "medium",
+        "full_body"
+      ],
+      "tags": [
+        "seated",
+        "sitting",
+        "front",
+        "pose"
+      ],
+      "validation_status": "pending_review"
+    }
+  ],
+  "layout_id": "guriya_master_v1",
+  "original_source_image": "projects/guriya/characters/guriya/references/master/master_sheet.png",
+  "output_format": "png",
+  "panel_count": 8,
+  "preview_path": "projects/guriya/characters/guriya/references/master/master_sheet_preview.png",
+  "project": "guriya",
+  "source_checksum": "08cd9ef47081add980fe93dd40a412c29cc9d5e0d561a909788b96e414c76351",
+  "source_dimensions": {
+    "height": 768,
+    "width": 1376
+  },
+  "source_image": "projects/guriya/characters/guriya/references/master/master_sheet.png"
+}

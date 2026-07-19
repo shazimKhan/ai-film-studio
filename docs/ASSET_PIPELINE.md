@@ -178,6 +178,10 @@ Prompt compilation should reference approved assets by stable id and path. The p
 compiler must not generate missing image references or invent appearances. Asset
 bible references are production inputs used by future compiler and QA stages.
 
+Reference sheets can be split into individual reviewable character images before
+they are selected for generation manifests. See `docs/REFERENCE_SHEET_WORKFLOW.md`
+for local preview, split, approval, and rejection commands.
+
 ## Best Practices
 
 - Keep `reference_status: awaiting_reference` until approved images are present.

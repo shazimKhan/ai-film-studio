@@ -6,7 +6,11 @@ from abc import ABC, abstractmethod
 from collections.abc import Collection
 from typing import TYPE_CHECKING
 
-from ai_film_studio.engine_adapters.models import EngineRequest, EngineResult
+from ai_film_studio.engine_adapters.models import (
+    EngineReferenceCapabilities,
+    EngineRequest,
+    EngineResult,
+)
 
 if TYPE_CHECKING:
     from ai_film_studio.prompt_compiler.models import PromptCompilationResult
@@ -33,6 +37,11 @@ class BaseEngineAdapter(ABC):
     def capabilities(self) -> Collection[str]:
         """Capability names supported by this adapter."""
         return ()
+
+    @property
+    def reference_capabilities(self) -> EngineReferenceCapabilities:
+        """Reference image capabilities supported by this adapter."""
+        return EngineReferenceCapabilities()
 
     def supports(self, capability: str) -> bool:
         """Return whether the adapter advertises a framework capability."""

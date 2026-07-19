@@ -5,7 +5,11 @@ from __future__ import annotations
 from typing import TYPE_CHECKING
 
 from ai_film_studio.engine_adapters.base import BaseEngineAdapter
-from ai_film_studio.engine_adapters.models import EngineRequest, EngineResult
+from ai_film_studio.engine_adapters.models import (
+    EngineReferenceCapabilities,
+    EngineRequest,
+    EngineResult,
+)
 
 if TYPE_CHECKING:
     from ai_film_studio.prompt_compiler.models import PromptCompilationResult
@@ -27,6 +31,20 @@ class GeminiAdapter(BaseEngineAdapter):
     @property
     def capabilities(self) -> tuple[str, ...]:
         return ("prompt_formatting", "video_prompt")
+
+    @property
+    def reference_capabilities(self) -> EngineReferenceCapabilities:
+        return EngineReferenceCapabilities(
+            max_character_reference_images=4,
+            supports_multiple_references=True,
+            supports_reference_manifest=True,
+            preferred_reference_types=(
+                "front",
+                "three_quarter",
+                "profile",
+                "full_body",
+            ),
+        )
 
     def format_prompt(self, compiled_prompt: PromptCompilationResult) -> str:
         """Format structured prompt sections for Gemini video generation."""

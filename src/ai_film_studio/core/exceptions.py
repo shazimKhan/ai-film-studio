@@ -55,3 +55,7 @@ class OutputWriteError(PromptCompilationError):
 
 class AssetBibleError(AIFilmStudioError):
     """Raised when asset bible validation or indexing fails."""
+
+
+class ReferenceSheetError(AIFilmStudioError):
+    """Raised when reference sheet splitting or selection fails."""
