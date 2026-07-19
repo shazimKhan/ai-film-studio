@@ -99,6 +99,25 @@ output/guriya/episode_01/scene_02/clip_001/gemini_prompt_v1.txt
 Existing prompts are not overwritten. Re-running the same command creates the
 next available version, such as `gemini_prompt_v2.txt`.
 
+## Asset Bible Validation
+
+Production image references are generated manually outside this repository and stored
+under the project asset bible folders. Validate the asset structure and generate the
+asset index with:
+
+```bash
+aifs validate-assets
+```
+
+This writes:
+
+```text
+projects/guriya/asset_index.json
+```
+
+See `docs/ASSET_PIPELINE.md` for naming conventions, validation rules, and best
+practices.
+
 ## Current Limitations
 
 - Local prompt compilation only.
@@ -106,6 +125,7 @@ next available version, such as `gemini_prompt_v2.txt`.
 - Gemini support currently means prompt formatting through `GeminiAdapter`.
 - Guriya is demo project data, not compiler logic.
 - Prompt Compiler v1 resolves character and world assets from local YAML files.
+- Asset reference images are manually generated and may be awaiting approval.
 
 ## Features
 

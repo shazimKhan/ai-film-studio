@@ -3,6 +3,7 @@
 from ai_film_studio.core.exceptions import (
     AdapterRegistrationError,
     AIFilmStudioError,
+    AssetBibleError,
     AssetNotFoundError,
     BuildError,
     ConfigurationError,
@@ -21,6 +22,7 @@ from ai_film_studio.core.version import __version__
 __all__ = [
     "AdapterRegistrationError",
     "AIFilmStudioError",
+    "AssetBibleError",
     "AssetNotFoundError",
     "BuildError",
     "ConfigurationError",

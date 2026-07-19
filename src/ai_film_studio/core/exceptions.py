@@ -51,3 +51,7 @@ class UnsupportedEngineError(PromptCompilationError):
 
 class OutputWriteError(PromptCompilationError):
     """Raised when a compiled prompt cannot be written."""
+
+
+class AssetBibleError(AIFilmStudioError):
+    """Raised when asset bible validation or indexing fails."""

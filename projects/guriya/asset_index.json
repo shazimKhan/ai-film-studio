@@ -1,0 +1,4284 @@
+{
+  "characters": [
+    {
+      "asset_type": "character",
+      "id": "brother_01",
+      "notes_path": "characters/brother_01/notes.md",
+      "path": "characters/brother_01",
+      "prompt_path": "characters/brother_01/prompt.md",
+      "reference_images": [
+        {
+          "category": "references",
+          "exists": false,
+          "name": "front.png",
+          "path": "characters/brother_01/references/front.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "back.png",
+          "path": "characters/brother_01/references/back.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "left.png",
+          "path": "characters/brother_01/references/left.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "right.png",
+          "path": "characters/brother_01/references/right.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "three_quarter.png",
+          "path": "characters/brother_01/references/three_quarter.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "full_body.png",
+          "path": "characters/brother_01/references/full_body.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "closeup.png",
+          "path": "characters/brother_01/references/closeup.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "neutral.png",
+          "path": "characters/brother_01/expressions/neutral.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "happy.png",
+          "path": "characters/brother_01/expressions/happy.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "sad.png",
+          "path": "characters/brother_01/expressions/sad.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "crying.png",
+          "path": "characters/brother_01/expressions/crying.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "angry.png",
+          "path": "characters/brother_01/expressions/angry.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "thinking.png",
+          "path": "characters/brother_01/expressions/thinking.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "worried.png",
+          "path": "characters/brother_01/expressions/worried.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "dua.png",
+          "path": "characters/brother_01/expressions/dua.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "smile.png",
+          "path": "characters/brother_01/expressions/smile.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "standing.png",
+          "path": "characters/brother_01/poses/standing.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "walking.png",
+          "path": "characters/brother_01/poses/walking.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "sitting.png",
+          "path": "characters/brother_01/poses/sitting.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "running.png",
+          "path": "characters/brother_01/poses/running.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "working.png",
+          "path": "characters/brother_01/poses/working.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "holding_child.png",
+          "path": "characters/brother_01/poses/holding_child.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "sewing.png",
+          "path": "characters/brother_01/poses/sewing.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "cooking.png",
+          "path": "characters/brother_01/poses/cooking.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "default.png",
+          "path": "characters/brother_01/wardrobe/default.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "dress_01.png",
+          "path": "characters/brother_01/wardrobe/dress_01.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "dress_02.png",
+          "path": "characters/brother_01/wardrobe/dress_02.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "winter.png",
+          "path": "characters/brother_01/wardrobe/winter.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "wedding.png",
+          "path": "characters/brother_01/wardrobe/wedding.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "sleep.png",
+          "path": "characters/brother_01/wardrobe/sleep.png"
+        }
+      ],
+      "reference_status": "awaiting_reference",
+      "yaml_path": "characters/brother_01/character.yaml"
+    },
+    {
+      "asset_type": "character",
+      "id": "brother_02",
+      "notes_path": "characters/brother_02/notes.md",
+      "path": "characters/brother_02",
+      "prompt_path": "characters/brother_02/prompt.md",
+      "reference_images": [
+        {
+          "category": "references",
+          "exists": false,
+          "name": "front.png",
+          "path": "characters/brother_02/references/front.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "back.png",
+          "path": "characters/brother_02/references/back.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "left.png",
+          "path": "characters/brother_02/references/left.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "right.png",
+          "path": "characters/brother_02/references/right.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "three_quarter.png",
+          "path": "characters/brother_02/references/three_quarter.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "full_body.png",
+          "path": "characters/brother_02/references/full_body.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "closeup.png",
+          "path": "characters/brother_02/references/closeup.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "neutral.png",
+          "path": "characters/brother_02/expressions/neutral.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "happy.png",
+          "path": "characters/brother_02/expressions/happy.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "sad.png",
+          "path": "characters/brother_02/expressions/sad.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "crying.png",
+          "path": "characters/brother_02/expressions/crying.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "angry.png",
+          "path": "characters/brother_02/expressions/angry.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "thinking.png",
+          "path": "characters/brother_02/expressions/thinking.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "worried.png",
+          "path": "characters/brother_02/expressions/worried.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "dua.png",
+          "path": "characters/brother_02/expressions/dua.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "smile.png",
+          "path": "characters/brother_02/expressions/smile.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "standing.png",
+          "path": "characters/brother_02/poses/standing.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "walking.png",
+          "path": "characters/brother_02/poses/walking.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "sitting.png",
+          "path": "characters/brother_02/poses/sitting.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "running.png",
+          "path": "characters/brother_02/poses/running.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "working.png",
+          "path": "characters/brother_02/poses/working.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "holding_child.png",
+          "path": "characters/brother_02/poses/holding_child.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "sewing.png",
+          "path": "characters/brother_02/poses/sewing.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "cooking.png",
+          "path": "characters/brother_02/poses/cooking.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "default.png",
+          "path": "characters/brother_02/wardrobe/default.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "dress_01.png",
+          "path": "characters/brother_02/wardrobe/dress_01.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "dress_02.png",
+          "path": "characters/brother_02/wardrobe/dress_02.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "winter.png",
+          "path": "characters/brother_02/wardrobe/winter.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "wedding.png",
+          "path": "characters/brother_02/wardrobe/wedding.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "sleep.png",
+          "path": "characters/brother_02/wardrobe/sleep.png"
+        }
+      ],
+      "reference_status": "awaiting_reference",
+      "yaml_path": "characters/brother_02/character.yaml"
+    },
+    {
+      "asset_type": "character",
+      "id": "brother_03",
+      "notes_path": "characters/brother_03/notes.md",
+      "path": "characters/brother_03",
+      "prompt_path": "characters/brother_03/prompt.md",
+      "reference_images": [
+        {
+          "category": "references",
+          "exists": false,
+          "name": "front.png",
+          "path": "characters/brother_03/references/front.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "back.png",
+          "path": "characters/brother_03/references/back.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "left.png",
+          "path": "characters/brother_03/references/left.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "right.png",
+          "path": "characters/brother_03/references/right.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "three_quarter.png",
+          "path": "characters/brother_03/references/three_quarter.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "full_body.png",
+          "path": "characters/brother_03/references/full_body.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "closeup.png",
+          "path": "characters/brother_03/references/closeup.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "neutral.png",
+          "path": "characters/brother_03/expressions/neutral.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "happy.png",
+          "path": "characters/brother_03/expressions/happy.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "sad.png",
+          "path": "characters/brother_03/expressions/sad.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "crying.png",
+          "path": "characters/brother_03/expressions/crying.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "angry.png",
+          "path": "characters/brother_03/expressions/angry.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "thinking.png",
+          "path": "characters/brother_03/expressions/thinking.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "worried.png",
+          "path": "characters/brother_03/expressions/worried.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "dua.png",
+          "path": "characters/brother_03/expressions/dua.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "smile.png",
+          "path": "characters/brother_03/expressions/smile.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "standing.png",
+          "path": "characters/brother_03/poses/standing.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "walking.png",
+          "path": "characters/brother_03/poses/walking.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "sitting.png",
+          "path": "characters/brother_03/poses/sitting.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "running.png",
+          "path": "characters/brother_03/poses/running.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "working.png",
+          "path": "characters/brother_03/poses/working.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "holding_child.png",
+          "path": "characters/brother_03/poses/holding_child.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "sewing.png",
+          "path": "characters/brother_03/poses/sewing.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "cooking.png",
+          "path": "characters/brother_03/poses/cooking.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "default.png",
+          "path": "characters/brother_03/wardrobe/default.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "dress_01.png",
+          "path": "characters/brother_03/wardrobe/dress_01.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "dress_02.png",
+          "path": "characters/brother_03/wardrobe/dress_02.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "winter.png",
+          "path": "characters/brother_03/wardrobe/winter.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "wedding.png",
+          "path": "characters/brother_03/wardrobe/wedding.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "sleep.png",
+          "path": "characters/brother_03/wardrobe/sleep.png"
+        }
+      ],
+      "reference_status": "awaiting_reference",
+      "yaml_path": "characters/brother_03/character.yaml"
+    },
+    {
+      "asset_type": "character",
+      "id": "daughter_01",
+      "notes_path": "characters/daughter_01/notes.md",
+      "path": "characters/daughter_01",
+      "prompt_path": "characters/daughter_01/prompt.md",
+      "reference_images": [
+        {
+          "category": "references",
+          "exists": false,
+          "name": "front.png",
+          "path": "characters/daughter_01/references/front.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "back.png",
+          "path": "characters/daughter_01/references/back.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "left.png",
+          "path": "characters/daughter_01/references/left.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "right.png",
+          "path": "characters/daughter_01/references/right.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "three_quarter.png",
+          "path": "characters/daughter_01/references/three_quarter.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "full_body.png",
+          "path": "characters/daughter_01/references/full_body.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "closeup.png",
+          "path": "characters/daughter_01/references/closeup.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "neutral.png",
+          "path": "characters/daughter_01/expressions/neutral.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "happy.png",
+          "path": "characters/daughter_01/expressions/happy.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "sad.png",
+          "path": "characters/daughter_01/expressions/sad.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "crying.png",
+          "path": "characters/daughter_01/expressions/crying.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "angry.png",
+          "path": "characters/daughter_01/expressions/angry.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "thinking.png",
+          "path": "characters/daughter_01/expressions/thinking.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "worried.png",
+          "path": "characters/daughter_01/expressions/worried.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "dua.png",
+          "path": "characters/daughter_01/expressions/dua.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "smile.png",
+          "path": "characters/daughter_01/expressions/smile.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "standing.png",
+          "path": "characters/daughter_01/poses/standing.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "walking.png",
+          "path": "characters/daughter_01/poses/walking.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "sitting.png",
+          "path": "characters/daughter_01/poses/sitting.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "running.png",
+          "path": "characters/daughter_01/poses/running.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "working.png",
+          "path": "characters/daughter_01/poses/working.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "holding_child.png",
+          "path": "characters/daughter_01/poses/holding_child.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "sewing.png",
+          "path": "characters/daughter_01/poses/sewing.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "cooking.png",
+          "path": "characters/daughter_01/poses/cooking.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "default.png",
+          "path": "characters/daughter_01/wardrobe/default.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "dress_01.png",
+          "path": "characters/daughter_01/wardrobe/dress_01.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "dress_02.png",
+          "path": "characters/daughter_01/wardrobe/dress_02.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "winter.png",
+          "path": "characters/daughter_01/wardrobe/winter.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "wedding.png",
+          "path": "characters/daughter_01/wardrobe/wedding.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "sleep.png",
+          "path": "characters/daughter_01/wardrobe/sleep.png"
+        }
+      ],
+      "reference_status": "awaiting_reference",
+      "yaml_path": "characters/daughter_01/character.yaml"
+    },
+    {
+      "asset_type": "character",
+      "id": "father",
+      "notes_path": "characters/father/notes.md",
+      "path": "characters/father",
+      "prompt_path": "characters/father/prompt.md",
+      "reference_images": [
+        {
+          "category": "references",
+          "exists": false,
+          "name": "front.png",
+          "path": "characters/father/references/front.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "back.png",
+          "path": "characters/father/references/back.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "left.png",
+          "path": "characters/father/references/left.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "right.png",
+          "path": "characters/father/references/right.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "three_quarter.png",
+          "path": "characters/father/references/three_quarter.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "full_body.png",
+          "path": "characters/father/references/full_body.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "closeup.png",
+          "path": "characters/father/references/closeup.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "neutral.png",
+          "path": "characters/father/expressions/neutral.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "happy.png",
+          "path": "characters/father/expressions/happy.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "sad.png",
+          "path": "characters/father/expressions/sad.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "crying.png",
+          "path": "characters/father/expressions/crying.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "angry.png",
+          "path": "characters/father/expressions/angry.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "thinking.png",
+          "path": "characters/father/expressions/thinking.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "worried.png",
+          "path": "characters/father/expressions/worried.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "dua.png",
+          "path": "characters/father/expressions/dua.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "smile.png",
+          "path": "characters/father/expressions/smile.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "standing.png",
+          "path": "characters/father/poses/standing.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "walking.png",
+          "path": "characters/father/poses/walking.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "sitting.png",
+          "path": "characters/father/poses/sitting.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "running.png",
+          "path": "characters/father/poses/running.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "working.png",
+          "path": "characters/father/poses/working.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "holding_child.png",
+          "path": "characters/father/poses/holding_child.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "sewing.png",
+          "path": "characters/father/poses/sewing.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "cooking.png",
+          "path": "characters/father/poses/cooking.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "default.png",
+          "path": "characters/father/wardrobe/default.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "dress_01.png",
+          "path": "characters/father/wardrobe/dress_01.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "dress_02.png",
+          "path": "characters/father/wardrobe/dress_02.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "winter.png",
+          "path": "characters/father/wardrobe/winter.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "wedding.png",
+          "path": "characters/father/wardrobe/wedding.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "sleep.png",
+          "path": "characters/father/wardrobe/sleep.png"
+        }
+      ],
+      "reference_status": "awaiting_reference",
+      "yaml_path": "characters/father/character.yaml"
+    },
+    {
+      "asset_type": "character",
+      "id": "guriya",
+      "notes_path": "characters/guriya/notes.md",
+      "path": "characters/guriya",
+      "prompt_path": "characters/guriya/prompt.md",
+      "reference_images": [
+        {
+          "category": "references",
+          "exists": false,
+          "name": "front.png",
+          "path": "characters/guriya/references/front.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "back.png",
+          "path": "characters/guriya/references/back.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "left.png",
+          "path": "characters/guriya/references/left.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "right.png",
+          "path": "characters/guriya/references/right.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "three_quarter.png",
+          "path": "characters/guriya/references/three_quarter.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "full_body.png",
+          "path": "characters/guriya/references/full_body.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "closeup.png",
+          "path": "characters/guriya/references/closeup.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "neutral.png",
+          "path": "characters/guriya/expressions/neutral.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "happy.png",
+          "path": "characters/guriya/expressions/happy.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "sad.png",
+          "path": "characters/guriya/expressions/sad.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "crying.png",
+          "path": "characters/guriya/expressions/crying.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "angry.png",
+          "path": "characters/guriya/expressions/angry.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "thinking.png",
+          "path": "characters/guriya/expressions/thinking.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "worried.png",
+          "path": "characters/guriya/expressions/worried.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "dua.png",
+          "path": "characters/guriya/expressions/dua.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "smile.png",
+          "path": "characters/guriya/expressions/smile.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "standing.png",
+          "path": "characters/guriya/poses/standing.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "walking.png",
+          "path": "characters/guriya/poses/walking.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "sitting.png",
+          "path": "characters/guriya/poses/sitting.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "running.png",
+          "path": "characters/guriya/poses/running.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "working.png",
+          "path": "characters/guriya/poses/working.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "holding_child.png",
+          "path": "characters/guriya/poses/holding_child.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "sewing.png",
+          "path": "characters/guriya/poses/sewing.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "cooking.png",
+          "path": "characters/guriya/poses/cooking.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "default.png",
+          "path": "characters/guriya/wardrobe/default.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "dress_01.png",
+          "path": "characters/guriya/wardrobe/dress_01.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "dress_02.png",
+          "path": "characters/guriya/wardrobe/dress_02.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "winter.png",
+          "path": "characters/guriya/wardrobe/winter.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "wedding.png",
+          "path": "characters/guriya/wardrobe/wedding.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "sleep.png",
+          "path": "characters/guriya/wardrobe/sleep.png"
+        }
+      ],
+      "reference_status": "awaiting_reference",
+      "yaml_path": "characters/guriya/character.yaml"
+    },
+    {
+      "asset_type": "character",
+      "id": "husband",
+      "notes_path": "characters/husband/notes.md",
+      "path": "characters/husband",
+      "prompt_path": "characters/husband/prompt.md",
+      "reference_images": [
+        {
+          "category": "references",
+          "exists": false,
+          "name": "front.png",
+          "path": "characters/husband/references/front.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "back.png",
+          "path": "characters/husband/references/back.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "left.png",
+          "path": "characters/husband/references/left.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "right.png",
+          "path": "characters/husband/references/right.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "three_quarter.png",
+          "path": "characters/husband/references/three_quarter.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "full_body.png",
+          "path": "characters/husband/references/full_body.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "closeup.png",
+          "path": "characters/husband/references/closeup.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "neutral.png",
+          "path": "characters/husband/expressions/neutral.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "happy.png",
+          "path": "characters/husband/expressions/happy.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "sad.png",
+          "path": "characters/husband/expressions/sad.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "crying.png",
+          "path": "characters/husband/expressions/crying.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "angry.png",
+          "path": "characters/husband/expressions/angry.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "thinking.png",
+          "path": "characters/husband/expressions/thinking.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "worried.png",
+          "path": "characters/husband/expressions/worried.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "dua.png",
+          "path": "characters/husband/expressions/dua.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "smile.png",
+          "path": "characters/husband/expressions/smile.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "standing.png",
+          "path": "characters/husband/poses/standing.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "walking.png",
+          "path": "characters/husband/poses/walking.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "sitting.png",
+          "path": "characters/husband/poses/sitting.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "running.png",
+          "path": "characters/husband/poses/running.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "working.png",
+          "path": "characters/husband/poses/working.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "holding_child.png",
+          "path": "characters/husband/poses/holding_child.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "sewing.png",
+          "path": "characters/husband/poses/sewing.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "cooking.png",
+          "path": "characters/husband/poses/cooking.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "default.png",
+          "path": "characters/husband/wardrobe/default.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "dress_01.png",
+          "path": "characters/husband/wardrobe/dress_01.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "dress_02.png",
+          "path": "characters/husband/wardrobe/dress_02.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "winter.png",
+          "path": "characters/husband/wardrobe/winter.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "wedding.png",
+          "path": "characters/husband/wardrobe/wedding.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "sleep.png",
+          "path": "characters/husband/wardrobe/sleep.png"
+        }
+      ],
+      "reference_status": "awaiting_reference",
+      "yaml_path": "characters/husband/character.yaml"
+    },
+    {
+      "asset_type": "character",
+      "id": "mother",
+      "notes_path": "characters/mother/notes.md",
+      "path": "characters/mother",
+      "prompt_path": "characters/mother/prompt.md",
+      "reference_images": [
+        {
+          "category": "references",
+          "exists": false,
+          "name": "front.png",
+          "path": "characters/mother/references/front.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "back.png",
+          "path": "characters/mother/references/back.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "left.png",
+          "path": "characters/mother/references/left.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "right.png",
+          "path": "characters/mother/references/right.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "three_quarter.png",
+          "path": "characters/mother/references/three_quarter.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "full_body.png",
+          "path": "characters/mother/references/full_body.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "closeup.png",
+          "path": "characters/mother/references/closeup.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "neutral.png",
+          "path": "characters/mother/expressions/neutral.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "happy.png",
+          "path": "characters/mother/expressions/happy.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "sad.png",
+          "path": "characters/mother/expressions/sad.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "crying.png",
+          "path": "characters/mother/expressions/crying.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "angry.png",
+          "path": "characters/mother/expressions/angry.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "thinking.png",
+          "path": "characters/mother/expressions/thinking.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "worried.png",
+          "path": "characters/mother/expressions/worried.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "dua.png",
+          "path": "characters/mother/expressions/dua.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "smile.png",
+          "path": "characters/mother/expressions/smile.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "standing.png",
+          "path": "characters/mother/poses/standing.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "walking.png",
+          "path": "characters/mother/poses/walking.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "sitting.png",
+          "path": "characters/mother/poses/sitting.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "running.png",
+          "path": "characters/mother/poses/running.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "working.png",
+          "path": "characters/mother/poses/working.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "holding_child.png",
+          "path": "characters/mother/poses/holding_child.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "sewing.png",
+          "path": "characters/mother/poses/sewing.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "cooking.png",
+          "path": "characters/mother/poses/cooking.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "default.png",
+          "path": "characters/mother/wardrobe/default.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "dress_01.png",
+          "path": "characters/mother/wardrobe/dress_01.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "dress_02.png",
+          "path": "characters/mother/wardrobe/dress_02.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "winter.png",
+          "path": "characters/mother/wardrobe/winter.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "wedding.png",
+          "path": "characters/mother/wardrobe/wedding.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "sleep.png",
+          "path": "characters/mother/wardrobe/sleep.png"
+        }
+      ],
+      "reference_status": "awaiting_reference",
+      "yaml_path": "characters/mother/character.yaml"
+    },
+    {
+      "asset_type": "character",
+      "id": "sister_01",
+      "notes_path": "characters/sister_01/notes.md",
+      "path": "characters/sister_01",
+      "prompt_path": "characters/sister_01/prompt.md",
+      "reference_images": [
+        {
+          "category": "references",
+          "exists": false,
+          "name": "front.png",
+          "path": "characters/sister_01/references/front.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "back.png",
+          "path": "characters/sister_01/references/back.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "left.png",
+          "path": "characters/sister_01/references/left.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "right.png",
+          "path": "characters/sister_01/references/right.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "three_quarter.png",
+          "path": "characters/sister_01/references/three_quarter.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "full_body.png",
+          "path": "characters/sister_01/references/full_body.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "closeup.png",
+          "path": "characters/sister_01/references/closeup.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "neutral.png",
+          "path": "characters/sister_01/expressions/neutral.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "happy.png",
+          "path": "characters/sister_01/expressions/happy.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "sad.png",
+          "path": "characters/sister_01/expressions/sad.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "crying.png",
+          "path": "characters/sister_01/expressions/crying.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "angry.png",
+          "path": "characters/sister_01/expressions/angry.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "thinking.png",
+          "path": "characters/sister_01/expressions/thinking.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "worried.png",
+          "path": "characters/sister_01/expressions/worried.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "dua.png",
+          "path": "characters/sister_01/expressions/dua.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "smile.png",
+          "path": "characters/sister_01/expressions/smile.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "standing.png",
+          "path": "characters/sister_01/poses/standing.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "walking.png",
+          "path": "characters/sister_01/poses/walking.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "sitting.png",
+          "path": "characters/sister_01/poses/sitting.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "running.png",
+          "path": "characters/sister_01/poses/running.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "working.png",
+          "path": "characters/sister_01/poses/working.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "holding_child.png",
+          "path": "characters/sister_01/poses/holding_child.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "sewing.png",
+          "path": "characters/sister_01/poses/sewing.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "cooking.png",
+          "path": "characters/sister_01/poses/cooking.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "default.png",
+          "path": "characters/sister_01/wardrobe/default.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "dress_01.png",
+          "path": "characters/sister_01/wardrobe/dress_01.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "dress_02.png",
+          "path": "characters/sister_01/wardrobe/dress_02.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "winter.png",
+          "path": "characters/sister_01/wardrobe/winter.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "wedding.png",
+          "path": "characters/sister_01/wardrobe/wedding.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "sleep.png",
+          "path": "characters/sister_01/wardrobe/sleep.png"
+        }
+      ],
+      "reference_status": "awaiting_reference",
+      "yaml_path": "characters/sister_01/character.yaml"
+    },
+    {
+      "asset_type": "character",
+      "id": "sister_02",
+      "notes_path": "characters/sister_02/notes.md",
+      "path": "characters/sister_02",
+      "prompt_path": "characters/sister_02/prompt.md",
+      "reference_images": [
+        {
+          "category": "references",
+          "exists": false,
+          "name": "front.png",
+          "path": "characters/sister_02/references/front.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "back.png",
+          "path": "characters/sister_02/references/back.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "left.png",
+          "path": "characters/sister_02/references/left.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "right.png",
+          "path": "characters/sister_02/references/right.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "three_quarter.png",
+          "path": "characters/sister_02/references/three_quarter.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "full_body.png",
+          "path": "characters/sister_02/references/full_body.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "closeup.png",
+          "path": "characters/sister_02/references/closeup.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "neutral.png",
+          "path": "characters/sister_02/expressions/neutral.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "happy.png",
+          "path": "characters/sister_02/expressions/happy.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "sad.png",
+          "path": "characters/sister_02/expressions/sad.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "crying.png",
+          "path": "characters/sister_02/expressions/crying.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "angry.png",
+          "path": "characters/sister_02/expressions/angry.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "thinking.png",
+          "path": "characters/sister_02/expressions/thinking.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "worried.png",
+          "path": "characters/sister_02/expressions/worried.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "dua.png",
+          "path": "characters/sister_02/expressions/dua.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "smile.png",
+          "path": "characters/sister_02/expressions/smile.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "standing.png",
+          "path": "characters/sister_02/poses/standing.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "walking.png",
+          "path": "characters/sister_02/poses/walking.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "sitting.png",
+          "path": "characters/sister_02/poses/sitting.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "running.png",
+          "path": "characters/sister_02/poses/running.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "working.png",
+          "path": "characters/sister_02/poses/working.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "holding_child.png",
+          "path": "characters/sister_02/poses/holding_child.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "sewing.png",
+          "path": "characters/sister_02/poses/sewing.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "cooking.png",
+          "path": "characters/sister_02/poses/cooking.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "default.png",
+          "path": "characters/sister_02/wardrobe/default.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "dress_01.png",
+          "path": "characters/sister_02/wardrobe/dress_01.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "dress_02.png",
+          "path": "characters/sister_02/wardrobe/dress_02.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "winter.png",
+          "path": "characters/sister_02/wardrobe/winter.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "wedding.png",
+          "path": "characters/sister_02/wardrobe/wedding.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "sleep.png",
+          "path": "characters/sister_02/wardrobe/sleep.png"
+        }
+      ],
+      "reference_status": "awaiting_reference",
+      "yaml_path": "characters/sister_02/character.yaml"
+    },
+    {
+      "asset_type": "character",
+      "id": "sister_03",
+      "notes_path": "characters/sister_03/notes.md",
+      "path": "characters/sister_03",
+      "prompt_path": "characters/sister_03/prompt.md",
+      "reference_images": [
+        {
+          "category": "references",
+          "exists": false,
+          "name": "front.png",
+          "path": "characters/sister_03/references/front.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "back.png",
+          "path": "characters/sister_03/references/back.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "left.png",
+          "path": "characters/sister_03/references/left.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "right.png",
+          "path": "characters/sister_03/references/right.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "three_quarter.png",
+          "path": "characters/sister_03/references/three_quarter.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "full_body.png",
+          "path": "characters/sister_03/references/full_body.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "closeup.png",
+          "path": "characters/sister_03/references/closeup.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "neutral.png",
+          "path": "characters/sister_03/expressions/neutral.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "happy.png",
+          "path": "characters/sister_03/expressions/happy.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "sad.png",
+          "path": "characters/sister_03/expressions/sad.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "crying.png",
+          "path": "characters/sister_03/expressions/crying.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "angry.png",
+          "path": "characters/sister_03/expressions/angry.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "thinking.png",
+          "path": "characters/sister_03/expressions/thinking.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "worried.png",
+          "path": "characters/sister_03/expressions/worried.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "dua.png",
+          "path": "characters/sister_03/expressions/dua.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "smile.png",
+          "path": "characters/sister_03/expressions/smile.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "standing.png",
+          "path": "characters/sister_03/poses/standing.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "walking.png",
+          "path": "characters/sister_03/poses/walking.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "sitting.png",
+          "path": "characters/sister_03/poses/sitting.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "running.png",
+          "path": "characters/sister_03/poses/running.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "working.png",
+          "path": "characters/sister_03/poses/working.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "holding_child.png",
+          "path": "characters/sister_03/poses/holding_child.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "sewing.png",
+          "path": "characters/sister_03/poses/sewing.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "cooking.png",
+          "path": "characters/sister_03/poses/cooking.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "default.png",
+          "path": "characters/sister_03/wardrobe/default.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "dress_01.png",
+          "path": "characters/sister_03/wardrobe/dress_01.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "dress_02.png",
+          "path": "characters/sister_03/wardrobe/dress_02.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "winter.png",
+          "path": "characters/sister_03/wardrobe/winter.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "wedding.png",
+          "path": "characters/sister_03/wardrobe/wedding.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "sleep.png",
+          "path": "characters/sister_03/wardrobe/sleep.png"
+        }
+      ],
+      "reference_status": "awaiting_reference",
+      "yaml_path": "characters/sister_03/character.yaml"
+    },
+    {
+      "asset_type": "character",
+      "id": "son_01",
+      "notes_path": "characters/son_01/notes.md",
+      "path": "characters/son_01",
+      "prompt_path": "characters/son_01/prompt.md",
+      "reference_images": [
+        {
+          "category": "references",
+          "exists": false,
+          "name": "front.png",
+          "path": "characters/son_01/references/front.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "back.png",
+          "path": "characters/son_01/references/back.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "left.png",
+          "path": "characters/son_01/references/left.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "right.png",
+          "path": "characters/son_01/references/right.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "three_quarter.png",
+          "path": "characters/son_01/references/three_quarter.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "full_body.png",
+          "path": "characters/son_01/references/full_body.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "closeup.png",
+          "path": "characters/son_01/references/closeup.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "neutral.png",
+          "path": "characters/son_01/expressions/neutral.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "happy.png",
+          "path": "characters/son_01/expressions/happy.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "sad.png",
+          "path": "characters/son_01/expressions/sad.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "crying.png",
+          "path": "characters/son_01/expressions/crying.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "angry.png",
+          "path": "characters/son_01/expressions/angry.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "thinking.png",
+          "path": "characters/son_01/expressions/thinking.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "worried.png",
+          "path": "characters/son_01/expressions/worried.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "dua.png",
+          "path": "characters/son_01/expressions/dua.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "smile.png",
+          "path": "characters/son_01/expressions/smile.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "standing.png",
+          "path": "characters/son_01/poses/standing.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "walking.png",
+          "path": "characters/son_01/poses/walking.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "sitting.png",
+          "path": "characters/son_01/poses/sitting.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "running.png",
+          "path": "characters/son_01/poses/running.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "working.png",
+          "path": "characters/son_01/poses/working.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "holding_child.png",
+          "path": "characters/son_01/poses/holding_child.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "sewing.png",
+          "path": "characters/son_01/poses/sewing.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "cooking.png",
+          "path": "characters/son_01/poses/cooking.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "default.png",
+          "path": "characters/son_01/wardrobe/default.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "dress_01.png",
+          "path": "characters/son_01/wardrobe/dress_01.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "dress_02.png",
+          "path": "characters/son_01/wardrobe/dress_02.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "winter.png",
+          "path": "characters/son_01/wardrobe/winter.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "wedding.png",
+          "path": "characters/son_01/wardrobe/wedding.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "sleep.png",
+          "path": "characters/son_01/wardrobe/sleep.png"
+        }
+      ],
+      "reference_status": "awaiting_reference",
+      "yaml_path": "characters/son_01/character.yaml"
+    },
+    {
+      "asset_type": "character",
+      "id": "son_02",
+      "notes_path": "characters/son_02/notes.md",
+      "path": "characters/son_02",
+      "prompt_path": "characters/son_02/prompt.md",
+      "reference_images": [
+        {
+          "category": "references",
+          "exists": false,
+          "name": "front.png",
+          "path": "characters/son_02/references/front.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "back.png",
+          "path": "characters/son_02/references/back.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "left.png",
+          "path": "characters/son_02/references/left.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "right.png",
+          "path": "characters/son_02/references/right.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "three_quarter.png",
+          "path": "characters/son_02/references/three_quarter.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "full_body.png",
+          "path": "characters/son_02/references/full_body.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "closeup.png",
+          "path": "characters/son_02/references/closeup.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "neutral.png",
+          "path": "characters/son_02/expressions/neutral.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "happy.png",
+          "path": "characters/son_02/expressions/happy.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "sad.png",
+          "path": "characters/son_02/expressions/sad.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "crying.png",
+          "path": "characters/son_02/expressions/crying.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "angry.png",
+          "path": "characters/son_02/expressions/angry.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "thinking.png",
+          "path": "characters/son_02/expressions/thinking.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "worried.png",
+          "path": "characters/son_02/expressions/worried.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "dua.png",
+          "path": "characters/son_02/expressions/dua.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "smile.png",
+          "path": "characters/son_02/expressions/smile.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "standing.png",
+          "path": "characters/son_02/poses/standing.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "walking.png",
+          "path": "characters/son_02/poses/walking.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "sitting.png",
+          "path": "characters/son_02/poses/sitting.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "running.png",
+          "path": "characters/son_02/poses/running.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "working.png",
+          "path": "characters/son_02/poses/working.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "holding_child.png",
+          "path": "characters/son_02/poses/holding_child.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "sewing.png",
+          "path": "characters/son_02/poses/sewing.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "cooking.png",
+          "path": "characters/son_02/poses/cooking.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "default.png",
+          "path": "characters/son_02/wardrobe/default.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "dress_01.png",
+          "path": "characters/son_02/wardrobe/dress_01.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "dress_02.png",
+          "path": "characters/son_02/wardrobe/dress_02.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "winter.png",
+          "path": "characters/son_02/wardrobe/winter.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "wedding.png",
+          "path": "characters/son_02/wardrobe/wedding.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "sleep.png",
+          "path": "characters/son_02/wardrobe/sleep.png"
+        }
+      ],
+      "reference_status": "awaiting_reference",
+      "yaml_path": "characters/son_02/character.yaml"
+    },
+    {
+      "asset_type": "character",
+      "id": "son_03",
+      "notes_path": "characters/son_03/notes.md",
+      "path": "characters/son_03",
+      "prompt_path": "characters/son_03/prompt.md",
+      "reference_images": [
+        {
+          "category": "references",
+          "exists": false,
+          "name": "front.png",
+          "path": "characters/son_03/references/front.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "back.png",
+          "path": "characters/son_03/references/back.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "left.png",
+          "path": "characters/son_03/references/left.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "right.png",
+          "path": "characters/son_03/references/right.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "three_quarter.png",
+          "path": "characters/son_03/references/three_quarter.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "full_body.png",
+          "path": "characters/son_03/references/full_body.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "closeup.png",
+          "path": "characters/son_03/references/closeup.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "neutral.png",
+          "path": "characters/son_03/expressions/neutral.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "happy.png",
+          "path": "characters/son_03/expressions/happy.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "sad.png",
+          "path": "characters/son_03/expressions/sad.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "crying.png",
+          "path": "characters/son_03/expressions/crying.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "angry.png",
+          "path": "characters/son_03/expressions/angry.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "thinking.png",
+          "path": "characters/son_03/expressions/thinking.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "worried.png",
+          "path": "characters/son_03/expressions/worried.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "dua.png",
+          "path": "characters/son_03/expressions/dua.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "smile.png",
+          "path": "characters/son_03/expressions/smile.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "standing.png",
+          "path": "characters/son_03/poses/standing.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "walking.png",
+          "path": "characters/son_03/poses/walking.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "sitting.png",
+          "path": "characters/son_03/poses/sitting.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "running.png",
+          "path": "characters/son_03/poses/running.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "working.png",
+          "path": "characters/son_03/poses/working.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "holding_child.png",
+          "path": "characters/son_03/poses/holding_child.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "sewing.png",
+          "path": "characters/son_03/poses/sewing.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "cooking.png",
+          "path": "characters/son_03/poses/cooking.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "default.png",
+          "path": "characters/son_03/wardrobe/default.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "dress_01.png",
+          "path": "characters/son_03/wardrobe/dress_01.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "dress_02.png",
+          "path": "characters/son_03/wardrobe/dress_02.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "winter.png",
+          "path": "characters/son_03/wardrobe/winter.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "wedding.png",
+          "path": "characters/son_03/wardrobe/wedding.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "sleep.png",
+          "path": "characters/son_03/wardrobe/sleep.png"
+        }
+      ],
+      "reference_status": "awaiting_reference",
+      "yaml_path": "characters/son_03/character.yaml"
+    },
+    {
+      "asset_type": "character",
+      "id": "storyteller",
+      "notes_path": "characters/storyteller/notes.md",
+      "path": "characters/storyteller",
+      "prompt_path": "characters/storyteller/prompt.md",
+      "reference_images": [
+        {
+          "category": "references",
+          "exists": false,
+          "name": "front.png",
+          "path": "characters/storyteller/references/front.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "back.png",
+          "path": "characters/storyteller/references/back.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "left.png",
+          "path": "characters/storyteller/references/left.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "right.png",
+          "path": "characters/storyteller/references/right.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "three_quarter.png",
+          "path": "characters/storyteller/references/three_quarter.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "full_body.png",
+          "path": "characters/storyteller/references/full_body.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "closeup.png",
+          "path": "characters/storyteller/references/closeup.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "neutral.png",
+          "path": "characters/storyteller/expressions/neutral.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "happy.png",
+          "path": "characters/storyteller/expressions/happy.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "sad.png",
+          "path": "characters/storyteller/expressions/sad.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "crying.png",
+          "path": "characters/storyteller/expressions/crying.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "angry.png",
+          "path": "characters/storyteller/expressions/angry.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "thinking.png",
+          "path": "characters/storyteller/expressions/thinking.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "worried.png",
+          "path": "characters/storyteller/expressions/worried.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "dua.png",
+          "path": "characters/storyteller/expressions/dua.png"
+        },
+        {
+          "category": "expressions",
+          "exists": false,
+          "name": "smile.png",
+          "path": "characters/storyteller/expressions/smile.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "standing.png",
+          "path": "characters/storyteller/poses/standing.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "walking.png",
+          "path": "characters/storyteller/poses/walking.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "sitting.png",
+          "path": "characters/storyteller/poses/sitting.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "running.png",
+          "path": "characters/storyteller/poses/running.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "working.png",
+          "path": "characters/storyteller/poses/working.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "holding_child.png",
+          "path": "characters/storyteller/poses/holding_child.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "sewing.png",
+          "path": "characters/storyteller/poses/sewing.png"
+        },
+        {
+          "category": "poses",
+          "exists": false,
+          "name": "cooking.png",
+          "path": "characters/storyteller/poses/cooking.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "default.png",
+          "path": "characters/storyteller/wardrobe/default.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "dress_01.png",
+          "path": "characters/storyteller/wardrobe/dress_01.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "dress_02.png",
+          "path": "characters/storyteller/wardrobe/dress_02.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "winter.png",
+          "path": "characters/storyteller/wardrobe/winter.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "wedding.png",
+          "path": "characters/storyteller/wardrobe/wedding.png"
+        },
+        {
+          "category": "wardrobe",
+          "exists": false,
+          "name": "sleep.png",
+          "path": "characters/storyteller/wardrobe/sleep.png"
+        }
+      ],
+      "reference_status": "awaiting_reference",
+      "yaml_path": "characters/storyteller/character.yaml"
+    }
+  ],
+  "environments": [
+    {
+      "asset_type": "environment",
+      "id": "bedroom",
+      "notes_path": null,
+      "path": "environment/bedroom",
+      "prompt_path": "environment/bedroom/prompt.md",
+      "reference_images": [
+        {
+          "category": "references",
+          "exists": false,
+          "name": "front_day.png",
+          "path": "environment/bedroom/references/front_day.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "front_evening.png",
+          "path": "environment/bedroom/references/front_evening.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "front_night.png",
+          "path": "environment/bedroom/references/front_night.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "back_day.png",
+          "path": "environment/bedroom/references/back_day.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "back_evening.png",
+          "path": "environment/bedroom/references/back_evening.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "back_night.png",
+          "path": "environment/bedroom/references/back_night.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "front.png",
+          "path": "environment/bedroom/angles/front.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "back.png",
+          "path": "environment/bedroom/angles/back.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "left.png",
+          "path": "environment/bedroom/angles/left.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "right.png",
+          "path": "environment/bedroom/angles/right.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "top.png",
+          "path": "environment/bedroom/angles/top.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "drone.png",
+          "path": "environment/bedroom/angles/drone.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "inside_to_outside.png",
+          "path": "environment/bedroom/angles/inside_to_outside.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "outside_to_inside.png",
+          "path": "environment/bedroom/angles/outside_to_inside.png"
+        },
+        {
+          "category": "lighting",
+          "exists": false,
+          "name": "morning.png",
+          "path": "environment/bedroom/lighting/morning.png"
+        },
+        {
+          "category": "lighting",
+          "exists": false,
+          "name": "afternoon.png",
+          "path": "environment/bedroom/lighting/afternoon.png"
+        },
+        {
+          "category": "lighting",
+          "exists": false,
+          "name": "golden_hour.png",
+          "path": "environment/bedroom/lighting/golden_hour.png"
+        },
+        {
+          "category": "lighting",
+          "exists": false,
+          "name": "evening.png",
+          "path": "environment/bedroom/lighting/evening.png"
+        },
+        {
+          "category": "lighting",
+          "exists": false,
+          "name": "night.png",
+          "path": "environment/bedroom/lighting/night.png"
+        },
+        {
+          "category": "lighting",
+          "exists": false,
+          "name": "rain.png",
+          "path": "environment/bedroom/lighting/rain.png"
+        }
+      ],
+      "reference_status": "awaiting_reference",
+      "yaml_path": "environment/bedroom/environment.yaml"
+    },
+    {
+      "asset_type": "environment",
+      "id": "courtyard",
+      "notes_path": null,
+      "path": "environment/courtyard",
+      "prompt_path": "environment/courtyard/prompt.md",
+      "reference_images": [
+        {
+          "category": "references",
+          "exists": false,
+          "name": "front_day.png",
+          "path": "environment/courtyard/references/front_day.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "front_evening.png",
+          "path": "environment/courtyard/references/front_evening.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "front_night.png",
+          "path": "environment/courtyard/references/front_night.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "back_day.png",
+          "path": "environment/courtyard/references/back_day.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "back_evening.png",
+          "path": "environment/courtyard/references/back_evening.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "back_night.png",
+          "path": "environment/courtyard/references/back_night.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "front.png",
+          "path": "environment/courtyard/angles/front.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "back.png",
+          "path": "environment/courtyard/angles/back.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "left.png",
+          "path": "environment/courtyard/angles/left.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "right.png",
+          "path": "environment/courtyard/angles/right.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "top.png",
+          "path": "environment/courtyard/angles/top.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "drone.png",
+          "path": "environment/courtyard/angles/drone.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "inside_to_outside.png",
+          "path": "environment/courtyard/angles/inside_to_outside.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "outside_to_inside.png",
+          "path": "environment/courtyard/angles/outside_to_inside.png"
+        },
+        {
+          "category": "lighting",
+          "exists": false,
+          "name": "morning.png",
+          "path": "environment/courtyard/lighting/morning.png"
+        },
+        {
+          "category": "lighting",
+          "exists": false,
+          "name": "afternoon.png",
+          "path": "environment/courtyard/lighting/afternoon.png"
+        },
+        {
+          "category": "lighting",
+          "exists": false,
+          "name": "golden_hour.png",
+          "path": "environment/courtyard/lighting/golden_hour.png"
+        },
+        {
+          "category": "lighting",
+          "exists": false,
+          "name": "evening.png",
+          "path": "environment/courtyard/lighting/evening.png"
+        },
+        {
+          "category": "lighting",
+          "exists": false,
+          "name": "night.png",
+          "path": "environment/courtyard/lighting/night.png"
+        },
+        {
+          "category": "lighting",
+          "exists": false,
+          "name": "rain.png",
+          "path": "environment/courtyard/lighting/rain.png"
+        }
+      ],
+      "reference_status": "awaiting_reference",
+      "yaml_path": "environment/courtyard/environment.yaml"
+    },
+    {
+      "asset_type": "environment",
+      "id": "house",
+      "notes_path": null,
+      "path": "environment/house",
+      "prompt_path": "environment/house/prompt.md",
+      "reference_images": [
+        {
+          "category": "references",
+          "exists": false,
+          "name": "front_day.png",
+          "path": "environment/house/references/front_day.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "front_evening.png",
+          "path": "environment/house/references/front_evening.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "front_night.png",
+          "path": "environment/house/references/front_night.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "back_day.png",
+          "path": "environment/house/references/back_day.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "back_evening.png",
+          "path": "environment/house/references/back_evening.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "back_night.png",
+          "path": "environment/house/references/back_night.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "front.png",
+          "path": "environment/house/angles/front.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "back.png",
+          "path": "environment/house/angles/back.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "left.png",
+          "path": "environment/house/angles/left.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "right.png",
+          "path": "environment/house/angles/right.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "top.png",
+          "path": "environment/house/angles/top.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "drone.png",
+          "path": "environment/house/angles/drone.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "inside_to_outside.png",
+          "path": "environment/house/angles/inside_to_outside.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "outside_to_inside.png",
+          "path": "environment/house/angles/outside_to_inside.png"
+        },
+        {
+          "category": "lighting",
+          "exists": false,
+          "name": "morning.png",
+          "path": "environment/house/lighting/morning.png"
+        },
+        {
+          "category": "lighting",
+          "exists": false,
+          "name": "afternoon.png",
+          "path": "environment/house/lighting/afternoon.png"
+        },
+        {
+          "category": "lighting",
+          "exists": false,
+          "name": "golden_hour.png",
+          "path": "environment/house/lighting/golden_hour.png"
+        },
+        {
+          "category": "lighting",
+          "exists": false,
+          "name": "evening.png",
+          "path": "environment/house/lighting/evening.png"
+        },
+        {
+          "category": "lighting",
+          "exists": false,
+          "name": "night.png",
+          "path": "environment/house/lighting/night.png"
+        },
+        {
+          "category": "lighting",
+          "exists": false,
+          "name": "rain.png",
+          "path": "environment/house/lighting/rain.png"
+        }
+      ],
+      "reference_status": "awaiting_reference",
+      "yaml_path": "environment/house/environment.yaml"
+    },
+    {
+      "asset_type": "environment",
+      "id": "kitchen",
+      "notes_path": null,
+      "path": "environment/kitchen",
+      "prompt_path": "environment/kitchen/prompt.md",
+      "reference_images": [
+        {
+          "category": "references",
+          "exists": false,
+          "name": "front_day.png",
+          "path": "environment/kitchen/references/front_day.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "front_evening.png",
+          "path": "environment/kitchen/references/front_evening.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "front_night.png",
+          "path": "environment/kitchen/references/front_night.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "back_day.png",
+          "path": "environment/kitchen/references/back_day.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "back_evening.png",
+          "path": "environment/kitchen/references/back_evening.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "back_night.png",
+          "path": "environment/kitchen/references/back_night.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "front.png",
+          "path": "environment/kitchen/angles/front.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "back.png",
+          "path": "environment/kitchen/angles/back.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "left.png",
+          "path": "environment/kitchen/angles/left.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "right.png",
+          "path": "environment/kitchen/angles/right.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "top.png",
+          "path": "environment/kitchen/angles/top.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "drone.png",
+          "path": "environment/kitchen/angles/drone.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "inside_to_outside.png",
+          "path": "environment/kitchen/angles/inside_to_outside.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "outside_to_inside.png",
+          "path": "environment/kitchen/angles/outside_to_inside.png"
+        },
+        {
+          "category": "lighting",
+          "exists": false,
+          "name": "morning.png",
+          "path": "environment/kitchen/lighting/morning.png"
+        },
+        {
+          "category": "lighting",
+          "exists": false,
+          "name": "afternoon.png",
+          "path": "environment/kitchen/lighting/afternoon.png"
+        },
+        {
+          "category": "lighting",
+          "exists": false,
+          "name": "golden_hour.png",
+          "path": "environment/kitchen/lighting/golden_hour.png"
+        },
+        {
+          "category": "lighting",
+          "exists": false,
+          "name": "evening.png",
+          "path": "environment/kitchen/lighting/evening.png"
+        },
+        {
+          "category": "lighting",
+          "exists": false,
+          "name": "night.png",
+          "path": "environment/kitchen/lighting/night.png"
+        },
+        {
+          "category": "lighting",
+          "exists": false,
+          "name": "rain.png",
+          "path": "environment/kitchen/lighting/rain.png"
+        }
+      ],
+      "reference_status": "awaiting_reference",
+      "yaml_path": "environment/kitchen/environment.yaml"
+    },
+    {
+      "asset_type": "environment",
+      "id": "market",
+      "notes_path": null,
+      "path": "environment/market",
+      "prompt_path": "environment/market/prompt.md",
+      "reference_images": [
+        {
+          "category": "references",
+          "exists": false,
+          "name": "front_day.png",
+          "path": "environment/market/references/front_day.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "front_evening.png",
+          "path": "environment/market/references/front_evening.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "front_night.png",
+          "path": "environment/market/references/front_night.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "back_day.png",
+          "path": "environment/market/references/back_day.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "back_evening.png",
+          "path": "environment/market/references/back_evening.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "back_night.png",
+          "path": "environment/market/references/back_night.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "front.png",
+          "path": "environment/market/angles/front.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "back.png",
+          "path": "environment/market/angles/back.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "left.png",
+          "path": "environment/market/angles/left.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "right.png",
+          "path": "environment/market/angles/right.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "top.png",
+          "path": "environment/market/angles/top.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "drone.png",
+          "path": "environment/market/angles/drone.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "inside_to_outside.png",
+          "path": "environment/market/angles/inside_to_outside.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "outside_to_inside.png",
+          "path": "environment/market/angles/outside_to_inside.png"
+        },
+        {
+          "category": "lighting",
+          "exists": false,
+          "name": "morning.png",
+          "path": "environment/market/lighting/morning.png"
+        },
+        {
+          "category": "lighting",
+          "exists": false,
+          "name": "afternoon.png",
+          "path": "environment/market/lighting/afternoon.png"
+        },
+        {
+          "category": "lighting",
+          "exists": false,
+          "name": "golden_hour.png",
+          "path": "environment/market/lighting/golden_hour.png"
+        },
+        {
+          "category": "lighting",
+          "exists": false,
+          "name": "evening.png",
+          "path": "environment/market/lighting/evening.png"
+        },
+        {
+          "category": "lighting",
+          "exists": false,
+          "name": "night.png",
+          "path": "environment/market/lighting/night.png"
+        },
+        {
+          "category": "lighting",
+          "exists": false,
+          "name": "rain.png",
+          "path": "environment/market/lighting/rain.png"
+        }
+      ],
+      "reference_status": "awaiting_reference",
+      "yaml_path": "environment/market/environment.yaml"
+    },
+    {
+      "asset_type": "environment",
+      "id": "mosque",
+      "notes_path": null,
+      "path": "environment/mosque",
+      "prompt_path": "environment/mosque/prompt.md",
+      "reference_images": [
+        {
+          "category": "references",
+          "exists": false,
+          "name": "front_day.png",
+          "path": "environment/mosque/references/front_day.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "front_evening.png",
+          "path": "environment/mosque/references/front_evening.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "front_night.png",
+          "path": "environment/mosque/references/front_night.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "back_day.png",
+          "path": "environment/mosque/references/back_day.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "back_evening.png",
+          "path": "environment/mosque/references/back_evening.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "back_night.png",
+          "path": "environment/mosque/references/back_night.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "front.png",
+          "path": "environment/mosque/angles/front.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "back.png",
+          "path": "environment/mosque/angles/back.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "left.png",
+          "path": "environment/mosque/angles/left.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "right.png",
+          "path": "environment/mosque/angles/right.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "top.png",
+          "path": "environment/mosque/angles/top.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "drone.png",
+          "path": "environment/mosque/angles/drone.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "inside_to_outside.png",
+          "path": "environment/mosque/angles/inside_to_outside.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "outside_to_inside.png",
+          "path": "environment/mosque/angles/outside_to_inside.png"
+        },
+        {
+          "category": "lighting",
+          "exists": false,
+          "name": "morning.png",
+          "path": "environment/mosque/lighting/morning.png"
+        },
+        {
+          "category": "lighting",
+          "exists": false,
+          "name": "afternoon.png",
+          "path": "environment/mosque/lighting/afternoon.png"
+        },
+        {
+          "category": "lighting",
+          "exists": false,
+          "name": "golden_hour.png",
+          "path": "environment/mosque/lighting/golden_hour.png"
+        },
+        {
+          "category": "lighting",
+          "exists": false,
+          "name": "evening.png",
+          "path": "environment/mosque/lighting/evening.png"
+        },
+        {
+          "category": "lighting",
+          "exists": false,
+          "name": "night.png",
+          "path": "environment/mosque/lighting/night.png"
+        },
+        {
+          "category": "lighting",
+          "exists": false,
+          "name": "rain.png",
+          "path": "environment/mosque/lighting/rain.png"
+        }
+      ],
+      "reference_status": "awaiting_reference",
+      "yaml_path": "environment/mosque/environment.yaml"
+    },
+    {
+      "asset_type": "environment",
+      "id": "roof",
+      "notes_path": null,
+      "path": "environment/roof",
+      "prompt_path": "environment/roof/prompt.md",
+      "reference_images": [
+        {
+          "category": "references",
+          "exists": false,
+          "name": "front_day.png",
+          "path": "environment/roof/references/front_day.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "front_evening.png",
+          "path": "environment/roof/references/front_evening.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "front_night.png",
+          "path": "environment/roof/references/front_night.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "back_day.png",
+          "path": "environment/roof/references/back_day.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "back_evening.png",
+          "path": "environment/roof/references/back_evening.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "back_night.png",
+          "path": "environment/roof/references/back_night.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "front.png",
+          "path": "environment/roof/angles/front.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "back.png",
+          "path": "environment/roof/angles/back.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "left.png",
+          "path": "environment/roof/angles/left.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "right.png",
+          "path": "environment/roof/angles/right.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "top.png",
+          "path": "environment/roof/angles/top.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "drone.png",
+          "path": "environment/roof/angles/drone.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "inside_to_outside.png",
+          "path": "environment/roof/angles/inside_to_outside.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "outside_to_inside.png",
+          "path": "environment/roof/angles/outside_to_inside.png"
+        },
+        {
+          "category": "lighting",
+          "exists": false,
+          "name": "morning.png",
+          "path": "environment/roof/lighting/morning.png"
+        },
+        {
+          "category": "lighting",
+          "exists": false,
+          "name": "afternoon.png",
+          "path": "environment/roof/lighting/afternoon.png"
+        },
+        {
+          "category": "lighting",
+          "exists": false,
+          "name": "golden_hour.png",
+          "path": "environment/roof/lighting/golden_hour.png"
+        },
+        {
+          "category": "lighting",
+          "exists": false,
+          "name": "evening.png",
+          "path": "environment/roof/lighting/evening.png"
+        },
+        {
+          "category": "lighting",
+          "exists": false,
+          "name": "night.png",
+          "path": "environment/roof/lighting/night.png"
+        },
+        {
+          "category": "lighting",
+          "exists": false,
+          "name": "rain.png",
+          "path": "environment/roof/lighting/rain.png"
+        }
+      ],
+      "reference_status": "awaiting_reference",
+      "yaml_path": "environment/roof/environment.yaml"
+    },
+    {
+      "asset_type": "environment",
+      "id": "school",
+      "notes_path": null,
+      "path": "environment/school",
+      "prompt_path": "environment/school/prompt.md",
+      "reference_images": [
+        {
+          "category": "references",
+          "exists": false,
+          "name": "front_day.png",
+          "path": "environment/school/references/front_day.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "front_evening.png",
+          "path": "environment/school/references/front_evening.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "front_night.png",
+          "path": "environment/school/references/front_night.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "back_day.png",
+          "path": "environment/school/references/back_day.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "back_evening.png",
+          "path": "environment/school/references/back_evening.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "back_night.png",
+          "path": "environment/school/references/back_night.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "front.png",
+          "path": "environment/school/angles/front.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "back.png",
+          "path": "environment/school/angles/back.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "left.png",
+          "path": "environment/school/angles/left.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "right.png",
+          "path": "environment/school/angles/right.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "top.png",
+          "path": "environment/school/angles/top.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "drone.png",
+          "path": "environment/school/angles/drone.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "inside_to_outside.png",
+          "path": "environment/school/angles/inside_to_outside.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "outside_to_inside.png",
+          "path": "environment/school/angles/outside_to_inside.png"
+        },
+        {
+          "category": "lighting",
+          "exists": false,
+          "name": "morning.png",
+          "path": "environment/school/lighting/morning.png"
+        },
+        {
+          "category": "lighting",
+          "exists": false,
+          "name": "afternoon.png",
+          "path": "environment/school/lighting/afternoon.png"
+        },
+        {
+          "category": "lighting",
+          "exists": false,
+          "name": "golden_hour.png",
+          "path": "environment/school/lighting/golden_hour.png"
+        },
+        {
+          "category": "lighting",
+          "exists": false,
+          "name": "evening.png",
+          "path": "environment/school/lighting/evening.png"
+        },
+        {
+          "category": "lighting",
+          "exists": false,
+          "name": "night.png",
+          "path": "environment/school/lighting/night.png"
+        },
+        {
+          "category": "lighting",
+          "exists": false,
+          "name": "rain.png",
+          "path": "environment/school/lighting/rain.png"
+        }
+      ],
+      "reference_status": "awaiting_reference",
+      "yaml_path": "environment/school/environment.yaml"
+    },
+    {
+      "asset_type": "environment",
+      "id": "street",
+      "notes_path": null,
+      "path": "environment/street",
+      "prompt_path": "environment/street/prompt.md",
+      "reference_images": [
+        {
+          "category": "references",
+          "exists": false,
+          "name": "front_day.png",
+          "path": "environment/street/references/front_day.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "front_evening.png",
+          "path": "environment/street/references/front_evening.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "front_night.png",
+          "path": "environment/street/references/front_night.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "back_day.png",
+          "path": "environment/street/references/back_day.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "back_evening.png",
+          "path": "environment/street/references/back_evening.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "back_night.png",
+          "path": "environment/street/references/back_night.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "front.png",
+          "path": "environment/street/angles/front.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "back.png",
+          "path": "environment/street/angles/back.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "left.png",
+          "path": "environment/street/angles/left.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "right.png",
+          "path": "environment/street/angles/right.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "top.png",
+          "path": "environment/street/angles/top.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "drone.png",
+          "path": "environment/street/angles/drone.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "inside_to_outside.png",
+          "path": "environment/street/angles/inside_to_outside.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "outside_to_inside.png",
+          "path": "environment/street/angles/outside_to_inside.png"
+        },
+        {
+          "category": "lighting",
+          "exists": false,
+          "name": "morning.png",
+          "path": "environment/street/lighting/morning.png"
+        },
+        {
+          "category": "lighting",
+          "exists": false,
+          "name": "afternoon.png",
+          "path": "environment/street/lighting/afternoon.png"
+        },
+        {
+          "category": "lighting",
+          "exists": false,
+          "name": "golden_hour.png",
+          "path": "environment/street/lighting/golden_hour.png"
+        },
+        {
+          "category": "lighting",
+          "exists": false,
+          "name": "evening.png",
+          "path": "environment/street/lighting/evening.png"
+        },
+        {
+          "category": "lighting",
+          "exists": false,
+          "name": "night.png",
+          "path": "environment/street/lighting/night.png"
+        },
+        {
+          "category": "lighting",
+          "exists": false,
+          "name": "rain.png",
+          "path": "environment/street/lighting/rain.png"
+        }
+      ],
+      "reference_status": "awaiting_reference",
+      "yaml_path": "environment/street/environment.yaml"
+    },
+    {
+      "asset_type": "environment",
+      "id": "village",
+      "notes_path": null,
+      "path": "environment/village",
+      "prompt_path": "environment/village/prompt.md",
+      "reference_images": [
+        {
+          "category": "references",
+          "exists": false,
+          "name": "front_day.png",
+          "path": "environment/village/references/front_day.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "front_evening.png",
+          "path": "environment/village/references/front_evening.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "front_night.png",
+          "path": "environment/village/references/front_night.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "back_day.png",
+          "path": "environment/village/references/back_day.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "back_evening.png",
+          "path": "environment/village/references/back_evening.png"
+        },
+        {
+          "category": "references",
+          "exists": false,
+          "name": "back_night.png",
+          "path": "environment/village/references/back_night.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "front.png",
+          "path": "environment/village/angles/front.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "back.png",
+          "path": "environment/village/angles/back.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "left.png",
+          "path": "environment/village/angles/left.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "right.png",
+          "path": "environment/village/angles/right.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "top.png",
+          "path": "environment/village/angles/top.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "drone.png",
+          "path": "environment/village/angles/drone.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "inside_to_outside.png",
+          "path": "environment/village/angles/inside_to_outside.png"
+        },
+        {
+          "category": "angles",
+          "exists": false,
+          "name": "outside_to_inside.png",
+          "path": "environment/village/angles/outside_to_inside.png"
+        },
+        {
+          "category": "lighting",
+          "exists": false,
+          "name": "morning.png",
+          "path": "environment/village/lighting/morning.png"
+        },
+        {
+          "category": "lighting",
+          "exists": false,
+          "name": "afternoon.png",
+          "path": "environment/village/lighting/afternoon.png"
+        },
+        {
+          "category": "lighting",
+          "exists": false,
+          "name": "golden_hour.png",
+          "path": "environment/village/lighting/golden_hour.png"
+        },
+        {
+          "category": "lighting",
+          "exists": false,
+          "name": "evening.png",
+          "path": "environment/village/lighting/evening.png"
+        },
+        {
+          "category": "lighting",
+          "exists": false,
+          "name": "night.png",
+          "path": "environment/village/lighting/night.png"
+        },
+        {
+          "category": "lighting",
+          "exists": false,
+          "name": "rain.png",
+          "path": "environment/village/lighting/rain.png"
+        }
+      ],
+      "reference_status": "awaiting_reference",
+      "yaml_path": "environment/village/environment.yaml"
+    }
+  ],
+  "project_root": ".",
+  "props": [
+    {
+      "asset_type": "prop",
+      "id": "charpai",
+      "notes_path": null,
+      "path": "props/charpai",
+      "prompt_path": "props/charpai/prompt.md",
+      "reference_images": [],
+      "reference_status": "awaiting_reference",
+      "yaml_path": "props/charpai/prop.yaml"
+    },
+    {
+      "asset_type": "prop",
+      "id": "clay_pots",
+      "notes_path": null,
+      "path": "props/clay_pots",
+      "prompt_path": "props/clay_pots/prompt.md",
+      "reference_images": [],
+      "reference_status": "awaiting_reference",
+      "yaml_path": "props/clay_pots/prop.yaml"
+    },
+    {
+      "asset_type": "prop",
+      "id": "metal_utensils",
+      "notes_path": null,
+      "path": "props/metal_utensils",
+      "prompt_path": "props/metal_utensils/prompt.md",
+      "reference_images": [],
+      "reference_status": "awaiting_reference",
+      "yaml_path": "props/metal_utensils/prop.yaml"
+    },
+    {
+      "asset_type": "prop",
+      "id": "old_radio",
+      "notes_path": null,
+      "path": "props/old_radio",
+      "prompt_path": "props/old_radio/prompt.md",
+      "reference_images": [],
+      "reference_status": "awaiting_reference",
+      "yaml_path": "props/old_radio/prop.yaml"
+    },
+    {
+      "asset_type": "prop",
+      "id": "old_sewing_machine",
+      "notes_path": null,
+      "path": "props/old_sewing_machine",
+      "prompt_path": "props/old_sewing_machine/prompt.md",
+      "reference_images": [],
+      "reference_status": "awaiting_reference",
+      "yaml_path": "props/old_sewing_machine/prop.yaml"
+    },
+    {
+      "asset_type": "prop",
+      "id": "school_books",
+      "notes_path": null,
+      "path": "props/school_books",
+      "prompt_path": "props/school_books/prompt.md",
+      "reference_images": [],
+      "reference_status": "awaiting_reference",
+      "yaml_path": "props/school_books/prop.yaml"
+    },
+    {
+      "asset_type": "prop",
+      "id": "traditional_trunk",
+      "notes_path": null,
+      "path": "props/traditional_trunk",
+      "prompt_path": "props/traditional_trunk/prompt.md",
+      "reference_images": [],
+      "reference_status": "awaiting_reference",
+      "yaml_path": "props/traditional_trunk/prop.yaml"
+    },
+    {
+      "asset_type": "prop",
+      "id": "village_bicycle",
+      "notes_path": null,
+      "path": "props/village_bicycle",
+      "prompt_path": "props/village_bicycle/prompt.md",
+      "reference_images": [],
+      "reference_status": "awaiting_reference",
+      "yaml_path": "props/village_bicycle/prop.yaml"
+    },
+    {
+      "asset_type": "prop",
+      "id": "water_bucket",
+      "notes_path": null,
+      "path": "props/water_bucket",
+      "prompt_path": "props/water_bucket/prompt.md",
+      "reference_images": [],
+      "reference_status": "awaiting_reference",
+      "yaml_path": "props/water_bucket/prop.yaml"
+    },
+    {
+      "asset_type": "prop",
+      "id": "wooden_bed",
+      "notes_path": null,
+      "path": "props/wooden_bed",
+      "prompt_path": "props/wooden_bed/prompt.md",
+      "reference_images": [],
+      "reference_status": "awaiting_reference",
+      "yaml_path": "props/wooden_bed/prop.yaml"
+    }
+  ]
+}

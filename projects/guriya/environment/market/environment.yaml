@@ -1,0 +1,5 @@
+id: market
+asset_type: environment
+reference_status: awaiting_reference
+manual_image_generation: true
+notes: "Awaiting approved manual references."
