@@ -4,10 +4,21 @@ from __future__ import annotations
 
 from importlib import import_module
 from importlib.metadata import EntryPoint, entry_points
-from typing import Any
+from pathlib import Path
+from typing import Any, cast
 
-from ai_film_studio.core.exceptions import ModuleLoadError
-from ai_film_studio.module_loader.models import ModuleSpec
+import yaml
+from yaml import YAMLError
+
+from ai_film_studio.core.exceptions import (
+    InvalidYAMLError,
+    MalformedConfigurationError,
+    ModuleLoadError,
+)
+from ai_film_studio.module_loader.models import LoadedDataModule, ModuleSpec
+
+YAML_SUFFIXES = {".yaml", ".yml"}
+MARKDOWN_SUFFIXES = {".md", ".markdown"}
 
 
 class ModuleLoader:
@@ -50,6 +61,44 @@ class ModuleLoader:
 
         return loaded
 
+    def load_data_module(self, path: Path) -> LoadedDataModule:
+        """Load a reusable YAML or Markdown module from disk."""
+        suffix = path.suffix.lower()
+        if suffix in YAML_SUFFIXES:
+            return LoadedDataModule(path=path, kind="yaml", data=self.load_yaml_file(path))
+        if suffix in MARKDOWN_SUFFIXES:
+            return LoadedDataModule(path=path, kind="markdown", data=self.load_markdown_file(path))
+
+        supported = ", ".join(sorted((*YAML_SUFFIXES, *MARKDOWN_SUFFIXES)))
+        msg = f"Unsupported module file type for '{path}'. Supported types: {supported}."
+        raise ModuleLoadError(msg)
+
+    def load_yaml_file(self, path: Path) -> dict[str, Any]:
+        """Load a YAML mapping from disk."""
+        text = self._read_text(path)
+        try:
+            data = yaml.safe_load(text)
+        except YAMLError as exc:
+            msg = f"Invalid YAML in '{path}': {exc}"
+            raise InvalidYAMLError(msg) from exc
+
+        if data is None:
+            msg = f"YAML module '{path}' is empty."
+            raise MalformedConfigurationError(msg)
+        if not isinstance(data, dict):
+            msg = f"YAML module '{path}' must contain a mapping at the top level."
+            raise MalformedConfigurationError(msg)
+
+        return cast(dict[str, Any], data)
+
+    def load_markdown_file(self, path: Path) -> str:
+        """Load a Markdown module from disk."""
+        text = self._read_text(path)
+        if not text.strip():
+            msg = f"Markdown module '{path}' is empty."
+            raise MalformedConfigurationError(msg)
+        return text
+
     @staticmethod
     def _coerce_spec(spec: ModuleSpec | str) -> ModuleSpec:
         if isinstance(spec, ModuleSpec):
@@ -61,3 +110,17 @@ class ModuleLoader:
             attribute=attribute if separator else None,
         )
 
+    @staticmethod
+    def _read_text(path: Path) -> str:
+        if not path.exists():
+            msg = f"Module file '{path}' does not exist."
+            raise ModuleLoadError(msg)
+        if not path.is_file():
+            msg = f"Module path '{path}' is not a file."
+            raise ModuleLoadError(msg)
+
+        try:
+            return path.read_text(encoding="utf-8")
+        except OSError as exc:
+            msg = f"Could not read module file '{path}': {exc}"
+            raise ModuleLoadError(msg) from exc

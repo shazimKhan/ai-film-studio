@@ -1,7 +1,15 @@
 """Runtime builder for AI Film Studio."""
 
-from ai_film_studio.builder.builder import StudioBuilder, create_default_builder
+from ai_film_studio.builder.builder import (
+    StudioBuilder,
+    create_default_builder,
+    create_default_engine_adapter_registry,
+)
 from ai_film_studio.builder.runtime import StudioRuntime
 
-__all__ = ["StudioBuilder", "StudioRuntime", "create_default_builder"]
-
+__all__ = [
+    "StudioBuilder",
+    "StudioRuntime",
+    "create_default_builder",
+    "create_default_engine_adapter_registry",
+]

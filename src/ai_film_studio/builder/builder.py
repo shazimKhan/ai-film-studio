@@ -6,6 +6,7 @@ from typing import Self
 
 from ai_film_studio.builder.runtime import StudioRuntime
 from ai_film_studio.core.exceptions import BuildError
+from ai_film_studio.engine_adapters.gemini import GEMINI_ADAPTER_ID, GeminiAdapter
 from ai_film_studio.engine_adapters.registry import EngineAdapterFactory, EngineAdapterRegistry
 from ai_film_studio.module_loader.loader import ModuleLoader
 from ai_film_studio.validator.base import Validator
@@ -22,7 +23,7 @@ class StudioBuilder:
         module_loader: ModuleLoader | None = None,
         validator: CompositeValidator | None = None,
     ) -> None:
-        self._engine_adapters = engine_adapters or EngineAdapterRegistry()
+        self._engine_adapters = engine_adapters or create_default_engine_adapter_registry()
         self._module_loader = module_loader or ModuleLoader()
         self._validator = validator or CompositeValidator()
 
@@ -82,3 +83,10 @@ def create_default_builder(
         module_loader=module_loader,
         validator=validator,
     )
+
+
+def create_default_engine_adapter_registry() -> EngineAdapterRegistry:
+    """Create the built-in engine adapter registry."""
+    registry = EngineAdapterRegistry()
+    registry.register(GEMINI_ADAPTER_ID, GeminiAdapter)
+    return registry

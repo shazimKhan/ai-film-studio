@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from pathlib import Path
 from typing import Annotated
 
 import typer
@@ -10,7 +11,9 @@ from rich.table import Table
 
 from ai_film_studio import __version__
 from ai_film_studio.builder import create_default_builder
+from ai_film_studio.core.exceptions import AIFilmStudioError
 from ai_film_studio.core.logging import configure_logging
+from ai_film_studio.prompt_compiler import PromptCompilationService
 
 console = Console()
 
@@ -50,6 +53,33 @@ def doctor() -> None:
     console.print(f"Registered engine adapters: {len(runtime.engine_adapters)}")
 
 
+@app.command("compile")
+def compile_scene(
+    scene_file: Annotated[
+        Path,
+        typer.Argument(help="Path to a scene blueprint YAML file."),
+    ],
+    engine: Annotated[
+        str,
+        typer.Option("--engine", "-e", help="Target engine adapter id."),
+    ],
+) -> None:
+    """Compile a scene blueprint into a local engine-ready prompt."""
+    try:
+        runtime = create_default_builder().build()
+        service = PromptCompilationService.from_runtime(
+            runtime,
+            repo_root=Path.cwd(),
+            output_root=Path("output"),
+        )
+        artifact = service.compile(scene_file, engine)
+    except AIFilmStudioError as exc:
+        console.print(f"[red]Error:[/red] {exc}")
+        raise typer.Exit(1) from None
+
+    console.print(f"Prompt written to: {artifact.output_path}")
+
+
 @adapters_app.command("list")
 def list_adapters() -> None:
     """List registered engine adapter ids."""
@@ -77,4 +107,3 @@ def load_module(
     runtime = create_default_builder().build()
     runtime.module_loader.load(import_path)
     console.print(f"[green]Loaded:[/green] {import_path}")
-

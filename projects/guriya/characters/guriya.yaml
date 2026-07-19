@@ -1,0 +1,11 @@
+id: guriya
+name: Guriya
+age: "9"
+appearance: "Small-framed Pakistani girl with observant dark eyes, sun-warmed brown skin, and a guarded, thoughtful face that should remain consistent across clips."
+wardrobe: "Faded cotton shalwar kameez in muted rose with a simple off-white dupatta, slightly dusty from the courtyard."
+hair: "Dark hair parted at the center and tied back neatly, with a few loose strands near the temples."
+personality: "Quietly brave, watchful, and emotionally contained; fear appears through stillness rather than exaggerated expression."
+performance_constraints:
+  - "Keep Guriya the same age and facial identity in every shot."
+  - "Use subtle micro-expressions instead of melodrama."
+  - "Maintain culturally grounded posture, clothing fit, and movement."

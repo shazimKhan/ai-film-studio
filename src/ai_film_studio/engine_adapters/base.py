@@ -4,8 +4,12 @@ from __future__ import annotations
 
 from abc import ABC, abstractmethod
 from collections.abc import Collection
+from typing import TYPE_CHECKING
 
 from ai_film_studio.engine_adapters.models import EngineRequest, EngineResult
+
+if TYPE_CHECKING:
+    from ai_film_studio.prompt_compiler.models import PromptCompilationResult
 
 
 class BaseEngineAdapter(ABC):
@@ -34,7 +38,10 @@ class BaseEngineAdapter(ABC):
         """Return whether the adapter advertises a framework capability."""
         return capability in self.capabilities
 
+    def format_prompt(self, compiled_prompt: PromptCompilationResult) -> str:
+        """Format an engine-neutral compiled prompt for this adapter."""
+        return compiled_prompt.prompt
+
     @abstractmethod
     def submit(self, request: EngineRequest) -> EngineResult:
         """Submit an engine-neutral request to the backing engine."""
-

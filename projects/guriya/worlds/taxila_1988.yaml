@@ -1,0 +1,16 @@
+id: taxila_1988
+name: "Taxila"
+period: "1988"
+location: "Taxila, Punjab, Pakistan"
+description: "A modest working-class neighborhood near old stone lanes, hand-plastered walls, weathered courtyards, and the soft dust of late afternoon."
+visual_rules:
+  - "No smartphones, LED signage, modern vehicles, satellite dishes, or contemporary fashion."
+  - "Architecture, props, and textiles must feel handmade, practical, and period-correct."
+  - "Keep the frame grounded in natural materials: limewash, brick, dust, cotton, brass, and wood."
+textures:
+  - "sun-faded plaster"
+  - "dusty brick floor"
+  - "worn cotton fabric"
+  - "brass water pot"
+atmosphere: "Warm, dusty, intimate, and slightly tense, with the feeling of ordinary life holding an unspoken secret."
+soundscape: "distant bicycle bell, low neighborhood voices, a hand pump creak, birds settling before dusk, and soft fabric movement"

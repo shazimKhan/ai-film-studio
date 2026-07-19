@@ -1,0 +1,47 @@
+project: guriya
+episode: episode_01
+scene: scene_02
+clip: clip_001
+title: "Courtyard Before Dusk"
+duration: 8
+action: "Guriya stands near the courtyard doorway, clutching the edge of her dupatta as she hears an adult conversation fade behind the wall. She looks toward the lane, holds her breath, and takes one hesitant step back into shadow."
+emotion: "quiet dread mixed with stubborn curiosity"
+characters:
+  - id: guriya
+    module: ../../characters/guriya.yaml
+    role: "primary subject"
+    wardrobe: "Faded rose cotton shalwar kameez and off-white dupatta, lightly dusty at the hem."
+    hair: "Center-parted dark hair tied back, a few strands loosened by the heat."
+world:
+  id: taxila_1988
+  module: ../../worlds/taxila_1988.yaml
+camera:
+  shot_size: "medium close-up"
+  angle: "slightly low child-height perspective"
+  lens: "35mm natural perspective"
+  movement: "slow, controlled push-in"
+  framing: "doorway frame within frame, negative space toward the lane"
+  focus: "shallow focus on Guriya's eyes, background conversation implied as soft blur"
+lighting:
+  quality: "soft late-afternoon natural light"
+  source: "low sun entering from the courtyard opening"
+  color_temperature: "warm amber with cooler interior shadows"
+  contrast: "gentle contrast, face half-lit and half-shadowed"
+  mood: "intimate, tense, and observational"
+motion:
+  subject: "Guriya barely moves, fingers tightening on the dupatta before one small backward step."
+  environment: "dust motes drift through the light; the dupatta edge moves slightly in the air."
+  camera: "slow push-in that stops before the step back."
+  pace: "restrained, quiet, and suspenseful"
+continuity:
+  previous_clip: "Guriya has just overheard a fragment of conversation about a family decision."
+  visual_state: "Her dupatta is already in her hand; her face is alert but controlled."
+  prop_state: "The brass water pot remains near the courtyard wall, untouched."
+  emotional_state: "She is afraid but trying to understand what the adults are hiding."
+audio: "Diegetic only: muffled adult voices behind the wall, a faint bicycle bell from the lane, fabric rustle, and a small breath held too long."
+negative prompts:
+  - "modern buildings, modern vehicles, smartphones, LED lights, plastic furniture"
+  - "glamour lighting, beauty commercial look, fantasy styling"
+  - "exaggerated crying, theatrical fear, adult-like performance"
+  - "text overlays, subtitles, logos, watermarks"
+  - "identity drift, changing age, changing facial structure"

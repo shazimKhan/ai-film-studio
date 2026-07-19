@@ -19,3 +19,13 @@ def test_doctor_command_builds_runtime() -> None:
     assert result.exit_code == 0
     assert "Runtime foundation built successfully." in result.stdout
 
+
+def test_compile_command_reports_missing_scene_without_traceback(tmp_path) -> None:
+    missing_scene = tmp_path / "missing.yaml"
+
+    result = CliRunner().invoke(app, ["compile", str(missing_scene), "--engine", "gemini"])
+
+    assert result.exit_code == 1
+    assert "Error:" in result.stdout
+    assert "does not exist" in result.stdout
+    assert "Traceback" not in result.stdout

@@ -24,11 +24,13 @@ dependencies = [
 dev = [
   "pytest>=8.2,<9.0",
   "ruff>=0.5,<1.0",
-  "mypy>=1.10,<2.0"
+  "mypy>=1.10,<2.0",
+  "types-PyYAML>=6.0,<7.0"
 ]
 
 [project.scripts]
 ai-film-studio = "ai_film_studio.cli.app:app"
+aifs = "ai_film_studio.cli.app:app"
 
 [tool.setuptools.packages.find]
 where = ["src"]
@@ -55,4 +57,3 @@ packages = ["ai_film_studio"]
 strict = true
 warn_return_any = true
 warn_unused_configs = true
-

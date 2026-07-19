@@ -1,0 +1,71 @@
+GEMINI VIDEO PROMPT
+Use the following structured cinematic brief as the full generation instruction. Respect section order, identity locks, period rules, continuity, and negative constraints exactly.
+
+PROJECT
+Project: guriya
+Episode: episode_01
+Scene: scene_02
+Clip: clip_001
+Title: Courtyard Before Dusk
+Duration: 8 seconds
+
+DIRECTOR INTENT
+Create a grounded cinematic clip centered on quiet dread mixed with stubborn curiosity. The shot must feel specific to Taxila, 1988, with restrained performances, exact continuity, and no anachronistic details.
+
+ACTION
+Guriya stands near the courtyard doorway, clutching the edge of her dupatta as she hears an adult conversation fade behind the wall. She looks toward the lane, holds her breath, and takes one hesitant step back into shadow.
+
+CHARACTER IDENTITY LOCK
+- Guriya (guriya), age 9: Small-framed Pakistani girl with observant dark eyes, sun-warmed brown skin, and a guarded, thoughtful face that should remain consistent across clips. Personality/performance: Quietly brave, watchful, and emotionally contained; fear appears through stillness rather than exaggerated expression. Role in clip: primary subject. Identity constraints: Keep Guriya the same age and facial identity in every shot. Use subtle micro-expressions instead of melodrama. Maintain culturally grounded posture, clothing fit, and movement.
+
+WORLD AND PERIOD
+World: Taxila
+Period: 1988
+Location: Taxila, Punjab, Pakistan
+Description: A modest working-class neighborhood near old stone lanes, hand-plastered walls, weathered courtyards, and the soft dust of late afternoon.
+Atmosphere: Warm, dusty, intimate, and slightly tense, with the feeling of ordinary life holding an unspoken secret.
+Textures: sun-faded plaster. dusty brick floor. worn cotton fabric. brass water pot.
+Visual rules: No smartphones, LED signage, modern vehicles, satellite dishes, or contemporary fashion. Architecture, props, and textiles must feel handmade, practical, and period-correct. Keep the frame grounded in natural materials: limewash, brick, dust, cotton, brass, and wood.
+
+WARDROBE AND HAIR
+- Guriya: wardrobe: Faded rose cotton shalwar kameez and off-white dupatta, lightly dusty at the hem; hair: Center-parted dark hair tied back, a few strands loosened by the heat.
+
+CAMERA
+Shot size: medium close-up
+Angle: slightly low child-height perspective
+Lens: 35mm natural perspective
+Movement: slow, controlled push-in
+Framing: doorway frame within frame, negative space toward the lane
+Focus: shallow focus on Guriya's eyes, background conversation implied as soft blur
+
+LIGHTING
+Quality: soft late-afternoon natural light
+Source: low sun entering from the courtyard opening
+Color temperature: warm amber with cooler interior shadows
+Contrast: gentle contrast, face half-lit and half-shadowed
+Mood: intimate, tense, and observational
+
+MOTION
+Subject motion: Guriya barely moves, fingers tightening on the dupatta before one small backward step.
+Environmental motion: dust motes drift through the light; the dupatta edge moves slightly in the air.
+Camera motion: slow push-in that stops before the step back.
+Pace: restrained, quiet, and suspenseful
+
+CONTINUITY
+Previous clip: Guriya has just overheard a fragment of conversation about a family decision.
+Visual state: Her dupatta is already in her hand; her face is alert but controlled.
+Prop state: The brass water pot remains near the courtyard wall, untouched.
+Emotional state: She is afraid but trying to understand what the adults are hiding.
+
+AUDIO
+Diegetic only: muffled adult voices behind the wall, a faint bicycle bell from the lane, fabric rustle, and a small breath held too long.
+
+NEGATIVE CONSTRAINTS
+- modern buildings, modern vehicles, smartphones, LED lights, plastic furniture
+- glamour lighting, beauty commercial look, fantasy styling
+- exaggerated crying, theatrical fear, adult-like performance
+- text overlays, subtitles, logos, watermarks
+- identity drift, changing age, changing facial structure
+
+OUTPUT QUALITY
+Generate a production-ready cinematic video prompt for a clip lasting 8 seconds. Preserve anatomy, identity, geography, fabric behavior, historical period, camera continuity, and lighting continuity. Avoid captions, text overlays, watermarks, logos, modern UI artifacts, and unmotivated stylization.

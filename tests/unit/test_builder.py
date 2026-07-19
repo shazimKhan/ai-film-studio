@@ -24,7 +24,7 @@ class FailingValidator:
 def test_default_builder_creates_runtime() -> None:
     runtime = create_default_builder().build()
 
-    assert runtime.engine_adapters.list_adapter_ids() == ()
+    assert runtime.engine_adapters.list_adapter_ids() == ("gemini",)
 
 
 def test_builder_raises_for_validation_errors() -> None:
@@ -32,4 +32,3 @@ def test_builder_raises_for_validation_errors() -> None:
 
     with pytest.raises(BuildError, match="foundation.invalid"):
         builder.build()
-
