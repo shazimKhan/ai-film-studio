@@ -11,7 +11,9 @@ reference_images:
     checksum: 08cd9ef47081add980fe93dd40a412c29cc9d5e0d561a909788b96e414c76351
     approved: false
     status: pending_review
-  views:
+    source_type: master_sheet
+    production_selectable: false
+  legacy_crops:
     front:
       path: references/views/front_v2.png
       tags:
@@ -30,6 +32,8 @@ reference_images:
       width: 344
       height: 384
       checksum: 7c79919fc668925ce251869a5311b0e17c96dc3dfc11ce1c901af732906dfcc5
+      source_type: cropped_preview
+      production_selectable: false
     left_profile:
       path: references/views/left_profile_v2.png
       tags:
@@ -50,6 +54,8 @@ reference_images:
       width: 344
       height: 384
       checksum: 65f2e2d0ac311b9f4512b18a8b1815066dad19c177a5d8b9b8267dcd435812d1
+      source_type: cropped_preview
+      production_selectable: false
     three_quarter_left:
       path: references/views/three_quarter_left_v2.png
       tags:
@@ -70,6 +76,8 @@ reference_images:
       width: 344
       height: 384
       checksum: 785bafc10dbca6d4ebf0ff62e161bdd737a58d95ce937128e4322284eb37b987
+      source_type: cropped_preview
+      production_selectable: false
     three_quarter_right:
       path: references/views/three_quarter_right_v2.png
       tags:
@@ -90,6 +98,8 @@ reference_images:
       width: 344
       height: 384
       checksum: c1f1b83ad3988044aa0bf62775c04488c43803664a895256f28295ed716c4126
+      source_type: cropped_preview
+      production_selectable: false
     full_body_front:
       path: references/views/full_body_front_v2.png
       tags:
@@ -108,6 +118,8 @@ reference_images:
       width: 344
       height: 384
       checksum: 38b79b6a5f5b7788a3c112e615e7f24ca127b93d103bb8de1f9bda164a33bed9
+      source_type: cropped_preview
+      production_selectable: false
     full_body_back_left:
       path: references/views/full_body_back_left_v2.png
       tags:
@@ -129,6 +141,8 @@ reference_images:
       width: 344
       height: 384
       checksum: fba4ff95a752fad60fb797b38658b3a4439553c8decd50bcf61205bb29ca334a
+      source_type: cropped_preview
+      production_selectable: false
     full_body_back:
       path: references/views/full_body_back_v2.png
       tags:
@@ -149,6 +163,8 @@ reference_images:
       width: 344
       height: 384
       checksum: ed59c70219ae71c66ad1e2a435abfbfb2430901bf2392f6e5ff21a94c8f67b0d
+      source_type: cropped_preview
+      production_selectable: false
     seated_front:
       path: references/views/seated_front_v2.png
       tags:
@@ -167,3 +183,168 @@ reference_images:
       width: 344
       height: 384
       checksum: 9dbff171e1b22a45b3e06303a4c0f737a2bca1bf74ee13e8f137bdb2e9969812
+      source_type: cropped_preview
+      production_selectable: false
+  production:
+    front:
+      path: references/production/front.png
+      source_type: native_high_resolution
+      production_selectable: true
+      status: pending_review
+      approved: false
+      tags:
+      - front
+      - portrait
+      - close_up
+      - identity
+      shot_types:
+      - close_up
+      - portrait
+      camera_angles:
+      - front
+      priority: 10
+    left_profile:
+      path: references/production/left_profile.png
+      source_type: native_high_resolution
+      production_selectable: true
+      status: pending_review
+      approved: false
+      tags:
+      - left_profile
+      - left
+      - profile
+      - portrait
+      - close_up
+      - identity
+      shot_types:
+      - close_up
+      - portrait
+      camera_angles:
+      - profile_left
+      - left
+      priority: 15
+    right_profile:
+      path: references/production/right_profile.png
+      source_type: native_high_resolution
+      production_selectable: true
+      status: pending_review
+      approved: false
+      tags:
+      - right_profile
+      - right
+      - profile
+      - portrait
+      - close_up
+      - identity
+      shot_types:
+      - close_up
+      - portrait
+      camera_angles:
+      - profile_right
+      - right
+      priority: 16
+    three_quarter_left:
+      path: references/production/three_quarter_left.png
+      source_type: native_high_resolution
+      production_selectable: true
+      status: pending_review
+      approved: false
+      tags:
+      - three_quarter_left
+      - three
+      - quarter
+      - left
+      - portrait
+      - close_up
+      - identity
+      shot_types:
+      - close_up
+      - portrait
+      camera_angles:
+      - three_quarter_left
+      - left
+      priority: 20
+    three_quarter_right:
+      path: references/production/three_quarter_right.png
+      source_type: native_high_resolution
+      production_selectable: true
+      status: pending_review
+      approved: false
+      tags:
+      - three_quarter_right
+      - three
+      - quarter
+      - right
+      - portrait
+      - close_up
+      - identity
+      shot_types:
+      - close_up
+      - portrait
+      camera_angles:
+      - three_quarter_right
+      - right
+      priority: 25
+    full_body_front:
+      path: references/production/full_body_front.png
+      source_type: native_high_resolution
+      production_selectable: true
+      status: pending_review
+      approved: false
+      tags:
+      - full_body_front
+      - full
+      - body
+      - front
+      - full_body
+      - standing
+      - wardrobe
+      shot_types:
+      - full_body
+      - wide
+      camera_angles:
+      - front
+      priority: 30
+    full_body_back:
+      path: references/production/full_body_back.png
+      source_type: native_high_resolution
+      production_selectable: true
+      status: pending_review
+      approved: false
+      tags:
+      - full_body_back
+      - full
+      - body
+      - back
+      - full_body
+      - standing
+      - wardrobe
+      shot_types:
+      - full_body
+      - wide
+      camera_angles:
+      - back
+      - back_view
+      priority: 32
+    seated_front:
+      path: references/production/seated_front.png
+      source_type: native_high_resolution
+      production_selectable: true
+      status: pending_review
+      approved: false
+      tags:
+      - seated_front
+      - seated
+      - front
+      - full_body
+      - standing
+      - wardrobe
+      - sitting
+      - pose
+      shot_types:
+      - full_body
+      - wide
+      camera_angles:
+      - front
+      priority: 40
+production_ready: false

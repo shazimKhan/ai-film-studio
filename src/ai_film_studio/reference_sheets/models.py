@@ -24,6 +24,23 @@ class ReferenceOutputFormat(StrEnum):
     WEBP = "webp"
 
 
+class ReferenceSourceType(StrEnum):
+    """Supported reference source types."""
+
+    MASTER_SHEET = "master_sheet"
+    CROPPED_PREVIEW = "cropped_preview"
+    NATIVE_HIGH_RESOLUTION = "native_high_resolution"
+    GENERATED_VARIANT = "generated_variant"
+
+
+PRODUCTION_SELECTABLE_SOURCE_TYPES = frozenset(
+    {
+        ReferenceSourceType.NATIVE_HIGH_RESOLUTION,
+        ReferenceSourceType.GENERATED_VARIANT,
+    },
+)
+
+
 class NormalizedCrop(BaseModel):
     """Normalized crop rectangle using values from 0.0 to 1.0."""
 
@@ -287,6 +304,8 @@ class SelectedReference(BaseModel):
     score: float
     priority: int
     reason: str = ""
+    source_type: ReferenceSourceType | None = None
+    production_selectable: bool = False
     tags: tuple[str, ...] = ()
     status: ReferenceStatus = ReferenceStatus.PENDING_REVIEW
 
@@ -301,6 +320,8 @@ class ExcludedReference(BaseModel):
     reason: str
     score: float = 0.0
     status: ReferenceStatus = ReferenceStatus.PENDING_REVIEW
+    source_type: ReferenceSourceType | None = None
+    production_selectable: bool = False
     tags: tuple[str, ...] = ()
 
 
@@ -318,6 +339,7 @@ class ReferenceSelectionRequest(BaseModel):
     engine_reference_limit: int = Field(default=1, gt=0)
     preferred_reference_types: tuple[str, ...] = ()
     allow_weak_fallbacks: bool = False
+    allow_preview_references: bool = False
 
     @field_validator(
         "camera_shot_type",
@@ -376,6 +398,12 @@ class ReferenceImageValidation(BaseModel):
     checksum: str | None = None
     expected_checksum: str | None = None
     checksum_matches: bool | None = None
+    source_type: ReferenceSourceType | None = None
+    source_type_valid: bool = True
+    production_selectable: bool = False
+    duplicate_path: bool = False
+    min_width: int | None = Field(default=None, gt=0)
+    min_height: int | None = Field(default=None, gt=0)
     status: ReferenceStatus = ReferenceStatus.PENDING_REVIEW
     approved: bool = False
     reason: str = ""
@@ -384,7 +412,40 @@ class ReferenceImageValidation(BaseModel):
     def is_valid(self) -> bool:
         """Return whether the image exists, is readable, and matches checksum if present."""
         checksum_ok = self.checksum_matches is not False
-        return self.exists and self.readable and checksum_ok
+        dimensions_ok = True
+        if self.min_width is not None and self.width is not None:
+            dimensions_ok = dimensions_ok and self.width >= self.min_width
+        if self.min_height is not None and self.height is not None:
+            dimensions_ok = dimensions_ok and self.height >= self.min_height
+        production_source_type_ok = (
+            self.min_width is None or self.source_type in PRODUCTION_SELECTABLE_SOURCE_TYPES
+        )
+        selectable_ok = True
+        if self.source_type in PRODUCTION_SELECTABLE_SOURCE_TYPES:
+            selectable_ok = self.production_selectable
+        return (
+            self.exists
+            and self.readable
+            and checksum_ok
+            and dimensions_ok
+            and production_source_type_ok
+            and self.source_type_valid
+            and not self.duplicate_path
+            and selectable_ok
+        )
+
+
+class ProductionReadiness(BaseModel):
+    """Production readiness result for a character's native HD references."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    character_id: str
+    production_ready: bool = False
+    required_references: tuple[str, ...] = ()
+    ready_references: tuple[str, ...] = ()
+    missing_references: tuple[str, ...] = ()
+    invalid_references: tuple[str, ...] = ()
 
 
 class ReferenceSceneCamera(BaseModel):

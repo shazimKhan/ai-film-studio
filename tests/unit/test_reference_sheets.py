@@ -15,6 +15,7 @@ from ai_film_studio.core.exceptions import ReferenceSheetError
 from ai_film_studio.engine_adapters.gemini import GeminiAdapter
 from ai_film_studio.reference_sheets import (
     ReferenceApprovalService,
+    ReferenceInventoryService,
     ReferenceOutputFormat,
     ReferenceSelectionRequest,
     ReferenceSelector,
@@ -70,8 +71,13 @@ def test_successful_4x2_split_writes_files_manifest_preview_and_yaml(tmp_path: P
     character_data = yaml.safe_load(character_yaml.read_text(encoding="utf-8"))
     assert character_data["custom_field"] == "keep_me"
     assert character_data["reference_images"]["master_sheet"]["approved"] is False
-    assert character_data["reference_images"]["views"]["front"]["status"] == "pending_review"
-    front_path = character_data["reference_images"]["views"]["front"]["path"]
+    assert character_data["reference_images"]["master_sheet"]["source_type"] == "master_sheet"
+    assert character_data["reference_images"]["master_sheet"]["production_selectable"] is False
+    legacy_crops = character_data["reference_images"]["legacy_crops"]
+    assert legacy_crops["front"]["status"] == "pending_review"
+    assert legacy_crops["front"]["source_type"] == "cropped_preview"
+    assert legacy_crops["front"]["production_selectable"] is False
+    front_path = legacy_crops["front"]["path"]
     assert front_path == "references/views/front.png"
 
 
@@ -251,7 +257,7 @@ def test_approval_rejection_and_selector_behaviour(tmp_path: Path) -> None:
 
     character_yaml = repo_root / "projects/demo/characters/hero/character.yaml"
     selector = ReferenceSelector()
-    selected = selector.select_from_yaml(
+    default_selected = selector.select_from_yaml(
         character_yaml,
         ReferenceSelectionRequest(
             camera_shot_type="close_up",
@@ -259,7 +265,17 @@ def test_approval_rejection_and_selector_behaviour(tmp_path: Path) -> None:
             engine_reference_limit=3,
         ),
     )
+    selected = selector.select_from_yaml(
+        character_yaml,
+        ReferenceSelectionRequest(
+            camera_shot_type="close_up",
+            angle="front",
+            engine_reference_limit=3,
+            allow_preview_references=True,
+        ),
+    )
 
+    assert default_selected == ()
     assert [item.name for item in selected] == ["front"]
     explained = selector.explain_from_yaml(
         character_yaml,
@@ -267,11 +283,15 @@ def test_approval_rejection_and_selector_behaviour(tmp_path: Path) -> None:
             camera_shot_type="close_up",
             angle="front",
             engine_reference_limit=3,
+            allow_preview_references=True,
         ),
     )
     assert any(item.name == "three_quarter_right" for item in explained.excluded)
     rejected_data = yaml.safe_load(character_yaml.read_text(encoding="utf-8"))
-    assert rejected_data["reference_images"]["views"]["three_quarter_right"]["status"] == "rejected"
+    assert (
+        rejected_data["reference_images"]["legacy_crops"]["three_quarter_right"]["status"]
+        == "rejected"
+    )
 
 
 def test_selector_matches_profiles_full_body_back_and_seated(tmp_path: Path) -> None:
@@ -298,19 +318,31 @@ def test_selector_matches_profiles_full_body_back_and_seated(tmp_path: Path) -> 
 
     profile = selector.select_from_yaml(
         character_yaml,
-        ReferenceSelectionRequest(angle="profile_left", engine_reference_limit=2),
+        ReferenceSelectionRequest(
+            angle="profile_left",
+            engine_reference_limit=2,
+            allow_preview_references=True,
+        ),
     )
     full_body = selector.select_from_yaml(
         character_yaml,
-        ReferenceSelectionRequest(camera_shot_type="full_body", pose="standing"),
+        ReferenceSelectionRequest(
+            camera_shot_type="full_body",
+            pose="standing",
+            allow_preview_references=True,
+        ),
     )
     back = selector.select_from_yaml(
         character_yaml,
-        ReferenceSelectionRequest(angle="back_view", engine_reference_limit=2),
+        ReferenceSelectionRequest(
+            angle="back_view",
+            engine_reference_limit=2,
+            allow_preview_references=True,
+        ),
     )
     seated = selector.select_from_yaml(
         character_yaml,
-        ReferenceSelectionRequest(pose="seated"),
+        ReferenceSelectionRequest(pose="seated", allow_preview_references=True),
     )
 
     assert profile[0].name == "left_profile"
@@ -339,11 +371,52 @@ def test_selector_respects_engine_reference_count(tmp_path: Path) -> None:
             camera_shot_type="close_up",
             engine_reference_limit=min(2, engine_capabilities.max_character_reference_images),
             preferred_reference_types=engine_capabilities.preferred_reference_types,
+            allow_preview_references=True,
         ),
     )
 
     assert engine_capabilities.supports_multiple_references is True
     assert len(selected) == 2
+
+
+def test_cropped_preview_references_do_not_make_character_production_ready(
+    tmp_path: Path,
+) -> None:
+    repo_root, source = _write_reference_project(tmp_path)
+    ReferenceSheetSplitter(repo_root=repo_root).split(
+        source,
+        project="demo",
+        character="hero",
+        layout_id="test_grid",
+        options=SplitOptions(min_width=50, min_height=50),
+    )
+    approvals = ReferenceApprovalService(repo_root=repo_root)
+    for reference in (
+        "front",
+        "left_profile",
+        "three_quarter_left",
+        "three_quarter_right",
+        "full_body_front",
+        "full_body_back",
+        "seated_front",
+    ):
+        approvals.approve(project="demo", character="hero", reference=reference)
+
+    readiness = ReferenceInventoryService(repo_root=repo_root).production_readiness(
+        project="demo",
+        character="hero",
+    )
+
+    assert readiness.production_ready is False
+    assert set(readiness.missing_references) == {
+        "front",
+        "left_profile",
+        "three_quarter_left",
+        "three_quarter_right",
+        "full_body_front",
+        "full_body_back",
+        "seated_front",
+    }
 
 
 def test_manual_overrides_take_priority_over_grid(tmp_path: Path) -> None:

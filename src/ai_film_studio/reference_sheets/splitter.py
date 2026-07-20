@@ -21,6 +21,7 @@ from ai_film_studio.reference_sheets.models import (
     PixelCrop,
     ReferenceOutputFormat,
     ReferenceSheetSplitResult,
+    ReferenceSourceType,
     ReferenceStatus,
     SplitOptions,
 )
@@ -436,14 +437,18 @@ class ReferenceSheetSplitter:
             "manifest_path": _relative_to(character_yaml.parent, manifest_path),
             "layout_id": layout_id,
             "checksum": source_checksum,
+            "source_type": ReferenceSourceType.MASTER_SHEET.value,
+            "production_selectable": False,
             "approved": False,
             "status": ReferenceStatus.PENDING_REVIEW.value,
         }
-        views = _ensure_mapping(reference_images, "views")
+        legacy_crops = _ensure_mapping(reference_images, "legacy_crops")
         for reference in generated:
             output_path = self._repo_root / reference.path
-            views[reference.name] = {
+            legacy_crops[reference.name] = {
                 "path": _relative_to(character_yaml.parent, output_path),
+                "source_type": ReferenceSourceType.CROPPED_PREVIEW.value,
+                "production_selectable": False,
                 "tags": list(reference.tags),
                 "shot_types": list(reference.shot_types),
                 "camera_angles": list(reference.camera_angles),

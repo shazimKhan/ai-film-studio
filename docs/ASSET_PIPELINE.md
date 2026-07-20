@@ -48,17 +48,21 @@ old_sewing_machine
 village_bicycle
 ```
 
-Character references:
+Character production references for compiler/default selector use:
 
 ```text
-references/front.png
-references/back.png
-references/left.png
-references/right.png
-references/three_quarter.png
-references/full_body.png
-references/closeup.png
+references/production/front.png
+references/production/left_profile.png
+references/production/three_quarter_left.png
+references/production/three_quarter_right.png
+references/production/full_body_front.png
+references/production/full_body_back.png
+references/production/seated_front.png
 ```
+
+`references/master/master_sheet.png` identity review ke liye hai. Split crops
+`references/views/` mein aa sakte hain, lekin woh `cropped_preview` hain aur default
+compiler/selector unhein production references ke taur par use nahi karta.
 
 Character expressions:
 
@@ -178,9 +182,10 @@ Prompt compilation should reference approved assets by stable id and path. The p
 compiler must not generate missing image references or invent appearances. Asset
 bible references are production inputs used by future compiler and QA stages.
 
-Reference sheets can be split into individual reviewable character images before
-they are selected for generation manifests. See `docs/REFERENCE_SHEET_WORKFLOW.md`
-for local preview, split, approval, and rejection commands.
+Reference sheets can be split into reviewable cropped previews, but final
+generation manifests should use separately generated approved HD production
+references. See `docs/REFERENCE_SHEET_WORKFLOW.md` and
+`docs/CHARACTER_SHEET_BATCH_WORKFLOW.md`.
 
 ## Best Practices
 

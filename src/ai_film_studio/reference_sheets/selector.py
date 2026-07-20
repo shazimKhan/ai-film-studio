@@ -10,9 +10,11 @@ from typing import Any
 from ai_film_studio.core.exceptions import ReferenceSheetError
 from ai_film_studio.module_loader import ModuleLoader
 from ai_film_studio.reference_sheets.models import (
+    PRODUCTION_SELECTABLE_SOURCE_TYPES,
     ExcludedReference,
     ReferenceSelectionRequest,
     ReferenceSelectionResult,
+    ReferenceSourceType,
     ReferenceStatus,
     SelectedReference,
 )
@@ -60,43 +62,121 @@ class ReferenceSelector:
     ) -> ReferenceSelectionResult:
         """Return selected references plus exclusion reasons for a shot request."""
         character_id = str(character_asset.get("id") or "unknown")
-        views = self._views(character_asset)
         compatible: list[_CandidateReference] = []
-        for name, raw_view in views.items():
-            if not isinstance(raw_view, Mapping):
-                continue
+        master_sheet = self._master_sheet(character_asset)
+        if master_sheet is not None:
+            compatible.append(
+                _CandidateReference.skipped(
+                    name="master_sheet",
+                    path=_path(master_sheet),
+                    reason="master sheets are identity review only",
+                    status=_status(master_sheet),
+                    source_type=ReferenceSourceType.MASTER_SHEET,
+                    production_selectable=False,
+                ),
+            )
+
+        for entry in self._reference_entries(character_asset):
+            name = entry.name
+            raw_view = entry.raw
             status = _status(raw_view)
+            source_type, source_type_valid = _source_type(raw_view, entry.default_source_type)
+            production_selectable = _production_selectable(
+                raw_view,
+                source_type=source_type,
+                default=entry.default_production_selectable,
+            )
+            if not source_type_valid:
+                compatible.append(
+                    _CandidateReference.skipped(
+                        name=name,
+                        path=_path(raw_view),
+                        reason="invalid source type",
+                        status=status,
+                        source_type=None,
+                        production_selectable=production_selectable,
+                    ),
+                )
+                continue
+            if source_type == ReferenceSourceType.MASTER_SHEET:
+                compatible.append(
+                    _CandidateReference.skipped(
+                        name=name,
+                        path=_path(raw_view),
+                        reason="master sheets are identity review only",
+                        status=status,
+                        source_type=source_type,
+                        production_selectable=False,
+                    ),
+                )
+                continue
+            if (
+                source_type == ReferenceSourceType.CROPPED_PREVIEW
+                and not request.allow_preview_references
+            ):
+                compatible.append(
+                    _CandidateReference.skipped(
+                        name=name,
+                        path=_path(raw_view),
+                        reason="preview references disabled",
+                        status=status,
+                        source_type=source_type,
+                        production_selectable=production_selectable,
+                    ),
+                )
+                continue
+            if (
+                source_type in PRODUCTION_SELECTABLE_SOURCE_TYPES
+                and not production_selectable
+            ):
+                compatible.append(
+                    _CandidateReference.skipped(
+                        name=name,
+                        path=_path(raw_view),
+                        reason="not production selectable",
+                        status=status,
+                        source_type=source_type,
+                        production_selectable=production_selectable,
+                    ),
+                )
+                continue
             if status == ReferenceStatus.REJECTED:
                 compatible.append(
                     _CandidateReference.skipped(
-                        name=str(name),
+                        name=name,
                         path=_path(raw_view),
                         reason="rejected reference",
                         status=status,
+                        source_type=source_type,
+                        production_selectable=production_selectable,
                     ),
                 )
                 continue
             if request.approved_only and not _is_approved(raw_view, status):
                 compatible.append(
                     _CandidateReference.skipped(
-                        name=str(name),
+                        name=name,
                         path=_path(raw_view),
                         reason="not approved",
                         status=status,
+                        source_type=source_type,
+                        production_selectable=production_selectable,
                     ),
                 )
                 continue
 
-            tags = _reference_tags(str(name), raw_view)
+            tags = _reference_tags(name, raw_view)
             path = _path(raw_view)
             if path is None:
                 compatible.append(
                     _CandidateReference.skipped(
-                        name=str(name),
+                        name=name,
                         path=None,
                         reason="missing reference path",
                         status=status,
                         tags=tags,
+                        source_type=source_type,
+                        production_selectable=production_selectable,
                     ),
                 )
                 continue
@@ -105,24 +185,28 @@ class ReferenceSelector:
             if not compatibility.is_compatible:
                 compatible.append(
                     _CandidateReference.skipped(
-                        name=str(name),
+                        name=name,
                         path=path,
                         reason=compatibility.reason,
                         status=status,
                         tags=tags,
+                        source_type=source_type,
+                        production_selectable=production_selectable,
                     ),
                 )
                 continue
 
             compatible.append(
                 _CandidateReference(
-                    name=str(name),
+                    name=name,
                     path=path,
                     reason=compatibility.reason,
                     score=self._score(tags, raw_view, request, compatibility),
                     priority=_priority(raw_view),
                     tags=tags,
                     status=status,
+                    source_type=source_type,
+                    production_selectable=production_selectable,
                     exact=compatibility.is_exact,
                     weak=compatibility.is_weak,
                     excluded=False,
@@ -135,7 +219,12 @@ class ReferenceSelector:
         ]
         selected_candidates = sorted(
             selectable,
-            key=lambda item: (-item.score, item.priority, item.name),
+            key=lambda item: (
+                -item.score,
+                _source_rank(item.source_type),
+                item.priority,
+                item.name,
+            ),
         )[: request.engine_reference_limit]
         selected_names = {item.name for item in selected_candidates}
 
@@ -178,14 +267,46 @@ class ReferenceSelector:
         score += max(0.0, 10.0 - (float(_priority(raw_view)) / 10.0))
         return round(min(score, 99.0), 2)
 
-    def _views(self, character_asset: Mapping[str, Any]) -> Mapping[str, Any]:
+    def _master_sheet(self, character_asset: Mapping[str, Any]) -> Mapping[str, Any] | None:
         reference_images = character_asset.get("reference_images")
         if not isinstance(reference_images, Mapping):
-            return {}
-        views = reference_images.get("views")
-        if not isinstance(views, Mapping):
-            return {}
-        return views
+            return None
+        master_sheet = reference_images.get("master_sheet")
+        if isinstance(master_sheet, Mapping):
+            return master_sheet
+        return None
+
+    def _reference_entries(self, character_asset: Mapping[str, Any]) -> tuple[_ReferenceEntry, ...]:
+        reference_images = character_asset.get("reference_images")
+        if not isinstance(reference_images, Mapping):
+            return ()
+        entries: list[_ReferenceEntry] = []
+        production = reference_images.get("production")
+        if isinstance(production, Mapping):
+            entries.extend(
+                _entry(
+                    name=name,
+                    raw_view=raw_view,
+                    default_source_type=ReferenceSourceType.NATIVE_HIGH_RESOLUTION,
+                    default_production_selectable=True,
+                )
+                for name, raw_view in production.items()
+                if isinstance(raw_view, Mapping)
+            )
+        for legacy_key in ("legacy_crops", "views"):
+            legacy = reference_images.get(legacy_key)
+            if isinstance(legacy, Mapping):
+                entries.extend(
+                    _entry(
+                        name=name,
+                        raw_view=raw_view,
+                        default_source_type=ReferenceSourceType.CROPPED_PREVIEW,
+                        default_production_selectable=False,
+                    )
+                    for name, raw_view in legacy.items()
+                    if isinstance(raw_view, Mapping)
+                )
+        return tuple(entries)
 
 
 @dataclass(frozen=True, slots=True)
@@ -205,6 +326,8 @@ class _CandidateReference:
     priority: int
     tags: set[str]
     status: ReferenceStatus
+    source_type: ReferenceSourceType | None
+    production_selectable: bool
     exact: bool
     weak: bool
     excluded: bool
@@ -218,6 +341,8 @@ class _CandidateReference:
         reason: str,
         status: ReferenceStatus,
         tags: set[str] | None = None,
+        source_type: ReferenceSourceType | None = None,
+        production_selectable: bool = False,
     ) -> _CandidateReference:
         return cls(
             name=name,
@@ -227,6 +352,8 @@ class _CandidateReference:
             priority=100,
             tags=tags or set(),
             status=status,
+            source_type=source_type,
+            production_selectable=production_selectable,
             exact=False,
             weak=False,
             excluded=True,
@@ -239,6 +366,8 @@ class _CandidateReference:
             score=self.score,
             priority=self.priority,
             reason=self.reason,
+            source_type=self.source_type,
+            production_selectable=self.production_selectable,
             tags=tuple(sorted(self.tags)),
             status=self.status,
         )
@@ -250,8 +379,18 @@ class _CandidateReference:
             reason=reason or self.reason,
             score=self.score,
             status=self.status,
+            source_type=self.source_type,
+            production_selectable=self.production_selectable,
             tags=tuple(sorted(self.tags)),
         )
+
+
+@dataclass(frozen=True, slots=True)
+class _ReferenceEntry:
+    name: str
+    raw: Mapping[str, Any]
+    default_source_type: ReferenceSourceType
+    default_production_selectable: bool
 
 
 def _path(raw_view: Mapping[str, Any]) -> str | None:
@@ -259,6 +398,62 @@ def _path(raw_view: Mapping[str, Any]) -> str | None:
     if isinstance(path, str) and path.strip():
         return path
     return None
+
+
+def _entry(
+    *,
+    name: object,
+    raw_view: Mapping[str, Any],
+    default_source_type: ReferenceSourceType,
+    default_production_selectable: bool,
+) -> _ReferenceEntry:
+    return _ReferenceEntry(
+        name=str(name),
+        raw=raw_view,
+        default_source_type=default_source_type,
+        default_production_selectable=default_production_selectable,
+    )
+
+
+def _source_type(
+    raw_view: Mapping[str, Any],
+    default_source_type: ReferenceSourceType,
+) -> tuple[ReferenceSourceType | None, bool]:
+    value = raw_view.get("source_type")
+    if value is None:
+        return default_source_type, True
+    if isinstance(value, ReferenceSourceType):
+        return value, True
+    if isinstance(value, str):
+        try:
+            return ReferenceSourceType(value), True
+        except ValueError:
+            return None, False
+    return None, False
+
+
+def _production_selectable(
+    raw_view: Mapping[str, Any],
+    *,
+    source_type: ReferenceSourceType | None,
+    default: bool,
+) -> bool:
+    value = raw_view.get("production_selectable")
+    if isinstance(value, bool):
+        return value
+    if source_type in PRODUCTION_SELECTABLE_SOURCE_TYPES:
+        return default
+    return False
+
+
+def _source_rank(source_type: ReferenceSourceType | None) -> int:
+    if source_type == ReferenceSourceType.NATIVE_HIGH_RESOLUTION:
+        return 0
+    if source_type == ReferenceSourceType.GENERATED_VARIANT:
+        return 1
+    if source_type == ReferenceSourceType.CROPPED_PREVIEW:
+        return 2
+    return 3
 
 
 def _status(raw_view: Mapping[str, Any]) -> ReferenceStatus:

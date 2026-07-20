@@ -118,19 +118,42 @@ projects/guriya/asset_index.json
 See `docs/ASSET_PIPELINE.md` for naming conventions, validation rules, and best
 practices.
 
-## Reference Sheet Splitting
+## Production Character References
 
-Manual character sheets can be split into production reference crops with deterministic
-layout templates. The splitter uses Pillow locally only; it does not run OCR, face
-recognition, character identification, cloud APIs, or image generation.
+Character images manually generate hoti hain. Aap Gemini, Flow, Veo, Kling,
+Photoshop, ya kisi bhi image tool se final HD angle banate hain, phir usay project
+folder mein store karte hain.
 
-Preview Guriya's current master sheet:
+Important rule:
+
+- `master_sheet.png` sirf identity review ke liye hai.
+- Split crops sirf preview/debug ke liye hain.
+- Compiler default mode mein sirf approved HD production references use karta hai.
+- HD production references yahan rakhni hain:
+
+```text
+projects/guriya/characters/guriya/references/production/
+```
+
+Required production references:
+
+```text
+front
+left_profile
+three_quarter_left
+three_quarter_right
+full_body_front
+full_body_back
+seated_front
+```
+
+Master sheet preview dekhne ke liye:
 
 ```bash
 aifs preview-reference-sheet projects/guriya/characters/guriya/references/master/master_sheet.png --layout guriya_master_v1 --overrides projects/guriya/characters/guriya/references/crop_overrides.yaml
 ```
 
-Split the sheet:
+Master sheet split karna sirf review crops banata hai:
 
 ```bash
 aifs split-reference-sheet projects/guriya/characters/guriya/references/master/master_sheet.png --project guriya --character guriya --layout guriya_master_v1
@@ -142,13 +165,45 @@ Equivalent module entry point:
 python -m ai_film_studio.cli split-reference-sheet projects/guriya/characters/guriya/references/master/master_sheet.png --project guriya --character guriya --layout guriya_master_v1
 ```
 
-Generated crops are written to:
+Cropped previews yahan likhe jate hain:
 
 ```text
 projects/guriya/characters/guriya/references/views/
 ```
 
-The crop preview is written to:
+Yeh crops production references nahi hain. Existing cropped metadata migrate karne
+ke liye:
+
+```bash
+aifs migrate-cropped-references --project guriya --character guriya
+```
+
+Har final angle ko separately HD mein generate karein, phir register karein:
+
+```bash
+aifs register-production-reference --project guriya --character guriya --type front --path projects/guriya/characters/guriya/references/production/front.png
+```
+
+Validate aur readiness check:
+
+```bash
+aifs list-production-references --project guriya --character guriya
+aifs validate-production-references --project guriya --character guriya
+```
+
+Valid HD image approve karne ke baad selector usay default mode mein use kar sakta hai:
+
+```bash
+aifs approve-reference --project guriya --character guriya --reference front
+```
+
+Debug mode mein cropped previews allow karne ke liye explicit flag chahiye:
+
+```bash
+aifs select-references projects/guriya/tests/reference_selection/close_up_front.yaml --engine gemini --allow-preview-references
+```
+
+Crop preview image yahan likhi jati hai:
 
 ```text
 projects/guriya/characters/guriya/references/master/master_sheet_preview.png
@@ -160,15 +215,9 @@ The reference manifest is written to:
 projects/guriya/characters/guriya/references/reference_sheet_manifest.json
 ```
 
-Split crops start as `pending_review`. Approve or reject them explicitly:
-
-```bash
-aifs approve-reference --project guriya --character guriya --reference front
-aifs reject-reference --project guriya --character guriya --reference front --reason "Crop is not usable"
-```
-
 See `docs/REFERENCE_SHEET_WORKFLOW.md` for the Roman Urdu workflow and exact
-Guriya commands.
+Guriya commands. See `docs/CHARACTER_SHEET_BATCH_WORKFLOW.md` for batch HD
+reference generation workflow.
 
 ## Current Limitations
 
@@ -179,7 +228,8 @@ Guriya commands.
 - Prompt Compiler v1 resolves character and world assets from local YAML files.
 - Asset reference images are manually generated and may be awaiting approval.
 - Reference sheet splitting is deterministic local asset management only; the combined
-  master sheet is not treated as an ideal direct video-generation input.
+  master sheet and cropped previews are not production generation references.
+- No automatic upscaling or image generation is performed.
 
 ## Features
 

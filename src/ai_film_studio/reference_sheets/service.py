@@ -68,6 +68,7 @@ class ReferenceSelectionService:
         *,
         engine: str,
         allow_weak_fallbacks: bool = False,
+        allow_preview_references: bool = False,
     ) -> SceneReferenceSelectionArtifact:
         """Run reference selection for a scene file and write its generation manifest."""
         resolved_scene_file = self._resolve_repo_path(scene_file)
@@ -89,6 +90,7 @@ class ReferenceSelectionService:
             engine_reference_limit=capabilities.max_character_reference_images,
             preferred_reference_types=capabilities.preferred_reference_types,
             allow_weak_fallbacks=allow_weak_fallbacks,
+            allow_preview_references=allow_preview_references,
         )
         character_yaml = (
             self._repo_root
@@ -165,6 +167,7 @@ class ReferenceSelectionService:
             "selector_inputs": result.selector_inputs.model_dump(mode="json"),
             "engine_reference_limit": result.engine_reference_limit,
             "allow_weak_fallbacks": result.allow_weak_fallbacks,
+            "allow_preview_references": result.selector_inputs.allow_preview_references,
             "expected_reference": scene.expected_reference,
             "primary_reference": result.selected[0].name if result.selected else None,
             "selected_references": [
@@ -173,6 +176,10 @@ class ReferenceSelectionService:
                     "path": reference.path,
                     "score": reference.score,
                     "reason": reference.reason,
+                    "source_type": (
+                        reference.source_type.value if reference.source_type is not None else None
+                    ),
+                    "production_selectable": reference.production_selectable,
                     "priority": reference.priority,
                     "tags": list(reference.tags),
                     "status": reference.status.value,
@@ -184,6 +191,10 @@ class ReferenceSelectionService:
                     "name": reference.name,
                     "path": reference.path,
                     "reason": reference.reason,
+                    "source_type": (
+                        reference.source_type.value if reference.source_type is not None else None
+                    ),
+                    "production_selectable": reference.production_selectable,
                     "score": reference.score,
                     "status": reference.status.value,
                     "tags": list(reference.tags),
@@ -201,6 +212,14 @@ class ReferenceSelectionService:
                     "height": validation.height,
                     "checksum": validation.checksum,
                     "checksum_matches": validation.checksum_matches,
+                    "source_type": (
+                        validation.source_type.value if validation.source_type is not None else None
+                    ),
+                    "source_type_valid": validation.source_type_valid,
+                    "production_selectable": validation.production_selectable,
+                    "duplicate_path": validation.duplicate_path,
+                    "min_width": validation.min_width,
+                    "min_height": validation.min_height,
                     "status": validation.status.value,
                     "approved": validation.approved,
                     "reason": validation.reason,

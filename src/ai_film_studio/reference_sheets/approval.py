@@ -31,10 +31,10 @@ class ReferenceApprovalService:
             msg = f"Reference '{reference}' cannot be approved: {validation.reason}."
             raise ReferenceSheetError(msg)
 
-        character_yaml, data, view = self._load_view(project, character, reference)
-        view["status"] = ReferenceStatus.APPROVED.value
-        view["approved"] = True
-        view.pop("rejection_reason", None)
+        character_yaml, data, reference_data = self._load_reference(project, character, reference)
+        reference_data["status"] = ReferenceStatus.APPROVED.value
+        reference_data["approved"] = True
+        reference_data.pop("rejection_reason", None)
         self._write_character_yaml(character_yaml, data)
         ReferenceInventoryService(
             repo_root=self._repo_root,
@@ -47,10 +47,10 @@ class ReferenceApprovalService:
         if not reason.strip():
             msg = "A rejection reason is required."
             raise ReferenceSheetError(msg)
-        character_yaml, data, view = self._load_view(project, character, reference)
-        view["status"] = ReferenceStatus.REJECTED.value
-        view["approved"] = False
-        view["rejection_reason"] = reason.strip()
+        character_yaml, data, reference_data = self._load_reference(project, character, reference)
+        reference_data["status"] = ReferenceStatus.REJECTED.value
+        reference_data["approved"] = False
+        reference_data["rejection_reason"] = reason.strip()
         self._write_character_yaml(character_yaml, data)
         ReferenceInventoryService(
             repo_root=self._repo_root,
@@ -58,7 +58,7 @@ class ReferenceApprovalService:
         ).sync_manifest_statuses(project=project, character=character)
         return character_yaml
 
-    def _load_view(
+    def _load_reference(
         self,
         project: str,
         character: str,
@@ -81,15 +81,15 @@ class ReferenceApprovalService:
         if not isinstance(reference_images, dict):
             msg = f"Character '{character}' has no extracted reference images."
             raise ReferenceSheetError(msg)
-        views = reference_images.get("views")
-        if not isinstance(views, dict):
-            msg = f"Character '{character}' has no extracted reference views."
-            raise ReferenceSheetError(msg)
-        view = views.get(reference)
-        if not isinstance(view, dict):
-            msg = f"Reference '{reference}' was not found for character '{character}'."
-            raise ReferenceSheetError(msg)
-        return character_yaml, data, view
+        for section_name in ("production", "legacy_crops", "views"):
+            section = reference_images.get(section_name)
+            if not isinstance(section, dict):
+                continue
+            reference_data = section.get(reference)
+            if isinstance(reference_data, dict):
+                return character_yaml, data, reference_data
+        msg = f"Reference '{reference}' was not found for character '{character}'."
+        raise ReferenceSheetError(msg)
 
     def _write_character_yaml(self, character_yaml: Path, data: dict[str, Any]) -> None:
         backup_path = character_yaml.with_suffix(character_yaml.suffix + ".bak")

@@ -17,12 +17,14 @@ from ai_film_studio.core.exceptions import AIFilmStudioError
 from ai_film_studio.core.logging import configure_logging
 from ai_film_studio.prompt_compiler import PromptCompilationService
 from ai_film_studio.reference_sheets import (
+    ProductionReadiness,
     ReferenceApprovalService,
     ReferenceImageValidation,
     ReferenceInventoryService,
     ReferenceOutputFormat,
     ReferenceSelectionService,
     ReferenceSheetSplitter,
+    ReferenceSourceType,
     SplitOptions,
 )
 
@@ -424,6 +426,130 @@ def validate_references(
     console.print("[green]Reference image validation passed.[/green]")
 
 
+@app.command("register-production-reference")
+def register_production_reference(
+    project: Annotated[
+        str,
+        typer.Option("--project", help="Project id under projects/."),
+    ],
+    character: Annotated[
+        str,
+        typer.Option("--character", help="Character asset id."),
+    ],
+    reference_type: Annotated[
+        str,
+        typer.Option("--type", help="Production reference type, such as front."),
+    ],
+    path: Annotated[
+        Path,
+        typer.Option("--path", help="Path to the independently generated HD image."),
+    ],
+    source_type: Annotated[
+        ReferenceSourceType,
+        typer.Option("--source-type", help="Production reference source type."),
+    ] = ReferenceSourceType.NATIVE_HIGH_RESOLUTION,
+) -> None:
+    """Register a separately generated HD production reference."""
+    try:
+        inventory = ReferenceInventoryService(repo_root=Path.cwd())
+        character_yaml = inventory.register_production_reference(
+            project=project,
+            character=character,
+            reference_type=reference_type,
+            path=path,
+            source_type=source_type,
+        )
+    except AIFilmStudioError as exc:
+        console.print(f"[red]Error:[/red] {exc}")
+        raise typer.Exit(1) from None
+    console.print(f"Registered production reference '{reference_type}' in: {character_yaml}")
+
+
+@app.command("list-production-references")
+def list_production_references(
+    project: Annotated[
+        str,
+        typer.Option("--project", help="Project id under projects/."),
+    ],
+    character: Annotated[
+        str,
+        typer.Option("--character", help="Character asset id."),
+    ],
+) -> None:
+    """List production references and readiness state."""
+    try:
+        inventory = ReferenceInventoryService(repo_root=Path.cwd())
+        validations = inventory.validate_production_references(
+            project=project,
+            character=character,
+        )
+        readiness = inventory.production_readiness(project=project, character=character)
+    except AIFilmStudioError as exc:
+        console.print(f"[red]Error:[/red] {exc}")
+        raise typer.Exit(1) from None
+
+    _print_reference_validation_table(validations)
+    _print_readiness(readiness)
+
+
+@app.command("validate-production-references")
+def validate_production_references(
+    project: Annotated[
+        str,
+        typer.Option("--project", help="Project id under projects/."),
+    ],
+    character: Annotated[
+        str,
+        typer.Option("--character", help="Character asset id."),
+    ],
+) -> None:
+    """Validate HD production references and production readiness."""
+    try:
+        inventory = ReferenceInventoryService(repo_root=Path.cwd())
+        validations = inventory.validate_production_references(
+            project=project,
+            character=character,
+        )
+        readiness = inventory.production_readiness(project=project, character=character)
+    except AIFilmStudioError as exc:
+        console.print(f"[red]Error:[/red] {exc}")
+        raise typer.Exit(1) from None
+
+    _print_reference_validation_table(validations)
+    _print_readiness(readiness)
+    invalid = [validation for validation in validations if not validation.is_valid]
+    if invalid or not readiness.production_ready:
+        console.print("[red]Production reference validation failed.[/red]")
+        raise typer.Exit(1)
+    console.print("[green]Production reference validation passed.[/green]")
+
+
+@app.command("migrate-cropped-references")
+def migrate_cropped_references(
+    project: Annotated[
+        str,
+        typer.Option("--project", help="Project id under projects/."),
+    ],
+    character: Annotated[
+        str,
+        typer.Option("--character", help="Character asset id."),
+    ],
+) -> None:
+    """Move cropped reference metadata into legacy preview references."""
+    try:
+        inventory = ReferenceInventoryService(repo_root=Path.cwd())
+        character_yaml = inventory.migrate_cropped_references(
+            project=project,
+            character=character,
+        )
+        readiness = inventory.production_readiness(project=project, character=character)
+    except AIFilmStudioError as exc:
+        console.print(f"[red]Error:[/red] {exc}")
+        raise typer.Exit(1) from None
+    console.print(f"Migrated cropped references in: {character_yaml}")
+    _print_readiness(readiness)
+
+
 @app.command("select-references")
 def select_references(
     scene_file: Annotated[
@@ -441,6 +567,13 @@ def select_references(
             help="Allow weak selector fallbacks such as portrait refs for full-body shots.",
         ),
     ] = False,
+    allow_preview_references: Annotated[
+        bool,
+        typer.Option(
+            "--allow-preview-references",
+            help="Allow cropped preview references for debugging only.",
+        ),
+    ] = False,
 ) -> None:
     """Debug reference selection for a scene and write a generation manifest."""
     try:
@@ -453,6 +586,7 @@ def select_references(
             scene_file,
             engine=engine,
             allow_weak_fallbacks=allow_weak_fallbacks,
+            allow_preview_references=allow_preview_references,
         )
     except AIFilmStudioError as exc:
         console.print(f"[red]Error:[/red] {exc}")
@@ -468,6 +602,7 @@ def select_references(
         console.print(f"Pose: {inputs.pose}")
     if inputs.action:
         console.print(f"Action: {inputs.action}")
+    console.print(f"Allow preview references: {inputs.allow_preview_references}")
     console.print(f"Engine reference limit: {artifact.result.engine_reference_limit}")
     console.print(f"Manifest: {artifact.output_path}")
 
@@ -549,9 +684,13 @@ def _print_reference_validation_table(validations: Iterable[ReferenceImageValida
     table = Table(title="Character References")
     table.add_column("Reference")
     table.add_column("Path")
+    table.add_column("Source")
+    table.add_column("Selectable")
     table.add_column("Status")
+    table.add_column("Approved")
     table.add_column("Valid")
     table.add_column("Size")
+    table.add_column("Minimum")
     table.add_column("Reason")
     for validation in validations:
         size = (
@@ -559,15 +698,35 @@ def _print_reference_validation_table(validations: Iterable[ReferenceImageValida
             if validation.width and validation.height
             else "-"
         )
+        minimum = (
+            f"{validation.min_width}x{validation.min_height}"
+            if validation.min_width and validation.min_height
+            else "-"
+        )
         table.add_row(
             validation.name,
             validation.path or "-",
+            validation.source_type.value if validation.source_type else "-",
+            "yes" if validation.production_selectable else "no",
             validation.status.value,
+            "yes" if validation.approved else "no",
             "yes" if validation.is_valid else "no",
             size,
+            minimum,
             validation.reason,
         )
     console.print(table)
+
+
+def _print_readiness(readiness: ProductionReadiness) -> None:
+    state = "yes" if readiness.production_ready else "no"
+    console.print(f"Production ready: {state}")
+    if readiness.ready_references:
+        console.print(f"Ready: {', '.join(readiness.ready_references)}")
+    if readiness.missing_references:
+        console.print(f"Missing: {', '.join(readiness.missing_references)}")
+    if readiness.invalid_references:
+        console.print(f"Invalid: {', '.join(readiness.invalid_references)}")
 
 
 def _format_score(score: float) -> str:
