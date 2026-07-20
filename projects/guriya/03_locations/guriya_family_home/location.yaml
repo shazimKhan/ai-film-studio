@@ -1,0 +1,24 @@
+schema_version: "1.0"
+location_id: guriya_family_home
+display_name: Guriya Family Home
+location_type: modest_family_home
+region: Taxila, Punjab, Pakistan
+primary_year: 1988
+prompt_sources:
+  master_prompt: MASTER_PROMPT.md
+  negative_prompt: NEGATIVE_PROMPT.md
+  asset_bible: ../../environment/house/environment.yaml
+reference_status: awaiting_location_references
+usable_scene_contexts:
+  - late_night_sewing_room
+  - children_sleeping_nearby
+  - happy_family_morning
+  - mother_helping_scene
+period_rules:
+  - use_1988_pakistani_domestic_details
+  - keep_materials_simple_and_lived_in
+  - avoid_modern_visual_noise
+pipeline_usage:
+  scene_compiler: location_reference
+  prompt_compiler: location_prompt_reference
+  qa_engine: period_and_continuity_check

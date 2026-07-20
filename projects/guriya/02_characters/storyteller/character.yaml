@@ -1,0 +1,27 @@
+schema_version: "1.0"
+character_id: storyteller
+display_name: Storyteller
+role: recurring_narrator
+identity_source:
+  master_prompt: MASTER_PROMPT.md
+  negative_prompt: NEGATIVE_PROMPT.md
+  asset_bible: ../../characters/storyteller/character.yaml
+reference_status: awaiting_hd_production_references
+studio_context: narrator_studio
+personality:
+  - compassionate
+  - serious
+  - reflective
+  - controlled
+continuity_files:
+  identity: continuity.yaml
+  camera: camera_rules.yaml
+  motion: motion_profile.yaml
+  style: style_profile.yaml
+  voice: voice_profile.yaml
+  studio_prompt: studio_prompt.md
+pipeline_usage:
+  ai_director: frame_narration
+  story_engine: episode_bridge
+  scene_compiler: narrator_reference
+  prompt_compiler: studio_frame_reference

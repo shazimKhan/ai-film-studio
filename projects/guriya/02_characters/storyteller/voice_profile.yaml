@@ -1,0 +1,11 @@
+schema_version: "1.0"
+character_id: storyteller
+voice_scope: narration_only
+language: urdu
+delivery:
+  tone: serious_and_compassionate
+  rhythm: measured
+  emotional_distance: respectful
+narration_policy:
+  store_narration_in: ../../10_voiceover/episode_01_narration.md
+  never_embed_narration_in_video_prompts: true

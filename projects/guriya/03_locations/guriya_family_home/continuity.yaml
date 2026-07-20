@@ -1,0 +1,21 @@
+schema_version: "1.0"
+location_id: guriya_family_home
+continuity_scope: episode_01
+locked_elements:
+  period: "1988 Taxila"
+  socioeconomic_feel: modest_working_family
+  texture: natural_domestic_materials
+  props:
+    - manual_sewing_machine
+    - fabric_pieces
+    - simple_bedding
+    - household_utensils
+night_state:
+  light_sources:
+    - practical_lamp
+    - soft_low_room_light
+  mood: tired_quiet_emotional
+flashback_morning_state:
+  light_sources:
+    - natural_morning_light
+  mood: peaceful_family_warmth

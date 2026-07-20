@@ -1,0 +1,26 @@
+schema_version: "1.0"
+episode_id: EP01
+qa_scope:
+  - story_structure
+  - character_identity
+  - location_continuity
+  - shot_metadata
+  - prompt_readiness
+checks:
+  - check_id: EP01_QA_001
+    target: 05_shots/opening_batch.yaml
+    rule_refs:
+      - one_main_action
+      - duration_range
+      - no_dialogue_in_video_prompt
+    status: ready_for_validation
+  - check_id: EP01_QA_002
+    target: 02_characters/guriya/continuity.yaml
+    rule_refs:
+      - identity_lock
+    status: ready_for_validation
+  - check_id: EP01_QA_003
+    target: 03_locations/guriya_family_home/continuity.yaml
+    rule_refs:
+      - period_accuracy
+    status: ready_for_validation

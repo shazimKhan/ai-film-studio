@@ -1,0 +1,10 @@
+schema_version: "1.0"
+character_id: storyteller
+visual_style:
+  frame_type: podcast_style_studio
+  tone: serious_documentary_drama_bridge
+  glamour_level: low
+style_rules:
+  - keep_lighting_soft_and_controlled
+  - avoid_neon_or_brand_heavy_sets
+  - preserve_sober_episode_tone

@@ -1,0 +1,13 @@
+schema_version: "1.0"
+character_id: guriya
+visual_style:
+  genre: realistic_pakistani_television_drama
+  period: "1988 Taxila"
+  texture: natural_skin_and_fabric_texture
+  performance: restrained_acting
+  glamour_level: low
+style_rules:
+  - preserve_period_accurate_clothing
+  - keep_lighting_natural_or_practical
+  - avoid_fashion_editorial_framing
+  - keep_emotion_human_and_grounded

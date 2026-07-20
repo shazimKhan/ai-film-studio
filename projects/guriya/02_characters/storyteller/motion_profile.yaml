@@ -1,0 +1,14 @@
+schema_version: "1.0"
+character_id: storyteller
+movement_style:
+  posture: seated_upright
+  gestures: restrained_hands
+  facial_motion: compassionate_serious
+  pace: measured
+approved_actions:
+  - looking_into_camera
+  - slight_head_turn
+  - restrained_hand_emphasis
+motion_prompt_rules:
+  - keep_one_speaking_action_per_shot
+  - do_not_add_cutaway_actions_inside_same_shot

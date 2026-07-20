@@ -1,0 +1,21 @@
+schema_version: "1.0"
+episode_id: EP01
+edit_style:
+  pacing: restrained
+  emotional_priority: character_expression
+  transition_policy: simple_motivated_cuts
+opening_sequence:
+  - shot_id: EP01_SC001_SH001
+    edit_note: open_on_storyteller_direct_address
+  - shot_id: EP01_SC002_SH001
+    edit_note: cut_to_guriya_late_night_sewing
+  - shot_id: EP01_SC002_SH002
+    edit_note: cut_to_hands_detail_for_work_pressure
+  - shot_id: EP01_SC003_SH001
+    edit_note: reveal_sleeping_children
+  - shot_id: EP01_SC003_SH002
+    edit_note: return_to_guriya_emotional_reaction
+flashback_transition:
+  scene_id: SC004
+  strategy: motivated_emotional_transition
+  status: planned

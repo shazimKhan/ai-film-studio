@@ -1,0 +1,20 @@
+schema_version: "1.0"
+location_id: narrator_studio
+display_name: Narrator Studio
+location_type: podcast_style_studio
+prompt_sources:
+  master_prompt: MASTER_PROMPT.md
+  negative_prompt: NEGATIVE_PROMPT.md
+reference_status: awaiting_location_references
+usable_scene_contexts:
+  - storyteller_opening
+  - episode_bridge
+  - reflective_narration
+style_rules:
+  - keep_background_quiet
+  - keep_studio_lighting_soft
+  - avoid_branding_or_presenter_spectacle
+pipeline_usage:
+  scene_compiler: frame_location_reference
+  prompt_compiler: location_prompt_reference
+  qa_engine: narrator_frame_consistency

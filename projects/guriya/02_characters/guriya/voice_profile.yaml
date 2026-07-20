@@ -1,0 +1,12 @@
+schema_version: "1.0"
+character_id: guriya
+voice_scope: dialogue_only
+language: urdu
+delivery:
+  tone: soft_spoken
+  rhythm: respectful_and_measured
+  emotion: sincere
+dialogue_policy:
+  store_dialogue_in: ../../10_voiceover/episode_01_dialogue.yaml
+  never_embed_dialogue_in_video_prompts: true
+  avoid_modern_slang: true

@@ -1,0 +1,18 @@
+schema_version: "1.0"
+character_id: guriya
+default_camera_language:
+  preferred_shots:
+    - medium_close_up
+    - medium_shot
+    - close_up_hands
+    - static_wide_for_family_context
+  eye_level: respectful_human_scale
+  lens_feel: naturalistic_television_drama
+rules:
+  - keep_camera_observational_not_glamour_focused
+  - use_closeups_for_emotional_readability
+  - avoid_extreme_beauty_angles
+  - avoid_fast_music_video_camera_moves
+identity_safety:
+  face_visibility_required_for_identity_shots: true
+  avoid_partial_face_when_identity_continuity_matters: true

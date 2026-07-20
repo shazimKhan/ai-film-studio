@@ -1,0 +1,19 @@
+schema_version: "1.0"
+location_id: guriya_family_home
+lighting_modes:
+  late_night:
+    source: practical_lamp_or_low_room_light
+    quality: soft_dim
+    mood: tired_determined
+  morning:
+    source: natural_window_light
+    quality: gentle_warm
+    mood: peaceful_family_life
+  flashback_transition:
+    source: soft_memory_light
+    quality: restrained_not_dreamy
+    mood: reflective
+lighting_rules:
+  - keep_skin_texture_natural
+  - avoid_glamour_backlight
+  - avoid_high_contrast_thriller_style

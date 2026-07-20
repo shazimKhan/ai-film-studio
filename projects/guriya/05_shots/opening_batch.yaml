@@ -1,0 +1,260 @@
+schema_version: "1.0"
+batch_id: opening_batch
+episode_id: EP01
+prompt_strategy_ref: ../project.yaml
+shots:
+  - shot_id: EP01_SC001_SH001
+    scene_id: SC001
+    main_action: storyteller_looks_into_camera
+    action_text: Storyteller looks into camera.
+    emotional_goal: serious_and_compassionate
+    duration_seconds: 6
+    camera_instruction:
+      shot_type: medium_close_up
+      angle: eye_level
+      movement: locked_off
+      framing: storyteller_seated_direct_address
+    lighting_instruction:
+      source: soft_studio_key_light
+      mood: quiet_serious
+    character_references:
+      - character_id: storyteller
+        prompt_pack: ../02_characters/storyteller
+        required: true
+    location_references:
+      - location_id: narrator_studio
+        prompt_pack: ../03_locations/narrator_studio
+        required: true
+    image_prompt_metadata:
+      master_character_prompt: ../02_characters/storyteller/MASTER_PROMPT.md
+      location_prompt: ../03_locations/narrator_studio/MASTER_PROMPT.md
+      shot_action: storyteller_looks_into_camera
+      emotion: serious_and_compassionate
+      camera: medium_close_up_eye_level_locked
+      lighting: soft_controlled_studio_light
+      period_rules: narrator_frame_not_1988_flashback
+      negative_prompt:
+        - ../02_characters/storyteller/NEGATIVE_PROMPT.md
+        - ../03_locations/narrator_studio/NEGATIVE_PROMPT.md
+    video_motion_prompt:
+      subject_motion: storyteller_holds_direct_eye_contact
+      facial_motion: subtle_serious_expression
+      environment_motion: studio_background_remains_still
+      camera_motion: none_locked_off
+      speed: calm_measured
+      continuity_rules:
+        - keep_storyteller_seated
+        - keep_one_speaking_action_only
+        - do_not_include_narration_text_in_video_prompt
+    continuity_constraints:
+      - narrator_studio_identity_consistent
+      - storyteller_tone_serious_compassionate
+    qa_rules:
+      - one_main_action_only
+      - duration_between_4_and_8_seconds
+      - no_dialogue_or_narration_text_in_video_prompt
+      - no_visible_branding
+  - shot_id: EP01_SC002_SH001
+    scene_id: SC002
+    main_action: guriya_sits_at_manual_sewing_machine
+    action_text: Guriya sits at a manual sewing machine.
+    emotional_goal: tired_but_determined
+    duration_seconds: 6
+    camera_instruction:
+      shot_type: medium_shot
+      angle: eye_level
+      movement: slow_push_in
+      framing: guriya_and_sewing_machine
+    lighting_instruction:
+      source: dim_practical_lamp
+      mood: late_night_work
+    character_references:
+      - character_id: guriya
+        prompt_pack: ../02_characters/guriya
+        required: true
+    location_references:
+      - location_id: guriya_family_home
+        prompt_pack: ../03_locations/guriya_family_home
+        required: true
+    image_prompt_metadata:
+      master_character_prompt: ../02_characters/guriya/MASTER_PROMPT.md
+      location_prompt: ../03_locations/guriya_family_home/MASTER_PROMPT.md
+      shot_action: guriya_sits_at_manual_sewing_machine
+      emotion: tired_but_determined
+      camera: medium_shot_slow_push_in
+      lighting: dim_late_night_practical_light
+      period_rules: "1988 domestic Taxila setting"
+      negative_prompt:
+        - ../02_characters/guriya/NEGATIVE_PROMPT.md
+        - ../03_locations/guriya_family_home/NEGATIVE_PROMPT.md
+    video_motion_prompt:
+      subject_motion: guriya_remains_seated_at_machine
+      facial_motion: tired_focus_with_quiet_determination
+      environment_motion: room_stays_still_and_quiet
+      camera_motion: slow_push_in
+      speed: slow
+      continuity_rules:
+        - keep_guriya_identity_locked
+        - keep_manual_sewing_machine_period_accurate
+        - no_extra_action_beyond_sitting_at_machine
+    continuity_constraints:
+      - guriya_present_day_night_state_tired_but_determined
+      - modest_room_remains_dim_and_period_accurate
+    qa_rules:
+      - one_main_action_only
+      - duration_between_4_and_8_seconds
+      - no_modern_sewing_machine
+      - no_dialogue_in_video_prompt
+  - shot_id: EP01_SC002_SH002
+    scene_id: SC002
+    main_action: guriya_guides_fabric_with_hands
+    action_text: Guriya's hands guide fabric through the sewing machine.
+    emotional_goal: focused
+    duration_seconds: 5
+    camera_instruction:
+      shot_type: close_up
+      angle: hands_level
+      movement: locked_off
+      framing: hands_fabric_and_machine_needle
+    lighting_instruction:
+      source: dim_practical_lamp
+      mood: intimate_work_detail
+    character_references:
+      - character_id: guriya
+        prompt_pack: ../02_characters/guriya
+        required: true
+    location_references:
+      - location_id: guriya_family_home
+        prompt_pack: ../03_locations/guriya_family_home
+        required: true
+    image_prompt_metadata:
+      master_character_prompt: ../02_characters/guriya/MASTER_PROMPT.md
+      location_prompt: ../03_locations/guriya_family_home/MASTER_PROMPT.md
+      shot_action: hands_guiding_fabric
+      emotion: focused
+      camera: close_up_locked_hands_detail
+      lighting: dim_late_night_practical_light
+      period_rules: manual_sewing_machine_and_1988_fabric
+      negative_prompt:
+        - ../02_characters/guriya/NEGATIVE_PROMPT.md
+        - ../03_locations/guriya_family_home/NEGATIVE_PROMPT.md
+    video_motion_prompt:
+      subject_motion: hands_guide_fabric_slowly
+      facial_motion: none_not_visible
+      environment_motion: fabric_moves_under_needle
+      camera_motion: none_locked_off
+      speed: steady
+      continuity_rules:
+        - show_only_one_fabric_guiding_action
+        - preserve_manual_machine_detail
+        - avoid_showing_modern_tools
+    continuity_constraints:
+      - same_late_night_sewing_context_as_previous_shot
+      - fabric_and_machine_match_scene_state
+    qa_rules:
+      - one_main_action_only
+      - duration_between_4_and_8_seconds
+      - close_up_must_focus_on_hands_not_new_action
+      - no_dialogue_in_video_prompt
+  - shot_id: EP01_SC003_SH001
+    scene_id: SC003
+    main_action: sleeping_children_rest_nearby
+    action_text: Sleeping children rest nearby.
+    emotional_goal: peaceful_but_emotionally_heavy
+    duration_seconds: 5
+    camera_instruction:
+      shot_type: static_wide
+      angle: room_level
+      movement: locked_off
+      framing: sleeping_children_in_modest_room
+    lighting_instruction:
+      source: soft_low_night_light
+      mood: quiet_vulnerable
+    character_references:
+      - character_id: children_group
+        prompt_pack: pending_child_reference_pack
+        required: false
+    location_references:
+      - location_id: guriya_family_home
+        prompt_pack: ../03_locations/guriya_family_home
+        required: true
+    image_prompt_metadata:
+      master_character_prompt: pending_child_reference_pack
+      location_prompt: ../03_locations/guriya_family_home/MASTER_PROMPT.md
+      shot_action: sleeping_children_nearby
+      emotion: peaceful_but_emotionally_heavy
+      camera: static_wide_locked
+      lighting: soft_low_night_light
+      period_rules: modest_domestic_1988_room
+      negative_prompt:
+        - ../03_locations/guriya_family_home/NEGATIVE_PROMPT.md
+    video_motion_prompt:
+      subject_motion: children_remain_asleep
+      facial_motion: none_sleeping
+      environment_motion: room_stays_still
+      camera_motion: none_locked_off
+      speed: still
+      continuity_rules:
+        - do_not_wake_children
+        - no_dialogue_or_narration_text
+        - keep_room_same_as_sewing_sequence
+    continuity_constraints:
+      - children_sleep_near_guriya_sewing_area
+      - late_night_quiet_state
+    qa_rules:
+      - one_main_action_only
+      - duration_between_4_and_8_seconds
+      - children_must_remain_sleeping
+      - no_extra_character_action
+  - shot_id: EP01_SC003_SH002
+    scene_id: SC003
+    main_action: guriya_pauses_and_looks_toward_children
+    action_text: Guriya pauses and looks toward the children.
+    emotional_goal: worried_but_resolute
+    duration_seconds: 6
+    camera_instruction:
+      shot_type: medium_close_up
+      angle: eye_level
+      movement: slow_push_in
+      framing: guriya_turning_attention_toward_children
+    lighting_instruction:
+      source: dim_practical_lamp
+      mood: worry_and_resolve
+    character_references:
+      - character_id: guriya
+        prompt_pack: ../02_characters/guriya
+        required: true
+    location_references:
+      - location_id: guriya_family_home
+        prompt_pack: ../03_locations/guriya_family_home
+        required: true
+    image_prompt_metadata:
+      master_character_prompt: ../02_characters/guriya/MASTER_PROMPT.md
+      location_prompt: ../03_locations/guriya_family_home/MASTER_PROMPT.md
+      shot_action: guriya_pauses_and_looks_toward_children
+      emotion: worried_but_resolute
+      camera: medium_close_up_slow_push_in
+      lighting: dim_late_night_practical_light
+      period_rules: modest_1988_domestic_setting
+      negative_prompt:
+        - ../02_characters/guriya/NEGATIVE_PROMPT.md
+        - ../03_locations/guriya_family_home/NEGATIVE_PROMPT.md
+    video_motion_prompt:
+      subject_motion: guriya_pauses_then_turns_her_gaze_toward_children
+      facial_motion: worry_settles_into_resolve
+      environment_motion: room_remains_quiet
+      camera_motion: slow_push_in
+      speed: slow
+      continuity_rules:
+        - keep_one_pause_and_look_action
+        - keep_guriya_identity_and_wardrobe_locked
+        - do_not_add_dialogue
+    continuity_constraints:
+      - follows_hands_guiding_fabric_shot
+      - children_remain_asleep_offscreen_or_nearby
+      - emotional_state_moves_from_worry_to_resolve
+    qa_rules:
+      - one_main_action_only
+      - duration_between_4_and_8_seconds
+      - no_dialogue_in_video_prompt
+      - no_modern_objects

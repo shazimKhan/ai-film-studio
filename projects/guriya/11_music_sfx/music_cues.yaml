@@ -1,0 +1,22 @@
+schema_version: "1.0"
+episode_id: EP01
+music_policy:
+  style: restrained_pakistani_drama_score
+  avoid_melodramatic_excess: true
+  keep_dialogue_clear: true
+cues:
+  - cue_id: EP01_MUS_001
+    scene_id: SC001
+    emotional_function: compassionate_opening
+    intensity: low
+    status: planned
+  - cue_id: EP01_MUS_002
+    scene_id: SC002
+    emotional_function: late_night_pressure
+    intensity: low
+    status: planned
+  - cue_id: EP01_MUS_003
+    scene_id: SC007
+    emotional_function: subtle_future_hardship_hook
+    intensity: low
+    status: planned

@@ -1,0 +1,37 @@
+schema_version: "1.0"
+character_id: guriya
+display_name: Guriya
+role: main_character
+story_age:
+  episode_01_start: 18
+origin:
+  region: Taxila, Punjab, Pakistan
+  primary_year: 1988
+identity_source:
+  master_prompt: MASTER_PROMPT.md
+  negative_prompt: NEGATIVE_PROMPT.md
+  asset_bible: ../../characters/guriya/character.yaml
+reference_status: awaiting_hd_production_references
+approved_reference_policy:
+  use_master_sheet_for_identity_review_only: true
+  use_cropped_previews_for_debug_only: true
+  production_reference_dir: ../../characters/guriya/references/production
+personality:
+  - soft_spoken
+  - humble
+  - caring
+  - hardworking
+  - respectful
+  - emotionally_expressive
+continuity_files:
+  identity: continuity.yaml
+  camera: camera_rules.yaml
+  motion: motion_profile.yaml
+  style: style_profile.yaml
+  voice: voice_profile.yaml
+pipeline_usage:
+  ai_director: character_intent
+  story_engine: emotional_arc_reference
+  scene_compiler: character_reference
+  prompt_compiler: master_prompt_reference
+  qa_engine: identity_lock

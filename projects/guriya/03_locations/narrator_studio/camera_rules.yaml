@@ -1,0 +1,14 @@
+schema_version: "1.0"
+location_id: narrator_studio
+camera_language:
+  default: direct_address
+  preferred_shots:
+    - medium_close_up
+    - medium_shot
+  movement:
+    - locked_off
+    - very_slow_push
+rules:
+  - keep_storyteller_centered_or_slightly_off_center
+  - maintain_eye_level_camera
+  - avoid_fast_cuts_inside_single_narration_shot

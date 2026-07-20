@@ -1,0 +1,13 @@
+schema_version: "1.0"
+character_id: storyteller
+default_camera_language:
+  preferred_shots:
+    - medium_close_up
+    - medium_shot
+  angle: eye_level
+  movement: locked_or_slow_push
+rules:
+  - maintain_direct_camera_connection
+  - keep_background_secondary
+  - avoid_flashy_presenter_moves
+  - use_cutaways_only_if_scene_plan_requires

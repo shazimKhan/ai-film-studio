@@ -1,0 +1,29 @@
+schema_version: "1.0"
+episode_id: EP01
+dialogue_policy:
+  store_dialogue_separately_from_video_prompts: true
+  language: urdu
+  avoid_modern_slang: true
+dialogue_blocks:
+  - scene_id: SC001
+    type: narration
+    source: episode_01_narration.md
+    status: draft_outline
+  - scene_id: SC002
+    type: dialogue
+    status: none_planned_for_opening_shots
+  - scene_id: SC003
+    type: dialogue
+    status: none_planned_for_opening_shots
+  - scene_id: SC004
+    type: narration_bridge
+    status: planned
+  - scene_id: SC005
+    type: family_dialogue
+    status: planned
+  - scene_id: SC006
+    type: family_dialogue
+    status: planned
+  - scene_id: SC007
+    type: family_dialogue
+    status: planned

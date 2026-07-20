@@ -1,0 +1,18 @@
+schema_version: "1.0"
+character_id: guriya
+movement_style:
+  pace: gentle_and_deliberate
+  gestures: small_practical_emotionally_clear
+  posture: modest_grounded
+  emotional_expression: visible_but_restrained
+approved_actions:
+  - sewing
+  - guiding_fabric
+  - pausing
+  - looking_toward_children
+  - helping_mother
+  - listening_respectfully
+motion_prompt_rules:
+  - describe_subject_motion_only_once_per_shot
+  - keep_facial_motion_subtle
+  - do_not_add_extra_actions

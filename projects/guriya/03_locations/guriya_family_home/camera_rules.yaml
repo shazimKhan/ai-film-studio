@@ -1,0 +1,14 @@
+schema_version: "1.0"
+location_id: guriya_family_home
+camera_language:
+  default: observational_realist
+  preferred_shots:
+    - static_wide
+    - medium_shot
+    - medium_close_up
+    - close_up_detail
+rules:
+  - keep_rooms_spatially_clear
+  - use_static_frames_for_sleeping_children
+  - avoid_modern_crane_or_flashy_movement
+  - preserve_modest_room_scale

@@ -1,0 +1,31 @@
+schema_version: "1.0"
+character_id: guriya
+continuity_scope: episode_01
+identity_locks:
+  age: 18
+  face_shape: oval
+  skin_tone: soft_wheatish
+  eyes: large_expressive_dark_brown
+  eyebrows: naturally_thick
+  nose: small_straight
+  cheeks: soft_round
+  hair: long_black_single_simple_braid
+  body_proportions: modest_and_consistent
+  earrings: small_traditional
+wardrobe_locks:
+  base_outfit: pastel_1988_pakistani_shalwar_kameez
+  dupatta: matching
+  makeup: none
+  styling: practical_period_accurate
+scene_continuity:
+  present_day_night:
+    emotional_state: tired_but_determined
+    sewing_context: manual_sewing_machine
+  flashback_1988:
+    emotional_state: innocent_happy_hardworking
+    family_context: parents_and_sisters
+forbidden_changes:
+  - age_shift_without_story_reason
+  - different_face_structure
+  - modernized_hair_or_makeup
+  - glamorous_costume_upgrade

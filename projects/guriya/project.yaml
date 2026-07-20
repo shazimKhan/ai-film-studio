@@ -1,0 +1,86 @@
+schema_version: "1.0"
+project_id: guriya
+title: Guriya
+language:
+  primary: urdu
+  script_notes: dialogue_and_narration_stored_separately
+country: Pakistan
+region: Taxila, Punjab
+primary_year: 1988
+genre:
+  - realistic_pakistani_television_drama
+  - family_drama
+  - social_drama
+visual_style:
+  tone: emotionally_grounded
+  realism: natural_skin_texture
+  performance: restrained_acting
+  period_accuracy: "1988 Taxila, Punjab, Pakistan"
+  glamour_policy: cinematic_but_not_glamorous
+prompt_strategy:
+  image_prompt_order:
+    - master_character_prompt
+    - location_prompt
+    - shot_action
+    - emotion
+    - camera
+    - lighting
+    - period_rules
+    - negative_prompt
+  video_motion_prompt_order:
+    - subject_motion
+    - facial_motion
+    - environment_motion
+    - camera_motion
+    - speed
+    - continuity_rules
+  appearance_source_policy: keyframe_images_define_appearance
+  video_prompt_focus: motion_first
+naming_convention:
+  file_ids: snake_case
+  shot_ids: EP01_SC001_SH001
+  scene_ids: SC001
+default_shot_duration: 6
+max_shot_duration: 8
+min_shot_duration: 4
+character_reference_policy:
+  core_identity_source: 02_characters/{character_id}/MASTER_PROMPT.md
+  negative_prompt_source: 02_characters/{character_id}/NEGATIVE_PROMPT.md
+  production_images_source: characters/{character_id}/references/production
+  consistency_required:
+    - facial_identity
+    - age
+    - skin_tone
+    - eye_shape
+    - eyebrows
+    - nose
+    - cheeks
+    - hairstyle
+    - body_proportions
+    - clothing_identity
+location_reference_policy:
+  core_location_source: 03_locations/{location_id}/MASTER_PROMPT.md
+  continuity_source: 03_locations/{location_id}/continuity.yaml
+  production_images_source: environment/{location_id}
+dialogue_generation_policy:
+  stored_outside_video_prompts: true
+  narration_path: 10_voiceover/episode_01_narration.md
+  dialogue_path: 10_voiceover/episode_01_dialogue.yaml
+shot_policy:
+  one_main_action_per_shot: true
+  one_emotional_intention_per_shot: true
+  one_camera_instruction_per_shot: true
+  duration_seconds:
+    min: 4
+    max: 8
+qa_policy:
+  checklist_path: qa/shot_checklist.yaml
+  episode_qa_path: qa/episode_01_qa.yaml
+  reject_if:
+    - multiple_actions_in_single_shot
+    - missing_duration
+    - duration_outside_4_to_8_seconds
+    - missing_character_reference
+    - missing_location_reference
+    - dialogue_inside_video_prompt
+    - modern_objects_in_1988_flashback

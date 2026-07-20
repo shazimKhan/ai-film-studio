@@ -1,0 +1,30 @@
+schema_version: "1.0"
+episode_id: EP01
+shot_policy:
+  stable_id_format: EP01_SC001_SH001
+  one_main_action_only: true
+  one_emotional_intention_only: true
+  one_camera_instruction_only: true
+  duration_seconds:
+    min: 4
+    max: 8
+shot_batches:
+  - batch_id: opening_batch
+    path: opening_batch.yaml
+    scenes:
+      - SC001
+      - SC002
+      - SC003
+scene_shot_placeholders:
+  - scene_id: SC004
+    planned_function: flashback_transition
+    status: planned_not_batched
+  - scene_id: SC005
+    planned_function: happy_family_morning
+    status: planned_not_batched
+  - scene_id: SC006
+    planned_function: sewing_and_helping_mother
+    status: planned_not_batched
+  - scene_id: SC007
+    planned_function: ending_hook
+    status: planned_not_batched

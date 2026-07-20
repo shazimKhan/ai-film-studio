@@ -1,0 +1,100 @@
+schema_version: "1.0"
+episode_id: EP01
+episode_title: Guriya
+scene_policy:
+  one_main_action_per_shot: true
+  shot_duration_seconds:
+    min: 4
+    max: 8
+  dialogue_separate_from_video_prompts: true
+scenes:
+  - scene_id: SC001
+    stable_prefix: EP01_SC001
+    title: Storyteller Opening
+    location_id: narrator_studio
+    time_of_day: night
+    purpose: introduce_guriya
+    characters:
+      - storyteller
+    emotional_intent: serious_and_compassionate
+    summary: The storyteller opens the episode and frames Guriya's life with empathy.
+    output_batch: ../05_shots/opening_batch.yaml
+  - scene_id: SC002
+    stable_prefix: EP01_SC002
+    title: Guriya Sewing Late At Night
+    location_id: guriya_family_home
+    sublocation: modest_room
+    time_of_day: late_night
+    purpose: emotional_hook
+    characters:
+      - guriya
+    props:
+      - manual_sewing_machine
+      - fabric
+    emotional_intent: tired_but_determined
+    summary: Guriya works quietly at a manual sewing machine while the room sleeps.
+    output_batch: ../05_shots/opening_batch.yaml
+  - scene_id: SC003
+    stable_prefix: EP01_SC003
+    title: Guriya Looks At Sleeping Children
+    location_id: guriya_family_home
+    sublocation: modest_room
+    time_of_day: late_night
+    purpose: reveal_concern_and_determination
+    characters:
+      - guriya
+      - children_group
+    emotional_intent: worried_but_resolute
+    summary: Sleeping children become the emotional reason for Guriya's endurance.
+    output_batch: ../05_shots/opening_batch.yaml
+  - scene_id: SC004
+    stable_prefix: EP01_SC004
+    title: Flashback Transition
+    location_id: guriya_family_home
+    time_of_day: transition
+    purpose: move_story_to_taxila_1988
+    characters:
+      - guriya
+    emotional_intent: reflective
+    summary: The story shifts from present hardship into Guriya's early life.
+  - scene_id: SC005
+    stable_prefix: EP01_SC005
+    title: Happy Family Morning
+    location_id: guriya_family_home
+    time_of_day: morning
+    purpose: establish_peaceful_early_life
+    characters:
+      - guriya
+      - mother
+      - father
+      - sister_01
+      - sister_02
+      - sister_03
+    emotional_intent: warm_and_innocent
+    summary: Young Guriya is surrounded by family warmth in 1988 Taxila.
+  - scene_id: SC006
+    stable_prefix: EP01_SC006
+    title: Guriya Sewing And Helping Mother
+    location_id: guriya_family_home
+    time_of_day: morning
+    purpose: establish_skill_and_kindness
+    characters:
+      - guriya
+      - mother
+    props:
+      - sewing_materials
+      - household_items
+    emotional_intent: caring_and_hardworking
+    summary: Guriya's sewing skill and respect for her mother are established.
+  - scene_id: SC007
+    stable_prefix: EP01_SC007
+    title: Ending Hook
+    location_id: guriya_family_home
+    time_of_day: evening
+    purpose: hint_future_marriage_and_hardship
+    characters:
+      - guriya
+      - mother
+      - father
+    emotional_intent: quiet_uncertainty
+    summary: Family discussion gently points toward Guriya's future marriage.

@@ -1,0 +1,12 @@
+schema_version: "1.0"
+location_id: narrator_studio
+lighting_modes:
+  night_frame:
+    source: soft_key_light
+    fill: gentle
+    background: dim_quiet
+    mood: serious_compassionate
+lighting_rules:
+  - avoid_neon_color_wash
+  - keep_face_readable
+  - keep_background_secondary

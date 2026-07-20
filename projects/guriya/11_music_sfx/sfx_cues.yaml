@@ -1,0 +1,21 @@
+schema_version: "1.0"
+episode_id: EP01
+sfx_policy:
+  keep_naturalistic: true
+  avoid_exaggerated_stingers: true
+cues:
+  - cue_id: EP01_SFX_001
+    scene_id: SC002
+    source: manual_sewing_machine
+    function: late_night_work_rhythm
+    status: planned
+  - cue_id: EP01_SFX_002
+    scene_id: SC003
+    source: quiet_room_ambience
+    function: sleeping_children_stillness
+    status: planned
+  - cue_id: EP01_SFX_003
+    scene_id: SC005
+    source: morning_home_ambience
+    function: peaceful_family_life
+    status: planned

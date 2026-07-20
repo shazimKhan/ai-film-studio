@@ -1,0 +1,30 @@
+schema_version: "1.0"
+checklist_id: guriya_shot_checklist_v1
+rules:
+  - rule_id: one_main_action
+    description: Shot contains one main action only.
+    severity: error
+  - rule_id: one_emotional_intention
+    description: Shot contains one emotional intention only.
+    severity: error
+  - rule_id: one_camera_instruction
+    description: Shot contains one camera instruction only.
+    severity: error
+  - rule_id: duration_range
+    description: Shot duration is between 4 and 8 seconds.
+    severity: error
+  - rule_id: no_dialogue_in_video_prompt
+    description: Dialogue and narration stay outside video motion prompts.
+    severity: error
+  - rule_id: character_reference_present
+    description: Required character prompt pack is referenced.
+    severity: error
+  - rule_id: location_reference_present
+    description: Required location prompt pack is referenced.
+    severity: error
+  - rule_id: period_accuracy
+    description: 1988 Taxila scenes contain no modern objects or styling.
+    severity: error
+  - rule_id: identity_lock
+    description: Guriya identity locks are preserved where she appears.
+    severity: error

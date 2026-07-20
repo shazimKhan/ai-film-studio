@@ -1,0 +1,15 @@
+schema_version: "1.0"
+character_id: storyteller
+continuity_scope: episode_01
+identity_locks:
+  final_identity_source: approved_hd_production_references
+  role_presence: recurring_frame_narrator
+  emotional_tone: serious_compassionate
+studio_locks:
+  location_id: narrator_studio
+  framing: seated_podcast_style
+  audience_address: direct_to_camera
+forbidden_changes:
+  - comedic_delivery
+  - influencer_persona
+  - inconsistent_studio_identity

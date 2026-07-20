@@ -1,0 +1,12 @@
+schema_version: "1.0"
+location_id: narrator_studio
+continuity_scope: episode_01
+locked_elements:
+  frame_style: seated_podcast_studio
+  mood: serious_compassionate
+  background: quiet_non_branded
+  lighting: soft_controlled
+forbidden_changes:
+  - flashy_neon_studio
+  - visible_branding
+  - news_anchor_desk
