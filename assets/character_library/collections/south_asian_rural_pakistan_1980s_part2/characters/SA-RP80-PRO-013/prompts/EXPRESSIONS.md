@@ -1,0 +1,4 @@
+Neutral
+Friendly
+Concerned
+Serious

@@ -1,0 +1,28 @@
+id: bus_driver_01
+display_name: Bus Driver 01
+region: south_asian
+country: pakistan
+culture: pakistani_punjabi
+era: 1980s
+year_range:
+  start: 1980
+  end: 1989
+reference_year: 1988
+gender: male
+approximate_age: 41
+category: reusable_supporting_character
+reusable: true
+tags:
+- driver
+- transport
+compatible_projects:
+- family_drama
+- social_drama
+- period_drama
+- rural_drama
+historical_sensitivity:
+  named_historical_figure: false
+  sacred_figure: false
+paths:
+  prompts: prompts/
+  references: references/

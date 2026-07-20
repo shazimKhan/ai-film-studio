@@ -1,0 +1,4 @@
+Standing
+Walking
+Working
+Talking
