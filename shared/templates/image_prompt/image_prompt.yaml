@@ -1,0 +1,13 @@
+schema_version: "1.0"
+prompt_id: image_prompt_001
+project_id: ""
+shot_id: ""
+sections:
+  master_character_prompt: ""
+  location_prompt: ""
+  shot_action: ""
+  emotion: ""
+  camera: ""
+  lighting: ""
+  period_rules: ""
+  negative_prompt: ""

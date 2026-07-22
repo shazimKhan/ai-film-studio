@@ -1,0 +1,4 @@
+schema_version: "1.0"
+project_id: insan
+terms: []
+policy: terminology_requires_review_before_voiceover

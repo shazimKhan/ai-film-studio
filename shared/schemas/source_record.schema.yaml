@@ -1,0 +1,43 @@
+schema_version: "1.0"
+schema_id: source_record_v1
+source_types:
+  - quran
+  - sahih_hadith
+  - hasan_hadith
+  - weak_hadith
+  - tafsir
+  - seerah
+  - history
+  - scholarly_opinion
+  - modern_reference
+validation_states:
+  - unverified
+  - under_review
+  - verified
+  - disputed
+  - rejected
+  - approved_for_narration
+  - approved_for_visual_context
+fields:
+  source_id: string
+  source_type: enum
+  collection_name: string
+  book: string
+  chapter: string
+  verse_number: string
+  hadith_number: string
+  arabic_text: string
+  translation: string
+  narrator: string
+  authenticity_grade: string
+  scholar: string
+  publication: string
+  url_or_reference: string
+  retrieved_date: date
+  notes: string
+  disputed_status: string
+  validation_state: enum
+  confidence_level: enum
+  approved_for_script: boolean
+  approved_by: string
+  approval_date: date

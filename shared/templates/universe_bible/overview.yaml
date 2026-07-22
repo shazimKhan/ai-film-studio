@@ -1,0 +1,6 @@
+schema_version: "1.0"
+universe_id: example_universe
+scope: ""
+themes: []
+timeline_ref: timeline.yaml
+terminology_ref: terminology.yaml

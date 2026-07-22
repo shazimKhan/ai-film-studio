@@ -1,0 +1,4 @@
+schema_version: "1.0"
+project_id: insan
+episodes: []
+policy: no_episode_without_approved_factual_outline

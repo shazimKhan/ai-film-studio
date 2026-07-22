@@ -1,0 +1,74 @@
+schema_version: "1.0"
+schema_id: project_config_v1
+required_fields:
+  - project_id
+  - project_name
+  - project_type
+  - genre
+  - language
+  - research_required
+  - source_validation_required
+  - depiction_policy
+  - visual_style
+  - default_shot_duration
+  - prompt_engines
+  - qa_profiles
+  - project_asset_path
+fields:
+  project_id:
+    type: string
+    format: snake_case
+  project_name:
+    type: string
+  project_type:
+    type: enum
+    allowed:
+      - fictional_drama
+      - documentary
+      - islamic_history
+      - historical_drama
+      - educational_series
+  genre:
+    type: list_string
+  language:
+    type: string
+  secondary_languages:
+    type: list_string
+    required: false
+  historical_period:
+    type: string
+    required: false
+  research_required:
+    type: boolean
+  source_validation_required:
+    type: boolean
+  depiction_policy:
+    type: string
+  visual_style:
+    type: mapping
+  aspect_ratio:
+    type: string
+    required: false
+  default_shot_duration:
+    type: integer
+  target_platforms:
+    type: list_string
+    required: false
+  prompt_engines:
+    type: list_string
+  voiceover_language:
+    type: string
+    required: false
+  continuity_level:
+    type: string
+    required: false
+  qa_profiles:
+    type: list_string
+  shared_asset_access:
+    type: mapping
+    required: false
+  project_asset_path:
+    type: string
+  export_presets:
+    type: list_string
+    required: false

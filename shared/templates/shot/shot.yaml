@@ -1,0 +1,10 @@
+schema_version: "1.0"
+shot_id: EP01_SC001_SH001
+scene_id: SC001
+main_action: ""
+emotional_goal: ""
+duration_seconds: 6
+camera_instruction: {}
+lighting_instruction: {}
+source_refs: []
+qa_rules: []

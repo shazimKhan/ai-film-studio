@@ -1,0 +1,12 @@
+schema_version: "1.0"
+project_id: insan
+source_record_schema: ../../../shared/schemas/source_record.schema.yaml
+source_records: []
+validation_states:
+  - unverified
+  - under_review
+  - verified
+  - disputed
+  - rejected
+  - approved_for_narration
+  - approved_for_visual_context

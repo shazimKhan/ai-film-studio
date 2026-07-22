@@ -1,0 +1,6 @@
+schema_version: "1.0"
+project_id: insan
+universe_scope: humanity_and_islamic_history
+status: foundation_only
+source_validation_required: true
+notes: No narrative claims are approved until linked source records pass review.

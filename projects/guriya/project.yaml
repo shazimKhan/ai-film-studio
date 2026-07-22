@@ -1,22 +1,53 @@
 schema_version: "1.0"
 project_id: guriya
+project_name: Guriya
+project_type: fictional_drama
 title: Guriya
-language:
-  primary: urdu
+language: urdu
+language_notes:
   script_notes: dialogue_and_narration_stored_separately
+secondary_languages: []
 country: Pakistan
 region: Taxila, Punjab
 primary_year: 1988
+historical_period: "1988 Taxila, Punjab, Pakistan"
 genre:
   - realistic_pakistani_television_drama
   - family_drama
   - social_drama
+research_required: false
+source_validation_required: false
+depiction_policy: standard_fictional_drama
 visual_style:
   tone: emotionally_grounded
   realism: natural_skin_texture
   performance: restrained_acting
   period_accuracy: "1988 Taxila, Punjab, Pakistan"
   glamour_policy: cinematic_but_not_glamorous
+aspect_ratio: "16:9"
+target_platforms:
+  - youtube
+prompt_engines:
+  - gemini
+  - flow
+  - veo
+  - kling
+voiceover_language: urdu
+continuity_level: strict_character_identity
+qa_profiles:
+  - technical
+  - continuity
+  - period_accuracy
+shared_asset_access:
+  enabled: true
+  allowed_libraries:
+    - characters
+    - locations
+    - props
+    - wardrobe
+project_asset_path: projects/guriya
+export_presets:
+  - drama_hd
 prompt_strategy:
   image_prompt_order:
     - master_character_prompt

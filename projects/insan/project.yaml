@@ -1,0 +1,58 @@
+schema_version: "1.0"
+project_id: insan
+project_name: Insan
+project_type: islamic_history
+genre:
+  - documentary
+  - islamic_history
+  - educational_series
+language: urdu
+secondary_languages:
+  - arabic
+  - english
+historical_period: humanity_and_islamic_history
+research_required: true
+source_validation_required: true
+depiction_policy: islamic_sensitive_presence_policy
+visual_style:
+  tone: reverent_research_first_cinematic_documentary
+  realism: historically_grounded
+  sacred_content_policy: no_direct_prophet_or_revered_face_depiction
+aspect_ratio: "16:9"
+default_shot_duration: 6
+target_platforms:
+  - youtube
+  - longform_streaming
+prompt_engines:
+  - gemini
+  - flow
+  - veo
+  - kling
+voiceover_language: urdu
+continuity_level: strict
+qa_profiles:
+  - technical
+  - historical
+  - religious
+  - depiction
+shared_asset_access:
+  enabled: true
+  allowed_libraries:
+    - presence_library
+    - environments
+    - props
+    - wardrobe
+project_asset_path: projects/insan
+export_presets:
+  - documentary_hd
+source_validation:
+  source_registry: 01_research/source_registry.yaml
+  unresolved_questions: 01_research/unresolved_questions.yaml
+  minimum_state_for_outline: approved_for_narration
+  minimum_state_for_visual_context: approved_for_visual_context
+governance:
+  authenticity_policy: 00_governance/authenticity_policy.md
+  depiction_policy: 00_governance/depiction_policy.md
+  source_hierarchy: 00_governance/source_hierarchy.md
+  uncertainty_policy: 00_governance/uncertainty_policy.md
+  terminology_policy: 00_governance/terminology_policy.md

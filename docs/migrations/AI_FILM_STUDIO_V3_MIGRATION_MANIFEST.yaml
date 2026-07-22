@@ -1,0 +1,35 @@
+schema_version: "1.0"
+migration_id: ai_film_studio_v3
+mode: additive_non_destructive
+created:
+  - docs/migrations/AI_FILM_STUDIO_V3_AUDIT.md
+  - engine/
+  - shared/
+  - projects/insan/
+  - docs/architecture/
+  - docs/workflows/
+  - docs/policies/
+  - shared/schemas/project.schema.yaml
+  - shared/schemas/source_record.schema.yaml
+  - src/ai_film_studio/project_config/
+  - tests/unit/test_project_config.py
+  - config/README.md
+  - scripts/README.md
+modified:
+  - README.md
+  - projects/guriya/project.yaml
+  - src/ai_film_studio/cli/app.py
+  - docs/migrations/AI_FILM_STUDIO_V3_MIGRATION_MANIFEST.yaml
+moved: []
+deleted: []
+proposed_files: []
+compatibility_notes:
+  - Existing Guriya project remains under projects/guriya.
+  - Current Python implementation remains under src/ai_film_studio.
+  - engine/ is a responsibility map, not a duplicate implementation.
+  - Existing top-level templates remain for compatibility.
+risks:
+  - Future file moves may require path compatibility wrappers.
+  - Insan production must remain blocked until approved source records exist.
+  - Asset library migration from assets/ to shared/asset_library should be separate.
+next_recommended_task: Create the Insan Series Bible and Episode 1 research plan.

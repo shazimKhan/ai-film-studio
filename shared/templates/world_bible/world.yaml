@@ -1,0 +1,6 @@
+schema_version: "1.0"
+world_id: example_world
+period: ""
+geography: []
+visual_language_ref: visual_language.yaml
+source_refs: []

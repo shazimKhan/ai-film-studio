@@ -7,6 +7,7 @@ from pathlib import Path
 from typing import Annotated
 
 import typer
+import yaml
 from rich.console import Console
 from rich.table import Table
 
@@ -15,6 +16,7 @@ from ai_film_studio.asset_bible import AssetBibleService
 from ai_film_studio.builder import create_default_builder
 from ai_film_studio.core.exceptions import AIFilmStudioError
 from ai_film_studio.core.logging import configure_logging
+from ai_film_studio.project_config import ProjectConfigValidator, ProjectValidationReport
 from ai_film_studio.prompt_compiler import PromptCompilationService
 from ai_film_studio.reference_sheets import (
     ProductionReadiness,
@@ -64,6 +66,114 @@ def doctor() -> None:
     runtime = create_default_builder().build()
     console.print("[green]Runtime foundation built successfully.[/green]")
     console.print(f"Registered engine adapters: {len(runtime.engine_adapters)}")
+
+
+@app.command("validate-project")
+def validate_project(
+    project_root: Annotated[
+        Path,
+        typer.Argument(help="Project root containing project.yaml."),
+    ],
+) -> None:
+    """Validate reusable project configuration and research gates."""
+    try:
+        report = ProjectConfigValidator(repo_root=Path.cwd()).validate_project(project_root)
+    except AIFilmStudioError as exc:
+        console.print(f"[red]Error:[/red] {exc}")
+        raise typer.Exit(1) from None
+
+    _print_project_validation_report(report)
+    if not report.is_valid:
+        raise typer.Exit(1)
+
+
+@app.command("create-project")
+def create_project(
+    project_id: Annotated[
+        str,
+        typer.Option("--project-id", help="Lowercase snake_case project id."),
+    ],
+    project_name: Annotated[
+        str,
+        typer.Option("--project-name", help="Human-readable project name."),
+    ],
+    genre: Annotated[
+        str,
+        typer.Option("--genre", help="Primary genre label."),
+    ],
+    project_type: Annotated[
+        str,
+        typer.Option("--project-type", help="Reusable project type."),
+    ] = "fictional_drama",
+    language: Annotated[
+        str,
+        typer.Option("--language", help="Primary language."),
+    ] = "urdu",
+    research_required: Annotated[
+        bool,
+        typer.Option("--research-required/--no-research-required"),
+    ] = False,
+    source_validation_required: Annotated[
+        bool,
+        typer.Option("--source-validation-required/--no-source-validation-required"),
+    ] = False,
+    depiction_policy: Annotated[
+        str,
+        typer.Option("--depiction-policy", help="Depiction policy id."),
+    ] = "standard",
+    visual_style: Annotated[
+        str,
+        typer.Option("--visual-style", help="Short visual style description."),
+    ] = "project_defined",
+    target_platform: Annotated[
+        str,
+        typer.Option("--target-platform", help="Initial target platform."),
+    ] = "youtube",
+) -> None:
+    """Create a small project scaffold from reusable defaults."""
+    project_root = Path("projects") / project_id
+    project_yaml = project_root / "project.yaml"
+    readme = project_root / "README.md"
+    if project_yaml.exists() or readme.exists():
+        console.print(f"[red]Error:[/red] Project '{project_id}' already has starter files.")
+        raise typer.Exit(1)
+
+    config = {
+        "schema_version": "1.0",
+        "project_id": project_id,
+        "project_name": project_name,
+        "project_type": project_type,
+        "genre": [genre],
+        "language": language,
+        "secondary_languages": [],
+        "historical_period": "",
+        "research_required": research_required,
+        "source_validation_required": source_validation_required,
+        "depiction_policy": depiction_policy,
+        "visual_style": {"description": visual_style},
+        "aspect_ratio": "16:9",
+        "default_shot_duration": 6,
+        "target_platforms": [target_platform],
+        "prompt_engines": ["gemini"],
+        "voiceover_language": language,
+        "continuity_level": "standard",
+        "qa_profiles": ["technical"],
+        "shared_asset_access": {"enabled": True},
+        "project_asset_path": project_root.as_posix(),
+        "export_presets": [],
+    }
+    try:
+        project_root.mkdir(parents=True, exist_ok=False)
+        project_yaml.write_text(yaml.safe_dump(config, sort_keys=False), encoding="utf-8")
+        readme.write_text(
+            f"# {project_name}\n\nProject scaffold for `{project_id}`.\n",
+            encoding="utf-8",
+        )
+    except OSError as exc:
+        console.print(f"[red]Error:[/red] Could not create project '{project_id}': {exc}")
+        raise typer.Exit(1) from None
+
+    console.print(f"Project created at: {project_root}")
 
 
 @app.command("compile")
@@ -715,6 +825,22 @@ def _print_reference_validation_table(validations: Iterable[ReferenceImageValida
             minimum,
             validation.reason,
         )
+    console.print(table)
+
+
+def _print_project_validation_report(report: ProjectValidationReport) -> None:
+    state = "passed" if report.is_valid else "failed"
+    color = "green" if report.is_valid else "red"
+    console.print(f"[{color}]Project validation {state}:[/{color}] {report.project_id}")
+    if report.is_valid:
+        return
+
+    table = Table(title="Project Validation Issues")
+    table.add_column("Code", no_wrap=True)
+    table.add_column("Path")
+    table.add_column("Message")
+    for issue in report.issues:
+        table.add_row(issue.code, issue.path, issue.message)
     console.print(table)
 
 

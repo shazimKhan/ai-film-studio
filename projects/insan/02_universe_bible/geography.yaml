@@ -1,0 +1,4 @@
+schema_version: "1.0"
+project_id: insan
+geography_entries: []
+policy: geography_visuals_require_source_or_reviewed_context

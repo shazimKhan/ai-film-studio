@@ -1,0 +1,11 @@
+schema_version: "1.0"
+prompt_id: video_prompt_001
+project_id: ""
+shot_id: ""
+sections:
+  subject_motion: ""
+  facial_motion: ""
+  environment_motion: ""
+  camera_motion: ""
+  speed: ""
+  continuity_rules: []

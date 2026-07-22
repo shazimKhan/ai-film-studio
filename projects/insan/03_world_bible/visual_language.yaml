@@ -1,0 +1,7 @@
+schema_version: "1.0"
+project_id: insan
+visual_language:
+  tone: reverent_research_grounded
+  depiction_policy_ref: ../00_governance/depiction_policy.md
+  quality: cinematic_documentary_hd
+  no_direct_depiction_for_sensitive_figures: true

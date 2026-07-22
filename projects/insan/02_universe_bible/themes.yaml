@@ -1,0 +1,9 @@
+schema_version: "1.0"
+project_id: insan
+themes:
+  - theme_id: tawhid
+    status: requires_source_plan
+  - theme_id: human_responsibility
+    status: requires_source_plan
+  - theme_id: guidance_and_history
+    status: requires_source_plan

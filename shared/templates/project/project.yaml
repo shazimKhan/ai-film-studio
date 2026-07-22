@@ -1,0 +1,22 @@
+schema_version: "1.0"
+project_id: example_project
+project_name: Example Project
+project_type: fictional_drama
+genre: []
+language: urdu
+secondary_languages: []
+historical_period: ""
+research_required: false
+source_validation_required: false
+depiction_policy: standard
+visual_style: {}
+aspect_ratio: "16:9"
+default_shot_duration: 6
+target_platforms: []
+prompt_engines: []
+voiceover_language: urdu
+continuity_level: standard
+qa_profiles: []
+shared_asset_access: {}
+project_asset_path: projects/example_project
+export_presets: []

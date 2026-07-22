@@ -8,6 +8,71 @@ validated scene blueprint, resolves reusable project assets, builds structured
 cinematic prompt sections, formats them through an engine adapter, and writes a
 versioned prompt file.
 
+## V3 Architecture
+
+AI Film Studio now separates production work into three layers:
+
+- `engine/`: reusable engine responsibility map. Current Python implementation lives
+  under `src/ai_film_studio`.
+- `shared/`: reusable schemas, templates, prompt blocks, validators, and shared asset
+  library metadata.
+- `projects/`: isolated production projects such as `guriya` and `insan`.
+
+The engine must not contain project-specific story content. A project owns its own
+research, assets, episodes, scenes, shots, prompts, generated media, QA, and exports.
+
+## Projects
+
+`projects/guriya` is a fictional Pakistani drama project. It does not require Islamic
+source validation.
+
+`projects/insan` is a research-first Islamic history project. It requires approved
+source records before factual outlines, narration, scenes, shots, or prompts can
+enter production.
+
+Create a small new project scaffold with:
+
+```bash
+aifs create-project --project-id example_project --project-name "Example Project" --genre documentary
+```
+
+Validate a project with:
+
+```bash
+aifs validate-project projects/guriya
+aifs validate-project projects/insan
+```
+
+Insan is expected to fail production readiness until approved source records are
+added to `projects/insan/01_research/source_registry.yaml`.
+
+## Shared Assets
+
+Shared reusable metadata belongs under `shared/asset_library`. Project-local assets
+belong under `projects/<project_id>`. Shared assets must remain story-neutral and
+project configs decide which shared libraries are allowed.
+
+## Source Validation
+
+Islamic-history projects use a source hierarchy:
+
+1. Qur'an
+2. Authentic Hadith
+3. Reliable Tafsir
+4. Established Seerah sources
+5. Carefully evaluated classical histories
+6. Scholarly interpretation
+7. Modern academic references for geography, archaeology, chronology, and material culture
+
+No source is marked verified or approved without review. Weak or disputed material
+must be labeled and cannot be presented as certainty.
+
+## Engine Adapters
+
+Engine adapters isolate provider-specific formatting. The V3 adapter roadmap supports
+Flow, Gemini, Veo, Kling, Runway, Hailuo, Seedance, and future engines without
+tightly coupling the core engine to any provider.
+
 ## Installation
 
 Requires Python 3.12+.
@@ -16,6 +81,14 @@ Requires Python 3.12+.
 python -m venv .venv
 source .venv/bin/activate
 python -m pip install -e ".[dev]"
+```
+
+## Tests
+
+```bash
+pytest
+ruff check .
+mypy src
 ```
 
 ## Example Command
