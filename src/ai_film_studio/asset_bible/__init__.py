@@ -1,5 +1,14 @@
 """Production asset bible validation and indexing."""
 
+from ai_film_studio.asset_bible.identity import (
+    CanonicalReference,
+    IdentityContinuityContext,
+    IdentityLockService,
+    IdentityProfile,
+    IdentityReferenceAsset,
+    IdentityReferenceImage,
+    IdentityValidationIssue,
+)
 from ai_film_studio.asset_bible.models import (
     AssetIndex,
     AssetRecord,
@@ -18,4 +27,11 @@ __all__ = [
     "AssetValidationIssue",
     "AssetValidationReport",
     "AssetValidationSeverity",
+    "CanonicalReference",
+    "IdentityContinuityContext",
+    "IdentityLockService",
+    "IdentityProfile",
+    "IdentityReferenceAsset",
+    "IdentityReferenceImage",
+    "IdentityValidationIssue",
 ]

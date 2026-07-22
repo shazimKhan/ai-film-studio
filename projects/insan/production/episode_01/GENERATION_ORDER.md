@@ -3,8 +3,8 @@
 Status: ready as a production checklist, blocked until source and depiction gates
 are approved where applicable.
 
-1. Storyteller master
-   - File: `projects/insan/10_image_prompts/episode_01/assets/storyteller.yaml`
+1. Storyteller studio master
+   - File: `projects/insan/10_image_prompts/episode_01/assets/storyteller_studio.yaml`
 2. Iblis master
    - Files:
      - `projects/insan/10_image_prompts/episode_01/assets/iblis_pre_rebellion.yaml`
@@ -28,5 +28,8 @@ are approved where applicable.
 11. Final edit
    - File: `projects/insan/16_editing/episode_01/final_edit_timeline.yaml`
 
-First practical generation target: storyteller master, because it has no sacred
-figure depiction risk and unlocks the opening/closing shots.
+Approved canonical Storyteller identity: `projects/insan/12_generated_images/episode_01/assets/storyteller_master.png`.
+
+First practical generation target: storyteller studio master, because the
+Storyteller identity is already approved and the studio plate unlocks the
+opening/closing shot setup.

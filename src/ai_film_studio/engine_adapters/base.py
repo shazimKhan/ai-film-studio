@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from abc import ABC, abstractmethod
 from collections.abc import Collection
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, Any
 
 from ai_film_studio.engine_adapters.models import (
     EngineReferenceCapabilities,
@@ -50,6 +50,18 @@ class BaseEngineAdapter(ABC):
     def format_prompt(self, compiled_prompt: PromptCompilationResult) -> str:
         """Format an engine-neutral compiled prompt for this adapter."""
         return compiled_prompt.prompt
+
+    def build_request(self, compiled_prompt: PromptCompilationResult) -> EngineRequest:
+        """Build an engine-neutral local request from a compiled prompt."""
+        reference_assets = compiled_prompt.metadata.get("reference_assets")
+        assets: dict[str, Any] = {}
+        if isinstance(reference_assets, list | tuple):
+            assets["reference_assets"] = reference_assets
+        return EngineRequest(
+            prompt=self.format_prompt(compiled_prompt),
+            assets=assets,
+            metadata=dict(compiled_prompt.metadata),
+        )
 
     @abstractmethod
     def submit(self, request: EngineRequest) -> EngineResult:

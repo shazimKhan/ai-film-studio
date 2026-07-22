@@ -1,0 +1,39 @@
+schema_version: "1.0"
+project_id: insan
+character_id: storyteller
+identity_id: insan_storyteller_v1
+status: approved
+identity_locked: true
+lock_level: strict
+validation_status: approved
+canonical_reference:
+  path: projects/insan/12_generated_images/episode_01/assets/storyteller_master.png
+  filename: storyteller_master.png
+  version: v1
+reference_image:
+  path: projects/insan/12_generated_images/episode_01/assets/storyteller_master.png
+  filename: storyteller_master.png
+  required: true
+immutable_attributes:
+  - Pakistani Muslim male, approximately 30 to 35 years old.
+  - Mature thoughtful face.
+  - Neatly trimmed dark beard.
+  - Composed brown eyes.
+  - Same approved facial identity as storyteller_master.png.
+  - Realistic natural skin texture, not plastic or AI-looking.
+mutable_attributes:
+  - Camera angle.
+  - Shot framing.
+  - Natural expression intensity.
+  - Minor hand position.
+  - Lighting level inside approved storyteller studio continuity.
+continuity_prompt: >
+  Use the approved Storyteller master identity reference exactly. Maintain the
+  same mature thoughtful face, neatly trimmed dark beard, composed brown eyes,
+  approximate age, skin realism, and narrator presence across every generated
+  image or video frame. This identity lock has higher priority than wardrobe,
+  pose, styling, or shot-level variation.
+negative_continuity_prompt: >
+  Do not change the Storyteller face, age, beard shape, eye character, ethnicity
+  context, skin realism, or approved narrator identity. Do not make him look like
+  a different person, a celebrity, a fantasy character, or a caricature.

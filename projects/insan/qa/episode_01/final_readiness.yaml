@@ -35,7 +35,7 @@ qa_results:
   generated_quranic_arabic: prohibited_not_requested
   scene_to_shot_consistency: pass
   missing_prompts: none_detected
-  missing_assets: present
+  missing_assets: present_except_approved_storyteller_identity
   excessive_shot_count: pass_25_shots
 final_decision: not_ready_for_final_generation_until_blockers_resolved
-first_safe_generation_target: storyteller_master
+first_safe_generation_target: storyteller_studio_master

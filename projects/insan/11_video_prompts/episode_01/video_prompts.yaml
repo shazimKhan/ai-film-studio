@@ -3,6 +3,15 @@ project_id: insan
 episode_id: episode_01
 status: video_prompts_pending_source_asset_and_depiction_review
 total_video_prompts: 25
+identity_locks:
+  - character_id: storyteller
+    identity_id: insan_storyteller_v1
+    use_locked_identity: true
+    reference_image:
+      path: projects/insan/12_generated_images/episode_01/assets/storyteller_master.png
+      filename: storyteller_master.png
+      required: true
+    identity_lock: strict
 global_motion_constraints:
   - slow_controlled_cinematic_motion
   - avoid_exaggerated_motion
@@ -24,6 +33,12 @@ prompts:
   - shot_id: insan_ep01_shot_001
     duration_seconds: 12
     input_image_reference: projects/insan/12_generated_images/episode_01/insan_ep01_shot_001.png
+    reference_assets:
+      - character_id: storyteller
+        identity_id: insan_storyteller_v1
+        path: projects/insan/12_generated_images/episode_01/assets/storyteller_master.png
+        required: true
+        identity_lock: strict
     single_subject_action: storyteller looks into camera with solemn stillness
     camera_movement: slow_push_in
     environmental_movement: very subtle lamp flicker and background stillness
@@ -44,6 +59,12 @@ prompts:
   - shot_id: insan_ep01_shot_002
     duration_seconds: 12
     input_image_reference: projects/insan/12_generated_images/episode_01/insan_ep01_shot_002.png
+    reference_assets:
+      - character_id: storyteller
+        identity_id: insan_storyteller_v1
+        path: projects/insan/12_generated_images/episode_01/assets/storyteller_master.png
+        required: true
+        identity_lock: strict
     single_subject_action: storyteller lowers gaze briefly then returns to camera
     camera_movement: locked_off
     environmental_movement: none
@@ -484,6 +505,12 @@ prompts:
   - shot_id: insan_ep01_shot_024
     duration_seconds: 15
     input_image_reference: projects/insan/12_generated_images/episode_01/insan_ep01_shot_024.png
+    reference_assets:
+      - character_id: storyteller
+        identity_id: insan_storyteller_v1
+        path: projects/insan/12_generated_images/episode_01/assets/storyteller_master.png
+        required: true
+        identity_lock: strict
     single_subject_action: storyteller delivers closing moral with controlled emotion
     camera_movement: slow_push_in
     environmental_movement: subtle warm desk-light presence
@@ -504,6 +531,12 @@ prompts:
   - shot_id: insan_ep01_shot_025
     duration_seconds: 15
     input_image_reference: projects/insan/12_generated_images/episode_01/insan_ep01_shot_025.png
+    reference_assets:
+      - character_id: storyteller
+        identity_id: insan_storyteller_v1
+        path: projects/insan/12_generated_images/episode_01/assets/storyteller_master.png
+        required: true
+        identity_lock: strict
     single_subject_action: storyteller pauses after final line
     camera_movement: locked_off
     environmental_movement: warm light fades gently

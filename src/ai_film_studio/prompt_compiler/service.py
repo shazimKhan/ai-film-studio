@@ -8,6 +8,7 @@ from pathlib import Path
 from ai_film_studio.builder.runtime import StudioRuntime
 from ai_film_studio.core.exceptions import UnsupportedEngineError
 from ai_film_studio.engine_adapters.base import BaseEngineAdapter
+from ai_film_studio.engine_adapters.models import EngineRequest
 from ai_film_studio.engine_adapters.registry import EngineAdapterRegistry
 from ai_film_studio.prompt_compiler.compiler import PromptCompiler
 from ai_film_studio.prompt_compiler.loader import SceneBlueprintLoader
@@ -23,6 +24,7 @@ class CompilationArtifact:
     output_path: Path
     prompt: str
     compiled: PromptCompilationResult
+    engine_request: EngineRequest
 
 
 class PromptCompilationService:
@@ -72,9 +74,15 @@ class PromptCompilationService:
                 target_engine=adapter.adapter_id,
             ),
         )
-        prompt = adapter.format_prompt(compiled)
+        engine_request = adapter.build_request(compiled)
+        prompt = engine_request.prompt
         output_path = self._writer.write(scene, adapter.adapter_id, prompt)
-        return CompilationArtifact(output_path=output_path, prompt=prompt, compiled=compiled)
+        return CompilationArtifact(
+            output_path=output_path,
+            prompt=prompt,
+            compiled=compiled,
+            engine_request=engine_request,
+        )
 
     def _adapter_for(self, engine_id: str) -> BaseEngineAdapter:
         if engine_id not in self._engine_adapters:

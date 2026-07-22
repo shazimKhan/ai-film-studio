@@ -7,6 +7,7 @@ from typing import Any
 
 from pydantic import ValidationError
 
+from ai_film_studio.asset_bible import IdentityLockService
 from ai_film_studio.core.exceptions import AIFilmStudioError
 from ai_film_studio.module_loader import ModuleLoader
 from ai_film_studio.project_config.models import (
@@ -118,6 +119,7 @@ class ProjectConfigValidator:
         issues: list[ProjectValidationIssue] = []
         issues.extend(self._validate_adapter_ids(config, project_root))
         issues.extend(self._validate_asset_path(config, project_root))
+        issues.extend(self._validate_identities(project_root))
         if config.source_validation_required:
             issues.extend(self._validate_sources(config, project_root, raw_config))
         return tuple(issues)
@@ -153,6 +155,20 @@ class ProjectConfigValidator:
                 path=self._repo_relative(project_root / "project.yaml"),
                 message=f"Project asset path '{config.project_asset_path}' does not exist.",
             ),
+        )
+
+    def _validate_identities(self, project_root: Path) -> tuple[ProjectValidationIssue, ...]:
+        identity_issues = IdentityLockService(
+            repo_root=self._repo_root,
+            module_loader=self._module_loader,
+        ).validate_project(project_root)
+        return tuple(
+            ProjectValidationIssue(
+                code=issue.code,
+                path=issue.path,
+                message=issue.message,
+            )
+            for issue in identity_issues
         )
 
     def _validate_sources(

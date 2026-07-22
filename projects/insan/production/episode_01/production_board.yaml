@@ -2,6 +2,15 @@ schema_version: "1.0"
 project_id: insan
 episode_id: episode_01
 status: active_production_board_pending_approvals
+identity_locks:
+  - character_id: storyteller
+    identity_id: insan_storyteller_v1
+    use_locked_identity: true
+    reference_image:
+      path: projects/insan/12_generated_images/episode_01/assets/storyteller_master.png
+      filename: storyteller_master.png
+      required: true
+    identity_lock: strict
 columns:
   - shot_id
   - scene

@@ -2,7 +2,19 @@ schema_version: "1.0"
 project_id: insan
 episode_id: episode_01
 asset_id: storyteller
-status: ready_to_generate_subject_to_project_approval
+character_id: storyteller
+identity_id: insan_storyteller_v1
+use_locked_identity: true
+canonical_reference:
+  path: projects/insan/12_generated_images/episode_01/assets/storyteller_master.png
+  filename: storyteller_master.png
+  version: v1
+reference_image:
+  path: projects/insan/12_generated_images/episode_01/assets/storyteller_master.png
+  filename: storyteller_master.png
+  required: true
+identity_lock: strict
+status: approved_canonical_identity_exists
 recommended_aspect_ratio: "16:9"
 recommended_generator: gemini
 master_prompt: >

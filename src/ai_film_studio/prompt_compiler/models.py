@@ -8,6 +8,8 @@ from typing import Any
 
 from pydantic import AliasChoices, BaseModel, ConfigDict, Field, field_validator
 
+from ai_film_studio.asset_bible import IdentityProfile
+
 
 class PromptModel(BaseModel):
     """Base model configuration for prompt compiler contracts."""
@@ -113,7 +115,13 @@ class SceneBlueprint(PromptModel):
 class CharacterAsset(PromptModel):
     """Reusable character identity asset."""
 
-    id: str = Field(min_length=1)
+    model_config = ConfigDict(
+        extra="allow",
+        populate_by_name=True,
+        str_strip_whitespace=True,
+    )
+
+    id: str = Field(min_length=1, validation_alias=AliasChoices("id", "asset_id"))
     name: str = Field(min_length=1)
     age: str = Field(min_length=1)
     appearance: str = Field(min_length=1)
@@ -121,6 +129,15 @@ class CharacterAsset(PromptModel):
     hair: str = Field(min_length=1)
     personality: str = Field(min_length=1)
     performance_constraints: tuple[str, ...] = ()
+    status: str | None = Field(default=None, min_length=1)
+    identity_id: str | None = Field(default=None, min_length=1)
+    identity_locked: bool = False
+    lock_level: str | None = Field(default=None, min_length=1)
+    canonical_reference: dict[str, Any] | None = None
+    immutable_attributes: tuple[str, ...] = ()
+    mutable_attributes: tuple[str, ...] = ()
+    continuity_prompt: str | None = Field(default=None, min_length=1)
+    negative_continuity_prompt: str | None = Field(default=None, min_length=1)
 
 
 class WorldAsset(PromptModel):
@@ -142,6 +159,7 @@ class ResolvedCharacterReference(PromptModel):
 
     reference: CharacterReference
     asset: CharacterAsset
+    identity: IdentityProfile | None = None
 
 
 class ResolvedWorldReference(PromptModel):

@@ -3,6 +3,15 @@ project_id: insan
 episode_id: episode_01
 status: image_prompts_pending_source_and_depiction_review
 total_shot_prompts: 25
+identity_locks:
+  - character_id: storyteller
+    identity_id: insan_storyteller_v1
+    use_locked_identity: true
+    reference_image:
+      path: projects/insan/12_generated_images/episode_01/assets/storyteller_master.png
+      filename: storyteller_master.png
+      required: true
+    identity_lock: strict
 global_requirements:
   - no_visible_allah
   - no_throne_or_divine_body
@@ -24,6 +33,12 @@ prompts:
     locked_asset_references:
       - storyteller
       - storyteller_studio
+    reference_assets:
+      - character_id: storyteller
+        identity_id: insan_storyteller_v1
+        path: projects/insan/12_generated_images/episode_01/assets/storyteller_master.png
+        required: true
+        identity_lock: strict
     master_prompt: >
       Medium close-up of the approved storyteller seated centered at the wooden
       desk in the approved storyteller studio. Pakistani Muslim male, 30-35,
@@ -55,6 +70,12 @@ prompts:
     locked_asset_references:
       - storyteller
       - storyteller_studio
+    reference_assets:
+      - character_id: storyteller
+        identity_id: insan_storyteller_v1
+        path: projects/insan/12_generated_images/episode_01/assets/storyteller_master.png
+        required: true
+        identity_lock: strict
     master_prompt: >
       Close-up of the same storyteller at the same desk, slight front-left angle,
       calm eyes, restrained emotion, one hand near the desk edge but not dominant.
@@ -695,6 +716,12 @@ prompts:
     locked_asset_references:
       - storyteller
       - storyteller_studio
+    reference_assets:
+      - character_id: storyteller
+        identity_id: insan_storyteller_v1
+        path: projects/insan/12_generated_images/episode_01/assets/storyteller_master.png
+        required: true
+        identity_lock: strict
     master_prompt: >
       Medium close-up of the same storyteller in the same studio, centered,
       delivering the closing moral with controlled emotion. Books and MacBook
@@ -724,6 +751,12 @@ prompts:
     locked_asset_references:
       - storyteller
       - storyteller_studio
+    reference_assets:
+      - character_id: storyteller
+        identity_id: insan_storyteller_v1
+        path: projects/insan/12_generated_images/episode_01/assets/storyteller_master.png
+        required: true
+        identity_lock: strict
     master_prompt: >
       Close-up final hold on the same storyteller's thoughtful face after the
       final line. Warm light fades gently toward shadow, desk background soft,

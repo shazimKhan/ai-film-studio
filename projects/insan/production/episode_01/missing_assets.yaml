@@ -2,8 +2,9 @@ schema_version: "1.0"
 project_id: insan
 episode_id: episode_01
 status: missing_assets_block_generation
-missing_assets:
+approved_assets:
   - storyteller
+missing_assets:
   - iblis_pre_rebellion
   - iblis_post_expulsion
   - angelic_presence
@@ -23,4 +24,4 @@ generation_blockers:
   - source_records_unapproved
   - depiction_review_not_passed
   - reusable_asset_references_missing
-  - no_manual_reference_images_added
+  - required_manual_reference_images_still_missing

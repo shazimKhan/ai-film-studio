@@ -1,18 +1,58 @@
 schema_version: "1.0"
 project_id: insan
 asset_id: storyteller
+id: storyteller
+name: Storyteller
 asset_type: character
-status: missing_reference_images
+status: approved_identity_reference
 depiction_classification: narrator_asset
 reusable: true
+identity_id: insan_storyteller_v1
+identity_locked: true
+lock_level: strict
+canonical_reference:
+  path: projects/insan/12_generated_images/episode_01/assets/storyteller_master.png
+  filename: storyteller_master.png
+  version: v1
+age: "30 to 35"
+appearance: >
+  Pakistani Muslim male storyteller with a mature thoughtful face, neatly trimmed
+  dark beard, composed brown eyes, realistic natural skin texture, and a calm
+  narrator presence.
+wardrobe: Charcoal kurta and simple waistcoat.
+hair: Neatly kept dark hair.
+personality: Calm, reflective, serious, and emotionally restrained.
+performance_constraints:
+  - Maintain the approved narrator identity from storyteller_master.png.
+  - Keep expression controlled and documentary-realistic.
+  - Avoid overacting, caricature, or fantasy costume behavior.
 continuity_rules:
   - Pakistani Muslim male, approximately 30 to 35 years old.
   - Mature thoughtful face, neatly trimmed dark beard, composed brown eyes.
   - Charcoal kurta and simple waistcoat.
   - No readable text on books, papers, or laptop screen.
+immutable_attributes:
+  - Pakistani Muslim male, approximately 30 to 35 years old.
+  - Mature thoughtful face.
+  - Neatly trimmed dark beard.
+  - Composed brown eyes.
+  - Same approved facial identity as storyteller_master.png.
+mutable_attributes:
+  - Camera angle.
+  - Framing.
+  - Natural expression intensity.
+  - Minor hand position.
+  - Lighting level inside approved studio continuity.
+continuity_prompt: >
+  Use the approved Storyteller master identity reference exactly. Maintain the
+  same mature thoughtful face, neatly trimmed dark beard, composed brown eyes,
+  approximate age, skin realism, and narrator presence across all shots.
+negative_continuity_prompt: >
+  Do not change the Storyteller face, age, beard shape, eye character, ethnicity
+  context, natural skin texture, or approved narrator identity.
 visual_restrictions:
   - highly_realistic_not_ai_looking
   - no_caricature
   - no_exaggerated_religious_costume
-reference_status: awaiting_manual_generation
+reference_status: approved
 prompt_ref: projects/insan/10_image_prompts/episode_01/assets/storyteller.yaml

@@ -5,11 +5,24 @@ status: pending_asset_generation
 assets:
   characters:
     - asset_id: storyteller
+      character_id: storyteller
+      identity_id: insan_storyteller_v1
+      use_locked_identity: true
       type: character
+      canonical_reference:
+        path: projects/insan/12_generated_images/episode_01/assets/storyteller_master.png
+        filename: storyteller_master.png
+        version: v1
+      reference_assets:
+        - character_id: storyteller
+          identity_id: insan_storyteller_v1
+          path: projects/insan/12_generated_images/episode_01/assets/storyteller_master.png
+          required: true
+          identity_lock: strict
       required_scenes:
         - insan_ep01_scene_001
         - insan_ep01_scene_013
-      existing_or_missing: missing
+      existing_or_missing: existing_canonical_identity
       reusable_or_episode_specific: reusable
       continuity_rules: Pakistani Muslim male, 30-35, charcoal kurta, waistcoat, desk continuity.
       visual_restrictions: No readable text, realistic not AI-looking.

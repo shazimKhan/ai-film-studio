@@ -12,7 +12,7 @@ from rich.console import Console
 from rich.table import Table
 
 from ai_film_studio import __version__
-from ai_film_studio.asset_bible import AssetBibleService
+from ai_film_studio.asset_bible import AssetBibleService, IdentityLockService
 from ai_film_studio.builder import create_default_builder
 from ai_film_studio.core.exceptions import AIFilmStudioError
 from ai_film_studio.core.logging import configure_logging
@@ -85,6 +85,36 @@ def validate_project(
     _print_project_validation_report(report)
     if not report.is_valid:
         raise typer.Exit(1)
+
+
+@app.command("validate-identity")
+def validate_identity(
+    project: Annotated[
+        str,
+        typer.Option("--project", help="Project id under projects/."),
+    ],
+    character: Annotated[
+        str,
+        typer.Option("--character", help="Character id under 05_characters/."),
+    ],
+) -> None:
+    """Validate one project-local character identity lock."""
+    try:
+        identity = IdentityLockService(repo_root=Path.cwd()).load_identity(
+            Path("projects") / project,
+            character,
+        )
+    except AIFilmStudioError as exc:
+        console.print(f"[red]Error:[/red] {exc}")
+        raise typer.Exit(1) from None
+
+    reference_path = identity.reference_image.path if identity.reference_image else "-"
+    console.print(f"Character: {identity.character_id}")
+    console.print(f"Identity: {identity.identity_id}")
+    console.print(f"Status: {identity.status}")
+    console.print(f"Lock: {identity.lock_level}")
+    console.print(f"Reference image: {reference_path}")
+    console.print("[green]Validation: passed[/green]")
 
 
 @app.command("create-project")

@@ -6,6 +6,7 @@ from pathlib import Path
 
 from pydantic import ValidationError
 
+from ai_film_studio.asset_bible import IdentityLockService
 from ai_film_studio.core.exceptions import AssetNotFoundError, MalformedConfigurationError
 from ai_film_studio.module_loader import ModuleLoader
 from ai_film_studio.prompt_compiler.errors import format_validation_error
@@ -32,12 +33,18 @@ class ModuleReferenceResolver:
     ) -> None:
         self._module_loader = module_loader or ModuleLoader()
         self._repo_root = repo_root or Path.cwd()
+        self._identity_locks = IdentityLockService(
+            repo_root=self._repo_root,
+            module_loader=self._module_loader,
+        )
 
     def resolve(self, scene: SceneBlueprint, scene_file: Path) -> ResolvedSceneContext:
         """Resolve all reusable modules referenced by a scene blueprint."""
         scene_dir = scene_file.parent
+        identity_project_root = self._identity_project_root(scene.project, scene_file)
         characters = tuple(
-            self._resolve_character(reference, scene_dir) for reference in scene.characters
+            self._resolve_character(reference, scene_dir, identity_project_root)
+            for reference in scene.characters
         )
         world = self._resolve_world(scene.world, scene_dir)
         return ResolvedSceneContext(scene=scene, characters=characters, world=world)
@@ -46,6 +53,7 @@ class ModuleReferenceResolver:
         self,
         reference: CharacterReference,
         scene_dir: Path,
+        identity_project_root: Path,
     ) -> ResolvedCharacterReference:
         path = self._resolve_asset_path(
             reference.module,
@@ -68,7 +76,15 @@ class ModuleReferenceResolver:
                 f"'{asset.id}' in '{path}'."
             )
             raise MalformedConfigurationError(msg)
-        return ResolvedCharacterReference(reference=reference, asset=asset)
+
+        identity = self._identity_locks.try_load_identity(identity_project_root, reference.id)
+        if identity is None and asset.identity_locked:
+            msg = (
+                f"Character asset '{asset.id}' is identity_locked but no identity.yaml exists "
+                f"under '{identity_project_root / '05_characters' / reference.id}'."
+            )
+            raise AssetNotFoundError(msg)
+        return ResolvedCharacterReference(reference=reference, asset=asset, identity=identity)
 
     def _resolve_world(
         self,
@@ -114,3 +130,18 @@ class ModuleReferenceResolver:
         if scene_relative == root_relative:
             return (scene_relative,)
         return (scene_relative, root_relative)
+
+    def _identity_project_root(self, project_id: str, scene_file: Path) -> Path:
+        project_root = self._repo_root / "projects" / project_id
+        if project_root.exists():
+            return project_root
+
+        parts = scene_file.resolve().parts
+        try:
+            projects_index = parts.index("projects")
+            if parts[projects_index + 1] == project_id:
+                return Path(*parts[: projects_index + 2])
+        except (ValueError, IndexError):
+            pass
+
+        return self._repo_root

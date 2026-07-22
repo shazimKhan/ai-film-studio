@@ -87,7 +87,16 @@ class PromptSectionBuilder:
     @staticmethod
     def _character_identity(characters: tuple[ResolvedCharacterReference, ...]) -> str:
         entries: list[str] = []
+        seen_identity_ids: set[str] = set()
         for character in characters:
+            if (
+                character.identity is not None
+                and character.identity.identity_locked
+                and character.identity.identity_id not in seen_identity_ids
+            ):
+                seen_identity_ids.add(character.identity.identity_id)
+                entries.append(_identity_continuity_block(character))
+
             asset = character.asset
             reference = character.reference
             constraints = _sentence_list(asset.performance_constraints)
@@ -95,6 +104,7 @@ class PromptSectionBuilder:
             notes = f" Scene notes: {_sentence_list(reference.notes)}" if reference.notes else ""
             entries.append(
                 (
+                    "- "
                     f"{asset.name} ({asset.id}), age {asset.age}: "
                     f"{_ensure_period(asset.appearance)} "
                     f"Personality/performance: {_ensure_period(asset.personality)}"
@@ -103,7 +113,7 @@ class PromptSectionBuilder:
                     f"{constraints or 'maintain the same face, body, and age.'}"
                 ).strip()
             )
-        return _bullet_lines(entries)
+        return "\n\n".join(entries)
 
     @staticmethod
     def _world(context: ResolvedSceneContext) -> str:
@@ -197,7 +207,27 @@ class PromptSectionBuilder:
 
     @staticmethod
     def _negative(context: ResolvedSceneContext) -> str:
-        return _bullet_lines(context.scene.negative_prompts)
+        negative_constraints: list[str] = []
+        seen_constraints: set[str] = set()
+        for character in context.characters:
+            identity = character.identity
+            if (
+                identity is None
+                or not identity.identity_locked
+                or not identity.negative_continuity_prompt
+            ):
+                continue
+            if identity.negative_continuity_prompt in seen_constraints:
+                continue
+            seen_constraints.add(identity.negative_continuity_prompt)
+            negative_constraints.append(identity.negative_continuity_prompt)
+
+        for negative_prompt in context.scene.negative_prompts:
+            if negative_prompt in seen_constraints:
+                continue
+            seen_constraints.add(negative_prompt)
+            negative_constraints.append(negative_prompt)
+        return _bullet_lines(negative_constraints)
 
     @staticmethod
     def _output_quality(context: ResolvedSceneContext) -> str:
@@ -232,3 +262,26 @@ def _ensure_period(value: str) -> str:
 
 def _trim_terminal_punctuation(value: str) -> str:
     return value.strip().rstrip(".!?")
+
+
+def _identity_continuity_block(character: ResolvedCharacterReference) -> str:
+    identity = character.identity
+    if identity is None:
+        return ""
+
+    immutable = _sentence_list(identity.immutable_attributes)
+    mutable = _sentence_list(identity.mutable_attributes)
+    lines = [
+        "CHARACTER IDENTITY CONTINUITY — MANDATORY",
+        f"Character: {character.asset.name} ({identity.character_id})",
+        f"Identity ID: {identity.identity_id}",
+        f"Lock level: {identity.lock_level}",
+        "This approved identity reference overrides wardrobe, pose, styling, and shot-level "
+        "variation if any later instruction conflicts with identity continuity.",
+        identity.continuity_prompt or "",
+    ]
+    if immutable:
+        lines.append(f"Immutable attributes: {immutable}")
+    if mutable:
+        lines.append(f"Mutable attributes may vary only when the shot requires them: {mutable}")
+    return _lines(lines)

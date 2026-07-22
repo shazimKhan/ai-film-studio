@@ -191,6 +191,30 @@ projects/guriya/asset_index.json
 See `docs/ASSET_PIPELINE.md` for naming conventions, validation rules, and best
 practices.
 
+## Identity Locks
+
+Project-local characters can define strict approved identity references in:
+
+```text
+projects/<project_id>/05_characters/<character_id>/identity.yaml
+```
+
+Validate one locked identity with:
+
+```bash
+aifs validate-identity --project insan --character storyteller
+```
+
+The current approved Storyteller identity reference is:
+
+```text
+projects/insan/12_generated_images/episode_01/assets/storyteller_master.png
+```
+
+Prompt compilation injects a mandatory character identity continuity block and carries
+the reference image forward in engine-neutral `reference_assets` metadata. The core
+compiler does not copy image files or call external engines.
+
 ## Production Character References
 
 Character images manually generate hoti hain. Aap Gemini, Flow, Veo, Kling,
