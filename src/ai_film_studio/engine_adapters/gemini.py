@@ -78,11 +78,16 @@ def _reference_asset_block(reference_assets: Any) -> str:
             continue
         character_id = reference_asset.get("character_id", "unknown_character")
         identity_id = reference_asset.get("identity_id", "unknown_identity")
+        state_id = reference_asset.get("state_id")
+        reference_role = reference_asset.get("reference_role", "identity")
         path = reference_asset.get("path", "")
         required = "required" if reference_asset.get("required", False) else "optional"
         lock_level = reference_asset.get("identity_lock", "standard")
+        label = f"{character_id} / {identity_id}"
+        if state_id:
+            label = f"{label} / {state_id}"
         lines.append(
-            f"- {character_id} / {identity_id}: {path} ({required}, identity lock: {lock_level})",
+            f"- {label}: {path} ({required}, {reference_role} lock: {lock_level})",
         )
     if len(lines) == 1:
         return ""

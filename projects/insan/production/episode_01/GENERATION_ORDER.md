@@ -5,10 +5,11 @@ are approved where applicable.
 
 1. Storyteller studio master
    - File: `projects/insan/10_image_prompts/episode_01/assets/storyteller_studio.yaml`
-2. Iblis master
-   - Files:
-     - `projects/insan/10_image_prompts/episode_01/assets/iblis_pre_rebellion.yaml`
-     - `projects/insan/10_image_prompts/episode_01/assets/iblis_post_expulsion.yaml`
+2. Iblis state masters
+   - Character: `iblis`
+   - States:
+     - `pre_rebellion` -> `projects/insan/10_image_prompts/episode_01/assets/iblis_pre_rebellion.yaml`
+     - `post_expulsion` -> `projects/insan/10_image_prompts/episode_01/assets/iblis_post_expulsion.yaml`
 3. Angelic presence
    - File: `projects/insan/10_image_prompts/episode_01/assets/angelic_presence.yaml`
 4. Adam concealed presence

@@ -38,6 +38,9 @@ class PromptCompiler(BasePromptCompiler):
     ) -> dict[str, Any]:
         metadata = dict(request.metadata)
         reference_assets = _identity_reference_assets(request.scene_context)
+        character_states = _character_states(request.scene_context)
+        if character_states:
+            metadata["character_states"] = list(character_states)
         if not reference_assets:
             return metadata
 
@@ -77,14 +80,55 @@ def _identity_reference_assets(context: ResolvedSceneContext) -> tuple[dict[str,
     for character in context.characters:
         identity = character.identity
         if identity is None or not identity.identity_locked or identity.reference_image is None:
-            continue
-        reference_assets.append(
-            {
+            identity_asset = None
+        else:
+            identity_asset = {
                 "character_id": identity.character_id,
                 "identity_id": identity.identity_id,
                 "path": identity.reference_image.path,
                 "required": identity.reference_image.required,
                 "identity_lock": identity.lock_level,
+            }
+        if identity_asset is not None:
+            reference_assets.append(identity_asset)
+
+        state = character.state
+        if identity is None or state is None or state.reference_image is None:
+            continue
+        reference_assets.append(
+            {
+                "character_id": identity.character_id,
+                "identity_id": identity.identity_id,
+                "state_id": state.state_id,
+                "path": state.reference_image.path,
+                "required": state.reference_image.required,
+                "identity_lock": state.lock_level,
+                "reference_role": "state",
             },
         )
     return tuple(reference_assets)
+
+
+def _character_states(context: ResolvedSceneContext) -> tuple[dict[str, Any], ...]:
+    states: list[dict[str, Any]] = []
+    seen: set[tuple[str, str]] = set()
+    for character in context.characters:
+        identity = character.identity
+        state = character.state
+        if identity is None or state is None:
+            continue
+        key = (identity.identity_id, state.state_id)
+        if key in seen:
+            continue
+        seen.add(key)
+        states.append(
+            {
+                "character_id": identity.character_id,
+                "identity_id": identity.identity_id,
+                "state_id": state.state_id,
+                "status": state.status,
+                "reference_status": state.reference_status,
+                "master_prompt_path": state.master_prompt_path or state.prompt_ref,
+            },
+        )
+    return tuple(states)

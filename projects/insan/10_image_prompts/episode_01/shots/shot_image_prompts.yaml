@@ -12,6 +12,23 @@ identity_locks:
       filename: storyteller_master.png
       required: true
     identity_lock: strict
+character_state_resolution:
+  - character_id: iblis
+    identity_id: insan_iblis_v1
+    default_state: pre_rebellion
+    rules:
+      - state_id: pre_rebellion
+        applies_to_shots:
+          - insan_ep01_shot_005
+          - insan_ep01_shot_006
+          - insan_ep01_shot_015
+          - insan_ep01_shot_016
+          - insan_ep01_shot_017
+          - insan_ep01_shot_019
+      - state_id: post_expulsion
+        applies_to_shots:
+          - insan_ep01_shot_021
+          - insan_ep01_shot_022
 global_requirements:
   - no_visible_allah
   - no_throne_or_divine_body
@@ -163,7 +180,7 @@ prompts:
   - shot_id: insan_ep01_shot_005
     approval_status: needs_depiction_review
     locked_asset_references:
-      - iblis_pre_rebellion
+      - iblis
       - unseen_realm
     master_prompt: >
       Medium-wide symbolic shot of Iblis before rebellion as a restrained jinn
@@ -192,7 +209,7 @@ prompts:
   - shot_id: insan_ep01_shot_006
     approval_status: needs_depiction_review
     locked_asset_references:
-      - iblis_pre_rebellion
+      - iblis
       - angelic_presence
       - unseen_realm
     master_prompt: >
@@ -455,7 +472,7 @@ prompts:
     approval_status: needs_depiction_review
     locked_asset_references:
       - angelic_presence
-      - iblis_pre_rebellion
+      - iblis
       - unseen_realm
     master_prompt: >
       Medium-wide side frame revealing one upright dark space at the edge of
@@ -484,7 +501,7 @@ prompts:
   - shot_id: insan_ep01_shot_016
     approval_status: needs_source_and_depiction_review
     locked_asset_references:
-      - iblis_pre_rebellion
+      - iblis
       - angelic_presence
       - unseen_realm
     master_prompt: >
@@ -514,7 +531,7 @@ prompts:
   - shot_id: insan_ep01_shot_017
     approval_status: needs_depiction_review
     locked_asset_references:
-      - iblis_pre_rebellion
+      - iblis
       - unseen_realm
     master_prompt: >
       Close symbolic profile of shadow gathering around Iblis' upright jinn
@@ -570,7 +587,7 @@ prompts:
   - shot_id: insan_ep01_shot_019
     approval_status: needs_depiction_review
     locked_asset_references:
-      - iblis_pre_rebellion
+      - iblis
       - smokeless_fire
       - clay_particles
     master_prompt: >
@@ -628,7 +645,7 @@ prompts:
   - shot_id: insan_ep01_shot_021
     approval_status: needs_depiction_review
     locked_asset_references:
-      - iblis_post_expulsion
+      - iblis
       - expulsion_boundary
     master_prompt: >
       Medium-wide rear three-quarter image of Iblis post-expulsion as a dark
@@ -656,7 +673,7 @@ prompts:
   - shot_id: insan_ep01_shot_022
     approval_status: needs_source_and_depiction_review
     locked_asset_references:
-      - iblis_post_expulsion
+      - iblis
       - symbolic_path_of_humanity
       - darkness_separation
     master_prompt: >

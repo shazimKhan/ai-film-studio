@@ -84,7 +84,20 @@ class ModuleReferenceResolver:
                 f"under '{identity_project_root / '05_characters' / reference.id}'."
             )
             raise AssetNotFoundError(msg)
-        return ResolvedCharacterReference(reference=reference, asset=asset, identity=identity)
+        if identity is None and reference.state:
+            msg = (
+                f"Character reference '{reference.id}' requested state "
+                f"'{reference.state}' but no identity exists."
+            )
+            raise AssetNotFoundError(msg)
+
+        state = self._identity_locks.resolve_state(identity, reference.state) if identity else None
+        return ResolvedCharacterReference(
+            reference=reference,
+            asset=asset,
+            identity=identity,
+            state=state,
+        )
 
     def _resolve_world(
         self,

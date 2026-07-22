@@ -8,7 +8,7 @@ from typing import Any
 
 from pydantic import AliasChoices, BaseModel, ConfigDict, Field, field_validator
 
-from ai_film_studio.asset_bible import IdentityProfile
+from ai_film_studio.asset_bible import CharacterStateProfile, IdentityProfile
 
 
 class PromptModel(BaseModel):
@@ -26,6 +26,11 @@ class CharacterReference(PromptModel):
 
     id: str = Field(min_length=1)
     module: Path
+    state: str | None = Field(
+        default=None,
+        min_length=1,
+        validation_alias=AliasChoices("state", "state_id"),
+    )
     role: str | None = Field(default=None, min_length=1)
     wardrobe: str | None = Field(default=None, min_length=1)
     hair: str | None = Field(default=None, min_length=1)
@@ -160,6 +165,7 @@ class ResolvedCharacterReference(PromptModel):
     reference: CharacterReference
     asset: CharacterAsset
     identity: IdentityProfile | None = None
+    state: CharacterStateProfile | None = None
 
 
 class ResolvedWorldReference(PromptModel):

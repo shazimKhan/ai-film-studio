@@ -6,15 +6,16 @@ status: needs_depiction_review_before_generation
 recommended_aspect_ratio: "16:9"
 recommended_generator: gemini
 master_prompt: >
-  Symbolic cinematic depiction of Iblis before rebellion as a restrained jinn
-  presence, not an angel and not a Western devil. A tall shadowed non-human
-  presence formed through subtle smokeless fire texture, dark ember edges, and
-  controlled negative space, with no horns, no tail, no red monster skin, no
-  pitchfork, no demonic costume, and no detailed mouth for lip-sync. The design
-  should feel ancient, solemn, intelligent, and unsettling without horror
-  exaggeration. Place the presence in an abstract unseen realm with source-less
-  white-gold light far away and deep darkness around him. Highly realistic,
-  cinematic, reverent, non-cartoon, no readable text.
+  Iblis before rebellion, not yet visibly corrupted, presented as an ancient,
+  majestic, disciplined, calm, spiritually elevated, quiet, mysterious jinn
+  presence. The audience should initially feel admiration before knowing the
+  coming refusal. Hidden face, perfect posture, elegant layered robes, and a
+  subtle symbolic smokeless-fire aura only, with no flames, no horror, no
+  monster design, no demon styling, no Western devil features, no burning body,
+  no hellfire, no spikes, no skulls, no chains, no evil grin, and no glowing red
+  eyes. Place him in a grand unseen realm with sacred architecture, large scale,
+  timeless atmosphere, soft volumetric lighting, and museum-quality realism.
+  ARRI Alexa 65, ultra realistic, reverent cinematic frame, no readable text.
 negative_prompt: >
   angel, angel wings, halo, Western devil, horns, tail, pitchfork, red demon,
   monster face, horror gore, fantasy armor, readable text, Arabic text, Qur'anic

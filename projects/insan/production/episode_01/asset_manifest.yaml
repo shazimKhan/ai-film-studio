@@ -27,26 +27,42 @@ assets:
       continuity_rules: Pakistani Muslim male, 30-35, charcoal kurta, waistcoat, desk continuity.
       visual_restrictions: No readable text, realistic not AI-looking.
       generation_priority: 1
-    - asset_id: iblis_pre_rebellion
+    - asset_id: iblis
+      character_id: iblis
+      identity_id: insan_iblis_v1
       type: character_presence
+      default_state: pre_rebellion
+      states:
+        - state_id: pre_rebellion
+          prompt_ref: projects/insan/10_image_prompts/episode_01/assets/iblis_pre_rebellion.yaml
+          reference_image: projects/insan/12_generated_images/episode_01/assets/iblis_pre_rebellion_master.png
+          reference_status: awaiting_manual_generation
+          required_scenes:
+            - insan_ep01_scene_003
+            - insan_ep01_scene_009
+            - insan_ep01_scene_010
+          continuity_rules: Ancient disciplined pre-rebellion jinn presence, not angel.
+        - state_id: post_expulsion
+          prompt_ref: projects/insan/10_image_prompts/episode_01/assets/iblis_post_expulsion.yaml
+          reference_image: projects/insan/12_generated_images/episode_01/assets/iblis_post_expulsion_master.png
+          reference_status: awaiting_manual_generation
+          required_scenes:
+            - insan_ep01_scene_011
+            - insan_ep01_scene_012
+          continuity_rules: Same jinn identity family, darker and separated after expulsion.
+      legacy_asset_aliases:
+        iblis_pre_rebellion: pre_rebellion
+        iblis_post_expulsion: post_expulsion
       required_scenes:
         - insan_ep01_scene_003
         - insan_ep01_scene_009
         - insan_ep01_scene_010
-      existing_or_missing: missing
-      reusable_or_episode_specific: reusable
-      continuity_rules: Jinn presence, not angel, no leader-of-jinn claim.
-      visual_restrictions: No Western horned devil, no lipsync, no red monster skin.
-      generation_priority: 2
-    - asset_id: iblis_post_expulsion
-      type: character_presence
-      required_scenes:
         - insan_ep01_scene_011
         - insan_ep01_scene_012
       existing_or_missing: missing
       reusable_or_episode_specific: reusable
-      continuity_rules: Same identity family as pre-rebellion, darker and separated.
-      visual_restrictions: No horns, tail, pitchfork, horror monster transformation.
+      continuity_rules: One Iblis identity family with state-specific visual continuity.
+      visual_restrictions: No angel identity, no Western devil, no monster transformation.
       generation_priority: 2
   presences:
     - asset_id: angelic_presence

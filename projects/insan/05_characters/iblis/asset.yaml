@@ -1,0 +1,41 @@
+schema_version: "1.0"
+project_id: insan
+asset_id: iblis
+id: iblis
+name: Iblis
+asset_type: character_presence
+status: stateful_identity_defined_awaiting_state_references
+depiction_classification: jinn
+reusable: true
+identity_id: insan_iblis_v1
+identity_locked: false
+default_state: pre_rebellion
+age: "unseen created being; age not visually specified"
+appearance: >
+  Symbolic jinn presence with hidden face and non-Western visual language. The
+  exact visual treatment is resolved by approved character state.
+wardrobe: State-specific symbolic robes or shadow treatment.
+hair: Hidden or not visible.
+personality: >
+  Disciplined and elevated before rebellion; separated and disgraced after
+  expulsion. Never treated as an angel.
+performance_constraints:
+  - Iblis is classified as jinn, not angel.
+  - Do not claim that Iblis is king or leader of all jinn.
+  - Do not use Western devil iconography.
+  - Do not add lip-sync or direct dialogue performance without explicit approval.
+continuity_rules:
+  - Preserve one identity family across all states.
+  - Pre-rebellion and post-expulsion are different visual states, not separate characters.
+  - State-specific continuity overrides generic Iblis styling.
+visual_restrictions:
+  - no_western_horned_devil
+  - no_tail
+  - no_pitchfork
+  - no_red_monster_skin
+  - no_angelic_identity
+  - no_lip_sync_without_approval
+reference_status: awaiting_state_references
+states:
+  - pre_rebellion
+  - post_expulsion

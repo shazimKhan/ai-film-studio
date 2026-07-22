@@ -1,0 +1,37 @@
+schema_version: "1.0"
+project_id: insan
+episode_id: episode_01
+status: pending_source_depiction_and_asset_generation
+character_state_resolution:
+  - character_id: iblis
+    identity_id: insan_iblis_v1
+    default_state: pre_rebellion
+    states:
+      - state_id: pre_rebellion
+        prompt_ref: projects/insan/10_image_prompts/episode_01/assets/iblis_pre_rebellion.yaml
+        reference_image: projects/insan/12_generated_images/episode_01/assets/iblis_pre_rebellion_master.png
+        reference_required: false
+        applies_to_shots:
+          - insan_ep01_shot_005
+          - insan_ep01_shot_006
+          - insan_ep01_shot_015
+          - insan_ep01_shot_016
+          - insan_ep01_shot_017
+          - insan_ep01_shot_019
+      - state_id: post_expulsion
+        prompt_ref: projects/insan/10_image_prompts/episode_01/assets/iblis_post_expulsion.yaml
+        reference_image: projects/insan/12_generated_images/episode_01/assets/iblis_post_expulsion_master.png
+        reference_required: false
+        applies_to_shots:
+          - insan_ep01_shot_021
+          - insan_ep01_shot_022
+legacy_asset_aliases:
+  iblis_pre_rebellion:
+    character_id: iblis
+    state_id: pre_rebellion
+  iblis_post_expulsion:
+    character_id: iblis
+    state_id: post_expulsion
+reference_policy:
+  missing_state_references_block_final_generation: true
+  state_reference_paths_are_reserved_until_manual_generation: true

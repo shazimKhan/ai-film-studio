@@ -88,14 +88,21 @@ class PromptSectionBuilder:
     def _character_identity(characters: tuple[ResolvedCharacterReference, ...]) -> str:
         entries: list[str] = []
         seen_identity_ids: set[str] = set()
+        seen_state_ids: set[tuple[str, str]] = set()
         for character in characters:
             if (
                 character.identity is not None
-                and character.identity.identity_locked
+                and (character.identity.identity_locked or character.identity.continuity_prompt)
                 and character.identity.identity_id not in seen_identity_ids
             ):
                 seen_identity_ids.add(character.identity.identity_id)
                 entries.append(_identity_continuity_block(character))
+
+            if character.identity is not None and character.state is not None:
+                state_key = (character.identity.identity_id, character.state.state_id)
+                if state_key not in seen_state_ids:
+                    seen_state_ids.add(state_key)
+                    entries.append(_state_continuity_block(character))
 
             asset = character.asset
             reference = character.reference
@@ -212,15 +219,20 @@ class PromptSectionBuilder:
         for character in context.characters:
             identity = character.identity
             if (
-                identity is None
-                or not identity.identity_locked
-                or not identity.negative_continuity_prompt
+                identity is not None
+                and identity.negative_continuity_prompt
+                and identity.negative_continuity_prompt not in seen_constraints
             ):
+                seen_constraints.add(identity.negative_continuity_prompt)
+                negative_constraints.append(identity.negative_continuity_prompt)
+
+            state = character.state
+            if state is None or not state.negative_continuity_prompt:
                 continue
-            if identity.negative_continuity_prompt in seen_constraints:
+            if state.negative_continuity_prompt in seen_constraints:
                 continue
-            seen_constraints.add(identity.negative_continuity_prompt)
-            negative_constraints.append(identity.negative_continuity_prompt)
+            seen_constraints.add(state.negative_continuity_prompt)
+            negative_constraints.append(state.negative_continuity_prompt)
 
         for negative_prompt in context.scene.negative_prompts:
             if negative_prompt in seen_constraints:
@@ -276,12 +288,43 @@ def _identity_continuity_block(character: ResolvedCharacterReference) -> str:
         f"Character: {character.asset.name} ({identity.character_id})",
         f"Identity ID: {identity.identity_id}",
         f"Lock level: {identity.lock_level}",
-        "This approved identity reference overrides wardrobe, pose, styling, and shot-level "
+        "This identity continuity guidance overrides wardrobe, pose, styling, and shot-level "
         "variation if any later instruction conflicts with identity continuity.",
         identity.continuity_prompt or "",
     ]
+    if identity.reference_image is not None:
+        lines.append(f"Reference image: {identity.reference_image.path}")
     if immutable:
         lines.append(f"Immutable attributes: {immutable}")
     if mutable:
         lines.append(f"Mutable attributes may vary only when the shot requires them: {mutable}")
+    return _lines(lines)
+
+
+def _state_continuity_block(character: ResolvedCharacterReference) -> str:
+    identity = character.identity
+    state = character.state
+    if identity is None or state is None:
+        return ""
+
+    immutable = _sentence_list(state.immutable_attributes)
+    mutable = _sentence_list(state.mutable_attributes)
+    lines = [
+        "CHARACTER STATE CONTINUITY — MANDATORY",
+        f"Character: {character.asset.name} ({identity.character_id})",
+        f"Identity ID: {identity.identity_id}",
+        f"State ID: {state.state_id}",
+        f"State status: {state.status}",
+        f"State lock level: {state.lock_level}",
+        state.continuity_prompt or "",
+    ]
+    if state.reference_image is not None:
+        lines.append(f"Reference image: {state.reference_image.path}")
+    prompt_path = state.master_prompt_path or state.prompt_ref
+    if prompt_path:
+        lines.append(f"Master prompt: {prompt_path}")
+    if immutable:
+        lines.append(f"State immutable attributes: {immutable}")
+    if mutable:
+        lines.append(f"State mutable attributes may vary only when required: {mutable}")
     return _lines(lines)

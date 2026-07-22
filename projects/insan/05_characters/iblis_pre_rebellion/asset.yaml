@@ -2,7 +2,10 @@ schema_version: "1.0"
 project_id: insan
 asset_id: iblis_pre_rebellion
 asset_type: character_presence
-status: missing_reference_images
+status: legacy_state_alias
+canonical_character_id: iblis
+canonical_state_id: pre_rebellion
+canonical_asset: projects/insan/05_characters/iblis/asset.yaml
 depiction_classification: jinn
 reusable: true
 continuity_rules:

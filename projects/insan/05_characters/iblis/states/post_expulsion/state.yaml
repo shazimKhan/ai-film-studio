@@ -1,0 +1,34 @@
+schema_version: "1.0"
+project_id: insan
+character_id: iblis
+identity_id: insan_iblis_v1
+state_id: post_expulsion
+display_name: Iblis After Expulsion
+status: awaiting_reference
+identity_locked: false
+lock_level: state_continuity
+reference_status: awaiting_manual_generation
+master_prompt_path: projects/insan/10_image_prompts/episode_01/assets/iblis_post_expulsion.yaml
+reference_image:
+  path: projects/insan/12_generated_images/episode_01/assets/iblis_post_expulsion_master.png
+  filename: iblis_post_expulsion_master.png
+  required: false
+immutable_attributes:
+  - Same jinn identity family as pre-rebellion state.
+  - Separated, disgraced, and shadowed after expulsion.
+  - Hidden or non-detailed face.
+  - No Western devil iconography.
+  - No horror monster transformation.
+mutable_attributes:
+  - Darkness severity.
+  - Distance from receding source-less radiance.
+  - Ember edge intensity.
+  - Silhouette scale.
+continuity_prompt: >
+  Use Iblis in the post-expulsion state: the same restrained jinn identity
+  family, now separated into deeper darkness and stripped of radiance. Keep the
+  form symbolic, grave, and consequential without horror exaggeration.
+negative_continuity_prompt: >
+  No horns, no tail, no pitchfork, no red demon, no monster transformation, no
+  gore, no Western devil design, no angel wings, no detailed mouth, no lip-sync,
+  no throne, no divine body, no face in light.

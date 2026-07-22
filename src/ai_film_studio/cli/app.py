@@ -37,9 +37,11 @@ app = typer.Typer(
     no_args_is_help=True,
 )
 adapters_app = typer.Typer(help="Inspect engine adapter registrations.")
+character_state_app = typer.Typer(help="Inspect and validate character visual states.")
 modules_app = typer.Typer(help="Inspect loadable framework modules.")
 
 app.add_typer(adapters_app, name="adapters")
+app.add_typer(character_state_app, name="character-state")
 app.add_typer(modules_app, name="modules")
 
 
@@ -114,6 +116,78 @@ def validate_identity(
     console.print(f"Status: {identity.status}")
     console.print(f"Lock: {identity.lock_level}")
     console.print(f"Reference image: {reference_path}")
+    console.print("[green]Validation: passed[/green]")
+
+
+@character_state_app.command("status")
+def character_state_status(
+    project: Annotated[
+        str,
+        typer.Option("--project", help="Project id under projects/."),
+    ],
+    character: Annotated[
+        str,
+        typer.Option("--character", help="Character id under 05_characters/."),
+    ],
+) -> None:
+    """Print configured visual states for a character identity."""
+    try:
+        identity = IdentityLockService(repo_root=Path.cwd()).load_identity(
+            Path("projects") / project,
+            character,
+        )
+    except AIFilmStudioError as exc:
+        console.print(f"[red]Error:[/red] {exc}")
+        raise typer.Exit(1) from None
+
+    console.print(f"Character: {identity.character_id}")
+    console.print(f"Identity: {identity.identity_id}")
+    console.print(f"Default state: {identity.default_state or '-'}")
+    if not identity.states:
+        console.print("States: none configured")
+        return
+
+    table = Table(title="Character States")
+    table.add_column("State")
+    table.add_column("Status")
+    table.add_column("Lock")
+    table.add_column("Reference")
+    table.add_column("Prompt")
+    states = sorted(
+        identity.states,
+        key=lambda state: (state.state_id != identity.default_state, state.state_id),
+    )
+    for state in states:
+        reference = state.reference_image.path if state.reference_image else "-"
+        prompt = state.master_prompt_path or state.prompt_ref or "-"
+        table.add_row(state.state_id, state.status, state.lock_level, reference, prompt)
+    console.print(table)
+
+
+@character_state_app.command("validate")
+def character_state_validate(
+    project: Annotated[
+        str,
+        typer.Option("--project", help="Project id under projects/."),
+    ],
+    character: Annotated[
+        str,
+        typer.Option("--character", help="Character id under 05_characters/."),
+    ],
+) -> None:
+    """Validate configured visual states for a character identity."""
+    try:
+        identity = IdentityLockService(repo_root=Path.cwd()).load_identity(
+            Path("projects") / project,
+            character,
+        )
+    except AIFilmStudioError as exc:
+        console.print(f"[red]Error:[/red] {exc}")
+        raise typer.Exit(1) from None
+
+    console.print(f"Character: {identity.character_id}")
+    console.print(f"Identity: {identity.identity_id}")
+    console.print(f"States: {len(identity.states)}")
     console.print("[green]Validation: passed[/green]")
 
 

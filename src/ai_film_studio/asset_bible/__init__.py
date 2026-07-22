@@ -2,6 +2,7 @@
 
 from ai_film_studio.asset_bible.identity import (
     CanonicalReference,
+    CharacterStateProfile,
     IdentityContinuityContext,
     IdentityLockService,
     IdentityProfile,
@@ -28,6 +29,7 @@ __all__ = [
     "AssetValidationReport",
     "AssetValidationSeverity",
     "CanonicalReference",
+    "CharacterStateProfile",
     "IdentityContinuityContext",
     "IdentityLockService",
     "IdentityProfile",

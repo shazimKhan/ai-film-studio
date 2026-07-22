@@ -12,6 +12,23 @@ identity_locks:
       filename: storyteller_master.png
       required: true
     identity_lock: strict
+character_state_resolution:
+  - character_id: iblis
+    identity_id: insan_iblis_v1
+    default_state: pre_rebellion
+    rules:
+      - state_id: pre_rebellion
+        applies_to_shots:
+          - insan_ep01_shot_005
+          - insan_ep01_shot_006
+          - insan_ep01_shot_015
+          - insan_ep01_shot_016
+          - insan_ep01_shot_017
+          - insan_ep01_shot_019
+      - state_id: post_expulsion
+        applies_to_shots:
+          - insan_ep01_shot_021
+          - insan_ep01_shot_022
 global_motion_constraints:
   - slow_controlled_cinematic_motion
   - avoid_exaggerated_motion

@@ -1,0 +1,40 @@
+schema_version: "1.0"
+project_id: insan
+character_id: iblis
+identity_id: insan_iblis_v1
+state_id: pre_rebellion
+display_name: Iblis Before Rebellion
+status: awaiting_reference
+identity_locked: false
+lock_level: state_continuity
+reference_status: awaiting_manual_generation
+master_prompt_path: projects/insan/10_image_prompts/episode_01/assets/iblis_pre_rebellion.yaml
+reference_image:
+  path: projects/insan/12_generated_images/episode_01/assets/iblis_pre_rebellion_master.png
+  filename: iblis_pre_rebellion_master.png
+  required: false
+immutable_attributes:
+  - Jinn presence, not angel.
+  - Not yet visibly corrupted.
+  - Hidden face with no detailed mouth performance.
+  - Ancient, majestic, disciplined, calm, spiritually elevated presence.
+  - Perfect posture.
+  - Elegant layered robes.
+  - Subtle symbolic smokeless-fire aura, never flames.
+  - No Western devil or monster language.
+mutable_attributes:
+  - Camera distance.
+  - Sacred architectural scale.
+  - Soft volumetric light level.
+  - Amount of subtle aura.
+continuity_prompt: >
+  Use Iblis in the pre-rebellion state: ancient, majestic, disciplined, calm,
+  quiet, mysterious, and spiritually elevated. The audience may initially admire
+  the presence. Keep the face hidden, posture perfect, robes elegant and layered,
+  and the aura subtle and symbolic. Do not show corruption, horror, flames,
+  monster anatomy, or Western devil features.
+negative_continuity_prompt: >
+  No visible corruption, no flames, no horror, no monster, no demon styling, no
+  Western devil, no burning body, no hellfire, no spikes, no skulls, no chains,
+  no evil grin, no glowing red eyes, no horns, no tail, no pitchfork, no angel
+  wings, no detailed face, no lip-sync mouth.

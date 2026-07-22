@@ -5,8 +5,7 @@ status: missing_assets_block_generation
 approved_assets:
   - storyteller
 missing_assets:
-  - iblis_pre_rebellion
-  - iblis_post_expulsion
+  - iblis
   - angelic_presence
   - adam_concealed_presence
   - background_jinn_presence
@@ -20,6 +19,15 @@ missing_assets:
   - clay_particles
   - source_less_white_gold_light
   - darkness_separation
+missing_character_state_references:
+  - character_id: iblis
+    identity_id: insan_iblis_v1
+    state_id: pre_rebellion
+    path: projects/insan/12_generated_images/episode_01/assets/iblis_pre_rebellion_master.png
+  - character_id: iblis
+    identity_id: insan_iblis_v1
+    state_id: post_expulsion
+    path: projects/insan/12_generated_images/episode_01/assets/iblis_post_expulsion_master.png
 generation_blockers:
   - source_records_unapproved
   - depiction_review_not_passed

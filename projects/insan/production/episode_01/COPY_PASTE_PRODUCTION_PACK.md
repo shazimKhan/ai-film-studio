@@ -14,8 +14,8 @@
 ## 3. Assets That Must Be Generated First
 - storyteller -> approved canonical identity already exists at projects/insan/12_generated_images/episode_01/assets/storyteller_master.png
 - storyteller_studio -> save as projects/insan/12_generated_images/episode_01/assets/storyteller_studio_master.png
-- iblis_pre_rebellion -> save as projects/insan/12_generated_images/episode_01/assets/iblis_pre_rebellion_master.png
-- iblis_post_expulsion -> save as projects/insan/12_generated_images/episode_01/assets/iblis_post_expulsion_master.png
+- iblis / pre_rebellion state -> save as projects/insan/12_generated_images/episode_01/assets/iblis_pre_rebellion_master.png
+- iblis / post_expulsion state -> save as projects/insan/12_generated_images/episode_01/assets/iblis_post_expulsion_master.png
 - angelic_presence -> save as projects/insan/12_generated_images/episode_01/assets/angelic_presence_master.png
 - adam_concealed_presence -> save as projects/insan/12_generated_images/episode_01/assets/adam_concealed_presence_master.png
 - background_jinn_presence -> save as projects/insan/12_generated_images/episode_01/assets/background_jinn_presence_master.png
@@ -33,7 +33,7 @@ readable text, readable book titles, readable laptop screen, Arabic text, Qur'an
 
 ## 6. Iblis Pre-Rebellion Master Image Prompt
 ```text
-Symbolic cinematic depiction of Iblis before rebellion as a restrained jinn presence, not an angel and not a Western devil. A tall shadowed non-human presence formed through subtle smokeless fire texture, dark ember edges, and controlled negative space, with no horns, no tail, no red monster skin, no pitchfork, no demonic costume, and no detailed mouth for lip-sync. The design should feel ancient, solemn, intelligent, and unsettling without horror exaggeration. Place the presence in an abstract unseen realm with source-less white-gold light far away and deep darkness around him. Highly realistic, cinematic, reverent, non-cartoon, no readable text.
+Iblis before rebellion, not yet visibly corrupted, presented as an ancient, majestic, disciplined, calm, spiritually elevated, quiet, mysterious jinn presence. The audience should initially feel admiration before knowing the coming refusal. Hidden face, perfect posture, elegant layered robes, and a subtle symbolic smokeless-fire aura only, with no flames, no horror, no monster design, no demon styling, no Western devil features, no burning body, no hellfire, no spikes, no skulls, no chains, no evil grin, and no glowing red eyes. Place him in a grand unseen realm with sacred architecture, large scale, timeless atmosphere, soft volumetric lighting, and museum-quality realism. ARRI Alexa 65, ultra realistic, reverent cinematic frame, no readable text.
 ```
 
 ## 7. Iblis Post-Expulsion Master Image Prompt
@@ -92,7 +92,7 @@ Shots:
 Duration: 18 seconds
 Location: unseen_realm
 Required Assets:
-- iblis_pre_rebellion
+- iblis / pre_rebellion state
 - background_jinn_presence
 - unseen_realm
 Shots:
@@ -155,7 +155,7 @@ Shots:
 Duration: 20 seconds
 Location: unseen_realm
 Required Assets:
-- iblis_pre_rebellion
+- iblis / pre_rebellion state
 - angelic_presence
 - adam_concealed_presence
 Shots:
@@ -166,7 +166,7 @@ Shots:
 Duration: 22 seconds
 Location: unseen_realm
 Required Assets:
-- iblis_pre_rebellion
+- iblis / pre_rebellion state
 - smokeless_fire
 - clay_particles
 Shots:
@@ -177,7 +177,7 @@ Shots:
 Duration: 24 seconds
 Location: expulsion_boundary
 Required Assets:
-- iblis_post_expulsion
+- iblis / post_expulsion state
 - expulsion_boundary
 - darkness_separation
 Shots:
@@ -188,7 +188,7 @@ Shots:
 Duration: 28 seconds
 Location: symbolic_path_of_humanity
 Required Assets:
-- iblis_post_expulsion
+- iblis / post_expulsion state
 - symbolic_path_of_humanity
 - darkness_separation
 Shots:
@@ -1780,5 +1780,5 @@ projects/insan/12_generated_images/episode_01/assets/storyteller_studio_master.p
 ## THIRD ACTION
 After approval, paste this exact next prompt into Gemini:
 ```text
-Symbolic cinematic depiction of Iblis before rebellion as a restrained jinn presence, not an angel and not a Western devil. A tall shadowed non-human presence formed through subtle smokeless fire texture, dark ember edges, and controlled negative space, with no horns, no tail, no red monster skin, no pitchfork, no demonic costume, and no detailed mouth for lip-sync. The design should feel ancient, solemn, intelligent, and unsettling without horror exaggeration. Place the presence in an abstract unseen realm with source-less white-gold light far away and deep darkness around him. Highly realistic, cinematic, reverent, non-cartoon, no readable text.
+Iblis before rebellion, not yet visibly corrupted, presented as an ancient, majestic, disciplined, calm, spiritually elevated, quiet, mysterious jinn presence. The audience should initially feel admiration before knowing the coming refusal. Hidden face, perfect posture, elegant layered robes, and a subtle symbolic smokeless-fire aura only, with no flames, no horror, no monster design, no demon styling, no Western devil features, no burning body, no hellfire, no spikes, no skulls, no chains, no evil grin, and no glowing red eyes. Place him in a grand unseen realm with sacred architecture, large scale, timeless atmosphere, soft volumetric lighting, and museum-quality realism. ARRI Alexa 65, ultra realistic, reverent cinematic frame, no readable text.
 ```

@@ -215,6 +215,26 @@ Prompt compilation injects a mandatory character identity continuity block and c
 the reference image forward in engine-neutral `reference_assets` metadata. The core
 compiler does not copy image files or call external engines.
 
+## Character States
+
+Characters that evolve visually can define multiple states under one identity:
+
+```text
+Character -> Identity -> State -> Prompt -> Reference Image -> Compiled Prompt
+```
+
+Example:
+
+```text
+projects/insan/05_characters/iblis/
+  identity.yaml
+  states/pre_rebellion/state.yaml
+  states/post_expulsion/state.yaml
+```
+
+Scene references can provide `state`; if omitted, the identity `default_state` is
+used. See `docs/CHARACTER_STATE_SYSTEM.md`.
+
 ## Production Character References
 
 Character images manually generate hoti hain. Aap Gemini, Flow, Veo, Kling,

@@ -11,6 +11,30 @@ identity_locks:
       filename: storyteller_master.png
       required: true
     identity_lock: strict
+character_state_resolution:
+  - character_id: iblis
+    identity_id: insan_iblis_v1
+    default_state: pre_rebellion
+    rules:
+      - state_id: pre_rebellion
+        applies_to_scenes:
+          - insan_ep01_scene_003
+          - insan_ep01_scene_009
+          - insan_ep01_scene_010
+        applies_to_shots:
+          - insan_ep01_shot_005
+          - insan_ep01_shot_006
+          - insan_ep01_shot_015
+          - insan_ep01_shot_016
+          - insan_ep01_shot_017
+          - insan_ep01_shot_019
+      - state_id: post_expulsion
+        applies_to_scenes:
+          - insan_ep01_scene_011
+          - insan_ep01_scene_012
+        applies_to_shots:
+          - insan_ep01_shot_021
+          - insan_ep01_shot_022
 columns:
   - shot_id
   - scene
@@ -60,7 +84,7 @@ shots:
     approval_status: needs_depiction_review
   - shot_id: insan_ep01_shot_005
     scene: iblis_from_jinn
-    required_asset: iblis_pre_rebellion
+    required_asset: iblis
     image_status: blocked_missing_asset
     video_status: blocked_missing_image
     voice_status: needs_source_review
@@ -69,7 +93,7 @@ shots:
     approval_status: needs_source_review
   - shot_id: insan_ep01_shot_006
     scene: iblis_from_jinn
-    required_asset: iblis_pre_rebellion, angelic_presence
+    required_asset: iblis, angelic_presence
     image_status: blocked_missing_asset
     video_status: blocked_missing_image
     voice_status: needs_source_review
@@ -150,7 +174,7 @@ shots:
     approval_status: needs_depiction_review
   - shot_id: insan_ep01_shot_015
     scene: angels_prostrate
-    required_asset: angelic_presence, iblis_pre_rebellion
+    required_asset: angelic_presence, iblis
     image_status: blocked_missing_asset
     video_status: blocked_missing_image
     voice_status: needs_source_review
@@ -159,7 +183,7 @@ shots:
     approval_status: needs_depiction_review
   - shot_id: insan_ep01_shot_016
     scene: iblis_refuses
-    required_asset: iblis_pre_rebellion
+    required_asset: iblis
     image_status: blocked_missing_asset
     video_status: blocked_missing_image
     voice_status: needs_source_review
@@ -168,7 +192,7 @@ shots:
     approval_status: needs_source_review
   - shot_id: insan_ep01_shot_017
     scene: iblis_refuses
-    required_asset: iblis_pre_rebellion
+    required_asset: iblis
     image_status: blocked_missing_asset
     video_status: blocked_missing_image
     voice_status: needs_source_review
@@ -186,7 +210,7 @@ shots:
     approval_status: needs_source_review
   - shot_id: insan_ep01_shot_019
     scene: fire_and_clay_claim
-    required_asset: iblis_pre_rebellion, smokeless_fire, clay_particles
+    required_asset: iblis, smokeless_fire, clay_particles
     image_status: blocked_missing_asset
     video_status: blocked_missing_image
     voice_status: needs_source_review
@@ -204,7 +228,7 @@ shots:
     approval_status: needs_source_review
   - shot_id: insan_ep01_shot_021
     scene: expulsion
-    required_asset: iblis_post_expulsion
+    required_asset: iblis
     image_status: blocked_missing_asset
     video_status: blocked_missing_image
     voice_status: needs_source_review
@@ -213,7 +237,7 @@ shots:
     approval_status: needs_depiction_review
   - shot_id: insan_ep01_shot_022
     scene: respite_and_enmity
-    required_asset: symbolic_path_of_humanity, iblis_post_expulsion
+    required_asset: symbolic_path_of_humanity, iblis
     image_status: blocked_missing_asset
     video_status: blocked_missing_image
     voice_status: needs_source_review
