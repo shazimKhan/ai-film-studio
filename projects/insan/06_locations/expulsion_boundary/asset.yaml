@@ -1,0 +1,14 @@
+schema_version: "1.0"
+project_id: insan
+asset_id: expulsion_boundary
+asset_type: symbolic_environment
+status: missing_reference_images
+reusable: false
+continuity_rules:
+  - Boundary between white-gold radiance and deep separation.
+  - No divine body or throne.
+visual_restrictions:
+  - no_visual_allah
+  - no_horror_portal
+  - no_fantasy_battle_gate
+reference_status: awaiting_manual_generation

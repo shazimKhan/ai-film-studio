@@ -1,0 +1,39 @@
+schema_version: "1.0"
+project_id: insan
+episode_id: episode_01
+asset_id: storyteller
+status: ready_to_generate_subject_to_project_approval
+recommended_aspect_ratio: "16:9"
+recommended_generator: gemini
+master_prompt: >
+  Highly realistic cinematic portrait of a Pakistani Muslim male storyteller,
+  approximately 30 to 35 years old, mature thoughtful face, neatly trimmed dark
+  beard, composed brown eyes, wearing a charcoal kurta and a simple waistcoat,
+  sitting at a wooden desk in an elegant cinematic storytelling studio. Classical
+  books are placed naturally on one side of the desk and a realistic MacBook is
+  placed naturally on the other side. The atmosphere feels like ancient
+  manuscript scholarship blended with restrained modern filmmaking elements:
+  warm practical desk light, soft shadows, textured walls, subtle shelves, quiet
+  documentary seriousness, premium realistic skin texture, natural fabric, no AI
+  plastic look, no exaggerated costume, no readable text anywhere.
+negative_prompt: >
+  readable text, readable book titles, readable laptop screen, Arabic text,
+  Qur'anic text, fake calligraphy, plastic skin, AI artifacts, distorted hands,
+  extra fingers, overdramatic expression, fantasy costume, royal costume, horror
+  lighting, neon colors, cartoon, illustration, painting, low resolution
+continuity_lock:
+  age: 30_to_35
+  ethnicity_context: Pakistani_Muslim
+  beard: neatly_trimmed_dark
+  eyes: composed_brown
+  wardrobe: charcoal_kurta_simple_waistcoat
+  desk_layout: books_left_macbook_right
+camera_neutral_description: Storyteller seated at a wooden desk in a cinematic documentary studio.
+identity_restrictions:
+  - no_resemblance_to_real_public_figure
+  - no_caricature
+  - maintain_same_face_across_episode
+depiction_policy_restrictions:
+  - narrator_asset_only
+  - no_sacred_claims_in_background_text
+reference_image_guidance: Generate front, left, right, three-quarter, close-up, and seated desk references before shot generation.

@@ -1,0 +1,49 @@
+schema_version: "1.0"
+project_id: insan
+episode_id: episode_01
+content_type: unknown_or_unestablished_facts
+unknowns:
+  - unknown_id: unknown_001
+    statement: The exact physical appearance of Adam عليه السلام for visual depiction is not established for this production package.
+    source_refs:
+      - projects/insan/00_governance/depiction_policy.md
+      - projects/insan/00_governance/uncertainty_policy.md
+    confidence: high
+    validation_status: production_boundary
+  - unknown_id: unknown_002
+    statement: The exact visual appearance of angels in this event is not established for this production package.
+    source_refs:
+      - projects/insan/00_governance/depiction_policy.md
+      - projects/insan/00_governance/uncertainty_policy.md
+    confidence: high
+    validation_status: production_boundary
+  - unknown_id: unknown_003
+    statement: The exact form, location, scale, and physics of the pre-Earth unseen realm are not established by this research package.
+    source_refs:
+      - projects/insan/00_governance/uncertainty_policy.md
+      - quran_baqarah_2_30_39
+      - quran_sad_38_71_85
+    confidence: high
+    validation_status: research_boundary
+  - unknown_id: unknown_004
+    statement: The claim that Iblis was leader of all jinn is not approved by this package.
+    source_refs:
+      - tafsir_tabari_kahf_18_50
+      - tafsir_ibn_kathir_kahf_18_50
+      - user_instruction_2026_07_22
+    confidence: high
+    validation_status: unresolved_research_question
+  - unknown_id: unknown_005
+    statement: The mechanism of Iblis' progeny is not established for production use.
+    source_refs:
+      - tafsir_qurtubi_kahf_18_50
+      - projects/insan/00_governance/uncertainty_policy.md
+    confidence: high
+    validation_status: unresolved_research_question
+  - unknown_id: unknown_006
+    statement: The report that angels were sent to collect soil for Adam is not approved in this package.
+    source_refs:
+      - user_instruction_2026_07_22
+      - projects/insan/00_governance/source_hierarchy.md
+    confidence: high
+    validation_status: source_required_before_use

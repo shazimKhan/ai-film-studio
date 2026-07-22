@@ -1,0 +1,34 @@
+schema_version: "1.0"
+project_id: insan
+episode_id: episode_01
+asset_id: iblis_pre_rebellion
+status: needs_depiction_review_before_generation
+recommended_aspect_ratio: "16:9"
+recommended_generator: gemini
+master_prompt: >
+  Symbolic cinematic depiction of Iblis before rebellion as a restrained jinn
+  presence, not an angel and not a Western devil. A tall shadowed non-human
+  presence formed through subtle smokeless fire texture, dark ember edges, and
+  controlled negative space, with no horns, no tail, no red monster skin, no
+  pitchfork, no demonic costume, and no detailed mouth for lip-sync. The design
+  should feel ancient, solemn, intelligent, and unsettling without horror
+  exaggeration. Place the presence in an abstract unseen realm with source-less
+  white-gold light far away and deep darkness around him. Highly realistic,
+  cinematic, reverent, non-cartoon, no readable text.
+negative_prompt: >
+  angel, angel wings, halo, Western devil, horns, tail, pitchfork, red demon,
+  monster face, horror gore, fantasy armor, readable text, Arabic text, Qur'anic
+  text, exaggerated flames, screaming mouth, lip-sync mouth, cartoon, CGI look
+continuity_lock:
+  classification: jinn
+  pre_rebellion_state: upright_shadowed_presence
+  fire_language: smokeless_restrained_ember_texture
+camera_neutral_description: Symbolic non-Western jinn presence in abstract unseen realm.
+identity_restrictions:
+  - do_not_show_as_angel
+  - do_not_claim_leader_or_king_of_jinn
+  - no_detailed_human_face
+depiction_policy_restrictions:
+  - unseen_being_handled_symbolically
+  - no_sacred_dialogue_performance
+reference_image_guidance: Generate neutral standing symbolic front and three-quarter references only after depiction review.

@@ -1,0 +1,18 @@
+schema_version: "1.0"
+project_id: insan
+asset_id: storyteller
+asset_type: character
+status: missing_reference_images
+depiction_classification: narrator_asset
+reusable: true
+continuity_rules:
+  - Pakistani Muslim male, approximately 30 to 35 years old.
+  - Mature thoughtful face, neatly trimmed dark beard, composed brown eyes.
+  - Charcoal kurta and simple waistcoat.
+  - No readable text on books, papers, or laptop screen.
+visual_restrictions:
+  - highly_realistic_not_ai_looking
+  - no_caricature
+  - no_exaggerated_religious_costume
+reference_status: awaiting_manual_generation
+prompt_ref: projects/insan/10_image_prompts/episode_01/assets/storyteller.yaml

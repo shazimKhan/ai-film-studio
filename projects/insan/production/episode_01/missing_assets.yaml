@@ -1,0 +1,26 @@
+schema_version: "1.0"
+project_id: insan
+episode_id: episode_01
+status: missing_assets_block_generation
+missing_assets:
+  - storyteller
+  - iblis_pre_rebellion
+  - iblis_post_expulsion
+  - angelic_presence
+  - adam_concealed_presence
+  - background_jinn_presence
+  - storyteller_studio
+  - unseen_realm
+  - clay_formation_space
+  - expulsion_boundary
+  - symbolic_path_of_humanity
+  - smokeless_fire
+  - angelic_radiance
+  - clay_particles
+  - source_less_white_gold_light
+  - darkness_separation
+generation_blockers:
+  - source_records_unapproved
+  - depiction_review_not_passed
+  - reusable_asset_references_missing
+  - no_manual_reference_images_added

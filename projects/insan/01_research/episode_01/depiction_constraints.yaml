@@ -1,0 +1,62 @@
+schema_version: "1.0"
+project_id: insan
+episode_id: episode_01
+content_type: depiction_constraints_research
+constraints:
+  - constraint_id: depiction_001
+    subject: allah
+    statement: Allah is not depictable by the production pipeline.
+    source_refs:
+      - projects/insan/00_governance/depiction_policy.md
+      - user_instruction_2026_07_22
+    confidence: high
+    validation_status: policy_constraint
+  - constraint_id: depiction_002
+    subject: divine_speech
+    statement: Divine speech must be handled only through verified source citation and approved narration framing, not visual embodiment.
+    source_refs:
+      - user_instruction_2026_07_22
+      - projects/insan/00_governance/authenticity_policy.md
+    confidence: high
+    validation_status: policy_constraint
+  - constraint_id: depiction_003
+    subject: adam
+    statement: Adam عليه السلام must be represented, if at all, through concealed presence metadata and non-facial handling.
+    source_refs:
+      - projects/insan/00_governance/depiction_policy.md
+      - user_instruction_2026_07_22
+    confidence: high
+    validation_status: policy_constraint
+  - constraint_id: depiction_004
+    subject: angels
+    statement: Angels may not be given invented detailed facial identities for this event.
+    source_refs:
+      - projects/insan/00_governance/depiction_policy.md
+      - user_instruction_2026_07_22
+    confidence: high
+    validation_status: policy_constraint
+  - constraint_id: depiction_005
+    subject: iblis
+    statement: Iblis must be identified as jinn, not angel.
+    source_refs:
+      - quran_kahf_18_50
+      - tafsir_ibn_kathir_kahf_18_50
+      - user_instruction_2026_07_22
+    confidence: high
+    validation_status: source_located_pending_scholar_review
+  - constraint_id: depiction_006
+    subject: iblis
+    statement: Iblis must not be shown as leader of all jinn unless the claim is later approved by reliable source review.
+    source_refs:
+      - user_instruction_2026_07_22
+      - projects/insan/00_governance/source_hierarchy.md
+    confidence: high
+    validation_status: policy_constraint
+  - constraint_id: depiction_007
+    subject: sacred_events
+    statement: Sacred events must pass depiction review before visual planning.
+    source_refs:
+      - projects/insan/00_governance/depiction_policy.md
+      - docs/workflows/ISLAMIC_HISTORY_PRODUCTION_WORKFLOW.md
+    confidence: high
+    validation_status: workflow_constraint

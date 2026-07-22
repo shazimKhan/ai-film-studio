@@ -1,0 +1,55 @@
+schema_version: "1.0"
+project_id: insan
+episode_id: episode_01
+status: pending_sound_design
+sound_style:
+  - solemn
+  - ancient
+  - restrained
+  - emotionally_powerful
+global_restrictions:
+  - no_horror_music
+  - no_fantasy_battle_music
+  - no_excessive_choir
+  - no_inappropriate_sacred_vocalization
+  - no_thunder_as_divine_voice
+scene_sfx:
+  - scene_id: insan_ep01_scene_001
+    sfx: subtle_room_tone, soft desk presence
+    notes: no modern notification sounds
+  - scene_id: insan_ep01_scene_002
+    sfx: low_air_pressure, faint particles
+    notes: abstract unseen ambience, not space ambience
+  - scene_id: insan_ep01_scene_003
+    sfx: restrained ember texture
+    notes: no monster sounds
+  - scene_id: insan_ep01_scene_004
+    sfx: soft light swell
+    notes: no voice-source effect for Allah
+  - scene_id: insan_ep01_scene_005
+    sfx: fine clay dust movement
+    notes: no body formation sounds
+  - scene_id: insan_ep01_scene_006
+    sfx: thickening dust veil
+    notes: quiet and reverent
+  - scene_id: insan_ep01_scene_007
+    sfx: barely audible light resonance
+    notes: no supernatural voice performance
+  - scene_id: insan_ep01_scene_008
+    sfx: soft collective lowering of radiance
+    notes: no wing flaps
+  - scene_id: insan_ep01_scene_009
+    sfx: silence with low ember edge
+    notes: refusal through absence
+  - scene_id: insan_ep01_scene_010
+    sfx: restrained fire texture against clay dust
+    notes: no roaring flames
+  - scene_id: insan_ep01_scene_011
+    sfx: receding radiance, low shadow tone
+    notes: no horror portal sound
+  - scene_id: insan_ep01_scene_012
+    sfx: distant low wind along path
+    notes: no chase or battle sound
+  - scene_id: insan_ep01_scene_013
+    sfx: room tone returns
+    notes: silence after final line

@@ -1,0 +1,74 @@
+schema_version: "1.0"
+project_id: insan
+episode_id: episode_01
+status: pending_source_validation_before_recording
+language: roman_urdu
+voice_style:
+  tone:
+    - solemn
+    - ancient
+    - restrained
+    - emotionally_powerful
+  delivery: storyteller_led
+  pace: measured_documentary
+  target_duration_seconds: 292
+recording_rules:
+  - No invented direct voice performance for Allah.
+  - Use storyteller narration phrasing only.
+  - Qur'anic quotations require verified Arabic and approved Urdu translation before recording.
+  - Non-storyteller sacred or historical dialogue must not be performed.
+blocks:
+  - block_id: nar_001
+    record: true
+    lip_sync_scenes:
+      - insan_ep01_scene_001
+    performance_note: low serious opening, direct to viewer
+  - block_id: nar_002
+    record: true
+    lip_sync_scenes: []
+    performance_note: calm explanatory tone
+  - block_id: nar_003
+    record: true
+    lip_sync_scenes: []
+    performance_note: reverent pause before Allah Ta'ala ne farmaya
+  - block_id: nar_004
+    record: true
+    lip_sync_scenes: []
+    performance_note: careful and non-speculative
+  - block_id: nar_005
+    record: true
+    lip_sync_scenes: []
+    performance_note: solemn command context, no performed divine voice
+  - block_id: nar_006
+    record: true
+    lip_sync_scenes: []
+    performance_note: contrast obedience and refusal
+  - block_id: nar_007
+    record: true
+    lip_sync_scenes: []
+    performance_note: restrained emphasis on superiority claim
+  - block_id: nar_008
+    record: true
+    lip_sync_scenes: []
+    performance_note: interpretive moral, slow and clear
+  - block_id: nar_009
+    record: true
+    lip_sync_scenes: []
+    performance_note: severe but not theatrical
+  - block_id: nar_010
+    record: true
+    lip_sync_scenes: []
+    performance_note: controlled weight, avoid villain performance
+  - block_id: nar_011
+    record: true
+    lip_sync_scenes: []
+    performance_note: warning tone, no horror intensity
+  - block_id: nar_012
+    record: true
+    lip_sync_scenes: []
+    performance_note: hopeful restraint
+  - block_id: nar_013
+    record: true
+    lip_sync_scenes:
+      - insan_ep01_scene_013
+    performance_note: intimate closing moral, calm final pause

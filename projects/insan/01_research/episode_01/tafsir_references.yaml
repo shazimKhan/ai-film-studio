@@ -1,0 +1,102 @@
+schema_version: "1.0"
+project_id: insan
+episode_id: episode_01
+content_type: tafsir_reference_research
+references:
+  - reference_id: tafsir_ibn_kathir_baqarah_2_34
+    citation: Tafsir Ibn Kathir on Al-Baqarah 2:34
+    relevance: command_to_prostrate_iblis_not_angel_arrogance
+    statements:
+      - statement: Ibn Kathir explains the prostration as obedience to Allah and honor for Adam, not worship of Adam.
+        source_refs:
+          - tafsir_ibn_kathir_baqarah_2_34
+        confidence: medium
+        validation_status: source_located_pending_scholar_review
+      - statement: Ibn Kathir states that Iblis was included in the command though he was not an angel.
+        source_refs:
+          - tafsir_ibn_kathir_baqarah_2_34
+          - quran_kahf_18_50
+        confidence: medium
+        validation_status: source_located_pending_scholar_review
+      - statement: Ibn Kathir identifies arrogance as the first error in this account.
+        source_refs:
+          - tafsir_ibn_kathir_baqarah_2_34
+        confidence: medium
+        validation_status: source_located_pending_scholar_review
+  - reference_id: tafsir_ibn_kathir_kahf_18_50
+    citation: Tafsir Ibn Kathir on Al-Kahf 18:50
+    relevance: iblis_as_jinn_and_report_classification
+    statements:
+      - statement: Ibn Kathir links Al-Kahf 18:50 to the view that Iblis was from the jinn and created from fire.
+        source_refs:
+          - tafsir_ibn_kathir_kahf_18_50
+          - quran_kahf_18_50
+          - hadith_muslim_2996
+        confidence: medium
+        validation_status: source_located_pending_scholar_review
+      - statement: Ibn Kathir cites al-Hasan al-Basri's view that Iblis was never one of the angels.
+        source_refs:
+          - tafsir_ibn_kathir_kahf_18_50
+        confidence: medium
+        validation_status: source_located_pending_scholar_review
+  - reference_id: tafsir_ibn_kathir_sad_38_71_85
+    citation: Tafsir Ibn Kathir on Sad 38:71-85
+    relevance: summarized_sequence_of_adam_and_iblis
+    statements:
+      - statement: Ibn Kathir summarizes the account across Al-Baqarah, Al-A'raf, Al-Hijr, Al-Isra', Al-Kahf, and Sad.
+        source_refs:
+          - tafsir_ibn_kathir_sad_38_71_85
+        confidence: medium
+        validation_status: source_located_pending_scholar_review
+      - statement: Ibn Kathir again treats Iblis as from the jinn and not from the angels in this summary.
+        source_refs:
+          - tafsir_ibn_kathir_sad_38_71_85
+          - quran_kahf_18_50
+        confidence: medium
+        validation_status: source_located_pending_scholar_review
+  - reference_id: tafsir_tabari_baqarah_2_34
+    citation: Tafsir al-Tabari on Al-Baqarah 2:34
+    relevance: command_scope_and_exception_discussion
+    statements:
+      - statement: Al-Tabari discusses the exception of Iblis from the prostrating angels and the command directed to him.
+        source_refs:
+          - tafsir_tabari_baqarah_2_34
+        confidence: medium
+        validation_status: source_located_pending_scholar_review
+      - statement: Al-Tabari's discussion is a tafsir reference requiring scholarly handling alongside Al-Kahf 18:50.
+        source_refs:
+          - tafsir_tabari_baqarah_2_34
+          - quran_kahf_18_50
+        confidence: medium
+        validation_status: interpretation_pending_review
+  - reference_id: tafsir_tabari_kahf_18_50
+    citation: Tafsir al-Tabari on Al-Kahf 18:50
+    relevance: transmitted_views_about_iblis_jinn_or_angelic_association
+    statements:
+      - statement: Al-Tabari transmits multiple early views about Iblis' relation to angels and jinn.
+        source_refs:
+          - tafsir_tabari_kahf_18_50
+        confidence: medium
+        validation_status: source_located_pending_scholar_review
+      - statement: These transmitted views must not override the production rule that Iblis is classified as jinn.
+        source_refs:
+          - tafsir_tabari_kahf_18_50
+          - quran_kahf_18_50
+          - user_instruction_2026_07_22
+        confidence: high
+        validation_status: policy_constraint
+  - reference_id: tafsir_qurtubi_kahf_18_50
+    citation: Tafsir al-Qurtubi on Al-Kahf 18:50
+    relevance: iblis_descendants_and_unverified_mechanism_reports
+    statements:
+      - statement: Al-Qurtubi discusses Iblis' progeny and reports different explanations for the mechanism of that progeny.
+        source_refs:
+          - tafsir_qurtubi_kahf_18_50
+        confidence: medium
+        validation_status: source_located_pending_scholar_review
+      - statement: The mechanism of Iblis' progeny must remain unknown unless a sound report is approved.
+        source_refs:
+          - tafsir_qurtubi_kahf_18_50
+          - projects/insan/00_governance/uncertainty_policy.md
+        confidence: high
+        validation_status: policy_constraint

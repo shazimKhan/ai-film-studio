@@ -1,0 +1,82 @@
+schema_version: "1.0"
+project_id: insan
+episode_id: episode_01
+content_type: character_constraints_research
+characters:
+  - character_id: adam
+    display_name: Adam عليه السلام
+    classification: prophet
+    statements:
+      - statement: Adam عليه السلام is central to the creation and prostration account.
+        source_refs:
+          - quran_baqarah_2_30_39
+          - quran_sad_38_71_85
+        confidence: high
+        validation_status: source_located_pending_scholar_review
+      - statement: Adam عليه السلام must not receive a visible face, detailed body identity, or reusable character sheet.
+        source_refs:
+          - projects/insan/00_governance/depiction_policy.md
+        confidence: high
+        validation_status: policy_constraint
+  - character_id: iblis
+    display_name: Iblis
+    classification: jinn
+    statements:
+      - statement: Iblis is classified as jinn for this project.
+        source_refs:
+          - quran_kahf_18_50
+          - tafsir_ibn_kathir_kahf_18_50
+        confidence: high
+        validation_status: source_located_pending_scholar_review
+      - statement: Iblis refused the prostration command and acted arrogantly.
+        source_refs:
+          - quran_baqarah_2_30_39
+          - quran_araf_7_11_18
+          - quran_sad_38_71_85
+        confidence: high
+        validation_status: source_located_pending_scholar_review
+      - statement: Iblis must not be labeled an angel in any later production file.
+        source_refs:
+          - quran_kahf_18_50
+          - user_instruction_2026_07_22
+        confidence: high
+        validation_status: policy_constraint
+      - statement: Iblis must not be labeled leader of all jinn unless future approved research establishes it.
+        source_refs:
+          - user_instruction_2026_07_22
+          - weak_reports.yaml
+        confidence: high
+        validation_status: unresolved_research_question
+  - character_id: angels
+    display_name: Angels
+    classification: angels
+    statements:
+      - statement: Angels obeyed the command to prostrate to Adam.
+        source_refs:
+          - quran_baqarah_2_30_39
+          - quran_hijr_15_26_44
+          - quran_sad_38_71_85
+        confidence: high
+        validation_status: source_located_pending_scholar_review
+      - statement: Angels are not to be assigned invented detailed faces for this package.
+        source_refs:
+          - projects/insan/00_governance/depiction_policy.md
+          - user_instruction_2026_07_22
+        confidence: high
+        validation_status: policy_constraint
+  - character_id: storyteller
+    display_name: Storyteller
+    classification: narrator_asset
+    statements:
+      - statement: The storyteller is a production narration asset, not a sacred historical personality.
+        source_refs:
+          - projects/insan/project.yaml
+          - user_instruction_2026_07_22
+        confidence: high
+        validation_status: production_metadata
+      - statement: Storyteller content cannot quote Qur'an or Hadith as final text until source validation is complete.
+        source_refs:
+          - projects/insan/00_governance/authenticity_policy.md
+          - projects/insan/00_governance/source_hierarchy.md
+        confidence: high
+        validation_status: policy_constraint

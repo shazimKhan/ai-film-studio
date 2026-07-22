@@ -1,0 +1,592 @@
+schema_version: "1.0"
+project_id: insan
+episode_id: episode_01
+status: shot_breakdown_pending_source_and_depiction_review
+total_shots: 25
+target_duration_seconds: 292
+global_negative_constraints:
+  - no_visual_allah
+  - no_throne_or_divine_body
+  - no_generated_quranic_arabic_text
+  - adam_face_hidden
+  - angel_faces_hidden
+  - iblis_not_western_horned_devil
+  - no_unsourced_dialogue
+  - no_exaggerated_fantasy_battle_motion
+shots:
+  - shot_id: insan_ep01_shot_001
+    scene_id: insan_ep01_scene_001
+    duration_seconds: 12
+    shot_type: medium_close_up
+    composition: storyteller centered at wooden desk
+    camera_angle: front_eye_level
+    lens: 50mm
+    camera_movement: slow_push_in
+    subject: storyteller
+    single_action: storyteller looks into camera with solemn stillness
+    environment: storyteller_studio
+    lighting: warm_key_soft_shadow
+    mood: serious_reflective
+    continuity_requirements: storyteller charcoal kurta, simple waistcoat, books left, MacBook right
+    negative_constraints:
+      - no_readable_text_on_books_or_screen
+      - no_overacting
+    source_refs:
+      - user_instruction_2026_07_22
+    overlay_requirements: none
+    audio_notes: storyteller_lip_sync_required
+    transition: fade_from_black
+  - shot_id: insan_ep01_shot_002
+    scene_id: insan_ep01_scene_001
+    duration_seconds: 12
+    shot_type: close_up
+    composition: composed face and hands near desk edge
+    camera_angle: slight_front_left
+    lens: 85mm
+    camera_movement: locked_off
+    subject: storyteller
+    single_action: storyteller lowers his gaze briefly then returns to camera
+    environment: storyteller_studio
+    lighting: warm_low_contrast
+    mood: introspective
+    continuity_requirements: same wardrobe and desk layout as shot_001
+    negative_constraints:
+      - no_readable_text
+      - no_ai_skin_smoothing
+    source_refs:
+      - user_instruction_2026_07_22
+    overlay_requirements: title_card_optional_no_quranic_text
+    audio_notes: storyteller_lip_sync_required
+    transition: dissolve_to_unseen_realm
+  - shot_id: insan_ep01_shot_003
+    scene_id: insan_ep01_scene_002
+    duration_seconds: 10
+    shot_type: wide
+    composition: vast negative space with restrained light particles
+    camera_angle: frontal_wide
+    lens: 35mm
+    camera_movement: slow_forward_drift
+    subject: unseen_realm
+    single_action: suspended particles drift in darkness
+    environment: unseen_realm
+    lighting: source_less_white_gold
+    mood: ancient_reverent
+    continuity_requirements: abstract pre-Earth realm, not astronomy
+    negative_constraints:
+      - no_planets
+      - no_stars
+      - no_galaxies
+    source_refs:
+      - quran_kahf_18_50
+      - hadith_muslim_2996
+    overlay_requirements: none
+    audio_notes: narration_only_no_lip_sync
+    transition: dissolve_from_studio_shadow
+  - shot_id: insan_ep01_shot_004
+    scene_id: insan_ep01_scene_002
+    duration_seconds: 10
+    shot_type: wide
+    composition: distant faceless presences separated by light and shadow
+    camera_angle: slight_high_angle
+    lens: 40mm
+    camera_movement: slow_pan_right
+    subject: angelic_presence_and_background_jinn_presence
+    single_action: angelic radiance remains still while jinn silhouettes stay distant
+    environment: unseen_realm
+    lighting: white_gold_against_deep_black
+    mood: solemn
+    continuity_requirements: no facial identities, no literal bodies
+    negative_constraints:
+      - no_angel_faces
+      - no_jinn_monster_design
+    source_refs:
+      - quran_kahf_18_50
+      - hadith_muslim_2996
+    overlay_requirements: none
+    audio_notes: narration_only
+    transition: light_particles_gather
+  - shot_id: insan_ep01_shot_005
+    scene_id: insan_ep01_scene_003
+    duration_seconds: 9
+    shot_type: medium_wide
+    composition: Iblis presence isolated in edge shadow
+    camera_angle: profile_left_symbolic
+    lens: 65mm
+    camera_movement: slow_push_in
+    subject: iblis_pre_rebellion
+    single_action: Iblis presence remains upright and separate
+    environment: unseen_realm
+    lighting: dim_ember_edge_light
+    mood: tense_restrained
+    continuity_requirements: non-Western jinn presence, no horns, no tail, no red devil
+    negative_constraints:
+      - no_western_devil_imagery
+      - no_detailed_face
+    source_refs:
+      - quran_kahf_18_50
+      - tafsir_ibn_kathir_kahf_18_50
+    overlay_requirements: none
+    audio_notes: narration_only_no_iblis_lip_sync
+    transition: cut_from_assembly
+  - shot_id: insan_ep01_shot_006
+    scene_id: insan_ep01_scene_003
+    duration_seconds: 9
+    shot_type: wide
+    composition: Iblis shadow apart from faceless angelic light
+    camera_angle: high_wide
+    lens: 35mm
+    camera_movement: locked_off
+    subject: iblis_pre_rebellion
+    single_action: distance between Iblis and angelic radiance becomes visible
+    environment: unseen_realm
+    lighting: white_gold_radiance_and_ember_shadow
+    mood: separation
+    continuity_requirements: Iblis classified as jinn, not angel
+    negative_constraints:
+      - no_angel_wings_detail
+      - no_leader_of_jinn_symbolism
+    source_refs:
+      - quran_kahf_18_50
+    overlay_requirements: none
+    audio_notes: narration_only
+    transition: cut_to_announcement
+  - shot_id: insan_ep01_shot_007
+    scene_id: insan_ep01_scene_004
+    duration_seconds: 11
+    shot_type: extreme_wide
+    composition: angelic presences facing source-less light plane
+    camera_angle: low_wide
+    lens: 28mm
+    camera_movement: slow_tilt_up
+    subject: angelic_presence
+    single_action: angelic presences turn toward the light plane
+    environment: unseen_realm
+    lighting: source_less_white_gold
+    mood: awe
+    continuity_requirements: divine speech not embodied
+    negative_constraints:
+      - no_visual_allah
+      - no_throne
+    source_refs:
+      - quran_baqarah_2_30_39
+    overlay_requirements: quran_overlay_post_only_after_verification
+    audio_notes: storyteller_says_allah_taala_ne_farmaya
+    transition: light_plane_opens
+  - shot_id: insan_ep01_shot_008
+    scene_id: insan_ep01_scene_004
+    duration_seconds: 11
+    shot_type: wide
+    composition: white-gold plane expands across darkness
+    camera_angle: front_wide
+    lens: 32mm
+    camera_movement: slow_push_through_particles
+    subject: source_less_white_gold_light
+    single_action: light expands without forming a body or source figure
+    environment: unseen_realm
+    lighting: source_less_white_gold
+    mood: sacred_restraint
+    continuity_requirements: no source body for light
+    negative_constraints:
+      - no_face_in_light
+      - no_human_shape_in_light
+    source_refs:
+      - quran_baqarah_2_30_39
+    overlay_requirements: no_generated_text
+    audio_notes: narration_only
+    transition: dissolve_to_clay
+  - shot_id: insan_ep01_shot_009
+    scene_id: insan_ep01_scene_005
+    duration_seconds: 11
+    shot_type: macro
+    composition: clay particles suspended in dark void
+    camera_angle: side_macro
+    lens: 100mm_macro
+    camera_movement: slow_orbit_limited
+    subject: clay_particles
+    single_action: clay particles gather softly
+    environment: clay_formation_space
+    lighting: low_warm_white_gold
+    mood: humble_origin
+    continuity_requirements: no anatomical formation
+    negative_constraints:
+      - no_body_parts
+      - no_face
+    source_refs:
+      - quran_hijr_15_26_44
+      - quran_sad_38_71_85
+      - quran_ali_imran_3_59
+    overlay_requirements: none
+    audio_notes: narration_only
+    transition: particles_emerge
+  - shot_id: insan_ep01_shot_010
+    scene_id: insan_ep01_scene_005
+    duration_seconds: 11
+    shot_type: medium_wide
+    composition: concealed Adam presence behind veil of light and clay dust
+    camera_angle: rear_three_quarter_symbolic
+    lens: 70mm
+    camera_movement: locked_off
+    subject: adam_concealed_presence
+    single_action: concealed presence remains motionless
+    environment: clay_formation_space
+    lighting: veiled_white_gold
+    mood: reverent
+    continuity_requirements: no visible face, no detailed body
+    negative_constraints:
+      - no_prophet_face
+      - no_anatomy_detail
+    source_refs:
+      - quran_hijr_15_26_44
+      - quran_sad_38_71_85
+      - hadith_abi_dawud_4693
+    overlay_requirements: none
+    audio_notes: narration_only
+    transition: hold_to_concealment
+  - shot_id: insan_ep01_shot_011
+    scene_id: insan_ep01_scene_006
+    duration_seconds: 18
+    shot_type: medium_wide
+    composition: veiled presence obscured by clay particles
+    camera_angle: rear_low
+    lens: 85mm
+    camera_movement: slow_pull_back
+    subject: adam_concealed_presence
+    single_action: veil of particles thickens to conceal all detail
+    environment: clay_formation_space
+    lighting: dim_reverent_glow
+    mood: careful_reverence
+    continuity_requirements: concealed Adam presence only
+    negative_constraints:
+      - no_face
+      - no_hands
+      - no_body_detail
+    source_refs:
+      - quran_hijr_15_26_44
+      - projects/insan/00_governance/depiction_policy.md
+    overlay_requirements: none
+    audio_notes: narration_only
+    transition: dissolve_to_assembly
+  - shot_id: insan_ep01_shot_012
+    scene_id: insan_ep01_scene_007
+    duration_seconds: 12
+    shot_type: wide
+    composition: angelic presences and concealed Adam presence in solemn alignment
+    camera_angle: high_wide
+    lens: 35mm
+    camera_movement: slow_push_in
+    subject: angelic_presence
+    single_action: angelic presences align toward concealed Adam presence
+    environment: unseen_realm
+    lighting: white_gold_planes
+    mood: obedience
+    continuity_requirements: no visible faces, no divine visual source
+    negative_constraints:
+      - no_visual_allah
+      - no_angel_faces
+    source_refs:
+      - quran_baqarah_2_30_39
+      - quran_sad_38_71_85
+    overlay_requirements: quran_overlay_post_only_after_verification
+    audio_notes: storyteller_lip_sync_not_visible_narration_only
+    transition: light_plane_opens
+  - shot_id: insan_ep01_shot_013
+    scene_id: insan_ep01_scene_007
+    duration_seconds: 12
+    shot_type: close_symbolic
+    composition: faceless radiance lowers toward foreground
+    camera_angle: front_low
+    lens: 50mm
+    camera_movement: locked_off
+    subject: angelic_presence
+    single_action: radiance begins the prostration motion
+    environment: unseen_realm
+    lighting: bright_soft_white_gold
+    mood: solemn_submission
+    continuity_requirements: no bodies with faces
+    negative_constraints:
+      - no_wings_detail
+      - no_readable_text
+    source_refs:
+      - quran_hijr_15_26_44
+      - quran_sad_38_71_85
+    overlay_requirements: none
+    audio_notes: narration_only
+    transition: continuation_to_sujud
+  - shot_id: insan_ep01_shot_014
+    scene_id: insan_ep01_scene_008
+    duration_seconds: 10
+    shot_type: wide
+    composition: rows of faceless radiance lowered in obedience
+    camera_angle: high_angle
+    lens: 32mm
+    camera_movement: slow_lateral_slide
+    subject: angelic_presence
+    single_action: angelic presences complete prostration
+    environment: unseen_realm
+    lighting: reverent_white_gold
+    mood: submission
+    continuity_requirements: faceless symbolic presences
+    negative_constraints:
+      - no_angel_faces
+      - no_human_anatomy_focus
+    source_refs:
+      - quran_baqarah_2_30_39
+      - quran_sad_38_71_85
+    overlay_requirements: none
+    audio_notes: narration_only
+    transition: slow_slide
+  - shot_id: insan_ep01_shot_015
+    scene_id: insan_ep01_scene_008
+    duration_seconds: 10
+    shot_type: medium_wide
+    composition: empty upright space at edge of lowered radiance
+    camera_angle: side_wide
+    lens: 50mm
+    camera_movement: slow_pan_to_empty_space
+    subject: contrast_between_obedience_and_refusal
+    single_action: camera reveals one space that did not lower
+    environment: unseen_realm
+    lighting: dimming_edge_light
+    mood: tension
+    continuity_requirements: prepares reveal of Iblis standing
+    negative_constraints:
+      - no_iblis_dialogue
+      - no_devil_costume
+    source_refs:
+      - quran_baqarah_2_30_39
+      - quran_hijr_15_26_44
+    overlay_requirements: none
+    audio_notes: narration_only
+    transition: reveal_to_iblis
+  - shot_id: insan_ep01_shot_016
+    scene_id: insan_ep01_scene_009
+    duration_seconds: 10
+    shot_type: medium
+    composition: dark jinn presence upright against lowered radiance
+    camera_angle: low_front
+    lens: 65mm
+    camera_movement: slow_push_in
+    subject: iblis_pre_rebellion
+    single_action: Iblis remains standing
+    environment: unseen_realm
+    lighting: ember_edge_light
+    mood: defiance
+    continuity_requirements: no horns, no tail, no Western devil form
+    negative_constraints:
+      - no_lip_sync
+      - no_monster_face
+    source_refs:
+      - quran_baqarah_2_30_39
+      - quran_sad_38_71_85
+    overlay_requirements: none
+    audio_notes: narration_only
+    transition: hard_cut_from_obedience
+  - shot_id: insan_ep01_shot_017
+    scene_id: insan_ep01_scene_009
+    duration_seconds: 10
+    shot_type: close_symbolic
+    composition: shadow edge tightens around Iblis presence
+    camera_angle: profile_symbolic
+    lens: 85mm
+    camera_movement: locked_off
+    subject: iblis_pre_rebellion
+    single_action: shadow gathers around the upright presence
+    environment: unseen_realm
+    lighting: ember_and_shadow
+    mood: spiritual_danger
+    continuity_requirements: symbolic refusal only
+    negative_constraints:
+      - no_face_detail
+      - no_dialogue_mouth
+    source_refs:
+      - quran_baqarah_2_30_39
+      - quran_sad_38_71_85
+    overlay_requirements: none
+    audio_notes: narration_only
+    transition: cut_to_fire_clay
+  - shot_id: insan_ep01_shot_018
+    scene_id: insan_ep01_scene_010
+    duration_seconds: 11
+    shot_type: symbolic_close_up
+    composition: smokeless fire texture occupies one side, clay particles the other
+    camera_angle: front_flat_symbolic
+    lens: 75mm
+    camera_movement: slow_push_in
+    subject: fire_and_clay_contrast
+    single_action: fire rises while clay remains still
+    environment: unseen_realm
+    lighting: ember_vs_warm_clay
+    mood: arrogant_contrast
+    continuity_requirements: contrast supports narration only
+    negative_constraints:
+      - no_written_text
+      - no_face_in_fire
+    source_refs:
+      - quran_araf_7_11_18
+      - quran_sad_38_71_85
+    overlay_requirements: none
+    audio_notes: narration_only_no_iblis_lip_sync
+    transition: cut_to_symbolism
+  - shot_id: insan_ep01_shot_019
+    scene_id: insan_ep01_scene_010
+    duration_seconds: 11
+    shot_type: medium_wide
+    composition: Iblis silhouette beside fire texture, clay distant and humble
+    camera_angle: side_profile_symbolic
+    lens: 65mm
+    camera_movement: slow_lateral_move
+    subject: iblis_pre_rebellion
+    single_action: Iblis turns away from clay symbolism
+    environment: unseen_realm
+    lighting: ember_edge_and_deep_shadow
+    mood: pride
+    continuity_requirements: no speech performance
+    negative_constraints:
+      - no_horned_devil
+      - no_lip_sync
+    source_refs:
+      - quran_araf_7_11_18
+      - quran_sad_38_71_85
+    overlay_requirements: none
+    audio_notes: narration_only
+    transition: light_withdraws
+  - shot_id: insan_ep01_shot_020
+    scene_id: insan_ep01_scene_011
+    duration_seconds: 12
+    shot_type: wide
+    composition: expulsion boundary opening into darkness
+    camera_angle: low_wide
+    lens: 35mm
+    camera_movement: slow_pull_back
+    subject: expulsion_boundary
+    single_action: a boundary of light recedes
+    environment: expulsion_boundary
+    lighting: white_gold_receding_to_black
+    mood: severe
+    continuity_requirements: no divine figure, no throne
+    negative_constraints:
+      - no_visual_allah
+      - no_horror_transformation
+    source_refs:
+      - quran_araf_7_11_18
+      - quran_hijr_15_26_44
+      - quran_sad_38_71_85
+    overlay_requirements: none
+    audio_notes: narration_only
+    transition: light_recedes
+  - shot_id: insan_ep01_shot_021
+    scene_id: insan_ep01_scene_011
+    duration_seconds: 12
+    shot_type: medium_wide
+    composition: Iblis post-expulsion presence in deep separated shadow
+    camera_angle: rear_three_quarter
+    lens: 70mm
+    camera_movement: locked_off
+    subject: iblis_post_expulsion
+    single_action: Iblis presence stands beyond the boundary
+    environment: expulsion_boundary
+    lighting: low_ember_with_absent_radiance
+    mood: disgrace
+    continuity_requirements: post-expulsion darker continuity
+    negative_constraints:
+      - no_devil_costume
+      - no_face_detail
+    source_refs:
+      - quran_araf_7_11_18
+      - quran_hijr_15_26_44
+    overlay_requirements: none
+    audio_notes: narration_only
+    transition: shadow_hold
+  - shot_id: insan_ep01_shot_022
+    scene_id: insan_ep01_scene_012
+    duration_seconds: 14
+    shot_type: wide
+    composition: dark presence at edge of symbolic human path
+    camera_angle: high_wide
+    lens: 32mm
+    camera_movement: slow_forward_drift
+    subject: symbolic_path_of_humanity
+    single_action: shadow extends along the edge of the path
+    environment: symbolic_path_of_humanity
+    lighting: dim_path_with_shadow_edges
+    mood: ominous_restrained
+    continuity_requirements: no individual human faces
+    negative_constraints:
+      - no_horror_music_visuals
+      - no_crowd_faces
+    source_refs:
+      - quran_araf_7_11_18
+      - quran_isra_17_61_65
+      - quran_sad_38_71_85
+    overlay_requirements: quran_overlay_post_only_after_verification
+    audio_notes: narration_only
+    transition: shadow_extends
+  - shot_id: insan_ep01_shot_023
+    scene_id: insan_ep01_scene_012
+    duration_seconds: 14
+    shot_type: symbolic_close_up
+    composition: path splits between dim shadow and distant light
+    camera_angle: ground_level_forward
+    lens: 45mm
+    camera_movement: slow_push_forward
+    subject: symbolic_path_of_humanity
+    single_action: distant light remains visible beyond shadow
+    environment: symbolic_path_of_humanity
+    lighting: low_key_with_distant_white_gold
+    mood: trial_and_guidance
+    continuity_requirements: no literal modern setting
+    negative_constraints:
+      - no_written_quranic_text
+      - no_faces
+    source_refs:
+      - quran_hijr_15_26_44
+      - quran_isra_17_61_65
+    overlay_requirements: none
+    audio_notes: narration_only
+    transition: dissolve_back_to_studio
+  - shot_id: insan_ep01_shot_024
+    scene_id: insan_ep01_scene_013
+    duration_seconds: 15
+    shot_type: medium_close_up
+    composition: storyteller centered, books and MacBook visible but unreadable
+    camera_angle: front_eye_level
+    lens: 50mm
+    camera_movement: slow_push_in
+    subject: storyteller
+    single_action: storyteller delivers closing moral with controlled emotion
+    environment: storyteller_studio
+    lighting: warm_key_deeper_shadow
+    mood: moral_clarity
+    continuity_requirements: same wardrobe and desk layout
+    negative_constraints:
+      - no_readable_text
+      - no_exaggerated_expression
+    source_refs:
+      - user_instruction_2026_07_22
+      - quran_baqarah_2_30_39
+      - quran_sad_38_71_85
+    overlay_requirements: none
+    audio_notes: storyteller_lip_sync_required
+    transition: dissolve_from_path
+  - shot_id: insan_ep01_shot_025
+    scene_id: insan_ep01_scene_013
+    duration_seconds: 15
+    shot_type: close_up
+    composition: storyteller face in quiet final hold
+    camera_angle: front_eye_level
+    lens: 85mm
+    camera_movement: locked_off
+    subject: storyteller
+    single_action: storyteller pauses after final line
+    environment: storyteller_studio
+    lighting: warm_fade_to_shadow
+    mood: reflective_final
+    continuity_requirements: no text legible on set
+    negative_constraints:
+      - no_title_overlay_unverified
+      - no_readable_quranic_text
+    source_refs:
+      - user_instruction_2026_07_22
+    overlay_requirements: end_card_placeholder_no_sacred_text
+    audio_notes: storyteller_lip_sync_required_then_silence
+    transition: fade_to_black

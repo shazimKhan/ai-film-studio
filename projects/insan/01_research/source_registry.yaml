@@ -1,7 +1,6 @@
 schema_version: "1.0"
 project_id: insan
 source_record_schema: ../../../shared/schemas/source_record.schema.yaml
-source_records: []
 validation_states:
   - unverified
   - under_review
@@ -10,3 +9,227 @@ validation_states:
   - rejected
   - approved_for_narration
   - approved_for_visual_context
+source_records:
+  - source_id: insan_ep01_quran_baqarah_2_30
+    episode_id: episode_01
+    source_type: quran
+    collection_name: Quran
+    book: Al-Baqarah
+    chapter: "2"
+    verse_number: "30"
+    citation_ref: Al-Baqarah 2:30
+    validation_state: unverified
+    confidence_level: low
+    approved_for_script: false
+    approved_for_visual_context: false
+    notes: Candidate only. Text, translation, and interpretation require human verification.
+  - source_id: insan_ep01_quran_baqarah_2_34
+    episode_id: episode_01
+    source_type: quran
+    collection_name: Quran
+    book: Al-Baqarah
+    chapter: "2"
+    verse_number: "34"
+    citation_ref: Al-Baqarah 2:34
+    validation_state: unverified
+    confidence_level: low
+    approved_for_script: false
+    approved_for_visual_context: false
+    notes: Candidate only. Text, translation, and interpretation require human verification.
+  - source_id: insan_ep01_quran_araf_7_11_18
+    episode_id: episode_01
+    source_type: quran
+    collection_name: Quran
+    book: "Al-A'raf"
+    chapter: "7"
+    verse_number: "11-18"
+    citation_ref: "Al-A'raf 7:11-18"
+    validation_state: unverified
+    confidence_level: low
+    approved_for_script: false
+    approved_for_visual_context: false
+    notes: Candidate only. Text, translation, and interpretation require human verification.
+  - source_id: insan_ep01_quran_hijr_15_26_44
+    episode_id: episode_01
+    source_type: quran
+    collection_name: Quran
+    book: Al-Hijr
+    chapter: "15"
+    verse_number: "26-44"
+    citation_ref: Al-Hijr 15:26-44
+    validation_state: unverified
+    confidence_level: low
+    approved_for_script: false
+    approved_for_visual_context: false
+    notes: Candidate only. Text, translation, and interpretation require human verification.
+  - source_id: insan_ep01_quran_kahf_18_50
+    episode_id: episode_01
+    source_type: quran
+    collection_name: Quran
+    book: Al-Kahf
+    chapter: "18"
+    verse_number: "50"
+    citation_ref: Al-Kahf 18:50
+    validation_state: unverified
+    confidence_level: low
+    approved_for_script: false
+    approved_for_visual_context: false
+    notes: Candidate only. Use for checking Iblis classification before approval.
+  - source_id: insan_ep01_quran_sad_38_71_85
+    episode_id: episode_01
+    source_type: quran
+    collection_name: Quran
+    book: Sad
+    chapter: "38"
+    verse_number: "71-85"
+    citation_ref: Sad 38:71-85
+    validation_state: unverified
+    confidence_level: low
+    approved_for_script: false
+    approved_for_visual_context: false
+    notes: Candidate only. Text, translation, and interpretation require human verification.
+  - source_id: insan_ep01_hadith_muslim_2996
+    episode_id: episode_01
+    source_type: hadith
+    collection_name: Sahih Muslim
+    hadith_number: "2996"
+    citation_ref: Sahih Muslim 2996
+    authenticity_grade: pending_verification
+    validation_state: unverified
+    confidence_level: low
+    approved_for_script: false
+    approved_for_visual_context: false
+    notes: Candidate number from production input. Matn, translation, and relevance require verification.
+  - source_id: insan_ep01_hadith_abi_dawud_4693
+    episode_id: episode_01
+    source_type: hadith
+    collection_name: Sunan Abi Dawud
+    hadith_number: "4693"
+    citation_ref: Sunan Abi Dawud 4693
+    authenticity_grade: pending_verification
+    validation_state: unverified
+    confidence_level: low
+    approved_for_script: false
+    approved_for_visual_context: false
+    notes: Candidate number from production input. Matn, translation, grading, and relevance require verification.
+  - source_id: insan_ep01_quran_isra_17_61_65
+    episode_id: episode_01
+    source_type: quran
+    collection_name: Quran
+    book: "Al-Isra'"
+    chapter: "17"
+    verse_number: "61-65"
+    citation_ref: "Al-Isra' 17:61-65"
+    url_or_reference: https://legacy.quran.com/17/61-65
+    validation_state: unverified
+    confidence_level: low
+    approved_for_script: false
+    approved_for_visual_context: false
+    notes: Source located for Iblis' declaration against Adam's descendants; requires human verification.
+  - source_id: insan_ep01_quran_taha_20_115_123
+    episode_id: episode_01
+    source_type: quran
+    collection_name: Quran
+    book: Taha
+    chapter: "20"
+    verse_number: "115-123"
+    citation_ref: Taha 20:115-123
+    url_or_reference: https://legacy.quran.com/20/115-123
+    validation_state: unverified
+    confidence_level: low
+    approved_for_script: false
+    approved_for_visual_context: false
+    notes: Source located for related prostration, enemy warning, whispering, repentance, and descent context.
+  - source_id: insan_ep01_quran_ali_imran_3_59
+    episode_id: episode_01
+    source_type: quran
+    collection_name: Quran
+    book: "Ali 'Imran"
+    chapter: "3"
+    verse_number: "59"
+    citation_ref: "Ali 'Imran 3:59"
+    url_or_reference: https://legacy.quran.com/3/59
+    validation_state: unverified
+    confidence_level: low
+    approved_for_script: false
+    approved_for_visual_context: false
+    notes: Source located as supporting creation-from-dust reference; requires human verification.
+  - source_id: insan_ep01_hadith_muslim_854b
+    episode_id: episode_01
+    source_type: hadith
+    collection_name: Sahih Muslim
+    hadith_number: 854b
+    citation_ref: Sahih Muslim 854b
+    url_or_reference: https://sunnah.com/muslim:854b
+    authenticity_grade: pending_verification
+    validation_state: unverified
+    confidence_level: low
+    approved_for_script: false
+    approved_for_visual_context: false
+    notes: Source located as related Friday context; relevance to this episode requires review.
+  - source_id: insan_ep01_tafsir_ibn_kathir_baqarah_2_34
+    episode_id: episode_01
+    source_type: tafsir
+    collection_name: Tafsir Ibn Kathir
+    citation_ref: Tafsir Ibn Kathir on Al-Baqarah 2:34
+    url_or_reference: https://www.alim.org/quran/tafsir/ibn-kathir/surah/2/34/
+    validation_state: unverified
+    confidence_level: low
+    approved_for_script: false
+    approved_for_visual_context: false
+    notes: Source located for tafsir discussion of prostration, Iblis, and arrogance.
+  - source_id: insan_ep01_tafsir_ibn_kathir_kahf_18_50
+    episode_id: episode_01
+    source_type: tafsir
+    collection_name: Tafsir Ibn Kathir
+    citation_ref: Tafsir Ibn Kathir on Al-Kahf 18:50
+    url_or_reference: https://www.alim.org/quran/tafsir/ibn-kathir/surah/18/50/
+    validation_state: unverified
+    confidence_level: low
+    approved_for_script: false
+    approved_for_visual_context: false
+    notes: Source located for Iblis as jinn and related report classification.
+  - source_id: insan_ep01_tafsir_ibn_kathir_sad_38_71_85
+    episode_id: episode_01
+    source_type: tafsir
+    collection_name: Tafsir Ibn Kathir
+    citation_ref: Tafsir Ibn Kathir on Sad 38:71-85
+    url_or_reference: https://www.alim.org/quran/tafsir/ibn-kathir/surah/38/73/
+    validation_state: unverified
+    confidence_level: low
+    approved_for_script: false
+    approved_for_visual_context: false
+    notes: Source located for summarized sequence of Adam and Iblis.
+  - source_id: insan_ep01_tafsir_tabari_baqarah_2_34
+    episode_id: episode_01
+    source_type: tafsir
+    collection_name: Tafsir al-Tabari
+    citation_ref: Tafsir al-Tabari on Al-Baqarah 2:34
+    url_or_reference: https://quran.ksu.edu.sa/tafseer/tabary/sura2-aya34.html
+    validation_state: unverified
+    confidence_level: low
+    approved_for_script: false
+    approved_for_visual_context: false
+    notes: Source located for command scope and exception discussion.
+  - source_id: insan_ep01_tafsir_tabari_kahf_18_50
+    episode_id: episode_01
+    source_type: tafsir
+    collection_name: Tafsir al-Tabari
+    citation_ref: Tafsir al-Tabari on Al-Kahf 18:50
+    url_or_reference: https://quran.com/es/Al-K%C3%A1hf/50/tafsirs/ar-tafsir-al-tabari
+    validation_state: unverified
+    confidence_level: low
+    approved_for_script: false
+    approved_for_visual_context: false
+    notes: Source located for transmitted views about Iblis, angels, and jinn.
+  - source_id: insan_ep01_tafsir_qurtubi_kahf_18_50
+    episode_id: episode_01
+    source_type: tafsir
+    collection_name: Tafsir al-Qurtubi
+    citation_ref: Tafsir al-Qurtubi on Al-Kahf 18:50
+    url_or_reference: https://quran.com/en/18%3A50/tafsirs/ar-tafseer-al-qurtubi
+    validation_state: unverified
+    confidence_level: low
+    approved_for_script: false
+    approved_for_visual_context: false
+    notes: Source located for discussion of Iblis' progeny and the need for sound transmission.

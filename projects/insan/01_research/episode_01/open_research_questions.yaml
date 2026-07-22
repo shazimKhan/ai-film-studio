@@ -1,0 +1,84 @@
+schema_version: "1.0"
+project_id: insan
+episode_id: episode_01
+content_type: open_research_questions
+questions:
+  - question_id: insan_ep01_rq_001
+    question: Which exact Qur'anic passages should be approved as the final factual backbone for the episode?
+    source_refs:
+      - quran_baqarah_2_30_39
+      - quran_araf_7_11_18
+      - quran_hijr_15_26_44
+      - quran_kahf_18_50
+      - quran_sad_38_71_85
+    confidence: high
+    validation_status: open
+  - question_id: insan_ep01_rq_002
+    question: Which Urdu translation and terminology should be used for final narration after verification?
+    source_refs:
+      - projects/insan/00_governance/terminology_policy.md
+      - quran_baqarah_2_30_39
+      - quran_sad_38_71_85
+    confidence: high
+    validation_status: open
+  - question_id: insan_ep01_rq_003
+    question: What tafsir framing should be approved for explaining prostration as obedience to Allah and honor for Adam?
+    source_refs:
+      - tafsir_ibn_kathir_baqarah_2_34
+      - tafsir_tabari_baqarah_2_34
+    confidence: medium
+    validation_status: open
+  - question_id: insan_ep01_rq_004
+    question: How should the difference of opinion about Iblis' relation to angels be acknowledged, if at all?
+    source_refs:
+      - tafsir_tabari_kahf_18_50
+      - tafsir_ibn_kathir_kahf_18_50
+      - quran_kahf_18_50
+    confidence: medium
+    validation_status: open
+  - question_id: insan_ep01_rq_005
+    question: Are reports naming Iblis as Azazil usable only as labeled tafsir/story material, or should they be excluded entirely?
+    source_refs:
+      - tafsir_ibn_kathir_baqarah_2_34
+      - weak_reports.yaml
+    confidence: medium
+    validation_status: open
+  - question_id: insan_ep01_rq_006
+    question: Is there any reliable approved source for Iblis being leader of all jinn?
+    source_refs:
+      - weak_reports.yaml
+      - user_instruction_2026_07_22
+    confidence: high
+    validation_status: open
+    default_position_until_resolved: exclude_claim
+  - question_id: insan_ep01_rq_007
+    question: What is the approved treatment for divine speech wording in Urdu narration?
+    source_refs:
+      - quran_araf_7_11_18
+      - quran_hijr_15_26_44
+      - quran_sad_38_71_85
+      - projects/insan/00_governance/authenticity_policy.md
+    confidence: high
+    validation_status: open
+  - question_id: insan_ep01_rq_008
+    question: Which non-literal visual boundaries are acceptable for unseen-realm research without creating prompts?
+    source_refs:
+      - visual_constraints.yaml
+      - environment_constraints.yaml
+      - projects/insan/00_governance/depiction_policy.md
+    confidence: high
+    validation_status: open
+  - question_id: insan_ep01_rq_009
+    question: Should Sahih Muslim 854b be used in this episode or reserved as related context only?
+    source_refs:
+      - hadith_muslim_854b
+      - hadith_references.yaml
+    confidence: medium
+    validation_status: open
+  - question_id: insan_ep01_rq_010
+    question: What level of detail from Sunan Abi Dawud 4693 is allowed without over-visualizing Adam عليه السلام?
+    source_refs:
+      - hadith_abi_dawud_4693
+      - depiction_constraints.yaml
+    confidence: medium
+    validation_status: open

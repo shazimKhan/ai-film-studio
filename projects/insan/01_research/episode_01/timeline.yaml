@@ -1,0 +1,99 @@
+schema_version: "1.0"
+project_id: insan
+episode_id: episode_01
+content_type: research_timeline
+timeline_type: relative_sequence_not_calendar
+timeline:
+  - order: 1
+    event_id: timeline_001
+    statement: Allah announces the creation or appointment of Adam/humanity to the angels.
+    source_refs:
+      - quran_baqarah_2_30_39
+      - quran_sad_38_71_85
+    confidence: high
+    validation_status: source_located_pending_scholar_review
+  - order: 2
+    event_id: timeline_002
+    statement: Adam is created from earth/clay material as described in the Qur'an and related Hadith.
+    source_refs:
+      - quran_hijr_15_26_44
+      - quran_sad_38_71_85
+      - quran_ali_imran_3_59
+      - hadith_muslim_2996
+      - hadith_abi_dawud_4693
+    confidence: high
+    validation_status: source_located_pending_scholar_review
+  - order: 3
+    event_id: timeline_003
+    statement: The angels are commanded to prostrate to Adam.
+    source_refs:
+      - quran_baqarah_2_30_39
+      - quran_araf_7_11_18
+      - quran_hijr_15_26_44
+      - quran_taha_20_115_123
+      - quran_sad_38_71_85
+    confidence: high
+    validation_status: source_located_pending_scholar_review
+  - order: 4
+    event_id: timeline_004
+    statement: The angels prostrate while Iblis refuses.
+    source_refs:
+      - quran_baqarah_2_30_39
+      - quran_hijr_15_26_44
+      - quran_taha_20_115_123
+      - quran_sad_38_71_85
+    confidence: high
+    validation_status: source_located_pending_scholar_review
+  - order: 5
+    event_id: timeline_005
+    statement: Iblis gives a superiority argument based on being created from fire while Adam was created from clay.
+    source_refs:
+      - quran_araf_7_11_18
+      - quran_sad_38_71_85
+    confidence: high
+    validation_status: source_located_pending_scholar_review
+  - order: 6
+    event_id: timeline_006
+    statement: Iblis is expelled and cursed until the Day of Recompense.
+    source_refs:
+      - quran_araf_7_11_18
+      - quran_hijr_15_26_44
+      - quran_sad_38_71_85
+    confidence: high
+    validation_status: source_located_pending_scholar_review
+  - order: 7
+    event_id: timeline_007
+    statement: Iblis asks for respite until resurrection.
+    source_refs:
+      - quran_araf_7_11_18
+      - quran_hijr_15_26_44
+      - quran_sad_38_71_85
+    confidence: high
+    validation_status: source_located_pending_scholar_review
+  - order: 8
+    event_id: timeline_008
+    statement: Iblis is granted respite until the appointed time.
+    source_refs:
+      - quran_araf_7_11_18
+      - quran_hijr_15_26_44
+      - quran_sad_38_71_85
+    confidence: high
+    validation_status: source_located_pending_scholar_review
+  - order: 9
+    event_id: timeline_009
+    statement: Iblis declares his intention to mislead humanity, except Allah's sincere servants.
+    source_refs:
+      - quran_araf_7_11_18
+      - quran_hijr_15_26_44
+      - quran_isra_17_61_65
+      - quran_sad_38_71_85
+    confidence: high
+    validation_status: source_located_pending_scholar_review
+  - order: 10
+    event_id: timeline_010
+    statement: Iblis has no authority over Allah's believing servants.
+    source_refs:
+      - quran_hijr_15_26_44
+      - quran_isra_17_61_65
+    confidence: high
+    validation_status: source_located_pending_scholar_review

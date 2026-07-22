@@ -1,0 +1,32 @@
+schema_version: "1.0"
+project_id: insan
+episode_id: episode_01
+asset_id: adam_concealed_presence
+status: needs_depiction_review_before_generation
+recommended_aspect_ratio: "16:9"
+recommended_generator: gemini
+master_prompt: >
+  Concealed presence of Adam عليه السلام for an Islamic historical documentary
+  drama, represented without face, without detailed body, and without reusable
+  prophet identity. Use a veiled non-facial presence implied through clay
+  particles, soft obscuring light, and respectful negative space. No anatomy
+  detail, no hands, no face, no eyes, no silhouette that reveals exact body
+  features. The image should communicate sacred restraint and creation context
+  without visualizing the Prophet's identity. No readable text, no Arabic text.
+negative_prompt: >
+  face, eyes, mouth, hands, detailed body, muscular body, portrait, prophet face,
+  reusable identity, anatomy formation, nude form, readable text, Arabic text,
+  Qur'anic text, divine body, throne, fantasy magic, cartoon
+continuity_lock:
+  visibility: concealed
+  material_context: clay_particles
+  identity: no_reusable_face_or_body
+camera_neutral_description: Concealed non-facial Adam presence with clay and light.
+identity_restrictions:
+  - no_face
+  - no_detailed_body
+  - no_reusable_prophet_identity
+depiction_policy_restrictions:
+  - prophet_presence_metadata_only
+  - sacred_depiction_review_required
+reference_image_guidance: Generate only concealed presence references after depiction approval.

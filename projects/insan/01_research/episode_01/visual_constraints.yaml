@@ -1,0 +1,60 @@
+schema_version: "1.0"
+project_id: insan
+episode_id: episode_01
+content_type: visual_constraints_research
+constraints:
+  - constraint_id: visual_001
+    statement: Allah must not be visually represented in any form.
+    source_refs:
+      - projects/insan/00_governance/depiction_policy.md
+      - user_instruction_2026_07_22
+    confidence: high
+    validation_status: policy_constraint
+  - constraint_id: visual_002
+    statement: No visual form, shadow, body, throne representation, voice-source body, or human representation may be attributed to Allah.
+    source_refs:
+      - user_instruction_2026_07_22
+      - projects/insan/00_governance/depiction_policy.md
+    confidence: high
+    validation_status: policy_constraint
+  - constraint_id: visual_003
+    statement: Adam عليه السلام must not receive a visible face or detailed reusable body identity.
+    source_refs:
+      - projects/insan/00_governance/depiction_policy.md
+      - user_instruction_2026_07_22
+    confidence: high
+    validation_status: policy_constraint
+  - constraint_id: visual_004
+    statement: Angelic faces must not be invented.
+    source_refs:
+      - projects/insan/00_governance/depiction_policy.md
+      - user_instruction_2026_07_22
+    confidence: high
+    validation_status: policy_constraint
+  - constraint_id: visual_005
+    statement: Qur'anic Arabic text must not be generated inside AI images.
+    source_refs:
+      - user_instruction_2026_07_22
+    confidence: high
+    validation_status: policy_constraint
+  - constraint_id: visual_006
+    statement: Verse overlays must be post-production elements and require human verification.
+    source_refs:
+      - user_instruction_2026_07_22
+      - projects/insan/00_governance/authenticity_policy.md
+    confidence: high
+    validation_status: policy_constraint
+  - constraint_id: visual_007
+    statement: The unseen realm must not be treated as literal outer space.
+    source_refs:
+      - user_instruction_2026_07_22
+      - projects/insan/00_governance/uncertainty_policy.md
+    confidence: high
+    validation_status: policy_constraint
+  - constraint_id: visual_008
+    statement: No final image or video prompt may be generated from this package until source validation and depiction review pass.
+    source_refs:
+      - projects/insan/00_governance/authenticity_policy.md
+      - docs/workflows/ISLAMIC_HISTORY_PRODUCTION_WORKFLOW.md
+    confidence: high
+    validation_status: workflow_constraint

@@ -1,4 +1,13 @@
 schema_version: "1.0"
 project_id: insan
-episodes: []
+episodes:
+  - episode_id: episode_01
+    episode_number: 1
+    title: Takabbur Ka Pehla Imtihan
+    narration: 07_episodes/episode_01/narration_urdu.md
+    scenes: 08_scenes/episode_01/scenes.yaml
+    shots: 09_shots/episode_01/shots.yaml
+    production_board: production/episode_01/production_board.yaml
+    final_readiness: qa/episode_01/final_readiness.yaml
+    status: production_package_created_pending_source_and_depiction_review
 policy: no_episode_without_approved_factual_outline

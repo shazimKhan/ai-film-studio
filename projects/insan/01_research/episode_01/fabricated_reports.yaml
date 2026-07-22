@@ -1,0 +1,24 @@
+schema_version: "1.0"
+project_id: insan
+episode_id: episode_01
+content_type: fabricated_report_tracking
+screening_status: no_confirmed_fabricated_reports_catalogued_in_this_pass
+records: []
+statements:
+  - statement: This package does not classify any specific named report as fabricated because no specialist fabrication grading has been completed.
+    source_refs:
+      - projects/insan/00_governance/source_hierarchy.md
+      - projects/insan/00_governance/uncertainty_policy.md
+    confidence: high
+    validation_status: specialist_review_required
+  - statement: Any unsourced dialogue attributed to Allah, Adam عليه السلام, angels, or Iblis is prohibited from production use.
+    source_refs:
+      - projects/insan/00_governance/authenticity_policy.md
+      - user_instruction_2026_07_22
+    confidence: high
+    validation_status: policy_constraint
+  - statement: Any claim presented without a traceable source must be treated as unapproved even if it is not formally classified as fabricated.
+    source_refs:
+      - projects/insan/00_governance/source_hierarchy.md
+    confidence: high
+    validation_status: policy_constraint

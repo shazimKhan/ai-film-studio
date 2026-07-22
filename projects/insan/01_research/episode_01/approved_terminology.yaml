@@ -1,0 +1,79 @@
+schema_version: "1.0"
+project_id: insan
+episode_id: episode_01
+content_type: approved_terminology_research
+approval_status: research_terms_only_pending_language_review
+terms:
+  - term_id: term_adam_as
+    approved_term: Adam عليه السلام
+    usage_scope: respectful_reference
+    statement: Adam عليه السلام should be named with respectful phrasing in research and production metadata.
+    source_refs:
+      - projects/insan/00_governance/terminology_policy.md
+    confidence: high
+    validation_status: policy_constraint
+  - term_id: term_iblis
+    approved_term: Iblis
+    usage_scope: quranic_name
+    statement: Iblis is the approved name for the figure refusing prostration in this episode topic.
+    source_refs:
+      - quran_baqarah_2_30_39
+      - quran_kahf_18_50
+      - quran_sad_38_71_85
+    confidence: high
+    validation_status: source_located_pending_scholar_review
+  - term_id: term_jinn
+    approved_term: jinn
+    usage_scope: iblis_classification
+    statement: Jinn is the approved classification term for Iblis in this package.
+    source_refs:
+      - quran_kahf_18_50
+      - hadith_muslim_2996
+    confidence: high
+    validation_status: source_located_pending_scholar_review
+  - term_id: term_angels
+    approved_term: angels
+    usage_scope: prostration_command_group
+    statement: Angels is the approved English metadata term for malaikah in source-indexed research.
+    source_refs:
+      - quran_baqarah_2_30_39
+      - quran_sad_38_71_85
+    confidence: high
+    validation_status: source_located_pending_scholar_review
+  - term_id: term_takabbur
+    approved_term: takabbur
+    usage_scope: theme_research_label
+    statement: Takabbur is allowed as a thematic research label for arrogance, pending Urdu terminology review.
+    source_refs:
+      - quran_baqarah_2_30_39
+      - quran_sad_38_71_85
+      - user_instruction_2026_07_22
+    confidence: medium
+    validation_status: language_review_required
+  - term_id: term_respite
+    approved_term: respite
+    usage_scope: research_summary
+    statement: Respite is an approved English metadata term for Iblis' request and granted delay, pending final translation review.
+    source_refs:
+      - quran_araf_7_11_18
+      - quran_hijr_15_26_44
+      - quran_sad_38_71_85
+    confidence: high
+    validation_status: source_located_pending_language_review
+blocked_terms:
+  - term_id: blocked_iblis_angel
+    blocked_term: Iblis as angel
+    statement: Iblis must not be called an angel as a production fact.
+    source_refs:
+      - quran_kahf_18_50
+      - user_instruction_2026_07_22
+    confidence: high
+    validation_status: policy_constraint
+  - term_id: blocked_iblis_leader_of_all_jinn
+    blocked_term: leader of all jinn
+    statement: Iblis must not be called leader of all jinn unless future approved research supports it.
+    source_refs:
+      - weak_reports.yaml
+      - user_instruction_2026_07_22
+    confidence: high
+    validation_status: unresolved_research_question

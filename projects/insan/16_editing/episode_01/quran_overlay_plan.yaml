@@ -1,0 +1,117 @@
+schema_version: "1.0"
+project_id: insan
+episode_id: episode_01
+status: post_production_only_pending_human_verification
+policy:
+  - Do not generate Arabic Qur'anic text inside AI image or video tools.
+  - Arabic text and Urdu translation must be added manually after verification.
+  - Overlay text below is metadata only, not final verse text.
+overlays:
+  - overlay_id: quran_overlay_001
+    scene_id: insan_ep01_scene_004
+    surah_name: Al-Baqarah
+    ayah_number: "2:30"
+    display_timing: "01:02-01:24"
+    verified_arabic_required: true
+    urdu_translation_required: true
+    source_verification_status: unverified_pending_human_review
+    screen_position: lower_third_center
+    text_duration_seconds: 8
+    fade_style: soft_fade_in_out
+    human_verification_required: true
+  - overlay_id: quran_overlay_002
+    scene_id: insan_ep01_scene_007
+    surah_name: Al-Baqarah
+    ayah_number: "2:34"
+    display_timing: "02:04-02:28"
+    verified_arabic_required: true
+    urdu_translation_required: true
+    source_verification_status: unverified_pending_human_review
+    screen_position: lower_third_center
+    text_duration_seconds: 8
+    fade_style: soft_fade_in_out
+    human_verification_required: true
+  - overlay_id: quran_overlay_003
+    scene_id: insan_ep01_scene_010
+    surah_name: "Al-A'raf"
+    ayah_number: "7:11-18"
+    display_timing: "03:08-03:30"
+    verified_arabic_required: true
+    urdu_translation_required: true
+    source_verification_status: unverified_pending_human_review
+    screen_position: lower_third_center
+    text_duration_seconds: 10
+    fade_style: soft_fade_in_out
+    human_verification_required: true
+  - overlay_id: quran_overlay_004
+    scene_id: insan_ep01_scene_005
+    surah_name: Al-Hijr
+    ayah_number: "15:26-44"
+    display_timing: "01:24-01:46"
+    verified_arabic_required: true
+    urdu_translation_required: true
+    source_verification_status: unverified_pending_human_review
+    screen_position: lower_third_center
+    text_duration_seconds: 8
+    fade_style: soft_fade_in_out
+    human_verification_required: true
+  - overlay_id: quran_overlay_005
+    scene_id: insan_ep01_scene_003
+    surah_name: Al-Kahf
+    ayah_number: "18:50"
+    display_timing: "00:44-01:02"
+    verified_arabic_required: true
+    urdu_translation_required: true
+    source_verification_status: unverified_pending_human_review
+    screen_position: lower_third_center
+    text_duration_seconds: 7
+    fade_style: soft_fade_in_out
+    human_verification_required: true
+  - overlay_id: quran_overlay_006
+    scene_id: insan_ep01_scene_007
+    surah_name: Taha
+    ayah_number: "20:115-123"
+    display_timing: "02:04-02:28"
+    verified_arabic_required: true
+    urdu_translation_required: true
+    source_verification_status: unverified_pending_human_review
+    screen_position: lower_third_center
+    text_duration_seconds: 7
+    fade_style: soft_fade_in_out
+    human_verification_required: true
+  - overlay_id: quran_overlay_007
+    scene_id: insan_ep01_scene_012
+    surah_name: "Al-Isra'"
+    ayah_number: "17:61-65"
+    display_timing: "03:54-04:22"
+    verified_arabic_required: true
+    urdu_translation_required: true
+    source_verification_status: unverified_pending_human_review
+    screen_position: lower_third_center
+    text_duration_seconds: 8
+    fade_style: soft_fade_in_out
+    human_verification_required: true
+  - overlay_id: quran_overlay_008
+    scene_id: insan_ep01_scene_012
+    surah_name: Sad
+    ayah_number: "38:71-85"
+    display_timing: "03:54-04:22"
+    verified_arabic_required: true
+    urdu_translation_required: true
+    source_verification_status: unverified_pending_human_review
+    screen_position: lower_third_center
+    text_duration_seconds: 8
+    fade_style: soft_fade_in_out
+    human_verification_required: true
+  - overlay_id: quran_overlay_009
+    scene_id: insan_ep01_scene_005
+    surah_name: "Ali 'Imran"
+    ayah_number: "3:59"
+    display_timing: "01:24-01:46"
+    verified_arabic_required: true
+    urdu_translation_required: true
+    source_verification_status: unverified_pending_human_review
+    screen_position: lower_third_center
+    text_duration_seconds: 6
+    fade_style: soft_fade_in_out
+    human_verification_required: true

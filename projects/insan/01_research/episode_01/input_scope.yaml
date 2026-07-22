@@ -1,0 +1,27 @@
+schema_version: "1.0"
+project_id: insan
+series_name: Insan
+episode_id: episode_01
+episode_title: Takabbur Ka Pehla Imtihan
+content_type: input_scope_record
+statements:
+  - statement: The research package covers Adam عليه السلام ki takhleeq, Iblis' refusal to prostrate, expulsion, respite request, and declaration to mislead humanity.
+    source_refs:
+      - user_instruction_2026_07_22
+    confidence: high
+    validation_status: instruction_recorded
+  - statement: The package must not generate scripts, scenes, prompts, narration, images, or videos.
+    source_refs:
+      - user_instruction_2026_07_22
+    confidence: high
+    validation_status: instruction_recorded
+  - statement: All research statements must carry source, confidence, and validation status metadata.
+    source_refs:
+      - user_instruction_2026_07_22
+    confidence: high
+    validation_status: instruction_recorded
+  - statement: The research output belongs under projects/insan/01_research.
+    source_refs:
+      - user_instruction_2026_07_22
+    confidence: high
+    validation_status: instruction_recorded

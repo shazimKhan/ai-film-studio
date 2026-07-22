@@ -1,0 +1,18 @@
+schema_version: "1.0"
+project_id: insan
+asset_id: unseen_realm
+asset_type: environment
+status: missing_reference_images
+reusable: true
+continuity_rules:
+  - Abstract pre-Earth unseen realm only.
+  - Deep darkness, source-less white-gold light, suspended particles, luminous planes, vast negative space.
+visual_restrictions:
+  - no_literal_outer_space
+  - no_planets
+  - no_stars
+  - no_galaxies
+  - no_earth_landscape
+  - no_visual_allah
+reference_status: awaiting_manual_generation
+prompt_ref: projects/insan/10_image_prompts/episode_01/assets/unseen_realm.yaml

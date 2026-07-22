@@ -1,0 +1,85 @@
+schema_version: "1.0"
+project_id: insan
+episode_id: episode_01
+content_type: known_facts
+facts:
+  - fact_id: fact_001
+    statement: Adam عليه السلام is the human figure connected to the prostration command in the Qur'anic account.
+    source_refs:
+      - quran_baqarah_2_30_39
+      - quran_sad_38_71_85
+    confidence: high
+    validation_status: source_located_pending_scholar_review
+  - fact_id: fact_002
+    statement: The angels obeyed the command to prostrate.
+    source_refs:
+      - quran_baqarah_2_30_39
+      - quran_hijr_15_26_44
+      - quran_sad_38_71_85
+    confidence: high
+    validation_status: source_located_pending_scholar_review
+  - fact_id: fact_003
+    statement: Iblis refused the command.
+    source_refs:
+      - quran_baqarah_2_30_39
+      - quran_hijr_15_26_44
+      - quran_taha_20_115_123
+      - quran_sad_38_71_85
+    confidence: high
+    validation_status: source_located_pending_scholar_review
+  - fact_id: fact_004
+    statement: Iblis' refusal is connected to arrogance.
+    source_refs:
+      - quran_baqarah_2_30_39
+      - quran_araf_7_11_18
+      - quran_sad_38_71_85
+      - tafsir_ibn_kathir_baqarah_2_34
+    confidence: high
+    validation_status: source_located_pending_scholar_review
+  - fact_id: fact_005
+    statement: Iblis is from the jinn.
+    source_refs:
+      - quran_kahf_18_50
+      - tafsir_ibn_kathir_kahf_18_50
+    confidence: high
+    validation_status: source_located_pending_scholar_review
+  - fact_id: fact_006
+    statement: Iblis argued that fire was superior to clay.
+    source_refs:
+      - quran_araf_7_11_18
+      - quran_sad_38_71_85
+    confidence: high
+    validation_status: source_located_pending_scholar_review
+  - fact_id: fact_007
+    statement: Iblis was expelled after refusing.
+    source_refs:
+      - quran_araf_7_11_18
+      - quran_hijr_15_26_44
+      - quran_sad_38_71_85
+    confidence: high
+    validation_status: source_located_pending_scholar_review
+  - fact_id: fact_008
+    statement: Iblis requested respite until resurrection.
+    source_refs:
+      - quran_araf_7_11_18
+      - quran_hijr_15_26_44
+      - quran_sad_38_71_85
+    confidence: high
+    validation_status: source_located_pending_scholar_review
+  - fact_id: fact_009
+    statement: Iblis declared an intention to mislead humanity.
+    source_refs:
+      - quran_araf_7_11_18
+      - quran_hijr_15_26_44
+      - quran_isra_17_61_65
+      - quran_sad_38_71_85
+    confidence: high
+    validation_status: source_located_pending_scholar_review
+  - fact_id: fact_010
+    statement: Allah's sincere or believing servants are protected from Iblis' authority in the cited passages.
+    source_refs:
+      - quran_hijr_15_26_44
+      - quran_isra_17_61_65
+      - quran_sad_38_71_85
+    confidence: high
+    validation_status: source_located_pending_scholar_review

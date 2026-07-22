@@ -1,0 +1,71 @@
+schema_version: "1.0"
+project_id: insan
+episode_id: episode_01
+content_type: glossary
+terms:
+  - term_id: glossary_adam
+    term: Adam عليه السلام
+    definition: Prophet and first human figure connected to this Qur'anic account.
+    source_refs:
+      - quran_baqarah_2_30_39
+      - quran_sad_38_71_85
+    confidence: high
+    validation_status: source_located_pending_scholar_review
+  - term_id: glossary_iblis
+    term: Iblis
+    definition: The jinn figure who refused the prostration command.
+    source_refs:
+      - quran_kahf_18_50
+      - quran_sad_38_71_85
+    confidence: high
+    validation_status: source_located_pending_scholar_review
+  - term_id: glossary_jinn
+    term: jinn
+    definition: Created from fire according to the cited Hadith and the classification used for Iblis by Al-Kahf 18:50.
+    source_refs:
+      - quran_kahf_18_50
+      - hadith_muslim_2996
+    confidence: high
+    validation_status: source_located_pending_scholar_review
+  - term_id: glossary_angels
+    term: angels
+    definition: The beings commanded to prostrate to Adam in the cited Qur'anic passages.
+    source_refs:
+      - quran_baqarah_2_30_39
+      - quran_sad_38_71_85
+    confidence: high
+    validation_status: source_located_pending_scholar_review
+  - term_id: glossary_sujud
+    term: sujud
+    definition: Prostration; in this event, tafsir discussion treats it as obedience to Allah and honor for Adam, not worship of Adam.
+    source_refs:
+      - quran_baqarah_2_30_39
+      - tafsir_ibn_kathir_baqarah_2_34
+    confidence: medium
+    validation_status: source_located_pending_scholar_review
+  - term_id: glossary_takabbur
+    term: takabbur
+    definition: Arrogance; the episode theme linked to Iblis' refusal and claim of superiority.
+    source_refs:
+      - quran_baqarah_2_30_39
+      - quran_araf_7_11_18
+      - quran_sad_38_71_85
+    confidence: high
+    validation_status: source_located_pending_language_review
+  - term_id: glossary_respite
+    term: respite
+    definition: The delay Iblis requested and was granted until an appointed time.
+    source_refs:
+      - quran_araf_7_11_18
+      - quran_hijr_15_26_44
+      - quran_sad_38_71_85
+    confidence: high
+    validation_status: source_located_pending_language_review
+  - term_id: glossary_unseen
+    term: unseen
+    definition: A research boundary label for matters not visually or physically specified by the approved sources.
+    source_refs:
+      - projects/insan/00_governance/uncertainty_policy.md
+      - projects/insan/00_governance/depiction_policy.md
+    confidence: high
+    validation_status: policy_constraint

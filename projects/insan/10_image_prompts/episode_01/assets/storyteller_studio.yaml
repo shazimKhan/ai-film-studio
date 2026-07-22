@@ -1,0 +1,31 @@
+schema_version: "1.0"
+project_id: insan
+episode_id: episode_01
+asset_id: storyteller_studio
+status: ready_to_generate_subject_to_project_approval
+recommended_aspect_ratio: "16:9"
+recommended_generator: gemini
+master_prompt: >
+  Elegant cinematic storytelling studio for an Urdu Islamic historical
+  documentary drama. A realistic wooden desk, classical books placed on one
+  side, a realistic MacBook placed naturally on the other side, warm desk lamp,
+  restrained manuscript atmosphere, textured neutral walls, subtle shelves,
+  premium documentary lighting, old scholarship feeling blended with modern
+  filmmaking discipline. Highly realistic, tasteful, serious, not fantasy, not
+  theatrical, no readable text on books, papers, walls, or screen.
+negative_prompt: >
+  readable text, Arabic text, Qur'anic text, fake calligraphy, fantasy palace,
+  mosque interior claim, neon lights, clutter, horror lighting, cartoon, AI
+  artifacts, warped laptop, brand-logo emphasis, low resolution
+continuity_lock:
+  desk: wooden
+  books_position: one_side
+  macbook_position: opposite_side
+  mood: elegant_serious_documentary
+camera_neutral_description: Cinematic storyteller studio with wooden desk, books, and MacBook.
+identity_restrictions:
+  - environment_only
+  - no_sacred_text_generated
+depiction_policy_restrictions:
+  - no_unverified_religious_text
+reference_image_guidance: Generate clean empty studio plates and seated-storyteller plates.

@@ -1,0 +1,16 @@
+schema_version: "1.0"
+project_id: insan
+asset_id: clay_formation_space
+asset_type: environment
+status: missing_reference_images
+reusable: true
+continuity_rules:
+  - Clay and earth symbolism only.
+  - Adam عليه السلام remains concealed.
+visual_restrictions:
+  - no_adam_face
+  - no_detailed_body
+  - no_anatomical_creation_sequence
+  - no_angels_collecting_earth_without_approved_source
+reference_status: awaiting_manual_generation
+prompt_ref: projects/insan/10_image_prompts/episode_01/assets/adam_concealed_presence.yaml

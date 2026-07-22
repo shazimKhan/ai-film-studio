@@ -1,0 +1,523 @@
+schema_version: "1.0"
+project_id: insan
+episode_id: episode_01
+status: video_prompts_pending_source_asset_and_depiction_review
+total_video_prompts: 25
+global_motion_constraints:
+  - slow_controlled_cinematic_motion
+  - avoid_exaggerated_motion
+  - avoid_face_drift
+  - avoid_anatomy_changes
+  - avoid_unnecessary_camera_rotation
+  - no_generated_arabic_text
+  - no_visual_allah
+  - adam_face_hidden
+  - angel_faces_hidden
+  - iblis_no_lip_sync
+provider_rules:
+  flow: Use stable image-to-video motion, natural lip-sync only for storyteller.
+  veo: Prioritize cinematic realism, gentle camera movement, no text generation.
+  seedance: Keep subject identity stable, reduce motion complexity.
+  kling: Use controlled motion, no anatomy mutation, no face drift.
+  generic_image_to_video: Preserve input image composition and execute one action only.
+prompts:
+  - shot_id: insan_ep01_shot_001
+    duration_seconds: 12
+    input_image_reference: projects/insan/12_generated_images/episode_01/insan_ep01_shot_001.png
+    single_subject_action: storyteller looks into camera with solemn stillness
+    camera_movement: slow_push_in
+    environmental_movement: very subtle lamp flicker and background stillness
+    facial_movement_restrictions: natural subtle lip movement only, no face drift
+    body_movement_restrictions: shoulders steady, no broad gestures
+    lighting_continuity: warm desk light remains constant
+    motion_realism: natural documentary talking-head motion
+    ending_frame_requirement: storyteller still centered and composed
+    negative_motion_constraints: no head wobble, no hand distortion, no text appearing
+    lip_sync_requirement: required_subtle_storyteller_lip_sync
+    transition_guidance: fade_from_black
+    provider_prompts:
+      flow: Subtle talking-head push-in with natural Urdu lip movement.
+      veo: Controlled documentary push-in, stable face and hands.
+      seedance: Minimal facial motion, locked identity, no background changes.
+      kling: Slow push-in only, no desk object morphing.
+      generic_image_to_video: Preserve input frame; add natural speaking motion.
+  - shot_id: insan_ep01_shot_002
+    duration_seconds: 12
+    input_image_reference: projects/insan/12_generated_images/episode_01/insan_ep01_shot_002.png
+    single_subject_action: storyteller lowers gaze briefly then returns to camera
+    camera_movement: locked_off
+    environmental_movement: none
+    facial_movement_restrictions: subtle lip movement and natural eye movement only
+    body_movement_restrictions: no hand gesture, no posture change
+    lighting_continuity: warm low-contrast lighting
+    motion_realism: subtle human performance
+    ending_frame_requirement: eyes returned to camera
+    negative_motion_constraints: no face morph, no extra fingers, no readable text
+    lip_sync_requirement: required_subtle_storyteller_lip_sync
+    transition_guidance: dissolve_to_unseen_realm
+    provider_prompts:
+      flow: Stable close-up, small eye movement, natural lip-sync.
+      veo: Keep expression restrained and face stable.
+      seedance: Avoid facial drift; no object changes.
+      kling: Minimal motion, no background text.
+      generic_image_to_video: Natural close-up speech with brief gaze dip.
+  - shot_id: insan_ep01_shot_003
+    duration_seconds: 10
+    input_image_reference: projects/insan/12_generated_images/episode_01/insan_ep01_shot_003.png
+    single_subject_action: suspended particles drift in darkness
+    camera_movement: slow_forward_drift
+    environmental_movement: particles drift slowly
+    facial_movement_restrictions: no faces present
+    body_movement_restrictions: no bodies present
+    lighting_continuity: source-less white-gold light remains bodyless
+    motion_realism: restrained atmospheric movement
+    ending_frame_requirement: abstract realm remains non-astronomical
+    negative_motion_constraints: no stars appearing, no galaxies, no text
+    lip_sync_requirement: no_lip_sync
+    transition_guidance: dissolve_from_studio_shadow
+    provider_prompts:
+      flow: Slow atmospheric drift, no new celestial objects.
+      veo: Preserve abstract realm; gentle particle movement only.
+      seedance: Keep frame minimal and non-space-like.
+      kling: No rotation, no planets or stars.
+      generic_image_to_video: Subtle particle drift in abstract darkness.
+  - shot_id: insan_ep01_shot_004
+    duration_seconds: 10
+    input_image_reference: projects/insan/12_generated_images/episode_01/insan_ep01_shot_004.png
+    single_subject_action: angelic radiance remains still while jinn silhouettes stay distant
+    camera_movement: slow_pan_right
+    environmental_movement: faint particle drift
+    facial_movement_restrictions: no faces may appear
+    body_movement_restrictions: no detailed bodies
+    lighting_continuity: white-gold radiance and deep shadow stay separated
+    motion_realism: symbolic slow pan
+    ending_frame_requirement: faceless presences remain separated
+    negative_motion_constraints: no monster emergence, no wings unfolding, no text
+    lip_sync_requirement: no_lip_sync
+    transition_guidance: light_particles_gather
+    provider_prompts:
+      flow: Slow pan across faceless presences; no new figures.
+      veo: Maintain symbolic separation and reverent stillness.
+      seedance: Keep distant forms vague; avoid face generation.
+      kling: No body transformations or wing motion.
+      generic_image_to_video: Subtle pan through abstract presences.
+  - shot_id: insan_ep01_shot_005
+    duration_seconds: 9
+    input_image_reference: projects/insan/12_generated_images/episode_01/insan_ep01_shot_005.png
+    single_subject_action: Iblis presence remains upright and separate
+    camera_movement: slow_push_in
+    environmental_movement: restrained ember shimmer
+    facial_movement_restrictions: no detailed face or mouth movement
+    body_movement_restrictions: silhouette stable, no monster transformation
+    lighting_continuity: dim ember edge light
+    motion_realism: slow symbolic tension
+    ending_frame_requirement: Iblis remains upright and non-Western
+    negative_motion_constraints: no horns growing, no tail, no lip-sync
+    lip_sync_requirement: no_lip_sync
+    transition_guidance: cut_from_assembly
+    provider_prompts:
+      flow: Stable silhouette push-in, ember shimmer only.
+      veo: Do not add horns, face, or mouth movement.
+      seedance: Lock shape; avoid creature mutation.
+      kling: Slow push-in with no anatomy changes.
+      generic_image_to_video: Restrained jinn presence stays still.
+  - shot_id: insan_ep01_shot_006
+    duration_seconds: 9
+    input_image_reference: projects/insan/12_generated_images/episode_01/insan_ep01_shot_006.png
+    single_subject_action: distance between Iblis and angelic radiance becomes visible
+    camera_movement: locked_off
+    environmental_movement: faint light pulse without source body
+    facial_movement_restrictions: no faces
+    body_movement_restrictions: no detailed bodies
+    lighting_continuity: white-gold and ember shadow remain distinct
+    motion_realism: almost still symbolic frame
+    ending_frame_requirement: separation remains clear
+    negative_motion_constraints: no crown, no army motion, no hierarchy symbols
+    lip_sync_requirement: no_lip_sync
+    transition_guidance: cut_to_announcement
+    provider_prompts:
+      flow: Hold separation with tiny light pulse.
+      veo: Keep frame stable and non-hierarchical.
+      seedance: No face or leader iconography.
+      kling: No movement except subtle atmospheric light.
+      generic_image_to_video: Locked-off symbolic separation.
+  - shot_id: insan_ep01_shot_007
+    duration_seconds: 11
+    input_image_reference: projects/insan/12_generated_images/episode_01/insan_ep01_shot_007.png
+    single_subject_action: angelic presences turn toward the light plane
+    camera_movement: slow_tilt_up
+    environmental_movement: light plane breathes softly without forming a body
+    facial_movement_restrictions: no faces
+    body_movement_restrictions: no humanized bodies
+    lighting_continuity: source-less white-gold light
+    motion_realism: slow reverent movement
+    ending_frame_requirement: light remains non-embodied
+    negative_motion_constraints: no divine figure, no throne, no text
+    lip_sync_requirement: no_lip_sync
+    transition_guidance: light_plane_opens
+    provider_prompts:
+      flow: Slow tilt with abstract bodyless light.
+      veo: Preserve no deity depiction; gentle radiance motion.
+      seedance: Avoid face-like light artifacts.
+      kling: No camera spin, no text creation.
+      generic_image_to_video: Reverent tilt toward source-less light plane.
+  - shot_id: insan_ep01_shot_008
+    duration_seconds: 11
+    input_image_reference: projects/insan/12_generated_images/episode_01/insan_ep01_shot_008.png
+    single_subject_action: light expands without forming a body or source figure
+    camera_movement: slow_push_through_particles
+    environmental_movement: particles move gently away from expanding light
+    facial_movement_restrictions: no faces
+    body_movement_restrictions: no body shapes
+    lighting_continuity: bodyless source-less light
+    motion_realism: soft atmospheric expansion
+    ending_frame_requirement: no face or source appears in light
+    negative_motion_constraints: no throne, no figure silhouette, no words
+    lip_sync_requirement: no_lip_sync
+    transition_guidance: dissolve_to_clay
+    provider_prompts:
+      flow: Slow push through particles; light remains abstract.
+      veo: No body, no face, no text in light.
+      seedance: Keep light geometry simple.
+      kling: Avoid face-like patterns.
+      generic_image_to_video: Gentle expanding light without source object.
+  - shot_id: insan_ep01_shot_009
+    duration_seconds: 11
+    input_image_reference: projects/insan/12_generated_images/episode_01/insan_ep01_shot_009.png
+    single_subject_action: clay particles gather softly
+    camera_movement: slow_orbit_limited
+    environmental_movement: clay dust gathers without body formation
+    facial_movement_restrictions: no faces
+    body_movement_restrictions: no body parts
+    lighting_continuity: warm white-gold glow
+    motion_realism: natural dust motion
+    ending_frame_requirement: particles remain abstract
+    negative_motion_constraints: no anatomy forming, no hands, no text
+    lip_sync_requirement: no_lip_sync
+    transition_guidance: particles_emerge
+    provider_prompts:
+      flow: Subtle clay particle gathering, no anatomy.
+      veo: Keep macro detail realistic and non-figurative.
+      seedance: Avoid body-like shapes.
+      kling: Slow orbit only; no transformations.
+      generic_image_to_video: Natural dust drift and gathering.
+  - shot_id: insan_ep01_shot_010
+    duration_seconds: 11
+    input_image_reference: projects/insan/12_generated_images/episode_01/insan_ep01_shot_010.png
+    single_subject_action: concealed presence remains motionless
+    camera_movement: locked_off
+    environmental_movement: light veil and dust move gently
+    facial_movement_restrictions: no face, eyes, or mouth
+    body_movement_restrictions: no body detail or reveal
+    lighting_continuity: veiled white-gold light
+    motion_realism: subtle dust and light only
+    ending_frame_requirement: Adam presence remains fully concealed
+    negative_motion_constraints: no face reveal, no hand reveal, no anatomy changes
+    lip_sync_requirement: no_lip_sync
+    transition_guidance: hold_to_concealment
+    provider_prompts:
+      flow: Preserve concealment; dust movement only.
+      veo: No body reveal at any frame.
+      seedance: Strong concealment lock and minimal motion.
+      kling: Avoid anatomy generation or face drift.
+      generic_image_to_video: Veiled presence stays motionless.
+  - shot_id: insan_ep01_shot_011
+    duration_seconds: 18
+    input_image_reference: projects/insan/12_generated_images/episode_01/insan_ep01_shot_011.png
+    single_subject_action: veil of particles thickens to conceal all detail
+    camera_movement: slow_pull_back
+    environmental_movement: clay particles thicken in front of concealed presence
+    facial_movement_restrictions: no face
+    body_movement_restrictions: no hands or body detail
+    lighting_continuity: dim reverent glow
+    motion_realism: realistic dust veil
+    ending_frame_requirement: all identity details remain hidden
+    negative_motion_constraints: no anatomy reveal, no face, no text
+    lip_sync_requirement: no_lip_sync
+    transition_guidance: dissolve_to_assembly
+    provider_prompts:
+      flow: Slow pull-back, concealment increases.
+      veo: Dust veil must hide all identity details.
+      seedance: No body emergence; keep abstract.
+      kling: Avoid forming limbs or face.
+      generic_image_to_video: Concealing particles thicken respectfully.
+  - shot_id: insan_ep01_shot_012
+    duration_seconds: 12
+    input_image_reference: projects/insan/12_generated_images/episode_01/insan_ep01_shot_012.png
+    single_subject_action: angelic presences align toward concealed Adam presence
+    camera_movement: slow_push_in
+    environmental_movement: light planes hold steady
+    facial_movement_restrictions: no angel faces, Adam face hidden
+    body_movement_restrictions: no detailed bodies
+    lighting_continuity: white-gold planes
+    motion_realism: solemn controlled alignment
+    ending_frame_requirement: presences aligned, no forbidden depiction
+    negative_motion_constraints: no faces, no divine body, no text
+    lip_sync_requirement: no_lip_sync
+    transition_guidance: light_plane_opens
+    provider_prompts:
+      flow: Slow push-in toward faceless aligned presences.
+      veo: Keep Adam concealed and angels faceless.
+      seedance: Avoid face artifacts.
+      kling: No body mutation or camera rotation.
+      generic_image_to_video: Reverent alignment motion.
+  - shot_id: insan_ep01_shot_013
+    duration_seconds: 12
+    input_image_reference: projects/insan/12_generated_images/episode_01/insan_ep01_shot_013.png
+    single_subject_action: radiance begins the prostration motion
+    camera_movement: locked_off
+    environmental_movement: gentle light falloff
+    facial_movement_restrictions: no faces
+    body_movement_restrictions: faceless radiance only, no anatomy
+    lighting_continuity: bright soft white-gold
+    motion_realism: slow symbolic lowering
+    ending_frame_requirement: radiance partially lowered
+    negative_motion_constraints: no wings unfolding, no faces, no text
+    lip_sync_requirement: no_lip_sync
+    transition_guidance: continuation_to_sujud
+    provider_prompts:
+      flow: Slow lowering of faceless light forms.
+      veo: Maintain abstraction and avoid bodies.
+      seedance: No face-like patterns.
+      kling: Lowering motion only, no transformations.
+      generic_image_to_video: Luminous non-facial prostration motion.
+  - shot_id: insan_ep01_shot_014
+    duration_seconds: 10
+    input_image_reference: projects/insan/12_generated_images/episode_01/insan_ep01_shot_014.png
+    single_subject_action: angelic presences complete prostration
+    camera_movement: slow_lateral_slide
+    environmental_movement: subtle particle drift
+    facial_movement_restrictions: no faces
+    body_movement_restrictions: no anatomy focus
+    lighting_continuity: reverent white-gold light
+    motion_realism: restrained group motion
+    ending_frame_requirement: ordered lowered radiance
+    negative_motion_constraints: no individual angel faces, no text
+    lip_sync_requirement: no_lip_sync
+    transition_guidance: slow_slide
+    provider_prompts:
+      flow: Lateral slide across faceless lowered radiance.
+      veo: Keep row order stable.
+      seedance: Avoid morphing light into faces.
+      kling: No anatomy changes.
+      generic_image_to_video: Slow slide over symbolic obedience.
+  - shot_id: insan_ep01_shot_015
+    duration_seconds: 10
+    input_image_reference: projects/insan/12_generated_images/episode_01/insan_ep01_shot_015.png
+    single_subject_action: camera reveals one space that did not lower
+    camera_movement: slow_pan_to_empty_space
+    environmental_movement: dimming edge light
+    facial_movement_restrictions: no faces
+    body_movement_restrictions: no body reveal
+    lighting_continuity: edge light dims
+    motion_realism: slow reveal
+    ending_frame_requirement: upright refusal space visible
+    negative_motion_constraints: no Iblis mouth, no devil costume, no text
+    lip_sync_requirement: no_lip_sync
+    transition_guidance: reveal_to_iblis
+    provider_prompts:
+      flow: Slow pan to upright shadow gap.
+      veo: Use absence and contrast, no monster reveal.
+      seedance: Keep shadow abstract.
+      kling: No sudden movement.
+      generic_image_to_video: Reveal one unlowered space.
+  - shot_id: insan_ep01_shot_016
+    duration_seconds: 10
+    input_image_reference: projects/insan/12_generated_images/episode_01/insan_ep01_shot_016.png
+    single_subject_action: Iblis remains standing
+    camera_movement: slow_push_in
+    environmental_movement: ember shimmer only
+    facial_movement_restrictions: no detailed face or lip movement
+    body_movement_restrictions: silhouette stable, no transformation
+    lighting_continuity: ember edge light
+    motion_realism: slow tension
+    ending_frame_requirement: Iblis upright, no Western devil features
+    negative_motion_constraints: no horns, no tail, no red skin, no lip-sync
+    lip_sync_requirement: no_lip_sync
+    transition_guidance: hard_cut_from_obedience
+    provider_prompts:
+      flow: Push in on stable symbolic Iblis silhouette.
+      veo: No facial detail or devil iconography.
+      seedance: Prevent shape mutation.
+      kling: Slow push-in only.
+      generic_image_to_video: Upright jinn presence holds still.
+  - shot_id: insan_ep01_shot_017
+    duration_seconds: 10
+    input_image_reference: projects/insan/12_generated_images/episode_01/insan_ep01_shot_017.png
+    single_subject_action: shadow gathers around the upright presence
+    camera_movement: locked_off
+    environmental_movement: shadow tightens subtly
+    facial_movement_restrictions: no face detail
+    body_movement_restrictions: no transformation
+    lighting_continuity: ember and shadow
+    motion_realism: minimal symbolic motion
+    ending_frame_requirement: shadow gathered, no face revealed
+    negative_motion_constraints: no teeth, no horns, no gore, no text
+    lip_sync_requirement: no_lip_sync
+    transition_guidance: cut_to_fire_clay
+    provider_prompts:
+      flow: Subtle shadow tightening only.
+      veo: Keep profile abstract and stable.
+      seedance: No facial generation.
+      kling: No monster transformation.
+      generic_image_to_video: Shadow gathers around still presence.
+  - shot_id: insan_ep01_shot_018
+    duration_seconds: 11
+    input_image_reference: projects/insan/12_generated_images/episode_01/insan_ep01_shot_018.png
+    single_subject_action: fire rises while clay remains still
+    camera_movement: slow_push_in
+    environmental_movement: restrained fire texture rises slowly
+    facial_movement_restrictions: no faces in fire
+    body_movement_restrictions: no bodies
+    lighting_continuity: ember versus warm clay
+    motion_realism: natural flame-like texture, not fantasy magic
+    ending_frame_requirement: fire-clay contrast remains readable
+    negative_motion_constraints: no face in flames, no text, no body parts
+    lip_sync_requirement: no_lip_sync
+    transition_guidance: cut_to_symbolism
+    provider_prompts:
+      flow: Subtle rising fire texture and still clay.
+      veo: No face-like flame pattern.
+      seedance: Keep split composition stable.
+      kling: No fantasy spell effects.
+      generic_image_to_video: Realistic restrained fire-clay motion.
+  - shot_id: insan_ep01_shot_019
+    duration_seconds: 11
+    input_image_reference: projects/insan/12_generated_images/episode_01/insan_ep01_shot_019.png
+    single_subject_action: Iblis turns away from clay symbolism
+    camera_movement: slow_lateral_move
+    environmental_movement: ember texture flickers lightly
+    facial_movement_restrictions: no mouth detail or lip-sync
+    body_movement_restrictions: minimal turn only, no transformation
+    lighting_continuity: ember edge and deep shadow
+    motion_realism: controlled symbolic turn
+    ending_frame_requirement: Iblis remains turned away, no devil features
+    negative_motion_constraints: no horns, no tail, no monster face, no text
+    lip_sync_requirement: no_lip_sync
+    transition_guidance: light_withdraws
+    provider_prompts:
+      flow: Slow symbolic turn away, no mouth movement.
+      veo: Preserve silhouette and avoid devil imagery.
+      seedance: Keep motion minimal to avoid mutation.
+      kling: No anatomy changes.
+      generic_image_to_video: Controlled turn from clay symbolism.
+  - shot_id: insan_ep01_shot_020
+    duration_seconds: 12
+    input_image_reference: projects/insan/12_generated_images/episode_01/insan_ep01_shot_020.png
+    single_subject_action: boundary of light recedes
+    camera_movement: slow_pull_back
+    environmental_movement: radiance withdraws into darkness
+    facial_movement_restrictions: no faces in light
+    body_movement_restrictions: no bodies
+    lighting_continuity: white-gold receding to black
+    motion_realism: solemn controlled recession
+    ending_frame_requirement: boundary remains abstract and bodyless
+    negative_motion_constraints: no divine figure, no throne, no horror portal
+    lip_sync_requirement: no_lip_sync
+    transition_guidance: light_recedes
+    provider_prompts:
+      flow: Slow pull-back as radiance recedes.
+      veo: Avoid portal/fantasy and deity imagery.
+      seedance: Keep geometry abstract.
+      kling: No text or figure appears.
+      generic_image_to_video: Minimal symbolic expulsion boundary motion.
+  - shot_id: insan_ep01_shot_021
+    duration_seconds: 12
+    input_image_reference: projects/insan/12_generated_images/episode_01/insan_ep01_shot_021.png
+    single_subject_action: Iblis presence stands beyond the boundary
+    camera_movement: locked_off
+    environmental_movement: low ember pulse
+    facial_movement_restrictions: no face detail
+    body_movement_restrictions: no transformation
+    lighting_continuity: low ember with absent radiance
+    motion_realism: stillness with tiny atmospheric motion
+    ending_frame_requirement: post-expulsion presence holds in shadow
+    negative_motion_constraints: no horns, no tail, no gore, no lip-sync
+    lip_sync_requirement: no_lip_sync
+    transition_guidance: shadow_hold
+    provider_prompts:
+      flow: Hold shadowed Iblis with subtle ember pulse.
+      veo: No transformation, no Western devil features.
+      seedance: Lock silhouette shape.
+      kling: Still frame with atmospheric shimmer only.
+      generic_image_to_video: Somber static post-expulsion hold.
+  - shot_id: insan_ep01_shot_022
+    duration_seconds: 14
+    input_image_reference: projects/insan/12_generated_images/episode_01/insan_ep01_shot_022.png
+    single_subject_action: shadow extends along the edge of the path
+    camera_movement: slow_forward_drift
+    environmental_movement: shadow crawls subtly along path edge
+    facial_movement_restrictions: no faces
+    body_movement_restrictions: no human bodies or crowds
+    lighting_continuity: dim path with distant light
+    motion_realism: symbolic restrained motion
+    ending_frame_requirement: path remains visible with shadow edge
+    negative_motion_constraints: no horror chase, no faces, no text
+    lip_sync_requirement: no_lip_sync
+    transition_guidance: shadow_extends
+    provider_prompts:
+      flow: Slow shadow extension along abstract path.
+      veo: Keep path symbolic, no people or afterlife visuals.
+      seedance: Avoid face generation in shadows.
+      kling: No rapid motion or camera spin.
+      generic_image_to_video: Restrained path-and-shadow motion.
+  - shot_id: insan_ep01_shot_023
+    duration_seconds: 14
+    input_image_reference: projects/insan/12_generated_images/episode_01/insan_ep01_shot_023.png
+    single_subject_action: distant light remains visible beyond shadow
+    camera_movement: slow_push_forward
+    environmental_movement: faint distant light shimmer
+    facial_movement_restrictions: no faces
+    body_movement_restrictions: no people
+    lighting_continuity: low-key with distant white-gold
+    motion_realism: slow symbolic push
+    ending_frame_requirement: distant light remains visible
+    negative_motion_constraints: no paradise scene, no hell scene, no text
+    lip_sync_requirement: no_lip_sync
+    transition_guidance: dissolve_back_to_studio
+    provider_prompts:
+      flow: Slow push along symbolic path toward distant light.
+      veo: Keep symbolism minimal and non-literal.
+      seedance: No figures or text added.
+      kling: Smooth push, no rotation.
+      generic_image_to_video: Distant light holds beyond shadow.
+  - shot_id: insan_ep01_shot_024
+    duration_seconds: 15
+    input_image_reference: projects/insan/12_generated_images/episode_01/insan_ep01_shot_024.png
+    single_subject_action: storyteller delivers closing moral with controlled emotion
+    camera_movement: slow_push_in
+    environmental_movement: subtle warm desk-light presence
+    facial_movement_restrictions: natural subtle lip movement, no face drift
+    body_movement_restrictions: calm posture, no broad gesture
+    lighting_continuity: warm key with deeper shadow
+    motion_realism: natural documentary performance
+    ending_frame_requirement: storyteller composed and centered
+    negative_motion_constraints: no object morphing, no text appearing, no overacting
+    lip_sync_requirement: required_subtle_storyteller_lip_sync
+    transition_guidance: dissolve_from_path
+    provider_prompts:
+      flow: Natural Urdu lip-sync, slow push-in, stable face.
+      veo: Documentary realism and controlled expression.
+      seedance: Maintain face and wardrobe consistency.
+      kling: No hands/object distortion.
+      generic_image_to_video: Talking-head closing moral with subtle motion.
+  - shot_id: insan_ep01_shot_025
+    duration_seconds: 15
+    input_image_reference: projects/insan/12_generated_images/episode_01/insan_ep01_shot_025.png
+    single_subject_action: storyteller pauses after final line
+    camera_movement: locked_off
+    environmental_movement: warm light fades gently
+    facial_movement_restrictions: mouth closes naturally, eyes steady
+    body_movement_restrictions: still posture
+    lighting_continuity: warm fade to shadow
+    motion_realism: quiet realistic pause
+    ending_frame_requirement: fade-ready still frame
+    negative_motion_constraints: no text overlay, no face morph, no sudden movement
+    lip_sync_requirement: required_then_stop_after_final_line
+    transition_guidance: fade_to_black
+    provider_prompts:
+      flow: Let lip-sync stop naturally, hold final pause.
+      veo: Gentle fade-ready stillness.
+      seedance: Keep face stable and quiet.
+      kling: No new text or object changes.
+      generic_image_to_video: Final reflective hold before fade.

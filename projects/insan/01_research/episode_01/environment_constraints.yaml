@@ -1,0 +1,40 @@
+schema_version: "1.0"
+project_id: insan
+episode_id: episode_01
+content_type: environment_constraints_research
+environments:
+  - environment_id: unseen_realm
+    statements:
+      - statement: The pre-Earth unseen realm is not established as a physical astronomical location.
+        source_refs:
+          - quran_baqarah_2_30_39
+          - quran_sad_38_71_85
+          - projects/insan/00_governance/uncertainty_policy.md
+        confidence: high
+        validation_status: research_boundary
+      - statement: This environment must not be represented as literal outer space, planets, galaxies, cities, or Earth landscape.
+        source_refs:
+          - user_instruction_2026_07_22
+          - projects/insan/00_governance/uncertainty_policy.md
+        confidence: high
+        validation_status: policy_constraint
+  - environment_id: clay_creation_context
+    statements:
+      - statement: Clay and earth language is sourced, but the exact visual mechanics of Adam's creation are not approved for depiction.
+        source_refs:
+          - quran_hijr_15_26_44
+          - quran_sad_38_71_85
+          - hadith_abi_dawud_4693
+          - projects/insan/00_governance/depiction_policy.md
+        confidence: high
+        validation_status: source_located_pending_depiction_review
+  - environment_id: paradise_context
+    statements:
+      - statement: Paradise appears in related context after the prostration/refusal material, but this research package does not authorize visual depiction of Paradise.
+        source_refs:
+          - quran_baqarah_2_30_39
+          - quran_taha_20_115_123
+          - hadith_muslim_854b
+          - projects/insan/00_governance/depiction_policy.md
+        confidence: medium
+        validation_status: research_boundary

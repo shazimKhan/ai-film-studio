@@ -1,0 +1,750 @@
+schema_version: "1.0"
+project_id: insan
+episode_id: episode_01
+status: image_prompts_pending_source_and_depiction_review
+total_shot_prompts: 25
+global_requirements:
+  - no_visible_allah
+  - no_throne_or_divine_body
+  - no_generated_arabic_text
+  - no_generated_quranic_text
+  - adam_face_hidden
+  - angel_faces_hidden
+  - iblis_not_western_horned_devil
+  - realistic_cinematic_documentary
+provider_adaptation_rules:
+  gemini: Use natural-language cinematic detail and preserve all negative constraints.
+  flow: Favor clean subject lock, stable composition, and image-to-video readiness.
+  veo_image_workflow: Produce a stable keyframe with clear motion affordance and no text.
+  seedance_image_input_workflow: Use strong continuity locks and simple silhouette-safe composition.
+  generic_cinematic_image_model: Use direct photographic language and avoid sacred-text generation.
+prompts:
+  - shot_id: insan_ep01_shot_001
+    approval_status: ready_to_generate_subject_to_project_approval
+    locked_asset_references:
+      - storyteller
+      - storyteller_studio
+    master_prompt: >
+      Medium close-up of the approved storyteller seated centered at the wooden
+      desk in the approved storyteller studio. Pakistani Muslim male, 30-35,
+      charcoal kurta, simple waistcoat, thoughtful face, neatly trimmed beard,
+      composed brown eyes. Books on one side, MacBook on the other, no readable
+      text. Front eye-level 50mm lens, slow-push-in keyframe, warm soft desk
+      light, serious reflective atmosphere, realistic cinematic documentary.
+    exact_scene_composition: storyteller centered at desk
+    subject_placement: center_frame
+    environment: storyteller_studio
+    camera: medium_close_up_front_eye_level
+    lens: 50mm
+    lighting: warm_key_soft_shadow
+    atmosphere: solemn_documentary
+    visual_symbolism: human arrogance introduced through direct address
+    continuity_instructions: keep wardrobe, desk layout, face, beard, and lighting consistent
+    depiction_restrictions:
+      - no_sacred_figure_depiction
+      - no_readable_religious_text
+    negative_prompt: readable text, Arabic text, Qur'anic text, distorted hands, plastic skin, fantasy costume
+    provider_adaptations:
+      gemini: Generate a highly realistic cinematic storyteller keyframe; preserve desk continuity and no readable text.
+      flow: Create a stable talking-head keyframe with natural face proportions for later lip-sync.
+      veo_image_workflow: Use as opening keyframe; leave room for subtle push-in and mouth movement.
+      seedance_image_input_workflow: Keep face stable and centered, no text on screen.
+      generic_cinematic_image_model: Photorealistic documentary studio portrait, warm light, no text.
+  - shot_id: insan_ep01_shot_002
+    approval_status: ready_to_generate_subject_to_project_approval
+    locked_asset_references:
+      - storyteller
+      - storyteller_studio
+    master_prompt: >
+      Close-up of the same storyteller at the same desk, slight front-left angle,
+      calm eyes, restrained emotion, one hand near the desk edge but not dominant.
+      Classical books and MacBook softly visible and unreadable. 85mm lens,
+      warm low-contrast cinematic light, natural skin texture, no AI look.
+    exact_scene_composition: storyteller close-up with desk edge
+    subject_placement: center_slight_left
+    environment: storyteller_studio
+    camera: close_up_slight_front_left
+    lens: 85mm
+    lighting: warm_low_contrast
+    atmosphere: introspective
+    visual_symbolism: storyteller lowers ego before discussing arrogance
+    continuity_instructions: match shot_001 identity and wardrobe
+    depiction_restrictions:
+      - narrator_asset_only
+      - no_quranic_text
+    negative_prompt: readable text, Arabic text, overacting, warped laptop, distorted fingers
+    provider_adaptations:
+      gemini: Generate a quiet realistic close-up, same storyteller identity, no readable text.
+      flow: Stable face reference for subtle lip movement and controlled gaze change.
+      veo_image_workflow: Close-up keyframe with natural expression, no text.
+      seedance_image_input_workflow: Use strong face continuity, minimal background clutter.
+      generic_cinematic_image_model: Photorealistic close-up, warm desk light, restrained emotion.
+  - shot_id: insan_ep01_shot_003
+    approval_status: needs_depiction_review
+    locked_asset_references:
+      - unseen_realm
+    master_prompt: >
+      Extreme wide abstract pre-Earth unseen realm: deep darkness, suspended
+      particles, source-less white-gold light, luminous planes, vast negative
+      space. No planets, stars, galaxies, Earth, city, palace, throne, divine
+      body, or readable text. 35mm wide cinematic frame, slow-forward-drift
+      keyframe, ancient reverent mood.
+    exact_scene_composition: vast negative space with light particles
+    subject_placement: environment_full_frame
+    environment: unseen_realm
+    camera: wide_frontal
+    lens: 35mm
+    lighting: source_less_white_gold
+    atmosphere: ancient_reverent
+    visual_symbolism: existence before humanity without literal astronomy
+    continuity_instructions: keep realm abstract and non-physical
+    depiction_restrictions:
+      - no_visual_allah
+      - no_literal_outer_space
+    negative_prompt: planets, stars, galaxies, throne, divine body, Arabic text, Qur'anic text
+    provider_adaptations:
+      gemini: Generate abstract cinematic unseen realm, not outer space.
+      flow: Stable environmental plate with slow drift potential.
+      veo_image_workflow: Keyframe should allow subtle particle movement.
+      seedance_image_input_workflow: Keep composition simple and non-astronomical.
+      generic_cinematic_image_model: Photorealistic abstract darkness with source-less white-gold light.
+  - shot_id: insan_ep01_shot_004
+    approval_status: needs_depiction_review
+    locked_asset_references:
+      - angelic_presence
+      - background_jinn_presence
+      - unseen_realm
+    master_prompt: >
+      Wide shot of distant faceless angelic radiance and vague background jinn
+      shadow presences separated across the abstract unseen realm. No faces, no
+      monster bodies, no detailed wings, no Western demons. White-gold radiance
+      remains still while distant ember shadows stay far back. Slight high-angle
+      40mm lens, solemn cinematic realism.
+    exact_scene_composition: faceless presences separated by light and shadow
+    subject_placement: angelic_light_left_jinn_shadows_far_right
+    environment: unseen_realm
+    camera: wide_slight_high_angle
+    lens: 40mm
+    lighting: white_gold_against_deep_black
+    atmosphere: solemn
+    visual_symbolism: obedience and unseen created beings
+    continuity_instructions: keep presences non-specific and faceless
+    depiction_restrictions:
+      - angel_faces_hidden
+      - no_jinn_monster_design
+    negative_prompt: faces, wings detail, horns, tails, red demons, Arabic text
+    provider_adaptations:
+      gemini: Generate restrained symbolic presences with no faces.
+      flow: Separate light and shadow groups clearly for motion staging.
+      veo_image_workflow: Provide stable wide keyframe with driftable particles.
+      seedance_image_input_workflow: Avoid small facial artifacts in distant presences.
+      generic_cinematic_image_model: Cinematic abstract group presence, no character portraits.
+  - shot_id: insan_ep01_shot_005
+    approval_status: needs_depiction_review
+    locked_asset_references:
+      - iblis_pre_rebellion
+      - unseen_realm
+    master_prompt: >
+      Medium-wide symbolic shot of Iblis before rebellion as a restrained jinn
+      presence at the edge of shadow, non-Western, no horns, no tail, no red
+      devil skin, no angel wings. Dim ember edge light, no detailed face or
+      mouth. Profile-left symbolic angle, 65mm lens, tense restrained mood.
+    exact_scene_composition: Iblis isolated in edge shadow
+    subject_placement: right_third
+    environment: unseen_realm
+    camera: medium_wide_profile_left_symbolic
+    lens: 65mm
+    lighting: dim_ember_edge_light
+    atmosphere: tense_restrained
+    visual_symbolism: separation before refusal
+    continuity_instructions: Iblis is jinn, not angel
+    depiction_restrictions:
+      - no_western_devil_imagery
+      - no_angelic_identity
+    negative_prompt: horns, tail, pitchfork, red demon, angel wings, mouth detail, Arabic text
+    provider_adaptations:
+      gemini: Generate symbolic jinn presence with restrained ember texture.
+      flow: Keep silhouette stable for later slow push-in.
+      veo_image_workflow: Keyframe must avoid facial detail and horns.
+      seedance_image_input_workflow: Strong silhouette continuity, no monster design.
+      generic_cinematic_image_model: Realistic symbolic shadow presence, not fantasy horror.
+  - shot_id: insan_ep01_shot_006
+    approval_status: needs_depiction_review
+    locked_asset_references:
+      - iblis_pre_rebellion
+      - angelic_presence
+      - unseen_realm
+    master_prompt: >
+      High wide shot showing Iblis' shadow presence apart from faceless angelic
+      radiance in the abstract unseen realm. The separation is spatial and
+      symbolic only. No leader symbolism, no throne, no faces, no angel wings
+      detail. White-gold radiance far from ember shadow, 35mm lens.
+    exact_scene_composition: Iblis shadow apart from angelic light
+    subject_placement: iblis_lower_right_angelic_radiance_upper_left
+    environment: unseen_realm
+    camera: high_wide
+    lens: 35mm
+    lighting: white_gold_and_ember_shadow
+    atmosphere: separation
+    visual_symbolism: Iblis not angel
+    continuity_instructions: avoid portraying rank or kingship
+    depiction_restrictions:
+      - no_leader_of_jinn_claim
+      - angel_faces_hidden
+    negative_prompt: crown, army leader, horns, angel face, throne, Arabic text
+    provider_adaptations:
+      gemini: Generate symbolic separation without hierarchy claims.
+      flow: Stable high-wide composition for clean cut.
+      veo_image_workflow: Preserve distance between presences.
+      seedance_image_input_workflow: Avoid faces in all presences.
+      generic_cinematic_image_model: Abstract wide frame with clear light-shadow separation.
+  - shot_id: insan_ep01_shot_007
+    approval_status: needs_source_and_depiction_review
+    locked_asset_references:
+      - angelic_presence
+      - unseen_realm
+      - source_less_white_gold_light
+    master_prompt: >
+      Extreme wide shot of faceless angelic presences oriented toward a
+      source-less white-gold light plane. The light has no body, no face, no
+      throne, no visual source. Low wide 28mm lens, solemn awe, abstract unseen
+      realm, no generated text.
+    exact_scene_composition: angelic presences face a source-less light plane
+    subject_placement: angelic_radiance_lower_frame_light_plane_upper_frame
+    environment: unseen_realm
+    camera: extreme_wide_low_angle
+    lens: 28mm
+    lighting: source_less_white_gold
+    atmosphere: awe_reverence
+    visual_symbolism: divine command narrated without embodiment
+    continuity_instructions: light must never form a body or face
+    depiction_restrictions:
+      - no_visual_allah
+      - no_throne
+    negative_prompt: divine body, face in light, throne, Arabic text, readable text
+    provider_adaptations:
+      gemini: Generate reverent non-embodied light and faceless presences.
+      flow: Keyframe ready for slow tilt up, no text.
+      veo_image_workflow: Leave clean space for post overlay, no generated words.
+      seedance_image_input_workflow: Keep light abstract and bodyless.
+      generic_cinematic_image_model: Cinematic source-less light plane, no deity depiction.
+  - shot_id: insan_ep01_shot_008
+    approval_status: needs_source_and_depiction_review
+    locked_asset_references:
+      - source_less_white_gold_light
+      - unseen_realm
+    master_prompt: >
+      Wide image of a white-gold light plane expanding across deep darkness
+      without any visible source, body, face, throne, or object. Suspended
+      particles, solemn sacred restraint, front-wide 32mm composition, no
+      text.
+    exact_scene_composition: white-gold plane expands across darkness
+    subject_placement: center_expanding_plane
+    environment: unseen_realm
+    camera: front_wide
+    lens: 32mm
+    lighting: source_less_white_gold
+    atmosphere: sacred_restraint
+    visual_symbolism: command without embodied divine presence
+    continuity_instructions: no source figure may appear
+    depiction_restrictions:
+      - no_visual_allah
+      - no_face_in_light
+    negative_prompt: face, body, throne, object source, Arabic text, Qur'anic text
+    provider_adaptations:
+      gemini: Generate abstract light plane with no source figure.
+      flow: Stable luminous plate for slow particle movement.
+      veo_image_workflow: Keyframe can dissolve to clay, no text.
+      seedance_image_input_workflow: Avoid face-like patterns in light.
+      generic_cinematic_image_model: Minimal abstract cinematic light plane.
+  - shot_id: insan_ep01_shot_009
+    approval_status: needs_source_and_depiction_review
+    locked_asset_references:
+      - clay_particles
+      - clay_formation_space
+    master_prompt: >
+      Macro cinematic shot of clay particles suspended in deep darkness, softly
+      gathering without forming anatomy. Warm white-gold low light, side macro
+      100mm lens, humble origin symbolism, no face, no hands, no body parts,
+      no text.
+    exact_scene_composition: clay particles suspended in void
+    subject_placement: center_macro_particles
+    environment: clay_formation_space
+    camera: side_macro
+    lens: 100mm_macro
+    lighting: low_warm_white_gold
+    atmosphere: humble_sacred
+    visual_symbolism: earth and clay origin
+    continuity_instructions: do not show anatomical creation sequence
+    depiction_restrictions:
+      - adam_face_hidden
+      - no_body_parts
+    negative_prompt: face, hands, body, anatomy, Arabic text, readable text
+    provider_adaptations:
+      gemini: Generate clay particle macro with no anatomy.
+      flow: Stable particles for subtle gathering motion.
+      veo_image_workflow: Keyframe supports slow particle drift.
+      seedance_image_input_workflow: Keep shapes abstract, no body formation.
+      generic_cinematic_image_model: Photorealistic clay dust macro, sacred restraint.
+  - shot_id: insan_ep01_shot_010
+    approval_status: needs_depiction_review
+    locked_asset_references:
+      - adam_concealed_presence
+      - clay_formation_space
+    master_prompt: >
+      Medium-wide rear three-quarter symbolic shot of Adam عليه السلام as a
+      concealed presence behind veiled light and clay dust. No face, no hands,
+      no body detail, no reusable identity. 70mm lens, motionless sacred
+      restraint, clay formation space, no text.
+    exact_scene_composition: concealed presence behind light and clay dust
+    subject_placement: center_obscured
+    environment: clay_formation_space
+    camera: rear_three_quarter_symbolic
+    lens: 70mm
+    lighting: veiled_white_gold
+    atmosphere: reverent
+    visual_symbolism: Prophet presence without depiction
+    continuity_instructions: conceal all identifiable details
+    depiction_restrictions:
+      - prophet_face_hidden
+      - no_reusable_prophet_identity
+    negative_prompt: face, eyes, hands, detailed body, anatomy, Arabic text, Qur'anic text
+    provider_adaptations:
+      gemini: Generate concealed presence only, no facial or body identity.
+      flow: Stable non-facial keyframe with no anatomy drift.
+      veo_image_workflow: Use for subtle dust movement, not body reveal.
+      seedance_image_input_workflow: Strong negative on face/body detail.
+      generic_cinematic_image_model: Respectful obscured presence with clay dust.
+  - shot_id: insan_ep01_shot_011
+    approval_status: needs_depiction_review
+    locked_asset_references:
+      - adam_concealed_presence
+      - clay_particles
+    master_prompt: >
+      Medium-wide rear-low shot of veiled clay particles thickening around the
+      concealed Adam presence, completely obscuring face, hands, and body.
+      85mm lens, dim reverent glow, careful non-figurative composition.
+    exact_scene_composition: veil of particles hides all detail
+    subject_placement: center_fully_obscured
+    environment: clay_formation_space
+    camera: rear_low_medium_wide
+    lens: 85mm
+    lighting: dim_reverent_glow
+    atmosphere: careful_reverence
+    visual_symbolism: unknown visual details remain concealed
+    continuity_instructions: never reveal anatomy
+    depiction_restrictions:
+      - adam_face_hidden
+      - no_hands
+      - no_body_detail
+    negative_prompt: face, hands, anatomy, body reveal, text, Arabic text
+    provider_adaptations:
+      gemini: Generate concealment-first frame with clay dust and light.
+      flow: Stable obscuring veil, no body reveal.
+      veo_image_workflow: Keyframe for pull-back without revealing identity.
+      seedance_image_input_workflow: Keep subject abstract and fully hidden.
+      generic_cinematic_image_model: Non-figurative sacred concealment frame.
+  - shot_id: insan_ep01_shot_012
+    approval_status: needs_source_and_depiction_review
+    locked_asset_references:
+      - angelic_presence
+      - adam_concealed_presence
+      - unseen_realm
+    master_prompt: >
+      Wide high-angle composition of faceless angelic presences aligned toward
+      the concealed Adam presence. Abstract unseen realm, white-gold planes, no
+      visible Allah, no throne, no angel faces, Adam fully concealed. 35mm lens.
+    exact_scene_composition: angelic presences align toward concealed Adam
+    subject_placement: angelic_radiance_surrounds_obscured_center
+    environment: unseen_realm
+    camera: high_wide
+    lens: 35mm
+    lighting: white_gold_planes
+    atmosphere: obedience
+    visual_symbolism: command and obedience without forbidden depiction
+    continuity_instructions: all sacred figures remain non-facial
+    depiction_restrictions:
+      - no_visual_allah
+      - angel_faces_hidden
+      - adam_face_hidden
+    negative_prompt: face, throne, divine body, wings detail, Arabic text
+    provider_adaptations:
+      gemini: Generate a reverent faceless alignment frame.
+      flow: Stable composition for subtle forward camera movement.
+      veo_image_workflow: Keyframe for command scene, no generated text.
+      seedance_image_input_workflow: Avoid face-like artifacts in radiance.
+      generic_cinematic_image_model: Cinematic faceless assembly in abstract realm.
+  - shot_id: insan_ep01_shot_013
+    approval_status: needs_depiction_review
+    locked_asset_references:
+      - angelic_presence
+      - unseen_realm
+    master_prompt: >
+      Symbolic close shot of faceless white-gold radiance beginning to lower in
+      prostration, no human faces, no detailed wings, no body anatomy focus.
+      Front-low 50mm lens, solemn submission, abstract unseen realm.
+    exact_scene_composition: faceless radiance lowers toward foreground
+    subject_placement: foreground_radiance
+    environment: unseen_realm
+    camera: close_symbolic_front_low
+    lens: 50mm
+    lighting: bright_soft_white_gold
+    atmosphere: solemn_submission
+    visual_symbolism: obedience to command
+    continuity_instructions: keep angels as faceless presence
+    depiction_restrictions:
+      - angel_faces_hidden
+      - no_generated_quranic_text
+    negative_prompt: faces, detailed wings, human anatomy, Arabic text, readable text
+    provider_adaptations:
+      gemini: Generate faceless radiance lowering, not portraits.
+      flow: Keyframe should support a slow lowering motion.
+      veo_image_workflow: No faces or text; clear prostration symbolism.
+      seedance_image_input_workflow: Keep all forms abstract.
+      generic_cinematic_image_model: Luminous non-facial submission image.
+  - shot_id: insan_ep01_shot_014
+    approval_status: needs_depiction_review
+    locked_asset_references:
+      - angelic_presence
+      - unseen_realm
+    master_prompt: >
+      Wide high-angle frame of ordered rows of faceless white-gold radiance
+      lowered in obedience. No faces, no wings detail, no human anatomy, no
+      Arabic text. 32mm lens, slow lateral composition, reverent light.
+    exact_scene_composition: rows of faceless radiance lowered
+    subject_placement: ordered_rows_across_frame
+    environment: unseen_realm
+    camera: wide_high_angle
+    lens: 32mm
+    lighting: reverent_white_gold
+    atmosphere: submission
+    visual_symbolism: collective obedience
+    continuity_instructions: maintain faceless non-individual presence
+    depiction_restrictions:
+      - angel_faces_hidden
+      - no_individual_angel_identity
+    negative_prompt: angel faces, detailed wings, readable text, Qur'anic text
+    provider_adaptations:
+      gemini: Generate ordered faceless radiance in prostration.
+      flow: Stable rows for slow lateral slide.
+      veo_image_workflow: Keep geometry stable and non-facial.
+      seedance_image_input_workflow: Avoid face-like details in light forms.
+      generic_cinematic_image_model: Wide symbolic obedience frame.
+  - shot_id: insan_ep01_shot_015
+    approval_status: needs_depiction_review
+    locked_asset_references:
+      - angelic_presence
+      - iblis_pre_rebellion
+      - unseen_realm
+    master_prompt: >
+      Medium-wide side frame revealing one upright dark space at the edge of
+      lowered faceless radiance. Iblis is implied by absence and shadow, not a
+      Western devil. No horns, no tail, no faces, no text. 50mm lens, dimming
+      edge light.
+    exact_scene_composition: empty upright space beside lowered radiance
+    subject_placement: empty_upright_space_right_edge
+    environment: unseen_realm
+    camera: medium_wide_side
+    lens: 50mm
+    lighting: dimming_edge_light
+    atmosphere: tension
+    visual_symbolism: refusal revealed by contrast
+    continuity_instructions: prepare reveal without dialogue
+    depiction_restrictions:
+      - no_iblis_lip_sync
+      - angel_faces_hidden
+    negative_prompt: horns, devil costume, angel faces, Arabic text
+    provider_adaptations:
+      gemini: Generate contrast of obedience and one upright refusal space.
+      flow: Frame should allow slow pan to empty space.
+      veo_image_workflow: Keep absent/upright area clear.
+      seedance_image_input_workflow: Avoid monster details in shadow.
+      generic_cinematic_image_model: Symbolic tension frame with no faces.
+  - shot_id: insan_ep01_shot_016
+    approval_status: needs_source_and_depiction_review
+    locked_asset_references:
+      - iblis_pre_rebellion
+      - angelic_presence
+      - unseen_realm
+    master_prompt: >
+      Medium shot of restrained Iblis jinn presence upright against lowered
+      faceless radiance. Low front 65mm lens, ember edge light, deep shadow.
+      No horns, no tail, no red devil, no monster face, no mouth movement, no
+      angelic traits.
+    exact_scene_composition: dark jinn presence upright against lowered radiance
+    subject_placement: center_right
+    environment: unseen_realm
+    camera: medium_low_front
+    lens: 65mm
+    lighting: ember_edge_light
+    atmosphere: defiance
+    visual_symbolism: refusal
+    continuity_instructions: Iblis is jinn, not angel
+    depiction_restrictions:
+      - no_western_devil
+      - no_lip_sync
+    negative_prompt: horns, tail, red demon, mouth detail, wings, Arabic text
+    provider_adaptations:
+      gemini: Generate restrained symbolic Iblis upright, not a devil trope.
+      flow: Stable silhouette for slow push-in.
+      veo_image_workflow: No facial detail, no lip motion affordance.
+      seedance_image_input_workflow: Lock silhouette and ember edge.
+      generic_cinematic_image_model: Dark symbolic jinn refusal frame.
+  - shot_id: insan_ep01_shot_017
+    approval_status: needs_depiction_review
+    locked_asset_references:
+      - iblis_pre_rebellion
+      - unseen_realm
+    master_prompt: >
+      Close symbolic profile of shadow gathering around Iblis' upright jinn
+      presence. No detailed face, no mouth, no horns, no Western devil imagery.
+      85mm lens, ember and shadow, restrained spiritual danger.
+    exact_scene_composition: shadow edge tightens around Iblis presence
+    subject_placement: right_profile_shadow
+    environment: unseen_realm
+    camera: close_symbolic_profile
+    lens: 85mm
+    lighting: ember_and_shadow
+    atmosphere: spiritual_danger
+    visual_symbolism: arrogance hardening
+    continuity_instructions: no speech performance
+    depiction_restrictions:
+      - no_detailed_face
+      - no_western_devil
+    negative_prompt: face, teeth, horns, tail, horror gore, Arabic text
+    provider_adaptations:
+      gemini: Generate symbolic shadow close-up with no face detail.
+      flow: Stable edge-shadow frame for minimal motion.
+      veo_image_workflow: Keep profile abstract and non-lip-sync.
+      seedance_image_input_workflow: Avoid face drift by not showing a face.
+      generic_cinematic_image_model: Restrained shadow symbolism.
+  - shot_id: insan_ep01_shot_018
+    approval_status: needs_source_review
+    locked_asset_references:
+      - smokeless_fire
+      - clay_particles
+    master_prompt: >
+      Symbolic close-up split composition: restrained smokeless fire texture on
+      one side and humble clay particles on the other. No faces in fire, no text,
+      no anatomy, no fantasy magic. 75mm lens, ember versus warm clay light.
+    exact_scene_composition: fire texture and clay particles in contrast
+    subject_placement: fire_left_clay_right
+    environment: unseen_realm
+    camera: symbolic_close_up_front
+    lens: 75mm
+    lighting: ember_vs_warm_clay
+    atmosphere: arrogant_contrast
+    visual_symbolism: Iblis' superiority claim paraphrased
+    continuity_instructions: contrast only, no dialogue text
+    depiction_restrictions:
+      - no_face_in_fire
+      - no_generated_quranic_text
+    negative_prompt: face in flames, Arabic text, readable text, fantasy spell, body parts
+    provider_adaptations:
+      gemini: Generate symbolic fire-clay contrast, no text.
+      flow: Stable split frame for subtle rising fire motion.
+      veo_image_workflow: Keep fire natural and restrained.
+      seedance_image_input_workflow: Avoid face-like flame patterns.
+      generic_cinematic_image_model: Photorealistic symbolic texture contrast.
+  - shot_id: insan_ep01_shot_019
+    approval_status: needs_depiction_review
+    locked_asset_references:
+      - iblis_pre_rebellion
+      - smokeless_fire
+      - clay_particles
+    master_prompt: >
+      Medium-wide side-profile symbolic image of Iblis jinn presence beside
+      restrained smokeless fire texture, turning away from distant humble clay
+      particles. No horns, tail, Western devil design, or mouth detail. 65mm
+      lens, ember edge and deep shadow.
+    exact_scene_composition: Iblis beside fire with clay distant
+    subject_placement: iblis_left_clay_far_right
+    environment: unseen_realm
+    camera: side_profile_symbolic
+    lens: 65mm
+    lighting: ember_edge_and_deep_shadow
+    atmosphere: pride
+    visual_symbolism: choosing superiority over obedience
+    continuity_instructions: no lip-sync and no face detail
+    depiction_restrictions:
+      - no_western_devil
+      - no_sacred_dialogue_performance
+    negative_prompt: horns, tail, mouth movement, red demon, Arabic text
+    provider_adaptations:
+      gemini: Generate symbolic Iblis turning from clay, no devil trope.
+      flow: Stable frame for slow lateral move.
+      veo_image_workflow: No mouth detail or facial drift.
+      seedance_image_input_workflow: Lock silhouette and shadow.
+      generic_cinematic_image_model: Cinematic shadow figure with symbolic fire and clay.
+  - shot_id: insan_ep01_shot_020
+    approval_status: needs_source_and_depiction_review
+    locked_asset_references:
+      - expulsion_boundary
+      - darkness_separation
+    master_prompt: >
+      Wide low-angle shot of a symbolic expulsion boundary where white-gold
+      radiance recedes into deep darkness. No Allah depiction, no throne, no
+      body in light, no horror portal. 35mm lens, severe consequential mood.
+    exact_scene_composition: boundary of light receding into darkness
+    subject_placement: boundary_center
+    environment: expulsion_boundary
+    camera: wide_low_angle
+    lens: 35mm
+    lighting: white_gold_receding_to_black
+    atmosphere: severe
+    visual_symbolism: expulsion and separation
+    continuity_instructions: no divine source body
+    depiction_restrictions:
+      - no_visual_allah
+      - no_throne
+    negative_prompt: throne, divine body, face in light, horror portal, Arabic text
+    provider_adaptations:
+      gemini: Generate symbolic boundary, no divine visualization.
+      flow: Stable boundary frame for slow pull-back.
+      veo_image_workflow: Avoid portal/fantasy look; keep restrained.
+      seedance_image_input_workflow: Preserve abstract geometry and no faces.
+      generic_cinematic_image_model: Minimal cinematic separation frame.
+  - shot_id: insan_ep01_shot_021
+    approval_status: needs_depiction_review
+    locked_asset_references:
+      - iblis_post_expulsion
+      - expulsion_boundary
+    master_prompt: >
+      Medium-wide rear three-quarter image of Iblis post-expulsion as a dark
+      symbolic jinn presence beyond the boundary. Low ember light, absent
+      radiance, no horns, no tail, no devil costume, no face detail, no text.
+    exact_scene_composition: Iblis beyond expulsion boundary
+    subject_placement: beyond_boundary_right
+    environment: expulsion_boundary
+    camera: rear_three_quarter_medium_wide
+    lens: 70mm
+    lighting: low_ember_absent_radiance
+    atmosphere: disgrace
+    visual_symbolism: separation after refusal
+    continuity_instructions: darker version of Iblis identity family
+    depiction_restrictions:
+      - no_western_devil
+      - no_horror_transformation
+    negative_prompt: horns, tail, pitchfork, red monster, gore, Arabic text
+    provider_adaptations:
+      gemini: Generate post-expulsion Iblis as restrained shadow presence.
+      flow: Stable rear silhouette for shadow hold.
+      veo_image_workflow: No face detail; slow stillness ready.
+      seedance_image_input_workflow: Keep continuity with pre-rebellion form.
+      generic_cinematic_image_model: Somber symbolic jinn presence beyond light.
+  - shot_id: insan_ep01_shot_022
+    approval_status: needs_source_and_depiction_review
+    locked_asset_references:
+      - iblis_post_expulsion
+      - symbolic_path_of_humanity
+      - darkness_separation
+    master_prompt: >
+      Wide high-angle symbolic path of humanity, abstract and non-literal, with
+      dark shadow extending along the edge. Iblis post-expulsion presence remains
+      distant and non-lip-sync. No human faces, no literal Hell or Paradise, no
+      generated text. 32mm lens.
+    exact_scene_composition: dark presence at edge of human path
+    subject_placement: path_center_shadow_edge_left
+    environment: symbolic_path_of_humanity
+    camera: wide_high_angle
+    lens: 32mm
+    lighting: dim_path_with_shadow_edges
+    atmosphere: ominous_restrained
+    visual_symbolism: declared enmity and temptation
+    continuity_instructions: abstract path only
+    depiction_restrictions:
+      - no_lip_sync_for_iblis
+      - no_identifiable_human_faces
+    negative_prompt: crowd faces, hellfire, paradise garden, Arabic text, horror imagery
+    provider_adaptations:
+      gemini: Generate symbolic path with restrained shadow, no faces.
+      flow: Stable path for slow shadow extension.
+      veo_image_workflow: Leave safe space for post-production overlay.
+      seedance_image_input_workflow: Avoid literal religious afterlife visuals.
+      generic_cinematic_image_model: Abstract moral path with shadow edge.
+  - shot_id: insan_ep01_shot_023
+    approval_status: needs_depiction_review
+    locked_asset_references:
+      - symbolic_path_of_humanity
+    master_prompt: >
+      Symbolic ground-level view of a path splitting between dim shadow and a
+      distant white-gold light. No people, no faces, no literal afterlife
+      location, no text. 45mm lens, low-key lighting, restrained trial and
+      guidance mood.
+    exact_scene_composition: path between shadow and distant light
+    subject_placement: path_leads_to_distant_light
+    environment: symbolic_path_of_humanity
+    camera: ground_level_forward
+    lens: 45mm
+    lighting: low_key_with_distant_white_gold
+    atmosphere: trial_and_guidance
+    visual_symbolism: temptation does not close guidance
+    continuity_instructions: path remains symbolic
+    depiction_restrictions:
+      - no_quranic_text
+      - no_literal_paradise_or_hell
+    negative_prompt: faces, city, paradise, hell, Arabic text, readable text
+    provider_adaptations:
+      gemini: Generate simple symbolic path and distant light.
+      flow: Stable forward path for slow push.
+      veo_image_workflow: Keyframe ends with visible distant light.
+      seedance_image_input_workflow: Keep symbolism restrained.
+      generic_cinematic_image_model: Cinematic abstract path, no text.
+  - shot_id: insan_ep01_shot_024
+    approval_status: ready_to_generate_subject_to_project_approval
+    locked_asset_references:
+      - storyteller
+      - storyteller_studio
+    master_prompt: >
+      Medium close-up of the same storyteller in the same studio, centered,
+      delivering the closing moral with controlled emotion. Books and MacBook
+      visible but unreadable. Front eye-level 50mm lens, warm deeper shadow,
+      cinematic documentary realism.
+    exact_scene_composition: storyteller centered closing frame
+    subject_placement: center_frame
+    environment: storyteller_studio
+    camera: medium_close_up_front_eye_level
+    lens: 50mm
+    lighting: warm_key_deeper_shadow
+    atmosphere: moral_clarity
+    visual_symbolism: return from unseen account to human moral responsibility
+    continuity_instructions: match shots_001_002 identity, wardrobe, desk layout
+    depiction_restrictions:
+      - narrator_asset_only
+      - no_generated_quranic_text
+    negative_prompt: readable text, Arabic text, overacting, distorted hands, plastic skin
+    provider_adaptations:
+      gemini: Generate a realistic closing storyteller keyframe.
+      flow: Stable talking-head frame for natural lip movement.
+      veo_image_workflow: Suitable for subtle push-in and controlled facial motion.
+      seedance_image_input_workflow: Maintain face and wardrobe continuity.
+      generic_cinematic_image_model: Photorealistic documentary close-up.
+  - shot_id: insan_ep01_shot_025
+    approval_status: ready_to_generate_subject_to_project_approval
+    locked_asset_references:
+      - storyteller
+      - storyteller_studio
+    master_prompt: >
+      Close-up final hold on the same storyteller's thoughtful face after the
+      final line. Warm light fades gently toward shadow, desk background soft,
+      no readable text, no title overlay, no Qur'anic text. 85mm lens,
+      reflective final mood.
+    exact_scene_composition: storyteller face in quiet final hold
+    subject_placement: center_close_up
+    environment: storyteller_studio
+    camera: close_up_front_eye_level
+    lens: 85mm
+    lighting: warm_fade_to_shadow
+    atmosphere: reflective_final
+    visual_symbolism: humility after warning
+    continuity_instructions: same storyteller identity and wardrobe
+    depiction_restrictions:
+      - narrator_asset_only
+      - no_unverified_overlay
+    negative_prompt: readable text, Arabic text, title text, exaggerated expression, AI artifacts
+    provider_adaptations:
+      gemini: Generate final reflective storyteller close-up with no text.
+      flow: Stable close-up for final pause and fade.
+      veo_image_workflow: Ending keyframe should hold still and fade.
+      seedance_image_input_workflow: Maintain identity; no added text.
+      generic_cinematic_image_model: Realistic final close-up in warm shadow.

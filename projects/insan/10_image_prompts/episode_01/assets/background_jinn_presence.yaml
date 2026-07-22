@@ -1,0 +1,29 @@
+schema_version: "1.0"
+project_id: insan
+episode_id: episode_01
+asset_id: background_jinn_presence
+status: needs_depiction_review_before_generation
+recommended_aspect_ratio: "16:9"
+recommended_generator: gemini
+master_prompt: >
+  Distant background jinn presence for an Islamic historical documentary drama,
+  handled symbolically as vague shadow forms and restrained smokeless ember
+  texture in deep negative space. No individual identities, no monster faces, no
+  horns, no tails, no Western demon imagery. These are distant presences only,
+  not a crowd of named characters. Cinematic, subtle, ancient, non-horror,
+  realistic atmosphere, no readable text.
+negative_prompt: >
+  Western demons, horns, tails, red devils, monster faces, gore, fantasy army,
+  leader figure, readable text, Arabic text, Qur'anic text, cartoon, video game
+  style, horror poster
+continuity_lock:
+  role: distant_non_specific_jinn_presence
+  visibility: low_detail_symbolic
+camera_neutral_description: Distant vague jinn presences in abstract darkness.
+identity_restrictions:
+  - no_named_jinn_identity
+  - no_leader_symbolism
+  - no_iblis_duplication
+depiction_policy_restrictions:
+  - unseen_beings_symbolic_only
+reference_image_guidance: Generate wide atmospheric references only, not portraits.

@@ -1,0 +1,48 @@
+schema_version: "1.0"
+project_id: insan
+series_name: Insan
+episode_id: episode_01
+episode_title: Takabbur Ka Pehla Imtihan
+topic: creation_of_adam_iblis_refusal_expulsion_respite_and_misleading_humanity
+package_type: research_only
+package_status: source_located_pending_scholar_review
+approval_status: not_approved_for_script_or_prompt_generation
+created_date: "2026-07-22"
+rules:
+  - statement: No scripts, scenes, prompts, narration, images, or videos are produced by this package.
+    source_refs:
+      - user_instruction_2026_07_22
+    confidence: high
+    validation_status: instruction_recorded
+  - statement: Later production stages must treat this research package as the source-of-truth input, but not as religious approval.
+    source_refs:
+      - projects/insan/00_governance/source_hierarchy.md
+      - projects/insan/00_governance/authenticity_policy.md
+    confidence: high
+    validation_status: policy_constraint
+files:
+  input_scope: input_scope.yaml
+  source_index: source_index.yaml
+  quran_references: quran_references.yaml
+  hadith_references: hadith_references.yaml
+  tafsir_references: tafsir_references.yaml
+  historical_notes: historical_notes.yaml
+  scholarly_opinions: scholarly_opinions.yaml
+  timeline: timeline.yaml
+  chronological_events: chronological_events.yaml
+  known_facts: known_facts.yaml
+  unknown_facts: unknown_facts.yaml
+  weak_reports: weak_reports.yaml
+  fabricated_reports: fabricated_reports.yaml
+  visual_constraints: visual_constraints.yaml
+  depiction_constraints: depiction_constraints.yaml
+  character_constraints: character_constraints.yaml
+  environment_constraints: environment_constraints.yaml
+  approved_terminology: approved_terminology.yaml
+  glossary: glossary.yaml
+  open_research_questions: open_research_questions.yaml
+blocking_gates:
+  - source_validation_review
+  - scholarly_review
+  - depiction_review
+  - terminology_review

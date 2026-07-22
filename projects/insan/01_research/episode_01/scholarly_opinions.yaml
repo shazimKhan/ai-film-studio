@@ -1,0 +1,59 @@
+schema_version: "1.0"
+project_id: insan
+episode_id: episode_01
+content_type: differences_of_scholarly_opinion
+opinions:
+  - opinion_id: opinion_001
+    topic: iblis_classification
+    statement: The production baseline classifies Iblis as jinn because Al-Kahf 18:50 explicitly says he was from the jinn.
+    source_refs:
+      - quran_kahf_18_50
+      - tafsir_ibn_kathir_kahf_18_50
+    confidence: high
+    validation_status: source_located_pending_scholar_review
+    production_decision: use_as_required_constraint_after_final_review
+  - opinion_id: opinion_002
+    topic: iblis_relation_to_angels
+    statement: Some transmitted tafsir discussions describe Iblis as being among or associated with angels before refusal.
+    source_refs:
+      - tafsir_tabari_baqarah_2_34
+      - tafsir_tabari_kahf_18_50
+    confidence: medium
+    validation_status: difference_recorded_pending_scholar_review
+    production_decision: do_not_present_as_final_claim
+  - opinion_id: opinion_003
+    topic: iblis_not_an_angel
+    statement: Ibn Kathir reports the view that Iblis was not one of the angels and cites Al-Kahf 18:50 in support.
+    source_refs:
+      - tafsir_ibn_kathir_baqarah_2_34
+      - tafsir_ibn_kathir_kahf_18_50
+      - quran_kahf_18_50
+    confidence: medium
+    validation_status: source_located_pending_scholar_review
+    production_decision: align_with_quranic_constraint
+  - opinion_id: opinion_004
+    topic: nature_of_prostration
+    statement: Ibn Kathir records the explanation that the prostration was obedience to Allah and honor for Adam, not worship of Adam.
+    source_refs:
+      - tafsir_ibn_kathir_baqarah_2_34
+    confidence: medium
+    validation_status: source_located_pending_scholar_review
+    production_decision: requires_scholar_review_before_script
+  - opinion_id: opinion_005
+    topic: iblis_progeny
+    statement: Al-Qurtubi records multiple explanations about Iblis' progeny, while noting that the exact mechanism needs sound transmission.
+    source_refs:
+      - tafsir_qurtubi_kahf_18_50
+    confidence: medium
+    validation_status: source_located_pending_scholar_review
+    production_decision: keep_mechanism_unknown
+  - opinion_id: opinion_006
+    topic: iblis_leadership_claim
+    statement: This research package has not located an approved source establishing that Iblis was leader of all jinn.
+    source_refs:
+      - tafsir_ibn_kathir_kahf_18_50
+      - tafsir_tabari_kahf_18_50
+      - user_instruction_2026_07_22
+    confidence: high
+    validation_status: unresolved_research_question
+    production_decision: exclude_claim

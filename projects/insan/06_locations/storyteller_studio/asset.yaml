@@ -1,0 +1,16 @@
+schema_version: "1.0"
+project_id: insan
+asset_id: storyteller_studio
+asset_type: location
+status: missing_reference_images
+reusable: true
+continuity_rules:
+  - Elegant cinematic storytelling studio.
+  - Wooden desk, classical books to one side, realistic MacBook naturally placed on other side.
+  - Ancient manuscript atmosphere with restrained modern filmmaking elements.
+visual_restrictions:
+  - no_readable_text
+  - no_mosque_or_sacred_claim_without_source
+  - no_overdecorated_fantasy_set
+reference_status: awaiting_manual_generation
+prompt_ref: projects/insan/10_image_prompts/episode_01/assets/storyteller_studio.yaml

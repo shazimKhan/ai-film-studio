@@ -1,3 +1,54 @@
 schema_version: "1.0"
 project_id: insan
-questions: []
+questions:
+  - question_id: insan_ep01_rq_001
+    episode_id: episode_01
+    priority: critical
+    question: Which candidate Qur'anic passages directly establish the episode sequence?
+    status: open
+  - question_id: insan_ep01_rq_002
+    episode_id: episode_01
+    priority: critical
+    question: Which verified source wording establishes Iblis as jinn for narration?
+    status: open
+  - question_id: insan_ep01_rq_003
+    episode_id: episode_01
+    priority: critical
+    question: What exact wording may be used for the command to prostrate without inventing divine speech?
+    status: open
+  - question_id: insan_ep01_rq_004
+    episode_id: episode_01
+    priority: high
+    question: Which details about Adam علیہ السلام ki takhleeq are allowed visually without showing face or detailed body?
+    status: open
+  - question_id: insan_ep01_rq_005
+    episode_id: episode_01
+    priority: high
+    question: Is there any approved source for presenting Iblis as leader of all jinn?
+    status: open
+    default_position_until_resolved: exclude_claim
+  - question_id: insan_ep01_rq_006
+    episode_id: episode_01
+    priority: high
+    question: Are the provided Hadith references Sahih Muslim 2996 and Sunan Abi Dawud 4693 relevant to this episode topic?
+    status: open
+  - question_id: insan_ep01_rq_007
+    episode_id: episode_01
+    priority: high
+    question: What language should be used when a report is weak, disputed, or not directly sourced?
+    status: open
+  - question_id: insan_ep01_rq_008
+    episode_id: episode_01
+    priority: medium
+    question: Which non-literal visual symbols are acceptable for the unseen realm under the depiction policy?
+    status: open
+  - question_id: insan_ep01_rq_009
+    episode_id: episode_01
+    priority: medium
+    question: Should Sahih Muslim 854b be used in Episode 01 or reserved as related context only?
+    status: open
+  - question_id: insan_ep01_rq_010
+    episode_id: episode_01
+    priority: medium
+    question: What level of detail from Sunan Abi Dawud 4693 is allowed without over-visualizing Adam عليه السلام?
+    status: open

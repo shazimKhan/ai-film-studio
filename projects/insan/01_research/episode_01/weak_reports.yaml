@@ -1,0 +1,63 @@
+schema_version: "1.0"
+project_id: insan
+episode_id: episode_01
+content_type: weak_or_unapproved_reports
+classification_policy:
+  statement: Weak, disputed, or unsupported reports must be labeled and must not be presented as certainty.
+  source_refs:
+    - projects/insan/00_governance/source_hierarchy.md
+    - projects/insan/00_governance/uncertainty_policy.md
+  confidence: high
+  validation_status: policy_constraint
+reports:
+  - report_id: weak_001
+    claim: Iblis was originally an angel or from a special angelic group.
+    classification: disputed_tafsir_report_not_production_baseline
+    statement: This claim appears in transmitted tafsir discussions but conflicts with the production baseline drawn from Al-Kahf 18:50.
+    source_refs:
+      - tafsir_tabari_kahf_18_50
+      - quran_kahf_18_50
+      - tafsir_ibn_kathir_kahf_18_50
+    confidence: medium
+    validation_status: difference_recorded_pending_scholar_review
+    production_use: prohibited_unless_scholar_approved_as_report_label
+  - report_id: weak_002
+    claim: Iblis was named Azazil before rebellion.
+    classification: unapproved_report
+    statement: This name appears in some tafsir/story discussions but is not approved for this package.
+    source_refs:
+      - tafsir_ibn_kathir_baqarah_2_34
+      - tafsir_tabari_kahf_18_50
+    confidence: medium
+    validation_status: source_located_pending_scholar_review
+    production_use: blocked
+  - report_id: weak_003
+    claim: Iblis was leader of all jinn.
+    classification: unsupported_for_this_package
+    statement: No approved source record in this package establishes the leader-of-all-jinn claim.
+    source_refs:
+      - user_instruction_2026_07_22
+      - projects/insan/00_governance/source_hierarchy.md
+    confidence: high
+    validation_status: unresolved_research_question
+    production_use: blocked
+  - report_id: weak_004
+    claim: Angels were commanded to collect earth or clay for Adam's creation.
+    classification: unsupported_for_this_package
+    statement: This action must not be shown unless a traceable approved source is added.
+    source_refs:
+      - user_instruction_2026_07_22
+      - projects/insan/00_governance/source_hierarchy.md
+    confidence: high
+    validation_status: source_required_before_use
+    production_use: blocked
+  - report_id: weak_005
+    claim: Specific mechanisms for Iblis' offspring are known.
+    classification: unapproved_tafsir_report
+    statement: Al-Qurtubi records multiple explanations, but the mechanism is not established for production use without sound transmission.
+    source_refs:
+      - tafsir_qurtubi_kahf_18_50
+      - projects/insan/00_governance/uncertainty_policy.md
+    confidence: medium
+    validation_status: source_located_pending_scholar_review
+    production_use: blocked

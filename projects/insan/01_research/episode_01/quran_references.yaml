@@ -1,0 +1,134 @@
+schema_version: "1.0"
+project_id: insan
+episode_id: episode_01
+content_type: quran_reference_research
+translation_policy:
+  statement: Exact Arabic text and final translation overlays must be added manually after human verification.
+  source_refs:
+    - projects/insan/00_governance/authenticity_policy.md
+    - user_instruction_2026_07_22
+  confidence: high
+  validation_status: policy_constraint
+references:
+  - reference_id: quran_baqarah_2_30_39
+    citation: Al-Baqarah 2:30-39
+    relevance: creation_announcement_names_prostration_fall_and_guidance
+    statements:
+      - statement: Al-Baqarah 2:30 presents the declaration to the angels about placing a khalifah on earth.
+        source_refs:
+          - quran_baqarah_2_30_39
+        confidence: high
+        validation_status: source_located_pending_scholar_review
+      - statement: Al-Baqarah 2:34 records the command to prostrate to Adam, the angels' prostration, and Iblis' refusal/arrogance.
+        source_refs:
+          - quran_baqarah_2_30_39
+        confidence: high
+        validation_status: source_located_pending_scholar_review
+      - statement: Al-Baqarah 2:35-39 continues into Paradise, the slip, descent, and guidance; these verses are related context, not the central refusal sequence.
+        source_refs:
+          - quran_baqarah_2_30_39
+        confidence: high
+        validation_status: source_located_pending_scholar_review
+  - reference_id: quran_araf_7_11_18
+    citation: "Al-A'raf 7:11-18"
+    relevance: prostration_refusal_arrogance_expulsion_respite_and_misleading_from_directions
+    statements:
+      - statement: Al-A'raf 7:11-12 records creation/forming language, the prostration command, and Iblis' claim of superiority because of fire over clay.
+        source_refs:
+          - quran_araf_7_11_18
+        confidence: high
+        validation_status: source_located_pending_scholar_review
+      - statement: Al-A'raf 7:13-15 records expulsion and respite.
+        source_refs:
+          - quran_araf_7_11_18
+        confidence: high
+        validation_status: source_located_pending_scholar_review
+      - statement: Al-A'raf 7:16-18 records Iblis' declaration to wait on the straight path and approach humanity from multiple directions.
+        source_refs:
+          - quran_araf_7_11_18
+        confidence: high
+        validation_status: source_located_pending_scholar_review
+  - reference_id: quran_hijr_15_26_44
+    citation: Al-Hijr 15:26-44
+    relevance: creation_material_command_refusal_expulsion_respite_misleading_and_exception_of_sincere_servants
+    statements:
+      - statement: Al-Hijr 15:26-29 describes Adam's creation material using clay language and the command to prostrate after formation.
+        source_refs:
+          - quran_hijr_15_26_44
+        confidence: high
+        validation_status: source_located_pending_scholar_review
+      - statement: Al-Hijr 15:30-33 records the angels' prostration and Iblis' refusal.
+        source_refs:
+          - quran_hijr_15_26_44
+        confidence: high
+        validation_status: source_located_pending_scholar_review
+      - statement: Al-Hijr 15:34-44 records expulsion, curse until recompense, respite, Iblis' misleading intention, the exception of sincere servants, and final punishment language.
+        source_refs:
+          - quran_hijr_15_26_44
+        confidence: high
+        validation_status: source_located_pending_scholar_review
+  - reference_id: quran_isra_17_61_65
+    citation: "Al-Isra' 17:61-65"
+    relevance: refusal_and_declaration_against_adams_descendants
+    statements:
+      - statement: Al-Isra' 17:61-65 repeats the refusal to prostrate and records Iblis' threat against Adam's descendants.
+        source_refs:
+          - quran_isra_17_61_65
+        confidence: high
+        validation_status: source_located_pending_scholar_review
+      - statement: Al-Isra' 17:65 states that Iblis has no authority over Allah's believing servants.
+        source_refs:
+          - quran_isra_17_61_65
+        confidence: high
+        validation_status: source_located_pending_scholar_review
+  - reference_id: quran_kahf_18_50
+    citation: Al-Kahf 18:50
+    relevance: iblis_classification_as_jinn
+    statements:
+      - statement: Al-Kahf 18:50 identifies Iblis as being from the jinn and describes his departure from his Lord's command.
+        source_refs:
+          - quran_kahf_18_50
+        confidence: high
+        validation_status: source_located_pending_scholar_review
+  - reference_id: quran_taha_20_115_123
+    citation: Taha 20:115-123
+    relevance: prostration_refusal_enemy_warning_whispering_and_descent_context
+    statements:
+      - statement: Taha 20:116 records the command to prostrate and Iblis' refusal.
+        source_refs:
+          - quran_taha_20_115_123
+        confidence: high
+        validation_status: source_located_pending_scholar_review
+      - statement: Taha 20:117-123 provides related context about Iblis as enemy, the whispering, Adam's error and repentance, and descent.
+        source_refs:
+          - quran_taha_20_115_123
+        confidence: high
+        validation_status: source_located_pending_scholar_review
+  - reference_id: quran_sad_38_71_85
+    citation: Sad 38:71-85
+    relevance: full_sequence_creation_command_refusal_arrogance_expulsion_respite_misleading_and_punishment
+    statements:
+      - statement: Sad 38:71-72 records the creation from clay and command for prostration after Adam is fashioned.
+        source_refs:
+          - quran_sad_38_71_85
+        confidence: high
+        validation_status: source_located_pending_scholar_review
+      - statement: Sad 38:73-76 records the angels' prostration, Iblis' arrogance, and his claim of superiority by creation material.
+        source_refs:
+          - quran_sad_38_71_85
+        confidence: high
+        validation_status: source_located_pending_scholar_review
+      - statement: Sad 38:77-85 records expulsion, curse, respite, declaration to mislead, exception of sincere servants, and punishment for followers.
+        source_refs:
+          - quran_sad_38_71_85
+        confidence: high
+        validation_status: source_located_pending_scholar_review
+  - reference_id: quran_ali_imran_3_59
+    citation: "Ali 'Imran 3:59"
+    relevance: supporting_creation_from_dust_reference
+    statements:
+      - statement: Ali 'Imran 3:59 supports Adam's creation from dust in a theological comparison with Isa عليه السلام.
+        source_refs:
+          - quran_ali_imran_3_59
+        confidence: high
+        validation_status: source_located_pending_scholar_review

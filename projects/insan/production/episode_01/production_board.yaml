@@ -1,0 +1,240 @@
+schema_version: "1.0"
+project_id: insan
+episode_id: episode_01
+status: active_production_board_pending_approvals
+columns:
+  - shot_id
+  - scene
+  - required_asset
+  - image_status
+  - video_status
+  - voice_status
+  - overlay_status
+  - edit_status
+  - approval_status
+shots:
+  - shot_id: insan_ep01_shot_001
+    scene: storyteller_opening
+    required_asset: storyteller, storyteller_studio
+    image_status: blocked_missing_asset
+    video_status: blocked_missing_image
+    voice_status: ready_to_record_after_source_review
+    overlay_status: none
+    edit_status: blocked
+    approval_status: needs_source_review
+  - shot_id: insan_ep01_shot_002
+    scene: storyteller_opening
+    required_asset: storyteller, storyteller_studio
+    image_status: blocked_missing_asset
+    video_status: blocked_missing_image
+    voice_status: ready_to_record_after_source_review
+    overlay_status: none
+    edit_status: blocked
+    approval_status: needs_source_review
+  - shot_id: insan_ep01_shot_003
+    scene: before_humanity
+    required_asset: unseen_realm
+    image_status: blocked_missing_asset
+    video_status: blocked_missing_image
+    voice_status: needs_source_review
+    overlay_status: none
+    edit_status: blocked
+    approval_status: needs_depiction_review
+  - shot_id: insan_ep01_shot_004
+    scene: before_humanity
+    required_asset: angelic_presence, background_jinn_presence
+    image_status: blocked_missing_asset
+    video_status: blocked_missing_image
+    voice_status: needs_source_review
+    overlay_status: none
+    edit_status: blocked
+    approval_status: needs_depiction_review
+  - shot_id: insan_ep01_shot_005
+    scene: iblis_from_jinn
+    required_asset: iblis_pre_rebellion
+    image_status: blocked_missing_asset
+    video_status: blocked_missing_image
+    voice_status: needs_source_review
+    overlay_status: none
+    edit_status: blocked
+    approval_status: needs_source_review
+  - shot_id: insan_ep01_shot_006
+    scene: iblis_from_jinn
+    required_asset: iblis_pre_rebellion, angelic_presence
+    image_status: blocked_missing_asset
+    video_status: blocked_missing_image
+    voice_status: needs_source_review
+    overlay_status: none
+    edit_status: blocked
+    approval_status: needs_depiction_review
+  - shot_id: insan_ep01_shot_007
+    scene: announcement_of_khalifah
+    required_asset: angelic_presence, unseen_realm
+    image_status: blocked_missing_asset
+    video_status: blocked_missing_image
+    voice_status: needs_source_review
+    overlay_status: needs_source_review
+    edit_status: blocked
+    approval_status: needs_source_review
+  - shot_id: insan_ep01_shot_008
+    scene: announcement_of_khalifah
+    required_asset: source_less_white_gold_light
+    image_status: blocked_missing_asset
+    video_status: blocked_missing_image
+    voice_status: needs_source_review
+    overlay_status: no_generated_text
+    edit_status: blocked
+    approval_status: needs_depiction_review
+  - shot_id: insan_ep01_shot_009
+    scene: earth_and_clay
+    required_asset: clay_particles
+    image_status: blocked_missing_asset
+    video_status: blocked_missing_image
+    voice_status: needs_source_review
+    overlay_status: none
+    edit_status: blocked
+    approval_status: needs_source_review
+  - shot_id: insan_ep01_shot_010
+    scene: earth_and_clay
+    required_asset: adam_concealed_presence
+    image_status: blocked_missing_asset
+    video_status: blocked_missing_image
+    voice_status: needs_source_review
+    overlay_status: none
+    edit_status: blocked
+    approval_status: needs_depiction_review
+  - shot_id: insan_ep01_shot_011
+    scene: formation_concealed
+    required_asset: adam_concealed_presence, clay_particles
+    image_status: blocked_missing_asset
+    video_status: blocked_missing_image
+    voice_status: needs_depiction_review
+    overlay_status: none
+    edit_status: blocked
+    approval_status: needs_depiction_review
+  - shot_id: insan_ep01_shot_012
+    scene: command_to_prostrate
+    required_asset: angelic_presence, adam_concealed_presence
+    image_status: blocked_missing_asset
+    video_status: blocked_missing_image
+    voice_status: needs_source_review
+    overlay_status: needs_source_review
+    edit_status: blocked
+    approval_status: needs_source_review
+  - shot_id: insan_ep01_shot_013
+    scene: command_to_prostrate
+    required_asset: angelic_presence
+    image_status: blocked_missing_asset
+    video_status: blocked_missing_image
+    voice_status: needs_source_review
+    overlay_status: none
+    edit_status: blocked
+    approval_status: needs_depiction_review
+  - shot_id: insan_ep01_shot_014
+    scene: angels_prostrate
+    required_asset: angelic_presence
+    image_status: blocked_missing_asset
+    video_status: blocked_missing_image
+    voice_status: needs_source_review
+    overlay_status: none
+    edit_status: blocked
+    approval_status: needs_depiction_review
+  - shot_id: insan_ep01_shot_015
+    scene: angels_prostrate
+    required_asset: angelic_presence, iblis_pre_rebellion
+    image_status: blocked_missing_asset
+    video_status: blocked_missing_image
+    voice_status: needs_source_review
+    overlay_status: none
+    edit_status: blocked
+    approval_status: needs_depiction_review
+  - shot_id: insan_ep01_shot_016
+    scene: iblis_refuses
+    required_asset: iblis_pre_rebellion
+    image_status: blocked_missing_asset
+    video_status: blocked_missing_image
+    voice_status: needs_source_review
+    overlay_status: none
+    edit_status: blocked
+    approval_status: needs_source_review
+  - shot_id: insan_ep01_shot_017
+    scene: iblis_refuses
+    required_asset: iblis_pre_rebellion
+    image_status: blocked_missing_asset
+    video_status: blocked_missing_image
+    voice_status: needs_source_review
+    overlay_status: none
+    edit_status: blocked
+    approval_status: needs_depiction_review
+  - shot_id: insan_ep01_shot_018
+    scene: fire_and_clay_claim
+    required_asset: smokeless_fire, clay_particles
+    image_status: blocked_missing_asset
+    video_status: blocked_missing_image
+    voice_status: needs_source_review
+    overlay_status: none
+    edit_status: blocked
+    approval_status: needs_source_review
+  - shot_id: insan_ep01_shot_019
+    scene: fire_and_clay_claim
+    required_asset: iblis_pre_rebellion, smokeless_fire, clay_particles
+    image_status: blocked_missing_asset
+    video_status: blocked_missing_image
+    voice_status: needs_source_review
+    overlay_status: none
+    edit_status: blocked
+    approval_status: needs_depiction_review
+  - shot_id: insan_ep01_shot_020
+    scene: expulsion
+    required_asset: expulsion_boundary
+    image_status: blocked_missing_asset
+    video_status: blocked_missing_image
+    voice_status: needs_source_review
+    overlay_status: none
+    edit_status: blocked
+    approval_status: needs_source_review
+  - shot_id: insan_ep01_shot_021
+    scene: expulsion
+    required_asset: iblis_post_expulsion
+    image_status: blocked_missing_asset
+    video_status: blocked_missing_image
+    voice_status: needs_source_review
+    overlay_status: none
+    edit_status: blocked
+    approval_status: needs_depiction_review
+  - shot_id: insan_ep01_shot_022
+    scene: respite_and_enmity
+    required_asset: symbolic_path_of_humanity, iblis_post_expulsion
+    image_status: blocked_missing_asset
+    video_status: blocked_missing_image
+    voice_status: needs_source_review
+    overlay_status: needs_source_review
+    edit_status: blocked
+    approval_status: needs_source_review
+  - shot_id: insan_ep01_shot_023
+    scene: respite_and_enmity
+    required_asset: symbolic_path_of_humanity
+    image_status: blocked_missing_asset
+    video_status: blocked_missing_image
+    voice_status: needs_source_review
+    overlay_status: none
+    edit_status: blocked
+    approval_status: needs_depiction_review
+  - shot_id: insan_ep01_shot_024
+    scene: storyteller_closing
+    required_asset: storyteller, storyteller_studio
+    image_status: blocked_missing_asset
+    video_status: blocked_missing_image
+    voice_status: ready_to_record_after_source_review
+    overlay_status: none
+    edit_status: blocked
+    approval_status: needs_source_review
+  - shot_id: insan_ep01_shot_025
+    scene: storyteller_closing
+    required_asset: storyteller, storyteller_studio
+    image_status: blocked_missing_asset
+    video_status: blocked_missing_image
+    voice_status: ready_to_record_after_source_review
+    overlay_status: none
+    edit_status: blocked
+    approval_status: needs_source_review

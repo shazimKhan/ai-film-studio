@@ -1,0 +1,52 @@
+schema_version: "1.0"
+project_id: insan
+episode_id: episode_01
+content_type: historical_notes
+notes:
+  - note_id: hist_001
+    statement: The episode topic belongs to unseen sacred history, not reconstructable archaeology.
+    source_refs:
+      - quran_baqarah_2_30_39
+      - quran_sad_38_71_85
+      - projects/insan/00_governance/uncertainty_policy.md
+    confidence: high
+    validation_status: source_located_pending_scholar_review
+  - note_id: hist_002
+    statement: The Qur'anic account appears across multiple surahs rather than as one continuous chronological passage.
+    source_refs:
+      - quran_baqarah_2_30_39
+      - quran_araf_7_11_18
+      - quran_hijr_15_26_44
+      - quran_isra_17_61_65
+      - quran_kahf_18_50
+      - quran_taha_20_115_123
+      - quran_sad_38_71_85
+    confidence: high
+    validation_status: source_located_pending_scholar_review
+  - note_id: hist_003
+    statement: Adam's creation material is described with earth, dust, clay, and altered clay language across Qur'anic and Hadith sources.
+    source_refs:
+      - quran_hijr_15_26_44
+      - quran_sad_38_71_85
+      - quran_ali_imran_3_59
+      - hadith_muslim_2996
+      - hadith_abi_dawud_4693
+    confidence: high
+    validation_status: source_located_pending_scholar_review
+  - note_id: hist_004
+    statement: No precise earthly calendar date for the prostration command, Iblis' refusal, or respite event is established in this package.
+    source_refs:
+      - quran_baqarah_2_30_39
+      - quran_araf_7_11_18
+      - quran_hijr_15_26_44
+      - quran_sad_38_71_85
+      - projects/insan/00_governance/uncertainty_policy.md
+    confidence: high
+    validation_status: research_boundary
+  - note_id: hist_005
+    statement: Sahih Muslim 854b gives Friday-related context for Adam's creation, entry into Paradise, and expulsion, but it does not narrate the full Iblis refusal/respite sequence.
+    source_refs:
+      - hadith_muslim_854b
+      - quran_sad_38_71_85
+    confidence: medium
+    validation_status: source_located_pending_scholar_review

@@ -1,0 +1,32 @@
+schema_version: "1.0"
+project_id: insan
+episode_id: episode_01
+asset_id: angelic_presence
+status: needs_depiction_review_before_generation
+recommended_aspect_ratio: "16:9"
+recommended_generator: gemini
+master_prompt: >
+  Abstract faceless angelic presence for an Islamic historical documentary
+  drama. Represent angels as restrained white-gold radiance, luminous veiled
+  forms, and ordered light planes without invented faces, eyes, mouths, detailed
+  wings, or human portrait identity. The feeling is obedience, purity, and
+  reverence. Use source-less white-gold light in deep negative space, cinematic
+  realism, soft volumetric particles, no readable text, no Arabic text generated
+  inside the image.
+negative_prompt: >
+  angel faces, human faces, detailed wings, fantasy angels, halos, Christian
+  iconography, readable text, Arabic text, Qur'anic text, divine body, throne,
+  outer space, stars, galaxies, cartoon, low realism
+continuity_lock:
+  form: faceless_radiance
+  color_language: white_gold
+  behavior: obedient_stillness
+camera_neutral_description: Faceless angelic radiance in abstract unseen realm.
+identity_restrictions:
+  - no_individual_angel_identity
+  - no_faces
+  - no_mouths
+depiction_policy_restrictions:
+  - angelic_faces_hidden
+  - no_visual_allah
+reference_image_guidance: Generate group presence references, not character portraits.

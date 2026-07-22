@@ -1,0 +1,114 @@
+schema_version: "1.0"
+project_id: insan
+episode_id: episode_01
+index_status: source_links_located_pending_scholar_review
+retrieved_date: "2026-07-22"
+sources:
+  - source_id: user_instruction_2026_07_22
+    source_type: production_instruction
+    reference: User instruction for Insan Episode 01 research package
+    url: local_conversation_instruction
+    validation_status: instruction_recorded
+    confidence: high
+  - source_id: quran_baqarah_2_30_39
+    source_type: quran
+    reference: Al-Baqarah 2:30-39
+    url: https://legacy.quran.com/2/29-107
+    validation_status: source_located_pending_scholar_review
+    confidence: high
+  - source_id: quran_araf_7_11_18
+    source_type: quran
+    reference: "Al-A'raf 7:11-18"
+    url: https://legacy.quran.com/7/11-18
+    validation_status: source_located_pending_scholar_review
+    confidence: high
+  - source_id: quran_hijr_15_26_44
+    source_type: quran
+    reference: Al-Hijr 15:26-44
+    url: https://legacy.quran.com/15/26-44
+    validation_status: source_located_pending_scholar_review
+    confidence: high
+  - source_id: quran_isra_17_61_65
+    source_type: quran
+    reference: "Al-Isra' 17:61-65"
+    url: https://legacy.quran.com/17/61-65
+    validation_status: source_located_pending_scholar_review
+    confidence: high
+  - source_id: quran_kahf_18_50
+    source_type: quran
+    reference: Al-Kahf 18:50
+    url: https://legacy.quran.com/18/50
+    validation_status: source_located_pending_scholar_review
+    confidence: high
+  - source_id: quran_taha_20_115_123
+    source_type: quran
+    reference: Taha 20:115-123
+    url: https://legacy.quran.com/20/115-123
+    validation_status: source_located_pending_scholar_review
+    confidence: high
+  - source_id: quran_sad_38_71_85
+    source_type: quran
+    reference: Sad 38:71-85
+    url: https://legacy.quran.com/38/71-88
+    validation_status: source_located_pending_scholar_review
+    confidence: high
+  - source_id: quran_ali_imran_3_59
+    source_type: quran
+    reference: "Ali 'Imran 3:59"
+    url: https://legacy.quran.com/3/59
+    validation_status: source_located_pending_scholar_review
+    confidence: high
+  - source_id: hadith_muslim_2996
+    source_type: hadith
+    reference: Sahih Muslim 2996
+    url: https://sunnah.com/muslim:2996
+    validation_status: source_located_pending_scholar_review
+    confidence: high
+  - source_id: hadith_abi_dawud_4693
+    source_type: hadith
+    reference: Sunan Abi Dawud 4693
+    url: https://sunnah.com/abudawud:4693
+    validation_status: source_located_pending_scholar_review
+    confidence: medium
+  - source_id: hadith_muslim_854b
+    source_type: hadith
+    reference: Sahih Muslim 854b
+    url: https://sunnah.com/muslim:854b
+    validation_status: source_located_pending_scholar_review
+    confidence: medium
+  - source_id: tafsir_ibn_kathir_baqarah_2_34
+    source_type: tafsir
+    reference: Tafsir Ibn Kathir on Al-Baqarah 2:34
+    url: https://www.alim.org/quran/tafsir/ibn-kathir/surah/2/34/
+    validation_status: source_located_pending_scholar_review
+    confidence: medium
+  - source_id: tafsir_ibn_kathir_kahf_18_50
+    source_type: tafsir
+    reference: Tafsir Ibn Kathir on Al-Kahf 18:50
+    url: https://www.alim.org/quran/tafsir/ibn-kathir/surah/18/50/
+    validation_status: source_located_pending_scholar_review
+    confidence: medium
+  - source_id: tafsir_ibn_kathir_sad_38_71_85
+    source_type: tafsir
+    reference: Tafsir Ibn Kathir on Sad 38:71-85
+    url: https://www.alim.org/quran/tafsir/ibn-kathir/surah/38/73/
+    validation_status: source_located_pending_scholar_review
+    confidence: medium
+  - source_id: tafsir_tabari_baqarah_2_34
+    source_type: tafsir
+    reference: Tafsir al-Tabari on Al-Baqarah 2:34
+    url: https://quran.ksu.edu.sa/tafseer/tabary/sura2-aya34.html
+    validation_status: source_located_pending_scholar_review
+    confidence: medium
+  - source_id: tafsir_tabari_kahf_18_50
+    source_type: tafsir
+    reference: Tafsir al-Tabari on Al-Kahf 18:50
+    url: https://quran.com/es/Al-K%C3%A1hf/50/tafsirs/ar-tafsir-al-tabari
+    validation_status: source_located_pending_scholar_review
+    confidence: medium
+  - source_id: tafsir_qurtubi_kahf_18_50
+    source_type: tafsir
+    reference: Tafsir al-Qurtubi on Al-Kahf 18:50
+    url: https://quran.com/en/18%3A50/tafsirs/ar-tafseer-al-qurtubi
+    validation_status: source_located_pending_scholar_review
+    confidence: medium

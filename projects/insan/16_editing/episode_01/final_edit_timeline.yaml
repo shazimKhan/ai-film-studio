@@ -1,0 +1,75 @@
+schema_version: "1.0"
+project_id: insan
+episode_id: episode_01
+status: edit_plan_pending_assets_voiceover_and_overlays
+target_duration_seconds: 292
+timeline:
+  - start: "00:00"
+    end: "00:24"
+    scene_id: insan_ep01_scene_001
+    audio: storyteller_voiceover_with_lip_sync
+    overlay: none
+  - start: "00:24"
+    end: "00:44"
+    scene_id: insan_ep01_scene_002
+    audio: narration_only
+    overlay: none
+  - start: "00:44"
+    end: "01:02"
+    scene_id: insan_ep01_scene_003
+    audio: narration_only
+    overlay: quran_overlay_005_optional_after_verification
+  - start: "01:02"
+    end: "01:24"
+    scene_id: insan_ep01_scene_004
+    audio: narration_only
+    overlay: quran_overlay_001_optional_after_verification
+  - start: "01:24"
+    end: "01:46"
+    scene_id: insan_ep01_scene_005
+    audio: narration_only
+    overlay: quran_overlay_004_or_009_optional_after_verification
+  - start: "01:46"
+    end: "02:04"
+    scene_id: insan_ep01_scene_006
+    audio: narration_only
+    overlay: none
+  - start: "02:04"
+    end: "02:28"
+    scene_id: insan_ep01_scene_007
+    audio: narration_only
+    overlay: quran_overlay_002_or_006_optional_after_verification
+  - start: "02:28"
+    end: "02:48"
+    scene_id: insan_ep01_scene_008
+    audio: narration_only
+    overlay: none
+  - start: "02:48"
+    end: "03:08"
+    scene_id: insan_ep01_scene_009
+    audio: narration_only
+    overlay: none
+  - start: "03:08"
+    end: "03:30"
+    scene_id: insan_ep01_scene_010
+    audio: narration_only
+    overlay: quran_overlay_003_optional_after_verification
+  - start: "03:30"
+    end: "03:54"
+    scene_id: insan_ep01_scene_011
+    audio: narration_only
+    overlay: none
+  - start: "03:54"
+    end: "04:22"
+    scene_id: insan_ep01_scene_012
+    audio: narration_only
+    overlay: quran_overlay_007_or_008_optional_after_verification
+  - start: "04:22"
+    end: "04:52"
+    scene_id: insan_ep01_scene_013
+    audio: storyteller_voiceover_with_lip_sync
+    overlay: none
+final_export:
+  platform: youtube
+  aspect_ratio: "16:9"
+  readiness: blocked_until_source_and_depiction_review

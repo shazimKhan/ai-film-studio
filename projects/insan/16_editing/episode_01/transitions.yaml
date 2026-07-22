@@ -1,0 +1,47 @@
+schema_version: "1.0"
+project_id: insan
+episode_id: episode_01
+status: ready_for_edit_after_assets
+transitions:
+  - from: start
+    to: insan_ep01_scene_001
+    transition: fade_from_black
+  - from: insan_ep01_scene_001
+    to: insan_ep01_scene_002
+    transition: slow_dissolve_to_darkness
+  - from: insan_ep01_scene_002
+    to: insan_ep01_scene_003
+    transition: light_particles_gather
+  - from: insan_ep01_scene_003
+    to: insan_ep01_scene_004
+    transition: cut_to_vast_assembly
+  - from: insan_ep01_scene_004
+    to: insan_ep01_scene_005
+    transition: dissolve_to_earth_clay_symbolism
+  - from: insan_ep01_scene_005
+    to: insan_ep01_scene_006
+    transition: clay_particles_hold_in_stillness
+  - from: insan_ep01_scene_006
+    to: insan_ep01_scene_007
+    transition: dissolve_to_command_assembly
+  - from: insan_ep01_scene_007
+    to: insan_ep01_scene_008
+    transition: continuation_to_sujud
+  - from: insan_ep01_scene_008
+    to: insan_ep01_scene_009
+    transition: reveal_still_iblis_presence
+  - from: insan_ep01_scene_009
+    to: insan_ep01_scene_010
+    transition: hard_cut_to_fire_clay_contrast
+  - from: insan_ep01_scene_010
+    to: insan_ep01_scene_011
+    transition: light_withdraws_from_iblis
+  - from: insan_ep01_scene_011
+    to: insan_ep01_scene_012
+    transition: low_shadow_hold
+  - from: insan_ep01_scene_012
+    to: insan_ep01_scene_013
+    transition: dissolve_back_to_storyteller
+  - from: insan_ep01_scene_013
+    to: end
+    transition: fade_to_black

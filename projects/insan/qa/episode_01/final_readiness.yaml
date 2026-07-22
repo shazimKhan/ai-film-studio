@@ -1,0 +1,41 @@
+schema_version: "1.0"
+project_id: insan
+episode_id: episode_01
+status: package_complete_generation_blocked
+episode_readiness_percentage: 62
+readiness_breakdown:
+  research_package: complete_pending_scholar_approval
+  narration: complete_pending_source_approval
+  scenes: complete_pending_depiction_review
+  shots: complete_pending_depiction_review
+  asset_manifest: complete
+  master_asset_prompts: complete_pending_review
+  shot_image_prompts: complete_pending_review
+  video_prompts: complete_pending_images
+  quran_overlay_plan: complete_pending_human_verification
+  voiceover_plan: complete_pending_source_approval
+  music_sfx_plan: complete
+  edit_plan: complete_pending_assets
+blocking_issues:
+  - source.no_approved_records
+  - depiction.review_not_passed
+  - assets.missing_required_references
+  - images.not_generated
+  - videos.not_generated
+  - voiceover.not_recorded
+qa_results:
+  unsupported_religious_statements: none_intentionally_added_but_all_claims_unapproved
+  missing_sources: none_detected_for_narration_blocks
+  unverified_claims: present_all_religious_claims_pending_review
+  depiction_violations: none_intentionally_requested
+  allah_visualization: prohibited_not_requested
+  adam_face_visibility: prohibited_not_requested
+  angel_face_visibility: prohibited_not_requested
+  western_devil_imagery: prohibited_not_requested
+  generated_quranic_arabic: prohibited_not_requested
+  scene_to_shot_consistency: pass
+  missing_prompts: none_detected
+  missing_assets: present
+  excessive_shot_count: pass_25_shots
+final_decision: not_ready_for_final_generation_until_blockers_resolved
+first_safe_generation_target: storyteller_master

@@ -1,0 +1,33 @@
+schema_version: "1.0"
+project_id: insan
+episode_id: episode_01
+asset_id: iblis_post_expulsion
+status: needs_depiction_review_before_generation
+recommended_aspect_ratio: "16:9"
+recommended_generator: gemini
+master_prompt: >
+  Symbolic cinematic depiction of Iblis after expulsion as the same restrained
+  jinn presence, now separated into deeper darkness and stripped of radiance.
+  Use shadow, dim ember texture, and severe negative space to show disgrace and
+  distance. No horns, no tail, no pitchfork, no red Western devil imagery, no
+  horror monster transformation, no gore, no detailed mouth or lip-sync. The
+  feeling is grave, consequential, and spiritually dangerous, not fantasy horror.
+  Abstract expulsion boundary behind him, white-gold light receding without any
+  visible divine source, no readable text.
+negative_prompt: >
+  Western devil, horns, tail, pitchfork, red demon, monster transformation,
+  gore, throne, divine body, face in light, angel wings, readable text, Arabic
+  text, Qur'anic text, horror poster, fantasy battle, cartoon, low realism
+continuity_lock:
+  identity_family: iblis_pre_rebellion
+  post_expulsion_state: darker_separated_disgraced
+  fire_language: dim_ember_edges
+camera_neutral_description: Shadowed jinn presence beyond a symbolic expulsion boundary.
+identity_restrictions:
+  - same_identity_family_as_pre_rebellion
+  - no_western_devil_iconography
+  - no_lip_sync_without_approval
+depiction_policy_restrictions:
+  - no_visual_allah
+  - no_divine_body_or_throne
+reference_image_guidance: Generate only symbolic continuity references after depiction review.

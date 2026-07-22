@@ -1,0 +1,179 @@
+schema_version: "1.0"
+project_id: insan
+episode_id: episode_01
+title: Takabbur Ka Pehla Imtihan
+language: roman_urdu
+status: production_draft_pending_source_and_depiction_review
+target_duration_seconds: 292
+blocks:
+  - block_id: nar_001
+    scene_id: insan_ep01_scene_001
+    start_time: "00:00"
+    duration_seconds: 24
+    text: >
+      Yeh kahani hai insan ki. Us insan ki jo kabhi apni taqat par itna fakhr
+      karta hai ke kamzor ki aah sunai dena band ho jati hai. Jo zameen par
+      akad kar chalta hai, jaise us ke qadam kabhi rukenge hi nahi. Magar
+      takabbur ki yeh kahani insan se shuru nahi hui.
+    source_refs:
+      - user_instruction_2026_07_22
+    validation_status: production_hook_pending_review
+  - block_id: nar_002
+    scene_id: insan_ep01_scene_002
+    start_time: "00:24"
+    duration_seconds: 20
+    text: >
+      Qur'an humein batata hai ke insan ke aane se pehle bhi Allah ki makhlooq
+      maujood thi. Jinn bhi the. Farishte bhi the. Yeh woh manzar hai jahan
+      insan abhi zameen par nahi aaya tha.
+    source_refs:
+      - quran_kahf_18_50
+      - hadith_muslim_2996
+    validation_status: source_located_pending_scholar_review
+  - block_id: nar_003
+    scene_id: insan_ep01_scene_003
+    start_time: "00:44"
+    duration_seconds: 18
+    text: >
+      Farishte apne Rabb ke hukm ke farmabardar the. Aur Iblis, Qur'an ke bayan
+      ke mutabiq, farishta nahi tha; woh jinn mein se tha.
+    source_refs:
+      - quran_kahf_18_50
+      - tafsir_ibn_kathir_kahf_18_50
+    validation_status: source_located_pending_scholar_review
+  - block_id: nar_004
+    scene_id: insan_ep01_scene_004
+    start_time: "01:02"
+    duration_seconds: 22
+    text: >
+      Qur'an ka mafhoom hai ke Allah Ta'ala ne farishton se farmaya ke woh
+      zameen mein ek khalifah banane wala hai. Yeh aik azeem elan tha. Is elan
+      mein insan ki ibtida bhi thi, zimmedari bhi thi, aur imtihan ka raasta
+      bhi.
+    source_refs:
+      - quran_baqarah_2_30_39
+    validation_status: source_located_pending_scholar_review
+  - block_id: nar_005
+    scene_id: insan_ep01_scene_005
+    start_time: "01:24"
+    duration_seconds: 22
+    text: >
+      Qur'an aur Hadith ke zariye humein maloom hota hai ke Adam عليه السلام
+      ki takhleeq mitti aur gandhi hui mitti ke bayan se juri hai. Yeh tafseel
+      hamare liye itni hi hai jitni wahy aur sahih riwayat se sabit ho.
+    source_refs:
+      - quran_hijr_15_26_44
+      - quran_sad_38_71_85
+      - quran_ali_imran_3_59
+      - hadith_muslim_2996
+      - hadith_abi_dawud_4693
+    validation_status: source_located_pending_scholar_review
+  - block_id: nar_006
+    scene_id: insan_ep01_scene_006
+    start_time: "01:46"
+    duration_seconds: 18
+    text: >
+      Jo cheez wazeh nahi, us mein hum apni taraf se manzar nahi banate. Adam
+      عليه السلام ka maqam adab ka taqaza karta hai; is liye yahan tasavvur se
+      zyada ihtiyat zaroori hai.
+    source_refs:
+      - quran_hijr_15_26_44
+      - quran_sad_38_71_85
+      - projects/insan/00_governance/depiction_policy.md
+    validation_status: source_located_pending_depiction_review
+  - block_id: nar_007
+    scene_id: insan_ep01_scene_007
+    start_time: "02:04"
+    duration_seconds: 24
+    text: >
+      Phir woh lamha aaya jis ka zikr Qur'an kai maqamat par karta hai. Allah
+      Ta'ala ne farishton ko hukm diya ke Adam عليه السلام ko sajdah karein.
+      Yeh sajdah Allah ke hukm ki ita'at tha. Is ko Adam عليه السلام ki ibadat
+      ke taur par pesh nahi kiya jayega.
+    source_refs:
+      - quran_baqarah_2_30_39
+      - quran_araf_7_11_18
+      - quran_hijr_15_26_44
+      - quran_taha_20_115_123
+      - quran_sad_38_71_85
+      - tafsir_ibn_kathir_baqarah_2_34
+    validation_status: source_located_pending_scholar_review
+  - block_id: nar_008
+    scene_id: insan_ep01_scene_008
+    start_time: "02:28"
+    duration_seconds: 20
+    text: >
+      Farishton ne hukm maana. Unhon ne sajdah kiya. Ita'at ka manzar khamosh
+      tha, magar us khamoshi mein bandagi ki poori gawahi maujood thi.
+    source_refs:
+      - quran_baqarah_2_30_39
+      - quran_hijr_15_26_44
+      - quran_sad_38_71_85
+    validation_status: source_located_pending_scholar_review
+  - block_id: nar_009
+    scene_id: insan_ep01_scene_009
+    start_time: "02:48"
+    duration_seconds: 20
+    text: >
+      Lekin Iblis ne inkar kar diya. Yahan se takabbur ka pehla bada imtihan
+      samne aata hai: hukm ke muqable mein apni soch ko bara samajhna.
+    source_refs:
+      - quran_baqarah_2_30_39
+      - quran_hijr_15_26_44
+      - quran_sad_38_71_85
+    validation_status: source_located_pending_scholar_review
+  - block_id: nar_010
+    scene_id: insan_ep01_scene_010
+    start_time: "03:08"
+    duration_seconds: 22
+    text: >
+      Qur'an ka mafhoom hai ke Iblis ne kaha ke woh Adam se behtar hai: use
+      aag se paida kiya gaya, aur Adam ko mitti se. Yeh sirf ek jawab nahi tha.
+      Yeh apni asal ko doosre ki asal se behtar samajhne ka elaan tha.
+    source_refs:
+      - quran_araf_7_11_18
+      - quran_sad_38_71_85
+    validation_status: source_located_pending_scholar_review
+  - block_id: nar_011
+    scene_id: insan_ep01_scene_011
+    start_time: "03:30"
+    duration_seconds: 24
+    text: >
+      Qur'an ke bayan ke mutabiq Iblis ko nikala gaya, zaleel kiya gaya, aur
+      us par lanat ka zikr aata hai. Yeh anjam sirf nafarmani ka nahi, balkeh
+      takabbur bhari nafarmani ka tha.
+    source_refs:
+      - quran_araf_7_11_18
+      - quran_hijr_15_26_44
+      - quran_sad_38_71_85
+    validation_status: source_located_pending_scholar_review
+  - block_id: nar_012
+    scene_id: insan_ep01_scene_012
+    start_time: "03:54"
+    duration_seconds: 28
+    text: >
+      Iblis ne mohlat maangi. Qur'an ke mafhoom ke mutabiq use ek muqarrar
+      waqt tak mohlat di gayi. Phir Iblis ne apna irada zahir kiya: woh insan
+      ko gumrah karne ki koshish karega. Lekin Qur'an yeh bhi batata hai ke
+      Allah ke mukhlis bandon par Iblis ka ikhtiyar nahi.
+    source_refs:
+      - quran_araf_7_11_18
+      - quran_hijr_15_26_44
+      - quran_isra_17_61_65
+      - quran_sad_38_71_85
+    validation_status: source_located_pending_scholar_review
+  - block_id: nar_013
+    scene_id: insan_ep01_scene_013
+    start_time: "04:22"
+    duration_seconds: 30
+    text: >
+      Aaj jab insan apni zaat, apni quwwat, apni nasl, apni daulat ya apni
+      soch par ghuroor karta hai, to woh usi purane raste ki taraf qadam
+      badhata hai jahan hukm ke samne takabbur khara ho gaya tha. Insan ki
+      pehli hifazat yahi hai: haq ke samne jhuk jana, aur takabbur ko dil mein
+      ghar na banane dena.
+    source_refs:
+      - user_instruction_2026_07_22
+      - quran_baqarah_2_30_39
+      - quran_sad_38_71_85
+    validation_status: production_moral_pending_review

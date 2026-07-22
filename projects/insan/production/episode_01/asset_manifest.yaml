@@ -1,0 +1,182 @@
+schema_version: "1.0"
+project_id: insan
+episode_id: episode_01
+status: pending_asset_generation
+assets:
+  characters:
+    - asset_id: storyteller
+      type: character
+      required_scenes:
+        - insan_ep01_scene_001
+        - insan_ep01_scene_013
+      existing_or_missing: missing
+      reusable_or_episode_specific: reusable
+      continuity_rules: Pakistani Muslim male, 30-35, charcoal kurta, waistcoat, desk continuity.
+      visual_restrictions: No readable text, realistic not AI-looking.
+      generation_priority: 1
+    - asset_id: iblis_pre_rebellion
+      type: character_presence
+      required_scenes:
+        - insan_ep01_scene_003
+        - insan_ep01_scene_009
+        - insan_ep01_scene_010
+      existing_or_missing: missing
+      reusable_or_episode_specific: reusable
+      continuity_rules: Jinn presence, not angel, no leader-of-jinn claim.
+      visual_restrictions: No Western horned devil, no lipsync, no red monster skin.
+      generation_priority: 2
+    - asset_id: iblis_post_expulsion
+      type: character_presence
+      required_scenes:
+        - insan_ep01_scene_011
+        - insan_ep01_scene_012
+      existing_or_missing: missing
+      reusable_or_episode_specific: reusable
+      continuity_rules: Same identity family as pre-rebellion, darker and separated.
+      visual_restrictions: No horns, tail, pitchfork, horror monster transformation.
+      generation_priority: 2
+  presences:
+    - asset_id: angelic_presence
+      type: presence
+      required_scenes:
+        - insan_ep01_scene_002
+        - insan_ep01_scene_004
+        - insan_ep01_scene_007
+        - insan_ep01_scene_008
+        - insan_ep01_scene_009
+      existing_or_missing: missing
+      reusable_or_episode_specific: reusable
+      continuity_rules: Faceless radiance, obedience, no invented facial identity.
+      visual_restrictions: No faces, no detailed wings, no humanized angel identity.
+      generation_priority: 3
+    - asset_id: adam_concealed_presence
+      type: presence
+      required_scenes:
+        - insan_ep01_scene_005
+        - insan_ep01_scene_006
+        - insan_ep01_scene_007
+        - insan_ep01_scene_008
+        - insan_ep01_scene_009
+      existing_or_missing: missing
+      reusable_or_episode_specific: reusable
+      continuity_rules: Concealed presence metadata only.
+      visual_restrictions: No face, no detailed body, no reusable prophet identity.
+      generation_priority: 4
+    - asset_id: background_jinn_presence
+      type: presence
+      required_scenes:
+        - insan_ep01_scene_002
+        - insan_ep01_scene_003
+      existing_or_missing: missing
+      reusable_or_episode_specific: reusable
+      continuity_rules: Distant non-specific jinn presences.
+      visual_restrictions: No monster faces, no Western demons, no leader symbolism.
+      generation_priority: 5
+  locations:
+    - asset_id: storyteller_studio
+      type: location
+      required_scenes:
+        - insan_ep01_scene_001
+        - insan_ep01_scene_013
+      existing_or_missing: missing
+      reusable_or_episode_specific: reusable
+      continuity_rules: Wooden desk, books left, MacBook right, ancient manuscript atmosphere.
+      visual_restrictions: No readable text on books or screen.
+      generation_priority: 1
+    - asset_id: unseen_realm
+      type: environment
+      required_scenes:
+        - insan_ep01_scene_002
+        - insan_ep01_scene_003
+        - insan_ep01_scene_004
+        - insan_ep01_scene_007
+        - insan_ep01_scene_008
+        - insan_ep01_scene_009
+        - insan_ep01_scene_010
+      existing_or_missing: missing
+      reusable_or_episode_specific: reusable
+      continuity_rules: Abstract darkness, source-less white-gold light, luminous planes.
+      visual_restrictions: No outer space, planets, stars, galaxies, Earth landscape.
+      generation_priority: 5
+    - asset_id: clay_formation_space
+      type: environment
+      required_scenes:
+        - insan_ep01_scene_005
+        - insan_ep01_scene_006
+      existing_or_missing: missing
+      reusable_or_episode_specific: reusable
+      continuity_rules: Clay particles and concealed presence only.
+      visual_restrictions: No Adam face or anatomical formation.
+      generation_priority: 6
+    - asset_id: expulsion_boundary
+      type: symbolic_environment
+      required_scenes:
+        - insan_ep01_scene_011
+      existing_or_missing: missing
+      reusable_or_episode_specific: episode_specific
+      continuity_rules: Radiance recedes into symbolic darkness.
+      visual_restrictions: No divine body, throne, or horror portal.
+      generation_priority: 7
+    - asset_id: symbolic_path_of_humanity
+      type: symbolic_environment
+      required_scenes:
+        - insan_ep01_scene_012
+      existing_or_missing: missing
+      reusable_or_episode_specific: episode_specific
+      continuity_rules: Shadow at path edge, distant light visible.
+      visual_restrictions: No literal Paradise/Hell, no identifiable human faces.
+      generation_priority: 8
+  effects:
+    - asset_id: smokeless_fire
+      type: effect
+      required_scenes:
+        - insan_ep01_scene_003
+        - insan_ep01_scene_010
+      existing_or_missing: missing
+      reusable_or_episode_specific: reusable
+      continuity_rules: Restrained ember texture, not horror flames.
+      visual_restrictions: No face in fire, no devil symbolism.
+      generation_priority: 6
+    - asset_id: angelic_radiance
+      type: effect
+      required_scenes:
+        - insan_ep01_scene_002
+        - insan_ep01_scene_004
+        - insan_ep01_scene_007
+        - insan_ep01_scene_008
+      existing_or_missing: missing
+      reusable_or_episode_specific: reusable
+      continuity_rules: Faceless white-gold radiance.
+      visual_restrictions: No angel faces, no divine source body.
+      generation_priority: 3
+    - asset_id: clay_particles
+      type: effect
+      required_scenes:
+        - insan_ep01_scene_005
+        - insan_ep01_scene_006
+        - insan_ep01_scene_010
+      existing_or_missing: missing
+      reusable_or_episode_specific: reusable
+      continuity_rules: Natural earth/clay particles.
+      visual_restrictions: No body-part formation.
+      generation_priority: 6
+    - asset_id: source_less_white_gold_light
+      type: effect
+      required_scenes:
+        - insan_ep01_scene_004
+        - insan_ep01_scene_007
+      existing_or_missing: missing
+      reusable_or_episode_specific: reusable
+      continuity_rules: Light has no visible body, object, throne, or source figure.
+      visual_restrictions: No visual Allah, no face in light.
+      generation_priority: 3
+    - asset_id: darkness_separation
+      type: effect
+      required_scenes:
+        - insan_ep01_scene_011
+        - insan_ep01_scene_012
+      existing_or_missing: missing
+      reusable_or_episode_specific: reusable
+      continuity_rules: Severe restrained darkness, no horror language.
+      visual_restrictions: No monster imagery.
+      generation_priority: 7

@@ -1,0 +1,29 @@
+schema_version: "1.0"
+project_id: insan
+episode_id: episode_01
+asset_id: unseen_realm
+status: needs_depiction_review_before_generation
+recommended_aspect_ratio: "16:9"
+recommended_generator: gemini
+master_prompt: >
+  Abstract pre-Earth unseen realm for an Islamic historical documentary drama:
+  deep darkness, source-less white-gold light, suspended particles, luminous
+  planes, and vast negative space. It must not look like outer space, astronomy,
+  galaxies, stars, planets, Earth, a city, a palace, a temple, or a throne room.
+  The environment is non-literal, reverent, solemn, cinematic, and restrained.
+  No visible Allah, no divine body, no throne, no readable text, no Arabic text.
+negative_prompt: >
+  outer space, stars, galaxies, planets, Earth, nebula, city, palace, throne,
+  divine body, face in light, readable text, Arabic text, Qur'anic text, fantasy
+  battle, horror, cartoon, low realism
+continuity_lock:
+  world_type: abstract_unseen_realm
+  light_language: source_less_white_gold
+  space_language: vast_negative_space
+camera_neutral_description: Abstract unseen realm with darkness and source-less white-gold light.
+identity_restrictions:
+  - no_location_that_claims_specific_unseen_physics
+depiction_policy_restrictions:
+  - no_visual_allah
+  - no_throne
+reference_image_guidance: Generate wide, medium, and detail environment plates before scene images.

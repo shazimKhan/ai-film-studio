@@ -1,0 +1,340 @@
+schema_version: "1.0"
+project_id: insan
+episode_id: episode_01
+status: production_scene_breakdown_pending_source_and_depiction_review
+total_scenes: 13
+target_duration_seconds: 292
+scenes:
+  - scene_id: insan_ep01_scene_001
+    title: Storyteller Opening Hook
+    narrative_purpose: Connect modern human arrogance to the episode's moral frame.
+    narration_block: nar_001
+    narration_text: >
+      Yeh kahani hai insan ki. Us insan ki jo kabhi apni taqat par itna fakhr
+      karta hai ke kamzor ki aah sunai dena band ho jati hai. Jo zameen par
+      akad kar chalta hai, jaise us ke qadam kabhi rukenge hi nahi. Magar
+      takabbur ki yeh kahani insan se shuru nahi hui.
+    source_refs:
+      - user_instruction_2026_07_22
+    duration_seconds: 24
+    location: storyteller_studio
+    required_assets:
+      - storyteller
+      - storyteller_studio
+    depiction_constraints:
+      - no_sacred_figure_depiction
+      - no_quranic_text_on_screen
+    visual_description: Storyteller seated at desk in a solemn documentary studio.
+    emotional_tone: serious_reflective
+    transition_in: fade_from_black
+    transition_out: slow_dissolve_to_darkness
+    approval_status: needs_source_review
+  - scene_id: insan_ep01_scene_002
+    title: Before Humanity
+    narrative_purpose: Establish that this account begins before human life on Earth.
+    narration_block: nar_003
+    narration_text: >
+      Qur'an humein batata hai ke insan ke aane se pehle bhi Allah ki makhlooq
+      maujood thi. Jinn bhi the. Farishte bhi the. Farishte apne Rabb ke hukm
+      ke farmabardar the.
+    source_refs:
+      - quran_kahf_18_50
+      - hadith_muslim_2996
+    duration_seconds: 20
+    location: unseen_realm
+    required_assets:
+      - unseen_realm
+      - background_jinn_presence
+      - angelic_presence
+    depiction_constraints:
+      - abstract_unseen_realm_only
+      - no_literal_outer_space
+      - no_angel_faces
+    visual_description: Abstract darkness with distant non-facial presences and restrained light.
+    emotional_tone: ancient_mysterious_reverent
+    transition_in: dissolve_from_studio_shadow
+    transition_out: light_particles_gather_softly
+    approval_status: needs_source_review
+  - scene_id: insan_ep01_scene_003
+    title: Iblis From The Jinn
+    narrative_purpose: Clarify that Iblis is jinn, not an angel.
+    narration_block: nar_002
+    narration_text: >
+      Aur Iblis, Qur'an ke bayan ke mutabiq, jinn mein se tha.
+    source_refs:
+      - quran_kahf_18_50
+      - tafsir_ibn_kathir_kahf_18_50
+    duration_seconds: 18
+    location: unseen_realm
+    required_assets:
+      - iblis_pre_rebellion
+      - background_jinn_presence
+      - unseen_realm
+    depiction_constraints:
+      - iblis_not_angel
+      - iblis_not_western_horned_devil
+      - no_leader_of_jinn_claim
+    visual_description: Symbolic non-Western jinn presence separated from angelic radiance.
+    emotional_tone: tense_restrained
+    transition_in: shadow_forms_from_negative_space
+    transition_out: cut_to_vast_assembly
+    approval_status: needs_source_review
+  - scene_id: insan_ep01_scene_004
+    title: Announcement Of The Khalifah
+    narrative_purpose: Present the Qur'anic announcement of a khalifah on Earth as paraphrased meaning.
+    narration_block: nar_004
+    narration_text: >
+      Qur'an ka mafhoom hai ke Allah Ta'ala ne farishton se farmaya ke woh
+      zameen mein ek khalifah banane wala hai.
+    source_refs:
+      - quran_baqarah_2_30_39
+    duration_seconds: 22
+    location: unseen_realm
+    required_assets:
+      - angelic_presence
+      - unseen_realm
+      - source_less_white_gold_light
+    depiction_constraints:
+      - no_visual_allah
+      - no_throne
+      - divine_speech_only_storyteller_narrated
+    visual_description: Angelic presences receive the announcement through non-embodied light and stillness.
+    emotional_tone: awe_reverence
+    transition_in: gentle_swell_of_light
+    transition_out: dissolve_to_earth_clay_symbolism
+    approval_status: needs_source_review
+  - scene_id: insan_ep01_scene_005
+    title: Earth And Clay
+    narrative_purpose: Ground Adam's creation material in sourced clay and earth language.
+    narration_block: nar_005
+    narration_text: >
+      Qur'an aur Hadith ke zariye humein maloom hota hai ke Adam عليه السلام
+      ki takhleeq mitti aur gandhi hui mitti ke bayan se juri hai.
+    source_refs:
+      - quran_hijr_15_26_44
+      - quran_sad_38_71_85
+      - quran_ali_imran_3_59
+      - hadith_muslim_2996
+      - hadith_abi_dawud_4693
+    duration_seconds: 22
+    location: clay_formation_space
+    required_assets:
+      - clay_formation_space
+      - clay_particles
+      - adam_concealed_presence
+    depiction_constraints:
+      - adam_face_hidden
+      - no_detailed_adam_body
+      - no_angels_collecting_earth
+    visual_description: Clay particles and concealed presence without showing Adam's face or body identity.
+    emotional_tone: humble_sacred
+    transition_in: particles_emerge_from_darkness
+    transition_out: clay_particles_hold_in_stillness
+    approval_status: needs_source_review
+  - scene_id: insan_ep01_scene_006
+    title: Formation Of Adam Concealed
+    narrative_purpose: Maintain creation context while avoiding prohibited depiction.
+    narration_block: nar_006
+    narration_text: >
+      Jo cheez wazeh nahi, us mein hum apni taraf se manzar nahi banate.
+    source_refs:
+      - quran_hijr_15_26_44
+      - quran_sad_38_71_85
+      - projects/insan/00_governance/depiction_policy.md
+    duration_seconds: 18
+    location: clay_formation_space
+    required_assets:
+      - adam_concealed_presence
+      - clay_particles
+    depiction_constraints:
+      - adam_face_hidden
+      - no_reusable_prophet_identity
+      - no_anatomical_formation_detail
+    visual_description: Concealed presence implied through veiled silhouette, clay texture, and light.
+    emotional_tone: reverent_careful
+    transition_in: hold_from_scene_005
+    transition_out: dissolve_to_command_assembly
+    approval_status: needs_depiction_review
+  - scene_id: insan_ep01_scene_007
+    title: Command To Prostrate
+    narrative_purpose: Present the command through storyteller narration, not performed divine voice.
+    narration_block: nar_007
+    narration_text: >
+      Allah Ta'ala ne farishton ko hukm diya ke Adam عليه السلام ko sajdah
+      karein. Yeh sajdah Allah ke hukm ki ita'at tha.
+    source_refs:
+      - quran_baqarah_2_30_39
+      - quran_araf_7_11_18
+      - quran_hijr_15_26_44
+      - quran_taha_20_115_123
+      - quran_sad_38_71_85
+      - tafsir_ibn_kathir_baqarah_2_34
+    duration_seconds: 24
+    location: unseen_realm
+    required_assets:
+      - angelic_presence
+      - adam_concealed_presence
+      - unseen_realm
+    depiction_constraints:
+      - no_visual_allah
+      - no_angel_faces
+      - adam_face_hidden
+    visual_description: Angelic presences oriented toward concealed Adam presence in solemn obedience.
+    emotional_tone: majestic_obedient
+    transition_in: light_plane_opens
+    transition_out: slow_lowering_motion
+    approval_status: needs_source_review
+  - scene_id: insan_ep01_scene_008
+    title: Angels Prostrate
+    narrative_purpose: Show obedience without inventing angelic faces or bodies.
+    narration_block: nar_008
+    narration_text: >
+      Farishton ne hukm maana. Unhon ne sajdah kiya.
+    source_refs:
+      - quran_baqarah_2_30_39
+      - quran_hijr_15_26_44
+      - quran_sad_38_71_85
+    duration_seconds: 20
+    location: unseen_realm
+    required_assets:
+      - angelic_presence
+      - adam_concealed_presence
+    depiction_constraints:
+      - no_angel_faces
+      - non_facial_angelic_presence
+      - no_generated_quranic_arabic
+    visual_description: Faceless radiance forms lower in synchronized obedience.
+    emotional_tone: solemn_submission
+    transition_in: continuation_from_command
+    transition_out: reveal_still_iblis_presence
+    approval_status: needs_depiction_review
+  - scene_id: insan_ep01_scene_009
+    title: Iblis Remains Standing
+    narrative_purpose: Contrast obedience with refusal.
+    narration_block: nar_009
+    narration_text: >
+      Lekin Iblis ne inkar kar diya. Yahan se takabbur ka pehla bada imtihan
+      samne aata hai.
+    source_refs:
+      - quran_baqarah_2_30_39
+      - quran_hijr_15_26_44
+      - quran_sad_38_71_85
+    duration_seconds: 20
+    location: unseen_realm
+    required_assets:
+      - iblis_pre_rebellion
+      - angelic_presence
+      - adam_concealed_presence
+    depiction_constraints:
+      - iblis_not_western_horned_devil
+      - no_iblis_lip_sync
+      - no_angel_faces
+    visual_description: One dark jinn presence remains upright while faceless radiance lowers.
+    emotional_tone: tense_decisive
+    transition_in: rack_focus_from_obedience_to_refusal
+    transition_out: hard_cut_to_fire_clay_contrast
+    approval_status: needs_source_review
+  - scene_id: insan_ep01_scene_010
+    title: Iblis Claims Superiority
+    narrative_purpose: Present Iblis' fire-over-clay argument as paraphrased Qur'anic meaning.
+    narration_block: nar_010
+    narration_text: >
+      Qur'an ka mafhoom hai ke Iblis ne kaha ke woh Adam se behtar hai: use
+      aag se paida kiya gaya, aur Adam ko mitti se.
+    source_refs:
+      - quran_araf_7_11_18
+      - quran_sad_38_71_85
+    duration_seconds: 22
+    location: unseen_realm
+    required_assets:
+      - iblis_pre_rebellion
+      - smokeless_fire
+      - clay_particles
+    depiction_constraints:
+      - no_direct_sacred_dialogue_performance
+      - no_iblis_lip_sync
+      - no_western_devil_imagery
+    visual_description: Abstract contrast of smokeless fire texture and humble clay particles.
+    emotional_tone: arrogant_chilling
+    transition_in: cut_to_symbolic_fire_and_clay
+    transition_out: light_withdraws_from_iblis
+    approval_status: needs_source_review
+  - scene_id: insan_ep01_scene_011
+    title: Expulsion And Disgrace
+    narrative_purpose: Present Iblis' expulsion and disgrace.
+    narration_block: nar_011
+    narration_text: >
+      Qur'an ke bayan ke mutabiq Iblis ko nikala gaya, zaleel kiya gaya, aur
+      us par lanat ka zikr aata hai.
+    source_refs:
+      - quran_araf_7_11_18
+      - quran_hijr_15_26_44
+      - quran_sad_38_71_85
+    duration_seconds: 24
+    location: expulsion_boundary
+    required_assets:
+      - iblis_post_expulsion
+      - expulsion_boundary
+      - darkness_separation
+    depiction_constraints:
+      - no_visual_allah
+      - no_throne
+      - no_horror_monster_transformation
+    visual_description: Iblis is symbolically separated into deep shadow, stripped of radiance.
+    emotional_tone: severe_consequential
+    transition_in: light_recedes
+    transition_out: low_shadow_hold
+    approval_status: needs_source_review
+  - scene_id: insan_ep01_scene_012
+    title: Respite And Declared Enmity
+    narrative_purpose: Present the request for respite and declared intention to mislead humanity.
+    narration_block: nar_012
+    narration_text: >
+      Iblis ne mohlat maangi. Qur'an ke mafhoom ke mutabiq use ek muqarrar
+      waqt tak mohlat di gayi. Phir Iblis ne apna irada zahir kiya: woh insan
+      ko gumrah karne ki koshish karega.
+    source_refs:
+      - quran_araf_7_11_18
+      - quran_hijr_15_26_44
+      - quran_isra_17_61_65
+      - quran_sad_38_71_85
+    duration_seconds: 28
+    location: symbolic_path_of_humanity
+    required_assets:
+      - iblis_post_expulsion
+      - symbolic_path_of_humanity
+      - darkness_separation
+    depiction_constraints:
+      - no_iblis_lip_sync
+      - no_unsourced_dialogue
+      - no_human_crowd_specific_faces
+    visual_description: A symbolic human path appears ahead while shadow trails at its edges.
+    emotional_tone: ominous_but_restrained
+    transition_in: shadow_extends_into_path
+    transition_out: dissolve_back_to_storyteller
+    approval_status: needs_source_review
+  - scene_id: insan_ep01_scene_013
+    title: Storyteller Closing Moral
+    narrative_purpose: Close with the moral danger of arrogance and the need to submit to truth.
+    narration_block: nar_013
+    narration_text: >
+      Aaj jab insan apni zaat, apni quwwat, apni nasl, apni daulat ya apni
+      soch par ghuroor karta hai, to woh usi purane raste ki taraf qadam
+      badhata hai jahan hukm ke samne takabbur khara ho gaya tha.
+    source_refs:
+      - user_instruction_2026_07_22
+      - quran_baqarah_2_30_39
+      - quran_sad_38_71_85
+    duration_seconds: 30
+    location: storyteller_studio
+    required_assets:
+      - storyteller
+      - storyteller_studio
+    depiction_constraints:
+      - no_quranic_arabic_generated
+      - no_unsourced_sacred_quote
+    visual_description: Storyteller closes calmly, with solemn desk light and restrained movement.
+    emotional_tone: reflective_moral_clarity
+    transition_in: dissolve_from_symbolic_path
+    transition_out: fade_to_black
+    approval_status: needs_source_review

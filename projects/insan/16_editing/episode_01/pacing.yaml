@@ -1,0 +1,37 @@
+schema_version: "1.0"
+project_id: insan
+episode_id: episode_01
+target_duration_seconds: 292
+pacing_style: measured_documentary
+rules:
+  - Let sacred moments breathe with silence.
+  - Keep motion slow and controlled.
+  - Avoid montage speed during source-sensitive claims.
+  - Avoid horror pacing.
+scene_timing:
+  - scene_id: insan_ep01_scene_001
+    duration_seconds: 24
+  - scene_id: insan_ep01_scene_002
+    duration_seconds: 20
+  - scene_id: insan_ep01_scene_003
+    duration_seconds: 18
+  - scene_id: insan_ep01_scene_004
+    duration_seconds: 22
+  - scene_id: insan_ep01_scene_005
+    duration_seconds: 22
+  - scene_id: insan_ep01_scene_006
+    duration_seconds: 18
+  - scene_id: insan_ep01_scene_007
+    duration_seconds: 24
+  - scene_id: insan_ep01_scene_008
+    duration_seconds: 20
+  - scene_id: insan_ep01_scene_009
+    duration_seconds: 20
+  - scene_id: insan_ep01_scene_010
+    duration_seconds: 22
+  - scene_id: insan_ep01_scene_011
+    duration_seconds: 24
+  - scene_id: insan_ep01_scene_012
+    duration_seconds: 28
+  - scene_id: insan_ep01_scene_013
+    duration_seconds: 30

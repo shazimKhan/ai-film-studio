@@ -1,0 +1,109 @@
+schema_version: "1.0"
+project_id: insan
+episode_id: episode_01
+status: pending_source_validation
+source_policy: No block is approved for final narration until referenced source records are approved.
+narration_blocks:
+  - block_id: nar_001
+    scene_id: insan_ep01_scene_001
+    source_refs:
+      - user_instruction_2026_07_22
+    claim_type: moral_hook
+    validation_status: production_hook_pending_review
+  - block_id: nar_002
+    scene_id: insan_ep01_scene_002
+    source_refs:
+      - quran_kahf_18_50
+      - hadith_muslim_2996
+    claim_type: before_humanity_created_beings
+    validation_status: source_located_pending_scholar_review
+  - block_id: nar_003
+    scene_id: insan_ep01_scene_003
+    source_refs:
+      - quran_kahf_18_50
+      - tafsir_ibn_kathir_kahf_18_50
+    claim_type: iblis_jinn_not_angel
+    validation_status: source_located_pending_scholar_review
+  - block_id: nar_004
+    scene_id: insan_ep01_scene_004
+    source_refs:
+      - quran_baqarah_2_30_39
+    claim_type: khalifah_announcement
+    validation_status: source_located_pending_scholar_review
+  - block_id: nar_005
+    scene_id: insan_ep01_scene_005
+    source_refs:
+      - quran_hijr_15_26_44
+      - quran_sad_38_71_85
+      - quran_ali_imran_3_59
+      - hadith_muslim_2996
+      - hadith_abi_dawud_4693
+    claim_type: adam_creation_material
+    validation_status: source_located_pending_scholar_review
+  - block_id: nar_006
+    scene_id: insan_ep01_scene_006
+    source_refs:
+      - quran_hijr_15_26_44
+      - quran_sad_38_71_85
+      - projects/insan/00_governance/depiction_policy.md
+    claim_type: concealed_adam_depiction_boundary
+    validation_status: source_located_pending_depiction_review
+  - block_id: nar_007
+    scene_id: insan_ep01_scene_007
+    source_refs:
+      - quran_baqarah_2_30_39
+      - quran_araf_7_11_18
+      - quran_hijr_15_26_44
+      - quran_taha_20_115_123
+      - quran_sad_38_71_85
+      - tafsir_ibn_kathir_baqarah_2_34
+    claim_type: prostration_command
+    validation_status: source_located_pending_scholar_review
+  - block_id: nar_008
+    scene_id: insan_ep01_scene_008
+    source_refs:
+      - quran_baqarah_2_30_39
+      - quran_hijr_15_26_44
+      - quran_sad_38_71_85
+    claim_type: angels_obey
+    validation_status: source_located_pending_scholar_review
+  - block_id: nar_009
+    scene_id: insan_ep01_scene_009
+    source_refs:
+      - quran_baqarah_2_30_39
+      - quran_hijr_15_26_44
+      - quran_sad_38_71_85
+    claim_type: iblis_refuses
+    validation_status: source_located_pending_scholar_review
+  - block_id: nar_010
+    scene_id: insan_ep01_scene_010
+    source_refs:
+      - quran_araf_7_11_18
+      - quran_sad_38_71_85
+    claim_type: iblis_fire_clay_superiority_claim
+    validation_status: source_located_pending_scholar_review
+  - block_id: nar_011
+    scene_id: insan_ep01_scene_011
+    source_refs:
+      - quran_araf_7_11_18
+      - quran_hijr_15_26_44
+      - quran_sad_38_71_85
+    claim_type: expulsion_disgrace_curse
+    validation_status: source_located_pending_scholar_review
+  - block_id: nar_012
+    scene_id: insan_ep01_scene_012
+    source_refs:
+      - quran_araf_7_11_18
+      - quran_hijr_15_26_44
+      - quran_isra_17_61_65
+      - quran_sad_38_71_85
+    claim_type: respite_declared_enmity_and_sincere_servants
+    validation_status: source_located_pending_scholar_review
+  - block_id: nar_013
+    scene_id: insan_ep01_scene_013
+    source_refs:
+      - user_instruction_2026_07_22
+      - quran_baqarah_2_30_39
+      - quran_sad_38_71_85
+    claim_type: closing_moral
+    validation_status: production_moral_pending_review

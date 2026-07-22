@@ -1,0 +1,61 @@
+schema_version: "1.0"
+project_id: insan
+episode_id: episode_01
+content_type: hadith_reference_research
+references:
+  - reference_id: hadith_muslim_2996
+    citation: Sahih Muslim 2996
+    collection: Sahih Muslim
+    relevance: creation_materials_for_angels_jinn_and_adam
+    statements:
+      - statement: Sahih Muslim 2996 distinguishes angels, jinn, and Adam by creation material.
+        source_refs:
+          - hadith_muslim_2996
+        confidence: high
+        validation_status: source_located_pending_scholar_review
+      - statement: This hadith supports keeping Iblis/jinn creation language distinct from angelic creation language.
+        source_refs:
+          - hadith_muslim_2996
+          - quran_kahf_18_50
+        confidence: high
+        validation_status: source_located_pending_scholar_review
+  - reference_id: hadith_abi_dawud_4693
+    citation: Sunan Abi Dawud 4693
+    collection: Sunan Abi Dawud
+    relevance: adam_created_from_handful_from_earth_candidate
+    statements:
+      - statement: Sunan Abi Dawud 4693 reports Adam's creation from a handful taken from the earth and connects human variation to the earth.
+        source_refs:
+          - hadith_abi_dawud_4693
+        confidence: medium
+        validation_status: source_located_pending_scholar_review
+      - statement: This report is relevant to creation material but should not be expanded into visual detail without scholarly review.
+        source_refs:
+          - hadith_abi_dawud_4693
+          - projects/insan/00_governance/depiction_policy.md
+        confidence: medium
+        validation_status: production_constraint
+  - reference_id: hadith_muslim_854b
+    citation: Sahih Muslim 854b
+    collection: Sahih Muslim
+    relevance: related_context_for_adam_created_entered_and_expelled_on_friday
+    statements:
+      - statement: Sahih Muslim 854b mentions Adam's creation, entry into Paradise, and expulsion from it in a Friday-related report.
+        source_refs:
+          - hadith_muslim_854b
+        confidence: high
+        validation_status: source_located_pending_scholar_review
+      - statement: This report is related context, not a standalone source for the full Iblis refusal and respite sequence.
+        source_refs:
+          - hadith_muslim_854b
+          - quran_sad_38_71_85
+          - quran_araf_7_11_18
+        confidence: medium
+        validation_status: research_classification_pending_review
+usage_constraints:
+  - statement: No Hadith wording may be used in final narration until matn, numbering, grading, translation, and relevance are reviewed.
+    source_refs:
+      - projects/insan/00_governance/source_hierarchy.md
+      - projects/insan/00_governance/authenticity_policy.md
+    confidence: high
+    validation_status: policy_constraint

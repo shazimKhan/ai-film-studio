@@ -1,0 +1,79 @@
+schema_version: "1.0"
+project_id: insan
+episode_id: episode_01
+content_type: chronological_event_research
+events:
+  - event_id: event_001_creation_announcement
+    event_label: creation_announcement
+    statement: The angels are informed about Adam/humanity in connection with earthly succession.
+    source_refs:
+      - quran_baqarah_2_30_39
+    confidence: high
+    validation_status: source_located_pending_scholar_review
+  - event_id: event_002_creation_material
+    event_label: creation_material
+    statement: Adam's creation is connected to dust/clay language in the Qur'an and related Hadith.
+    source_refs:
+      - quran_hijr_15_26_44
+      - quran_sad_38_71_85
+      - quran_ali_imran_3_59
+      - hadith_muslim_2996
+      - hadith_abi_dawud_4693
+    confidence: high
+    validation_status: source_located_pending_scholar_review
+  - event_id: event_003_command
+    event_label: prostration_command
+    statement: The command to prostrate to Adam is repeated in multiple Qur'anic passages.
+    source_refs:
+      - quran_baqarah_2_30_39
+      - quran_araf_7_11_18
+      - quran_hijr_15_26_44
+      - quran_taha_20_115_123
+      - quran_sad_38_71_85
+    confidence: high
+    validation_status: source_located_pending_scholar_review
+  - event_id: event_004_refusal
+    event_label: iblis_refusal
+    statement: Iblis refuses the command and is associated with arrogance.
+    source_refs:
+      - quran_baqarah_2_30_39
+      - quran_araf_7_11_18
+      - quran_sad_38_71_85
+      - tafsir_ibn_kathir_baqarah_2_34
+    confidence: high
+    validation_status: source_located_pending_scholar_review
+  - event_id: event_005_classification
+    event_label: iblis_as_jinn
+    statement: Iblis is identified as being from the jinn in Al-Kahf 18:50.
+    source_refs:
+      - quran_kahf_18_50
+    confidence: high
+    validation_status: source_located_pending_scholar_review
+  - event_id: event_006_expulsion
+    event_label: expulsion
+    statement: The Qur'anic passages record Iblis being ordered out and described as expelled or debased.
+    source_refs:
+      - quran_araf_7_11_18
+      - quran_hijr_15_26_44
+      - quran_sad_38_71_85
+    confidence: high
+    validation_status: source_located_pending_scholar_review
+  - event_id: event_007_respite
+    event_label: respite_request_and_grant
+    statement: Iblis asks for respite and is granted respite until an appointed time.
+    source_refs:
+      - quran_araf_7_11_18
+      - quran_hijr_15_26_44
+      - quran_sad_38_71_85
+    confidence: high
+    validation_status: source_located_pending_scholar_review
+  - event_id: event_008_misleading_declaration
+    event_label: misleading_declaration
+    statement: Iblis declares an intention to mislead humanity while sincere servants are excepted.
+    source_refs:
+      - quran_araf_7_11_18
+      - quran_hijr_15_26_44
+      - quran_isra_17_61_65
+      - quran_sad_38_71_85
+    confidence: high
+    validation_status: source_located_pending_scholar_review

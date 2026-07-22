@@ -1,0 +1,14 @@
+schema_version: "1.0"
+project_id: insan
+asset_id: symbolic_path_of_humanity
+asset_type: symbolic_environment
+status: missing_reference_images
+reusable: false
+continuity_rules:
+  - Abstract path representing human moral trial.
+  - Distant light remains visible beyond shadow.
+visual_restrictions:
+  - no_specific_modern_crowd_faces
+  - no_literal_hell_or_paradise_depiction
+  - no_generated_quranic_text
+reference_status: awaiting_manual_generation
